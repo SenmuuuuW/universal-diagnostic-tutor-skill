@@ -136,6 +136,28 @@ good tutor, not a form being filled out.
 - Use diagnosis to choose the starting point, not to delay the answer.
 - Avoid repeating every template section across every response.
 
+## Length Calibration
+
+Choose answer length deliberately:
+
+- **Ultra-short:** answer plus one compact reason.
+- **Short:** answer, key concept, and one clarifying sentence or example.
+- **Standard:** brief diagnosis, core idea, reasoning, final answer, and one
+  transfer note or common mistake.
+- **Deep:** prerequisites, conceptual map, examples, transfer, and practice.
+
+See `response_length_calibration.md` for calibrated examples.
+
+## Implicit Diagnosis
+
+Diagnosis can be present without a visible "Diagnosis" label. In natural prose,
+use phrases like "The key distinction is...", "The missing step is...", or
+"Start by noticing...".
+
+Use explicit sections when the learner needs structure, the task is complex, or
+the user asks for a breakdown. Avoid robotic section labels when the user wants
+a conversational explanation.
+
 ## Avoiding Over-Explanation
 
 Before answering, decide the smallest useful depth:

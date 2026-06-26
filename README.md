@@ -75,11 +75,16 @@ universal-diagnostic-tutor-skill/
         │   ├── subject_teaching_modes.md
         │   ├── output_formats.md
         │   ├── evaluation_checklist.md
+        │   ├── manual_test_matrix.md
+        │   ├── response_length_calibration.md
         │   └── maintenance_notes.md
         └── examples/
             ├── ai_concept_example.md
             ├── bad_vs_good_example.md
             ├── economics_business_example.md
+            ├── finance_boundary_example.md
+            ├── health_boundary_example.md
+            ├── humanities_evidence_example.md
             ├── math_example.md
             ├── science_example.md
             ├── humanities_example.md
@@ -87,6 +92,7 @@ universal-diagnostic-tutor-skill/
             ├── law_civics_example.md
             ├── language_literature_example.md
             ├── mixed_subject_example.md
+            ├── natural_style_example.md
             ├── writing_revision_example.md
             └── exam_prep_example.md
 ```
@@ -105,6 +111,19 @@ answers with
 answer should diagnose the learning task, teach from the right starting point,
 adapt to the subject, avoid over-explaining simple questions, and stay
 educational in high-stakes contexts.
+
+## V0.3 Improvements
+
+V0.3 adds a lightweight Markdown-only manual test system. The manual test
+matrix in `skills/universal-diagnostic-tutor/references/manual_test_matrix.md`
+covers 12 subject and boundary scenarios, while
+`skills/universal-diagnostic-tutor/references/response_length_calibration.md`
+shows how to tune ultra-short, short, standard, and deep answers without losing
+diagnosis-first reasoning.
+
+V0.3 also adds health and finance educational boundary examples, a humanities
+evidence example for interpretive uncertainty, and a natural style example that
+shows how to avoid robotic template language.
 
 ## Use With Codex
 
@@ -142,7 +161,7 @@ When updating the skill:
 
 - V0.1: Core universal tutor skill.
 - V0.2: Stronger examples, subject routing, and manual evaluation checklist.
-- V0.3: Evaluation scenarios and quality refinements.
+- V0.3: Manual test matrix and response length calibration.
 - V0.4: Optional subject-specific reference packs.
 - V1.0: Stable reusable tutor skill.
 

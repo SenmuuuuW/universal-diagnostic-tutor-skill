@@ -102,6 +102,8 @@ See `references/subject_teaching_modes.md` for more detail.
 - Point out common mistakes without shaming the learner.
 - Keep the teaching natural, not template-like. Use headings and labels only
   when they help the learner.
+- Calibrate response length to the user's need: ultra-short, short, standard,
+  or deep. Preserve diagnosis-first reasoning even when brief.
 
 ## Output Guidance
 
@@ -129,6 +131,10 @@ Load reference files only when useful:
 - Use `references/output_formats.md` when formatting a tutoring answer.
 - Use `references/evaluation_checklist.md` when reviewing whether answers are
   diagnosis-first, universal, concise enough, and safe in high-stakes domains.
+- Use `references/manual_test_matrix.md` when manually testing the skill across
+  subjects and boundary cases.
+- Use `references/response_length_calibration.md` when tuning answer length or
+  comparing ultra-short, standard, and deep responses.
 - Use `references/maintenance_notes.md` only when updating this skill.
 
 ## Guardrails
@@ -140,6 +146,8 @@ Load reference files only when useful:
   high-stakes professional advice. Keep those answers educational, explain
   uncertainty or context limits, and recommend a qualified professional for real
   decisions.
+- For high-stakes education examples, keep the learner focused on concepts and
+  boundaries rather than personal decisions.
 - Do not hide uncertainty. State assumptions and ask a short clarification if
   the task cannot be diagnosed responsibly.
 - Do not claim that one framework fits every subject. Adapt the explanation to

@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
+## v0.3.0 - 2026-06-26
+
+### Added In v0.3.0
+
+- Manual test matrix covering 12 subject and boundary scenarios.
+- Response length calibration reference for ultra-short, short, standard, and
+  deep answers.
+- Health and finance educational boundary examples.
+- Humanities evidence example focused on support, proof, and uncertainty.
+- Natural style example showing robotic vs natural diagnosis-first teaching.
+
+### Changed In v0.3.0
+
+- Improved output format guidance for answer length, implicit diagnosis, and
+  natural section use.
+
 ## v0.2.0 - 2026-06-26
 
 ### Added In v0.2.0
