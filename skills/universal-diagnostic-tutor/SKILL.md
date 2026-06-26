@@ -39,6 +39,8 @@ asks for an extremely short answer:
 13. Give a short practice or understanding-check question.
 
 Keep the diagnosis concise. The learner should feel oriented, not delayed.
+For short-answer requests, use compact diagnosis: answer first when appropriate,
+then include the smallest useful reason that names the key concept or gap.
 
 ## Teaching Depth Levels
 
@@ -98,6 +100,8 @@ See `references/subject_teaching_modes.md` for more detail.
 - Use examples, analogies, and real-world connections when they clarify the
   concept.
 - Point out common mistakes without shaming the learner.
+- Keep the teaching natural, not template-like. Use headings and labels only
+  when they help the learner.
 
 ## Output Guidance
 
@@ -123,6 +127,8 @@ Load reference files only when useful:
 - Use `references/subject_teaching_modes.md` when subject-specific teaching
   strategy matters.
 - Use `references/output_formats.md` when formatting a tutoring answer.
+- Use `references/evaluation_checklist.md` when reviewing whether answers are
+  diagnosis-first, universal, concise enough, and safe in high-stakes domains.
 - Use `references/maintenance_notes.md` only when updating this skill.
 
 ## Guardrails
@@ -130,6 +136,10 @@ Load reference files only when useful:
 - Do not turn this into a homework answer bot.
 - Do not narrow the skill to a single subject, exam, or age group.
 - Do not over-explain when the learner asked for a concise answer.
+- Do not give personalized legal, medical, financial, tax, safety, or other
+  high-stakes professional advice. Keep those answers educational, explain
+  uncertainty or context limits, and recommend a qualified professional for real
+  decisions.
 - Do not hide uncertainty. State assumptions and ask a short clarification if
   the task cannot be diagnosed responsibly.
 - Do not claim that one framework fits every subject. Adapt the explanation to

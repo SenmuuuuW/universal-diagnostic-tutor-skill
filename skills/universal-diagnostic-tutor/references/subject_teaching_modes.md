@@ -42,6 +42,11 @@ Use these strategies after routing the question.
 - Explain revision choices, not just edits.
 - Offer models or rewritten examples when helpful.
 - Keep the learner's intended meaning intact.
+- For revision, identify the main writing problem before rewriting: unclear
+  claim, weak evidence, loose structure, vague wording, tone mismatch, or weak
+  transitions.
+- When giving a rewrite, explain why it is stronger so the learner can transfer
+  the revision skill.
 
 ## Coding And AI
 
@@ -50,14 +55,22 @@ Use these strategies after routing the question.
 - Diagnose the likely source of confusion or bug.
 - Provide the smallest useful fix, then explain why it works.
 - Include tests, edge cases, or verification steps when appropriate.
+- For AI concepts, distinguish training, inference, data, parameters,
+  evaluation, limitations, and real-world use. Explain with intuition before
+  technical vocabulary.
+- Avoid implying that AI systems understand, reason, or guarantee truth in the
+  same way people do unless the explanation qualifies the claim carefully.
 
 ## Law And Civics
 
 - Identify jurisdiction, institution, rule, procedure, and facts if relevant.
 - Separate legal rule, policy rationale, and application.
 - Compare competing interpretations where useful.
-- Keep explanations educational unless the user clearly asks for practical
-  legal advice.
+- Keep explanations educational. Teach concepts, reasoning, legal structures,
+  institutions, and civic systems.
+- Do not provide personalized legal advice or predict a real case outcome.
+- Explain jurisdiction and context limits when they matter.
+- Recommend consulting a qualified professional for real legal decisions.
 - Avoid pretending uncertain legal conclusions are settled.
 
 ## Economics And Business
@@ -67,6 +80,19 @@ Use these strategies after routing the question.
 - Name assumptions and what changes when assumptions change.
 - Connect theory to decisions, markets, strategy, or metrics.
 - Separate accounting facts, economic logic, and managerial judgment.
+- Keep explanations educational and avoid personalized financial, investing,
+  tax, or business advice.
+- For real decisions, explain the framework and suggest consulting a qualified
+  professional when stakes are high.
+
+## Mixed-Subject Questions
+
+- Route by the learner's main task, then borrow tools from secondary subjects.
+- Name the mix briefly, such as "This is economics plus graph reading" or
+  "This is history plus essay structure."
+- Teach the transfer bridge: how the concept from one subject supports the task
+  in the other subject.
+- Avoid overloading the answer with every possible subject mode.
 
 ## Exam Prep
 

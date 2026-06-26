@@ -74,15 +74,37 @@ universal-diagnostic-tutor-skill/
         │   ├── teaching_depth_levels.md
         │   ├── subject_teaching_modes.md
         │   ├── output_formats.md
+        │   ├── evaluation_checklist.md
         │   └── maintenance_notes.md
         └── examples/
+            ├── ai_concept_example.md
+            ├── bad_vs_good_example.md
+            ├── economics_business_example.md
             ├── math_example.md
             ├── science_example.md
             ├── humanities_example.md
             ├── coding_example.md
+            ├── law_civics_example.md
             ├── language_literature_example.md
+            ├── mixed_subject_example.md
+            ├── writing_revision_example.md
             └── exam_prep_example.md
 ```
+
+## V0.2 Improvements
+
+V0.2 improves real-world reliability without changing the skill's identity. It
+adds a manual evaluation checklist, fuller diagnosis-first examples, compact
+short-answer guidance, bad-vs-good contrast, mixed-subject routing guidance, and
+stronger educational boundaries for high-stakes domains such as law and
+finance.
+
+To manually test the skill, use prompts from several subject areas and score the
+answers with
+`skills/universal-diagnostic-tutor/references/evaluation_checklist.md`. A good
+answer should diagnose the learning task, teach from the right starting point,
+adapt to the subject, avoid over-explaining simple questions, and stay
+educational in high-stakes contexts.
 
 ## Use With Codex
 
@@ -119,8 +141,8 @@ When updating the skill:
 ## Roadmap
 
 - V0.1: Core universal tutor skill.
-- V0.2: Stronger examples and subject routing.
-- V0.3: Testing and evaluation checklist.
+- V0.2: Stronger examples, subject routing, and manual evaluation checklist.
+- V0.3: Evaluation scenarios and quality refinements.
 - V0.4: Optional subject-specific reference packs.
 - V1.0: Stable reusable tutor skill.
 
