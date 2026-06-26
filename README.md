@@ -81,6 +81,16 @@ universal-diagnostic-tutor-skill/
         │   ├── resource_augmented_output.md
         │   ├── source_trust_hierarchy.md
         │   ├── stem_ai_cs_scope.md
+        │   ├── source_note_checklist.md
+        │   ├── source_packs/
+        │   │   ├── ai_ml_data.md
+        │   │   ├── exam_problem_set_sources.md
+        │   │   ├── graphics_multimedia_hci_software.md
+        │   │   ├── math_foundations.md
+        │   │   ├── physics_electronics_signals.md
+        │   │   ├── programming_and_cs_foundations.md
+        │   │   ├── source_pack_usage_guide.md
+        │   │   └── systems_networks_security.md
         │   └── maintenance_notes.md
         └── examples/
             ├── ai_concept_example.md
@@ -101,6 +111,7 @@ universal-diagnostic-tutor-skill/
             ├── resource_augmented_cs_example.md
             ├── resource_augmented_exam_pattern_example.md
             ├── resource_augmented_math_example.md
+            ├── source_pack_usage_example.md
             ├── source_limited_answer_example.md
             ├── writing_revision_example.md
             └── exam_prep_example.md
@@ -153,6 +164,24 @@ V0.4 does not add API dependencies, scripts, websites, copied textbooks, or
 scraped course materials. This remains a universal diagnosis-first tutor skill,
 not a CS-only skill.
 
+## V0.5 Improvements
+
+V0.5 adds curated, lightweight source packs for university-level STEM, AI, and
+computer science learning. These packs give the tutor better starting points
+for resource-augmented teaching in math foundations, programming and CS,
+systems, networks, security, AI/ML/data, physics/electronics/signals,
+graphics/HCI/software, and exam or problem-set practice.
+
+Source packs are for source selection, study-path design, and citation
+discipline. They are not copied textbooks, downloaded course archives, answer
+banks, or a substitute for teaching. No API dependency, search integration,
+website, package setup, PDFs, or copyrighted source material is included.
+
+When sources are used, the tutor should still verify links when possible, cite
+specific useful pages, and explain how each source supports the learner's next
+step. STEM / AI-CS is the primary current use case, but the skill remains a
+universal diagnosis-first tutor across all subjects.
+
 ## Use With Codex
 
 To use the skill locally, copy the skill folder into your Codex skills
@@ -191,6 +220,7 @@ When updating the skill:
 - V0.2: Stronger examples, subject routing, and manual evaluation checklist.
 - V0.3: Manual test matrix and response length calibration.
 - V0.4: STEM / AI-CS resource integration reference pack.
+- V0.5: Curated STEM / AI-CS source packs for resource-augmented tutoring.
 - V1.0: Stable reusable tutor skill.
 
 ## 中文简介

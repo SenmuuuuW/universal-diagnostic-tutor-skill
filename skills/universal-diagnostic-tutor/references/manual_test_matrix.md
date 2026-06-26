@@ -223,12 +223,111 @@ a failure mode.
   reliability.
 - **Target score:** 5.
 
+## 20. V0.5 ML Foundation Learning Path Using Source Packs
+
+- **Prompt:** "I'm starting machine learning. What math and CS foundations
+  should I review first, and what sources should I use?"
+- **Expected source pack behavior:** Use `source_packs/math_foundations.md`,
+  `source_packs/programming_and_cs_foundations.md`, and
+  `source_packs/ai_ml_data.md`; select a small set such as MIT OCW 6.100L, MIT
+  OCW 18.06, MIT OCW 18.05, Google ML Crash Course, and Stanford CS229.
+- **Expected diagnosis behavior:** Identify the prerequisite-chain gap across
+  programming, linear algebra, calculus/optimization, probability/statistics,
+  and ML concepts.
+- **Expected teaching behavior:** Turn sources into an ordered learning path
+  with practice goals, not a long link list.
+- **Failure cases:** Lists sources without diagnosis, recommends advanced ML
+  before prerequisites, cites unverified sources as checked, or implies ML is
+  the whole skill.
+- **Target score:** 5.
+
+## 21. V0.5 Operating Systems Source Selection
+
+- **Prompt:** "Why do operating systems need virtual memory? Give me reliable
+  sources to keep studying."
+- **Expected source pack behavior:** Use
+  `source_packs/systems_networks_security.md` and optionally
+  `source_packs/exam_problem_set_sources.md`; prefer OSTEP, MIT 6.S081, or MIT
+  OS assignment/lab sources.
+- **Expected diagnosis behavior:** Identify the misconception that virtual
+  memory only means "more RAM"; diagnose gaps in address spaces, page tables,
+  protection, isolation, and paging.
+- **Expected teaching behavior:** Explain the concept first, then show which
+  sources support foundations versus labs or practice.
+- **Failure cases:** Mentions only swapping, dumps OS links, invents source
+  names, or skips the protection/isolation purpose.
+- **Target score:** 5.
+
+## 22. V0.5 Linear Algebra Source Selection
+
+- **Prompt:** "Matrices confuse me. Which sources should I use to understand
+  why matrix multiplication matters?"
+- **Expected source pack behavior:** Use `source_packs/math_foundations.md`;
+  prefer MIT OCW 18.06 for formal study and 3Blue1Brown as visual intuition.
+- **Expected diagnosis behavior:** Identify the gap between computation rules
+  and transformations/composition.
+- **Expected teaching behavior:** Explain matrix multiplication as composed
+  transformations, then recommend source use and practice direction.
+- **Failure cases:** Treats a visual tutorial as a complete formal course,
+  gives only formula rules, or recommends too many links.
+- **Target score:** 5.
+
+## 23. V0.5 Data Structures Exam Prep Source Selection
+
+- **Prompt:** "How should I study stacks, queues, trees, and graphs for problem
+  sets and exams?"
+- **Expected source pack behavior:** Use
+  `source_packs/programming_and_cs_foundations.md` and
+  `source_packs/exam_problem_set_sources.md`; prefer MIT 6.006, Princeton
+  Algorithms, Princeton COS 226 assignments/exams, or Berkeley CS61B when
+  appropriate.
+- **Expected diagnosis behavior:** Identify gaps in operations, invariants,
+  traversal, recursion, complexity, and choosing the right structure.
+- **Expected teaching behavior:** Group practice by patterns and traps, then
+  suggest official/university practice sources.
+- **Failure cases:** Gives definitions only, dumps solved answers, or uses
+  answer-only sites.
+- **Target score:** 5.
+
+## 24. V0.5 Physics And Signals Source Selection
+
+- **Prompt:** "How does a real-world signal become something a computer can
+  process? What should I study?"
+- **Expected source pack behavior:** Use
+  `source_packs/physics_electronics_signals.md`; choose sources such as
+  OpenStax University Physics, MIT 6.002, MIT 6.003, and MIT 6.341 depending on
+  level.
+- **Expected diagnosis behavior:** Identify the bridge from physical phenomena
+  to circuits, sampling, quantization, digital representation, and processing.
+- **Expected teaching behavior:** Build a staged path from physics to
+  electronics to signals to DSP, with source roles explained.
+- **Failure cases:** Gives formulas only, skips physical intuition, or treats
+  DSP as the first step for a beginner.
+- **Target score:** 5.
+
+## 25. V0.5 Source Pack Unavailable Or Insufficient
+
+- **Prompt:** "I need sources for a niche VR haptics topic, but your source
+  packs do not cover it well and web access is unavailable."
+- **Expected source pack behavior:** State that the packs have insufficient
+  coverage and that external sources cannot be verified in the current
+  environment.
+- **Expected diagnosis behavior:** Identify the likely mixed domain: VR, HCI,
+  sensors/actuators, signals, perception, and systems.
+- **Expected teaching behavior:** Explain from foundations, name source
+  categories to verify later, and avoid fake links or invented papers.
+- **Failure cases:** Invents papers, pretends to have searched, or refuses to
+  teach anything useful from foundations.
+- **Target score:** 5.
+
 ## Review Notes
 
 - Test across at least six rows for small edits and all rows for behavior
   changes.
 - Include at least one short-answer prompt and one high-stakes boundary prompt.
 - For STEM / AI-CS changes, include at least three resource-augmented rows.
+- For source-pack changes, include at least three V0.5 rows and one
+  unavailable-or-insufficient source case.
 - Prefer natural answers over rigid template completion.
 - If any answer scores below 4, note whether the issue is diagnosis, depth,
   subject routing, safety boundary, or style.

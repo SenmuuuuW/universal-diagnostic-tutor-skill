@@ -30,6 +30,17 @@ Future changes must preserve the core identity of the skill:
   course materials.
 - Do not commit copyrighted textbooks, scraped books, copied course packs, or
   large copied source materials.
+- Do not add pirated textbooks, unofficial textbook uploads, copied PDFs, or
+  downloaded course archives.
+- In source packs, add only source metadata, links, coverage notes, usage notes,
+  and cautions.
+- Do not copy large source content into the repository.
+- Verify links lightly when possible, and mark stale or unreachable sources
+  instead of silently keeping them.
+- Prefer specific course pages, lecture pages, official documentation pages,
+  and problem-set pages over generic homepages.
+- Preserve the source trust hierarchy when adding or changing source packs.
+- Keep source packs maintainable; do not turn them into huge dumps.
 - Distinguish source-backed claims from general explanation when updating
   resource-augmented guidance.
 - Preserve the universal identity while supporting the STEM / AI-CS primary use

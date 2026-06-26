@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
+## v0.5.0 - 2026-06-26
+
+### Added In v0.5.0
+
+- Curated STEM / AI-CS source packs for math foundations, programming and CS,
+  systems, networks, security, AI/ML/data, physics/electronics/signals,
+  graphics/HCI/software, and exam or problem-set practice.
+- Source pack usage guide for choosing source packs without narrowing the
+  universal tutor identity.
+- Source note checklist for safer citation and source-list behavior.
+- Source pack usage example for building an ML foundations learning path.
+
+### Changed In v0.5.0
+
+- Improved source selection for resource-augmented tutoring.
+- Expanded the manual test matrix with V0.5 source-pack behavior tests.
+
 ## v0.4.0 - 2026-06-26
 
 ### Added In v0.4.0

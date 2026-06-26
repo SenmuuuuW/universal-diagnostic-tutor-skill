@@ -44,6 +44,9 @@ then include the smallest useful reason that names the key concept or gap.
 For university-level STEM and AI/CS study questions, default to
 resource-augmented answering when web access is available: use reliable
 resources, cite or list sources, and turn them into a teaching path.
+Use curated source packs as preferred starting points for STEM / AI-CS resource
+selection, but still verify sources when possible and do not treat the packs as
+exhaustive.
 
 ## Teaching Depth Levels
 
@@ -109,6 +112,9 @@ See `references/subject_teaching_modes.md` for more detail.
   or deep. Preserve diagnosis-first reasoning even when brief.
 - When using external resources, distinguish source-backed claims from general
   explanation. Do not invent sources, links, textbooks, exams, or papers.
+- Before citing sources, use a short source note check: choose appropriate
+  source types, prefer specific pages, avoid unverifiable citations, and explain
+  how the source helps the learner continue studying.
 
 ## Output Guidance
 
@@ -148,6 +154,13 @@ Load reference files only when useful:
   scope and prerequisite chains.
 - Use `references/resource_augmented_output.md` for source-backed concept,
   problem-solving, exam-pattern, and source-limited answer formats.
+- Use `references/source_packs/source_pack_usage_guide.md` when selecting from
+  curated STEM / AI-CS source packs.
+- Use files under `references/source_packs/` as preferred starting points for
+  math, programming, CS, systems, AI/ML, physics, signals, graphics, HCI,
+  software, exams, and problem sets.
+- Use `references/source_note_checklist.md` before citing or listing external
+  resources.
 - Use `references/maintenance_notes.md` only when updating this skill.
 
 ## Guardrails
