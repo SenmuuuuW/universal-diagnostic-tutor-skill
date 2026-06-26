@@ -77,6 +77,10 @@ universal-diagnostic-tutor-skill/
         │   ├── evaluation_checklist.md
         │   ├── manual_test_matrix.md
         │   ├── response_length_calibration.md
+        │   ├── resource_integration_protocol.md
+        │   ├── resource_augmented_output.md
+        │   ├── source_trust_hierarchy.md
+        │   ├── stem_ai_cs_scope.md
         │   └── maintenance_notes.md
         └── examples/
             ├── ai_concept_example.md
@@ -93,6 +97,11 @@ universal-diagnostic-tutor-skill/
             ├── language_literature_example.md
             ├── mixed_subject_example.md
             ├── natural_style_example.md
+            ├── resource_augmented_ai_example.md
+            ├── resource_augmented_cs_example.md
+            ├── resource_augmented_exam_pattern_example.md
+            ├── resource_augmented_math_example.md
+            ├── source_limited_answer_example.md
             ├── writing_revision_example.md
             └── exam_prep_example.md
 ```
@@ -124,6 +133,25 @@ diagnosis-first reasoning.
 V0.3 also adds health and finance educational boundary examples, a humanities
 evidence example for interpretive uncertainty, and a natural style example that
 shows how to avoid robotic template language.
+
+## V0.4 Improvements
+
+V0.4 adds a resource-augmented learning protocol for university-level STEM,
+AI, and computer science study while preserving the universal tutor identity.
+For STEM / AI-CS questions, the tutor should use reliable learning resources
+when web access is available, explain what sources were used, and turn those
+sources into a teaching path rather than a source dump.
+
+The new source trust hierarchy prioritizes official documentation, official
+course materials, university open courseware, textbooks and open textbooks,
+official problem sets, authoritative technical sources, and reputable tutorials.
+When external resources are used, answers should cite or list sources. When
+internet access is unavailable, the tutor should say that sources could not be
+verified instead of inventing links, textbooks, exams, or papers.
+
+V0.4 does not add API dependencies, scripts, websites, copied textbooks, or
+scraped course materials. This remains a universal diagnosis-first tutor skill,
+not a CS-only skill.
 
 ## Use With Codex
 
@@ -162,7 +190,7 @@ When updating the skill:
 - V0.1: Core universal tutor skill.
 - V0.2: Stronger examples, subject routing, and manual evaluation checklist.
 - V0.3: Manual test matrix and response length calibration.
-- V0.4: Optional subject-specific reference packs.
+- V0.4: STEM / AI-CS resource integration reference pack.
 - V1.0: Stable reusable tutor skill.
 
 ## 中文简介

@@ -26,6 +26,16 @@ Future changes must preserve the core identity of the skill:
 - Keep examples short, clear, and representative across subject areas.
 - Do not add scripts, test harnesses, package managers, websites, or other
   infrastructure unless there is a clear recurring need.
+- Do not add fake sources, invented citations, invented exams, or invented
+  course materials.
+- Do not commit copyrighted textbooks, scraped books, copied course packs, or
+  large copied source materials.
+- Distinguish source-backed claims from general explanation when updating
+  resource-augmented guidance.
+- Preserve the universal identity while supporting the STEM / AI-CS primary use
+  case.
+- Do not add API keys, credentials, or secrets to the repository.
+- Do not add external-search scripts unless explicitly requested.
 
 ## Editing Notes
 

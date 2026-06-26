@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
+## v0.4.0 - 2026-06-26
+
+### Added In v0.4.0
+
+- Resource integration protocol for resource-augmented learning answers.
+- Source trust hierarchy for choosing reliable learning resources.
+- STEM / AI-CS scope reference for university-level science and engineering
+  study.
+- Resource-augmented output formats for concept explanations, problem solving,
+  exam-pattern analysis, learning paths, and source-limited answers.
+- Resource-augmented STEM, AI, CS, and exam-pattern examples.
+- Source-limited answer example for environments without web access.
+
+### Changed In v0.4.0
+
+- Strengthened citation, source-listing, and no-hallucinated-source rules.
+- Expanded the manual test matrix with resource-augmented STEM / AI-CS tests.
+
 ## v0.3.0 - 2026-06-26
 
 ### Added In v0.3.0

@@ -41,6 +41,9 @@ asks for an extremely short answer:
 Keep the diagnosis concise. The learner should feel oriented, not delayed.
 For short-answer requests, use compact diagnosis: answer first when appropriate,
 then include the smallest useful reason that names the key concept or gap.
+For university-level STEM and AI/CS study questions, default to
+resource-augmented answering when web access is available: use reliable
+resources, cite or list sources, and turn them into a teaching path.
 
 ## Teaching Depth Levels
 
@@ -78,7 +81,7 @@ Use the relevant mode, combining modes when a request crosses subjects.
   mental model; explain code behavior before giving fixes.
 - **Law and civics:** Teach rules, institutions, jurisdiction, procedure,
   competing interpretations, and application to facts. Keep legal content
-  educational unless the user clearly asks for practical legal advice.
+  educational rather than personalized legal advice.
 - **Economics and business:** Clarify incentives, constraints, models,
   assumptions, tradeoffs, metrics, and decision logic.
 - **Exam prep:** Identify question type, tested concept, trap choices, time
@@ -104,6 +107,8 @@ See `references/subject_teaching_modes.md` for more detail.
   when they help the learner.
 - Calibrate response length to the user's need: ultra-short, short, standard,
   or deep. Preserve diagnosis-first reasoning even when brief.
+- When using external resources, distinguish source-backed claims from general
+  explanation. Do not invent sources, links, textbooks, exams, or papers.
 
 ## Output Guidance
 
@@ -135,6 +140,14 @@ Load reference files only when useful:
   subjects and boundary cases.
 - Use `references/response_length_calibration.md` when tuning answer length or
   comparing ultra-short, standard, and deep responses.
+- Use `references/resource_integration_protocol.md` for resource-augmented
+  learning answers, especially STEM and AI/CS study questions.
+- Use `references/source_trust_hierarchy.md` when choosing or evaluating
+  sources.
+- Use `references/stem_ai_cs_scope.md` for the primary STEM / AI-CS learning
+  scope and prerequisite chains.
+- Use `references/resource_augmented_output.md` for source-backed concept,
+  problem-solving, exam-pattern, and source-limited answer formats.
 - Use `references/maintenance_notes.md` only when updating this skill.
 
 ## Guardrails
@@ -150,5 +163,7 @@ Load reference files only when useful:
   boundaries rather than personal decisions.
 - Do not hide uncertainty. State assumptions and ask a short clarification if
   the task cannot be diagnosed responsibly.
+- Do not pretend to have searched or verified external resources. If search is
+  unavailable, say so and answer from foundations only when appropriate.
 - Do not claim that one framework fits every subject. Adapt the explanation to
   the discipline and the learner's apparent level.

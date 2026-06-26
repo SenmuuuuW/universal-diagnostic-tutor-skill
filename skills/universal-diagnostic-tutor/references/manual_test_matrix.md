@@ -132,11 +132,103 @@ a failure mode.
 - **Failure:** Teaches only abstract matrix algebra or only AI buzzwords.
 - **Target score:** 5.
 
+## 13. Resource-Augmented Calculus / Linear Algebra
+
+- **Prompt:** "Why does matrix multiplication represent composition of
+  transformations? Please include study resources."
+- **Expected source behavior:** Use or request reliable linear algebra sources,
+  preferably university notes, open courseware, or open textbooks. Cite or list
+  sources if external search is available.
+- **Expected diagnosis behavior:** Identify the gap between matrix formulas and
+  linear maps/composition.
+- **Expected teaching behavior:** Explain `A(Bx) = (AB)x`, basis-vector meaning,
+  order of operations, and a practice direction.
+- **Failure:** Gives only the multiplication formula, invents textbook links, or
+  dumps source summaries without teaching.
+- **Target score:** 5.
+
+## 14. Resource-Augmented Data Structures
+
+- **Prompt:** "How should I study stacks, queues, and trees for problem sets?"
+- **Expected source behavior:** Prefer official problem sets, past exams,
+  open courseware, or reputable data structures notes.
+- **Expected diagnosis behavior:** Identify pattern-recognition and invariant
+  gaps, not just definition gaps.
+- **Expected teaching behavior:** Group practice by operations, invariants,
+  complexity, traversal, recursion, and trap cases.
+- **Failure:** Lists definitions or solved answers without study patterns.
+- **Target score:** 5.
+
+## 15. Resource-Augmented Operating Systems
+
+- **Prompt:** "Why do operating systems need virtual memory? Use sources if you
+  can."
+- **Expected source behavior:** Prefer OS course notes, open courseware, or
+  official architecture references for address translation.
+- **Expected diagnosis behavior:** Identify the misconception that virtual
+  memory only means "more RAM."
+- **Expected teaching behavior:** Teach address spaces, page tables, isolation,
+  protection, and paging as system design ideas.
+- **Failure:** Mentions only swapping or pretends to cite sources not checked.
+- **Target score:** 5.
+
+## 16. Resource-Augmented Machine Learning
+
+- **Prompt:** "How do embeddings connect to linear algebra?"
+- **Expected source behavior:** Prefer university ML/NLP notes, reputable
+  tutorials, or official embedding documentation when implementation matters.
+- **Expected diagnosis behavior:** Identify the missing bridge from vectors to
+  learned representations and similarity.
+- **Expected teaching behavior:** Explain vectors, geometry, cosine similarity,
+  nearest-neighbor search, and later ML connections.
+- **Failure:** Uses jargon without intuition or treats embeddings as magic.
+- **Target score:** 5.
+
+## 17. Resource-Augmented Physics Or Electronics
+
+- **Prompt:** "Why does filtering a signal in frequency space change the time
+  signal?"
+- **Expected source behavior:** Prefer signal processing course notes, open
+  textbooks, or reputable engineering tutorials.
+- **Expected diagnosis behavior:** Identify the gap between time-domain and
+  frequency-domain representations.
+- **Expected teaching behavior:** Connect signals, decomposition, filters,
+  transforms, physical meaning, and engineering use.
+- **Failure:** Gives formulas only or ignores the conceptual representation gap.
+- **Target score:** 5.
+
+## 18. Source-Limited Answer
+
+- **Prompt:** "I need sources for virtual memory, but the environment cannot
+  access the web right now."
+- **Expected source behavior:** State that external resources could not be
+  verified. Do not invent links or source names.
+- **Expected diagnosis behavior:** Identify the topic and source need.
+- **Expected teaching behavior:** Give a foundations explanation and a checklist
+  of source categories to verify later.
+- **Failure:** Pretends to have searched or refuses to help at all.
+- **Target score:** 5.
+
+## 19. Exam-Pattern Analysis With Authoritative Sources
+
+- **Prompt:** "Use official or university-style resources to help me recognize
+  exam patterns for trees and graph traversal."
+- **Expected source behavior:** Prefer official problem sets, past exams,
+  open courseware, or instructor notes; reject answer-only sites.
+- **Expected diagnosis behavior:** Identify the tested concepts and prerequisite
+  gaps: traversal order, invariants, recursion, complexity, and edge cases.
+- **Expected teaching behavior:** Extract recurring patterns, traps, recognition
+  cues, and next practice priorities.
+- **Failure:** Dumps solutions, uses copied answer sites, or ignores source
+  reliability.
+- **Target score:** 5.
+
 ## Review Notes
 
 - Test across at least six rows for small edits and all rows for behavior
   changes.
 - Include at least one short-answer prompt and one high-stakes boundary prompt.
+- For STEM / AI-CS changes, include at least three resource-augmented rows.
 - Prefer natural answers over rigid template completion.
 - If any answer scores below 4, note whether the issue is diagnosis, depth,
   subject routing, safety boundary, or style.
