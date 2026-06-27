@@ -84,13 +84,20 @@ universal-diagnostic-tutor-skill/
         │   ├── source_note_checklist.md
         │   ├── source_packs/
         │   │   ├── ai_ml_data.md
+        │   │   ├── crypto_security_addendum.md
         │   │   ├── exam_problem_set_sources.md
         │   │   ├── graphics_multimedia_hci_software.md
         │   │   ├── math_foundations.md
+        │   │   ├── networks_from_zero.md
+        │   │   ├── numerical_hpc_control.md
         │   │   ├── physics_electronics_signals.md
         │   │   ├── programming_and_cs_foundations.md
+        │   │   ├── source_refresh_maintenance.md
         │   │   ├── source_pack_usage_guide.md
-        │   │   └── systems_networks_security.md
+        │   │   ├── source_specificity_guidelines.md
+        │   │   ├── systems_networks_security.md
+        │   │   ├── theory_formal_methods.md
+        │   │   └── vr_multimedia_addendum.md
         │   └── maintenance_notes.md
         └── examples/
             ├── ai_concept_example.md
@@ -103,10 +110,14 @@ universal-diagnostic-tutor-skill/
             ├── science_example.md
             ├── humanities_example.md
             ├── coding_example.md
+            ├── cryptography_foundation_example.md
+            ├── formal_languages_example.md
             ├── law_civics_example.md
             ├── language_literature_example.md
             ├── mixed_subject_example.md
             ├── natural_style_example.md
+            ├── networks_from_zero_source_example.md
+            ├── numerical_analysis_example.md
             ├── resource_augmented_ai_example.md
             ├── resource_augmented_cs_example.md
             ├── resource_augmented_exam_pattern_example.md
@@ -182,6 +193,20 @@ specific useful pages, and explain how each source supports the learner's next
 step. STEM / AI-CS is the primary current use case, but the skill remains a
 universal diagnosis-first tutor across all subjects.
 
+## V0.6 Improvements
+
+V0.6 strengthens the source-pack system with specialty addendums for
+theory/formal methods, cryptography/security, numerical analysis, HPC, control,
+beginner computer networks, VR, and multimedia. It also adds source specificity
+guidance so the tutor prefers exact lecture, assignment, documentation,
+standard, or textbook pages over broad homepages when possible.
+
+The networks-from-zero pack gives beginners a gentler path before advanced
+networking courses or RFCs. Source refresh maintenance guidance explains how to
+mark stale, unverified, or term-specific links without turning source packs into
+large dumps. This remains a universal diagnosis-first tutor skill; STEM / AI-CS
+coverage is strengthened without making the skill STEM-only.
+
 ## Use With Codex
 
 To use the skill locally, copy the skill folder into your Codex skills
@@ -221,6 +246,7 @@ When updating the skill:
 - V0.3: Manual test matrix and response length calibration.
 - V0.4: STEM / AI-CS resource integration reference pack.
 - V0.5: Curated STEM / AI-CS source packs for resource-augmented tutoring.
+- V0.6: Specialty source addendums and source maintenance guidance.
 - V1.0: Stable reusable tutor skill.
 
 ## 中文简介

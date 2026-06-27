@@ -39,8 +39,13 @@ Future changes must preserve the core identity of the skill:
   instead of silently keeping them.
 - Prefer specific course pages, lecture pages, official documentation pages,
   and problem-set pages over generic homepages.
+- Prefer exact source pages over broad homepages when updating source packs.
+- Mark links as stale, term-specific, or unverified when needed.
 - Preserve the source trust hierarchy when adding or changing source packs.
 - Keep source packs maintainable; do not turn them into huge dumps.
+- Do not add offensive cybersecurity instructions or exploit walkthroughs.
+- Keep security and cryptography content educational and defensive.
+- Keep source entries lightweight and maintainable.
 - Distinguish source-backed claims from general explanation when updating
   resource-augmented guidance.
 - Preserve the universal identity while supporting the STEM / AI-CS primary use

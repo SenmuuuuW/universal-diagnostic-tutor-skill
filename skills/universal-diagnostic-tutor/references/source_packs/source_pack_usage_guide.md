@@ -16,6 +16,23 @@ questions, while the skill remains universal across all subjects.
    practice, and next step.
 7. List sources used or recommended with clear labels.
 
+## Core Packs And Specialty Addendums
+
+Start with the core packs for broad learning questions. Use specialty addendums
+when the learner's topic is clearly narrower or when the core packs are too
+general.
+
+- Use core packs for first-pass routing and prerequisite diagnosis.
+- Use specialty addendums for theory/formal methods, cryptography/security,
+  numerical/HPC/control, networks from zero, and VR/multimedia.
+- Choose one to three sources for most answers. More links usually make the
+  answer harder to use.
+- Separate beginner sources from advanced sources. A beginner path should not
+  start with standards, RFCs, or graduate notes unless the user asks for exact
+  technical detail.
+- Escalate from beginner-friendly sources to advanced courses, standards, or
+  specifications only after the learner has the prerequisites.
+
 ## Routing By Topic
 
 - Calculus, linear algebra, discrete math, probability, statistics,
@@ -32,6 +49,20 @@ questions, while the skill remains universal across all subjects.
   engineering practice: use `graphics_multimedia_hci_software.md`.
 - Exam prep, practice planning, problem-set patterns, official assignments:
   use `exam_problem_set_sources.md`.
+- Formal languages, automata, computability, complexity, proof-heavy theory:
+  use `theory_formal_methods.md`.
+- Cryptography, number theory in crypto, network security, web security:
+  use `crypto_security_addendum.md`.
+- Numerical analysis, scientific computing, HPC, parallel computing, control:
+  use `numerical_hpc_control.md`.
+- Beginner computer networks, TCP/IP, DNS, HTTP, Wireshark labs:
+  use `networks_from_zero.md`.
+- VR, WebXR, multimedia, image/audio/video processing:
+  use `vr_multimedia_addendum.md`.
+- Link refresh and source-pack maintenance:
+  use `source_refresh_maintenance.md`.
+- Exact page citation and avoiding broad homepage citations:
+  use `source_specificity_guidelines.md`.
 
 ## Source Pack Rules
 
@@ -81,3 +112,5 @@ Sources: [labels and links]
 - Treating a tutorial as more authoritative than official documentation.
 - Giving final answers from a problem set without teaching the reusable method.
 - Recommending advanced sources before checking prerequisites.
+- Citing a broad course homepage when an exact lecture, assignment,
+  documentation, standard, or chapter page is available.

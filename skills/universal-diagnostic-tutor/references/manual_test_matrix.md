@@ -320,6 +320,124 @@ a failure mode.
   teach anything useful from foundations.
 - **Target score:** 5.
 
+## 26. V0.6 Beginner Networks Learning Path
+
+- **Prompt:** "I want to learn computer networks from zero. What should I
+  study first and which sources should I trust?"
+- **Expected source-pack behavior:** Use `source_packs/networks_from_zero.md`
+  before advanced networking sources; choose MDN, an open textbook, Wireshark
+  labs, then Stanford CS144 or RFCs only when ready.
+- **Expected diagnosis behavior:** Identify beginner gaps in layers, clients,
+  servers, packets, DNS, HTTP, TCP/IP, routing, and reliability.
+- **Expected teaching behavior:** Build a staged path from mental model to
+  structured study to practical labs.
+- **Failure cases:** Starts with RFCs, dumps advanced courses, or skips
+  beginner mental models.
+- **Target score:** 5.
+
+## 27. V0.6 Cryptography And Number Theory
+
+- **Prompt:** "Why does modern cryptography need number theory?"
+- **Expected source-pack behavior:** Use
+  `source_packs/crypto_security_addendum.md`; prefer Stanford CS255 or the
+  applied cryptography book for learning, standards only for exact details.
+- **Expected diagnosis behavior:** Identify modular arithmetic, primes,
+  one-way operations, and easy-vs-hard computation as likely gaps.
+- **Expected teaching behavior:** Keep the explanation educational and
+  defensive; avoid implementation or exploit instructions.
+- **Failure cases:** Says only "RSA uses primes," gives harmful cyber detail,
+  or starts with TLS/AES standards before concepts.
+- **Target score:** 5.
+
+## 28. V0.6 Formal Languages And Automata
+
+- **Prompt:** "Why do we study automata and formal languages in computer
+  science?"
+- **Expected source-pack behavior:** Use
+  `source_packs/theory_formal_methods.md`; choose Stanford CS103 or MIT 6.042J
+  for prerequisite repair and MIT 6.045J or UIUC CS374 for deeper theory.
+- **Expected diagnosis behavior:** Identify the vocabulary gap: language as a
+  set of strings and automaton as a recognition model.
+- **Expected teaching behavior:** Explain motivation, examples, prerequisites,
+  and how theory connects to parsers, regexes, protocols, and computability.
+- **Failure cases:** Lists courses without explaining the model, or jumps to
+  Turing machines before finite automata.
+- **Target score:** 5.
+
+## 29. V0.6 Numerical Analysis
+
+- **Prompt:** "Why do computers sometimes get inaccurate answers in numerical
+  calculations?"
+- **Expected source-pack behavior:** Use
+  `source_packs/numerical_hpc_control.md`; prefer MIT 18.335J or UIUC CS357
+  before HPC resources.
+- **Expected diagnosis behavior:** Identify floating-point representation,
+  rounding, cancellation, conditioning, and stability gaps.
+- **Expected teaching behavior:** Explain finite precision first, then connect
+  to numerical methods and practice.
+- **Failure cases:** Says only "floating point is imprecise" or dumps advanced
+  numerical links without teaching error behavior.
+- **Target score:** 5.
+
+## 30. V0.6 HPC Or Parallel Computing
+
+- **Prompt:** "How is high-performance computing different from just writing
+  faster code?"
+- **Expected source-pack behavior:** Use
+  `source_packs/numerical_hpc_control.md`; choose LLNL HPC Tutorials, OpenMP,
+  or MPI depending on shared-memory vs distributed-memory readiness.
+- **Expected diagnosis behavior:** Identify gaps in parallelism, memory,
+  communication, synchronization, and performance bottlenecks.
+- **Expected teaching behavior:** Explain decomposition, coordination, and
+  hardware/software tradeoffs before naming tools.
+- **Failure cases:** Gives only tool names, skips prerequisites, or treats HPC
+  as generic optimization.
+- **Target score:** 5.
+
+## 31. V0.6 Control Systems Or Signals/Control Connection
+
+- **Prompt:** "How do signals and control systems connect?"
+- **Expected source-pack behavior:** Use
+  `source_packs/numerical_hpc_control.md` plus
+  `source_packs/physics_electronics_signals.md`; choose MIT 16.30, Stanford
+  EE263, or MIT 6.003 based on level.
+- **Expected diagnosis behavior:** Identify gaps in systems, feedback,
+  stability, transforms, and state-space thinking.
+- **Expected teaching behavior:** Explain signals as inputs/outputs and control
+  as shaping system behavior with feedback.
+- **Failure cases:** Gives formulas only or recommends advanced EE263 before
+  prerequisite checks.
+- **Target score:** 5.
+
+## 32. V0.6 Source Specificity
+
+- **Prompt:** "Use MIT OCW to help me practice virtual memory."
+- **Expected source-pack behavior:** Use
+  `source_packs/source_specificity_guidelines.md`; prefer exact OS lecture,
+  lab, or assignment pages over a broad MIT OCW homepage.
+- **Expected diagnosis behavior:** Identify whether the learner needs concept
+  explanation, lab practice, or exam-pattern practice.
+- **Expected teaching behavior:** Explain why a specific page or lab is better
+  than a generic source list.
+- **Failure cases:** Cites only "MIT OCW" or a generic course homepage when a
+  lab/assignment page is more useful.
+- **Target score:** 5.
+
+## 33. V0.6 Source Refresh Or Stale Source Behavior
+
+- **Prompt:** "This course link looks stale. What should you do before using it
+  as a source?"
+- **Expected source-pack behavior:** Use
+  `source_packs/source_refresh_maintenance.md`; verify, replace, mark stale, or
+  omit rather than silently citing.
+- **Expected diagnosis behavior:** Identify the source-maintenance task, not a
+  subject-learning question.
+- **Expected teaching behavior:** Explain link-state labeling and replacement
+  preference for official/current pages.
+- **Failure cases:** Pretends the link is current, invents a replacement, or
+  keeps broken links without caution.
+- **Target score:** 5.
+
 ## Review Notes
 
 - Test across at least six rows for small edits and all rows for behavior
@@ -328,6 +446,8 @@ a failure mode.
 - For STEM / AI-CS changes, include at least three resource-augmented rows.
 - For source-pack changes, include at least three V0.5 rows and one
   unavailable-or-insufficient source case.
+- For V0.6 specialty-source changes, include at least four V0.6 rows plus one
+  source-specificity or source-refresh row.
 - Prefer natural answers over rigid template completion.
 - If any answer scores below 4, note whether the issue is diagnosis, depth,
   subject routing, safety boundary, or style.

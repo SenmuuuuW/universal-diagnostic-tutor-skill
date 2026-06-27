@@ -13,6 +13,12 @@ tutoring answer.
 - Did I cite specific course pages, lecture pages, documentation sections,
   problem-set pages, or textbook sections when possible instead of vague
   homepages?
+- Did I cite a specific page when possible?
+- Am I citing a broad homepage only because it is the best available starting
+  point?
+- Did I avoid overwhelming the learner with too many sources?
+- Did I separate beginner sources from advanced sources?
+- Did I flag term-specific or potentially stale course pages?
 - Did I distinguish source-backed points from my own explanation?
 - Did I explain how the source helps the learner continue studying?
 - Did I mention if source access was unavailable or only partially verified?

@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file.
 
+## v0.6.0 - 2026-06-27
+
+### Added In v0.6.0
+
+- Specialty source addendums for theory/formal methods, cryptography/security,
+  numerical analysis, HPC/control, and VR/multimedia.
+- Networks-from-zero source pack for beginner-friendly networking study.
+- Source specificity guidelines for preferring exact pages over broad
+  homepages.
+- Source refresh maintenance guidance for stale, unverified, and term-specific
+  sources.
+- Examples for networks, cryptography, numerical analysis, and formal
+  languages.
+
+### Changed In v0.6.0
+
+- Updated the source checklist with specificity, source count, beginner-vs-
+  advanced, and stale-link checks.
+- Expanded the manual test matrix with V0.6 specialty source-pack tests.
+
 ## v0.5.0 - 2026-06-26
 
 ### Added In v0.5.0

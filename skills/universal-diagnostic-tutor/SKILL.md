@@ -47,6 +47,9 @@ resources, cite or list sources, and turn them into a teaching path.
 Use curated source packs as preferred starting points for STEM / AI-CS resource
 selection, but still verify sources when possible and do not treat the packs as
 exhaustive.
+For beginner STEM / AI-CS learners, choose beginner-friendly sources first and
+escalate to advanced courses, standards, or specifications only when the
+prerequisites are ready.
 
 ## Teaching Depth Levels
 
@@ -159,6 +162,14 @@ Load reference files only when useful:
 - Use files under `references/source_packs/` as preferred starting points for
   math, programming, CS, systems, AI/ML, physics, signals, graphics, HCI,
   software, exams, and problem sets.
+- Use specialty source addendums under `references/source_packs/` for
+  theory/formal methods, cryptography/security, numerical/HPC/control,
+  networks from zero, and VR/multimedia topics.
+- Use `references/source_packs/source_specificity_guidelines.md` to prefer
+  exact lecture, assignment, documentation, standard, or chapter pages over
+  broad homepages when possible.
+- Use `references/source_packs/source_refresh_maintenance.md` when updating or
+  auditing source-pack links.
 - Use `references/source_note_checklist.md` before citing or listing external
   resources.
 - Use `references/maintenance_notes.md` only when updating this skill.
