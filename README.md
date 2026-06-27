@@ -2,11 +2,11 @@
 
 A reusable Codex Agent Skill for diagnosis-first tutoring across subjects.
 
-This project contains the first version of `universal-diagnostic-tutor`, a
-universal teaching skill for Codex and ChatGPT-style assistants. It is designed
-for learning-related questions in math, science, humanities, social sciences,
-law, economics, history, geography, literature, language learning, writing,
-coding, AI, exam prep, and general concept learning.
+This project contains `universal-diagnostic-tutor`, a universal teaching skill
+for Codex and ChatGPT-style assistants. It is designed for learning-related
+questions in math, science, humanities, social sciences, law, economics,
+history, geography, literature, language learning, writing, coding, AI, exam
+prep, and general concept learning.
 
 ## Not Answer-First, Diagnosis-First
 
@@ -71,6 +71,12 @@ universal-diagnostic-tutor-skill/
         ├── SKILL.md
         ├── references/
         │   ├── subject_routing.md
+        │   ├── adaptive_teaching_engine.md
+        │   ├── knowledge_gap_taxonomy.md
+        │   ├── multiturn_tutoring_protocol.md
+        │   ├── practice_ladder.md
+        │   ├── mistake_analysis_protocol.md
+        │   ├── stem_teaching_sequence.md
         │   ├── teaching_depth_levels.md
         │   ├── subject_teaching_modes.md
         │   ├── output_formats.md
@@ -100,6 +106,7 @@ universal-diagnostic-tutor-skill/
         │   │   └── vr_multimedia_addendum.md
         │   └── maintenance_notes.md
         └── examples/
+            ├── adaptive_multiturn_example.md
             ├── ai_concept_example.md
             ├── bad_vs_good_example.md
             ├── economics_business_example.md
@@ -115,15 +122,21 @@ universal-diagnostic-tutor-skill/
             ├── law_civics_example.md
             ├── language_literature_example.md
             ├── mixed_subject_example.md
+            ├── mistake_analysis_example.md
+            ├── mistake_analysis_teaching_example.md
             ├── natural_style_example.md
             ├── networks_from_zero_source_example.md
             ├── numerical_analysis_example.md
+            ├── practice_ladder_example.md
             ├── resource_augmented_ai_example.md
             ├── resource_augmented_cs_example.md
             ├── resource_augmented_exam_pattern_example.md
             ├── resource_augmented_math_example.md
             ├── source_pack_usage_example.md
             ├── source_limited_answer_example.md
+            ├── stem_intuition_to_formal_example.md
+            ├── stem_teaching_sequence_example.md
+            ├── still_confused_example.md
             ├── writing_revision_example.md
             └── exam_prep_example.md
 ```
@@ -207,6 +220,23 @@ mark stale, unverified, or term-specific links without turning source packs into
 large dumps. This remains a universal diagnosis-first tutor skill; STEM / AI-CS
 coverage is strengthened without making the skill STEM-only.
 
+## V0.7 Improvements
+
+V0.7 returns attention to the core teaching engine. It adds an adaptive
+teaching engine, knowledge-gap taxonomy, multiturn tutoring protocol, practice
+ladder, mistake analysis protocol, and STEM teaching sequence.
+
+The new adaptive teaching reference keeps resource use in its proper role:
+sources can support teaching, but they do not replace diagnosis, explanation,
+practice, feedback, and transfer. V0.7 remains universal across subjects, with
+examples for matrix multiplication follow-up tutoring, calculus confusion,
+algebra mistake analysis, conditional-probability misconception repair,
+recursion practice ladders, and STEM / AI-CS intuition-to-formal reasoning.
+
+This release strengthens teaching behavior, not source collection. It adds no
+new source packs, scripts, websites, APIs, package setup, PDFs, secrets, or
+infrastructure.
+
 ## Use With Codex
 
 To use the skill locally, copy the skill folder into your Codex skills
@@ -247,6 +277,8 @@ When updating the skill:
 - V0.4: STEM / AI-CS resource integration reference pack.
 - V0.5: Curated STEM / AI-CS source packs for resource-augmented tutoring.
 - V0.6: Specialty source addendums and source maintenance guidance.
+- V0.7: Adaptive teaching engine for multi-turn tutoring, mistake analysis,
+  practice ladders, and mastery building.
 - V1.0: Stable reusable tutor skill.
 
 ## 中文简介

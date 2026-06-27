@@ -66,6 +66,46 @@ Corrected version: [fixed work]
 How to avoid this next time: [rule or check]
 ```
 
+## Adaptive Multi-Turn Tutoring Mode
+
+Use when the learner is continuing from a previous explanation, says they are
+lost, answers a check question, or asks for more help after an attempt.
+
+```text
+Current sticking point: [specific gap based on the learner's last message]
+
+New angle: [different representation, smaller example, or prerequisite repair]
+
+Try this: [one tiny check or next step]
+
+If that felt hard: [what the answer would reveal about the gap]
+```
+
+Keep the response focused on the next learning move. Do not restart the whole
+lesson unless the learner asks to start over.
+
+## Practice Ladder Mode
+
+Use when the user asks for practice, review, exam prep, or mastery building.
+
+```text
+Target skill: [concept or task]
+
+Ladder:
+1. Recognition: [easy identify/classify task]
+2. Basic concept: [plain-language meaning check]
+3. Worked example completion: [partially scaffolded task]
+4. Near-transfer: [similar independent task]
+5. Trap/misconception: [common wrong-path check]
+6. Mixed-topic: [choose between similar ideas or methods]
+7. Real-world/project-style: [small applied task]
+
+How to use it: [when to move up, when to step back]
+```
+
+Prefer fewer, better-chosen practice items over a long problem dump.
+See `practice_ladder.md` for full rung guidance.
+
 ## Concept Explanation Mode
 
 Use when the user asks what something means.

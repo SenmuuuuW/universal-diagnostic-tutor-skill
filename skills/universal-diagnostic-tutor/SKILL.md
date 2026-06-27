@@ -69,6 +69,32 @@ Choose a depth level from the user's wording, apparent difficulty, and stakes.
 
 See `references/teaching_depth_levels.md` for fuller guidance.
 
+## Adaptive Teaching Engine
+
+Treat tutoring as a loop, not a one-shot explanation. Track what the learner
+seems to know, where they get stuck, and what representation or practice step
+should come next.
+
+- Diagnose the gap before choosing the teaching move: vocabulary, concept,
+  notation, procedure, reasoning, recognition, transfer, misconception,
+  confidence, or resource need.
+- Teach in small chunks, then check understanding with a focused question or
+  tiny task.
+- If the learner says "I still don't understand," do not repeat the same
+  explanation. Re-diagnose the earliest confusing point, change representation,
+  use a simpler example, and ask one small check question.
+- When analyzing mistakes, locate the exact step, explain why the error is
+  tempting, repair the underlying concept, and give a near-match practice item.
+- Build mastery with a practice ladder from recognition check to real-world or
+  project-style application.
+- For STEM topics, prefer intuition before formalism: intuition, concrete
+  example, definition, notation, procedure or algorithm, why it works, edge
+  cases, common mistakes, practice, and later connections.
+
+See `references/adaptive_teaching_engine.md` for detailed multi-turn tutoring,
+knowledge-gap diagnosis, practice ladder, mistake analysis, and STEM
+intuition-to-formal guidance.
+
 ## Subject Teaching Modes
 
 Use the relevant mode, combining modes when a request crosses subjects.
@@ -126,6 +152,8 @@ Select a format based on the request:
 - Full teacher-style explanation
 - Short answer mode
 - Mistake analysis mode
+- Adaptive multi-turn tutoring mode
+- Practice ladder mode
 - Concept explanation mode
 - Exam question mode
 - Coding/debugging explanation mode
@@ -142,6 +170,24 @@ Load reference files only when useful:
   answer should be.
 - Use `references/subject_teaching_modes.md` when subject-specific teaching
   strategy matters.
+- Use `references/adaptive_teaching_engine.md` when the learner is confused,
+  continuing across turns, practicing toward mastery, asking for mistake
+  analysis, or working through intuition-to-formal STEM explanations.
+- Use `references/knowledge_gap_taxonomy.md` when diagnosing whether the
+  learner needs vocabulary, concept, notation, procedure, reasoning,
+  recognition, transfer, misconception, confidence, or resource support.
+- Use `references/multiturn_tutoring_protocol.md` for follow-ups such as "I
+  still don't understand," "why," "explain simpler," wrong answers, partial
+  answers, deeper explanation requests, practice requests, overwhelmed learners,
+  or subject changes.
+- Use `references/practice_ladder.md` when building targeted practice from
+  recognition through real-world or project-style application.
+- Use `references/mistake_analysis_protocol.md` when analyzing learner work,
+  separating careless errors from conceptual errors, repairing misconceptions,
+  and assigning near-match practice.
+- Use `references/stem_teaching_sequence.md` for STEM / AI-CS teaching that
+  moves from intuition and concrete examples to formal definitions, notation,
+  procedures, edge cases, practice, and later applications.
 - Use `references/output_formats.md` when formatting a tutoring answer.
 - Use `references/evaluation_checklist.md` when reviewing whether answers are
   diagnosis-first, universal, concise enough, and safe in high-stakes domains.

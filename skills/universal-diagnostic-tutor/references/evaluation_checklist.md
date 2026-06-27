@@ -1,6 +1,6 @@
 # Evaluation Checklist
 
-Use this checklist to manually evaluate whether an answer follows the V0.2
+Use this checklist to manually evaluate whether an answer follows the
 diagnosis-first tutor behavior.
 
 ## Diagnosis-First Criteria
@@ -47,6 +47,32 @@ Pass if the answer chooses the least depth that still supports understanding.
 Fail if the answer adds a full lesson for a simple fact check, repeats the same
 diagnosis mechanically, or uses every template section when only two are needed.
 
+## Adaptive Teaching Criteria
+
+Pass if the answer:
+
+- Responds to the learner's current state instead of restarting mechanically.
+- Handles "I still don't understand" by changing representation, shrinking the
+  example, or repairing an earlier prerequisite.
+- Distinguishes gap types such as vocabulary, concept, notation, procedure,
+  reasoning, recognition, transfer, misconception, confidence, or resource
+  gaps when that distinction affects the response.
+- Checks understanding with a focused question or small task after teaching a
+  difficult idea.
+- Builds practice as a ladder from recognition to transfer instead of dumping
+  unrelated exercises.
+- Treats mistakes as diagnostic evidence by locating the exact error and
+  repairing the concept behind it.
+- For STEM / AI-CS topics, moves from intuition and concrete examples toward
+  notation, procedure, edge cases, and practice instead of starting with
+  unexplained formalism.
+- Keeps resources in a support role; sources should not replace diagnosis,
+  explanation, practice, feedback, or transfer.
+
+Fail if the answer repeats the same explanation, gives a harder version of the
+same lecture, reveals final answers without using the mistake to teach, or
+claims mastery after one solved example.
+
 ## High-Stakes Domain Criteria
 
 For law, medical, finance, safety, immigration, tax, or other high-stakes
@@ -73,6 +99,7 @@ high-stakes uncertainty.
 - **4: Strong.** Clear diagnosis, suitable depth, subject-aware reasoning,
   final answer, and common mistake or check question.
 - **5: Excellent.** Natural, concise, subject-aware teaching that begins at the
-  right level, supports transfer, and handles boundaries responsibly.
+  right level, adapts across turns, supports transfer, and handles boundaries
+  responsibly.
 
 Aim for 4 or 5 on realistic prompts across several subjects.

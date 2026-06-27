@@ -438,6 +438,148 @@ a failure mode.
   keeps broken links without caution.
 - **Target score:** 5.
 
+## 34. V0.7 "I Still Don't Understand" Follow-Up
+
+- **Prompt:** After an explanation of derivatives as slope, the learner says:
+  "I still don't understand. What is the derivative actually doing?"
+- **Expected diagnosis behavior:** Identify a concept or mental-model gap around
+  what "slope" means in context.
+- **Expected adaptive behavior:** Do not repeat the same slope explanation.
+  Identify the likely mental-model gap and switch to a smaller example such as
+  position changing over time.
+- **Expected teaching behavior:** Explain derivative as instant rate of change,
+  contrast average vs instant change, and ask one tiny check question.
+- **Failure cases:** Restarts a full calculus lecture, gives only the formal
+  limit definition, or says "it is just slope" again.
+- **Target score:** 5.
+
+## 35. V0.7 Mistake Analysis
+
+- **Prompt:** "I solved `2(x - 3) = 10` as `2x - 3 = 10`, so `x = 6.5`.
+  What did I do wrong?"
+- **Expected diagnosis behavior:** Identify a procedure and misconception gap
+  around distributing across a parenthesized group.
+- **Expected adaptive behavior:** Locate the exact distribution mistake and
+  explain why it is tempting.
+- **Expected teaching behavior:** Show that `2` multiplies both `x` and `-3`,
+  correct the work, and give one near-match practice item.
+- **Failure cases:** Only gives the correct answer or says "distribute
+  properly" without teaching the underlying operation.
+- **Target score:** 5.
+
+## 36. V0.7 Wrong Answer Response
+
+- **Prompt:** After being asked "What is the base case for factorial?" the
+  learner answers: "The base case is `n * factorial(n - 1)`."
+- **Expected diagnosis behavior:** Identify that the learner gave the recursive
+  case instead of the stopping condition; classify this as a procedure and
+  concept gap.
+- **Expected adaptive behavior:** Preserve the useful part, separate recursive
+  case from base case, and ask for the stopping value.
+- **Expected teaching behavior:** Explain that the base case prevents infinite
+  recursion and usually returns a direct value such as `1` for `0!` or `1!`.
+- **Failure cases:** Says only "wrong" or gives full code without repairing the
+  base-case distinction.
+- **Target score:** 5.
+
+## 37. V0.7 Explain Simpler
+
+- **Prompt:** "Explain matrix eigenvectors simpler. I got lost."
+- **Expected diagnosis behavior:** Identify abstraction overload and likely
+  notation or concept gap.
+- **Expected adaptive behavior:** Step down one level, avoid heavy notation,
+  use a visual or physical analogy, and ask one recognition check.
+- **Expected teaching behavior:** Explain that an eigenvector keeps its
+  direction under a transformation, while its length may scale.
+- **Failure cases:** Starts with `Av = lambda v` without plain-language meaning,
+  or repeats the same formal explanation.
+- **Target score:** 5.
+
+## 38. V0.7 Deeper Explanation Request
+
+- **Prompt:** "I get that supply shifts affect price, but why does the graph
+  model work at all? Give me the deeper reasoning."
+- **Expected diagnosis behavior:** Identify a reasoning gap about model purpose,
+  assumptions, and equilibrium logic.
+- **Expected adaptive behavior:** Increase depth by explaining mechanism and
+  assumptions, not by adding unrelated facts.
+- **Expected teaching behavior:** Explain buyers, sellers, incentives,
+  equilibrium, ceteris paribus assumptions, and limits of the model.
+- **Failure cases:** Repeats only "supply left means price up" or gives a long
+  economics lecture without answering why the model works.
+- **Target score:** 5.
+
+## 39. V0.7 Practice Ladder
+
+- **Prompt:** "I understand recursion when you explain it, but I freeze when I
+  need to write a recursive function. Give me practice."
+- **Expected diagnosis behavior:** Identify procedure and transfer gaps around
+  base case, smaller input, and recursive case.
+- **Expected adaptive behavior:** Use a ladder rather than random exercises.
+- **Expected teaching behavior:** Include recognition, concept check, worked
+  completion, near-transfer, trap/misconception, mixed-topic, and project-style
+  rungs.
+- **Failure cases:** Dumps many recursion problems or reteaches only the
+  definition.
+- **Target score:** 5.
+
+## 40. V0.7 Mistake Analysis With Misconception Repair
+
+- **Prompt:** "A medical test is 99% accurate, so I said a positive result
+  means 99% chance of disease. What did I do wrong?"
+- **Expected diagnosis behavior:** Identify a conditional-probability and
+  base-rate misconception, not just a calculation error.
+- **Expected adaptive behavior:** Explain why the wrong path felt tempting and
+  use a concrete-count example before formulas.
+- **Expected teaching behavior:** Separate sensitivity/false positives from
+  probability given a positive test, then give a near-match practice item.
+- **Failure cases:** Says only "use Bayes' theorem" or gives a formula without
+  repairing the intuition.
+- **Target score:** 5.
+
+## 41. V0.7 STEM Intuition-To-Formal Sequence
+
+- **Prompt:** "Why does gradient descent move in the negative gradient
+  direction? I know derivatives but not multivariable optimization."
+- **Expected diagnosis behavior:** Identify a prerequisite bridge from
+  single-variable derivatives to multivariable direction of steepest change.
+- **Expected adaptive behavior:** Bridge from single-variable slope to
+  multivariable steepest increase before formal notation.
+- **Expected teaching behavior:** Start with terrain intuition, define gradient
+  as direction of steepest increase, explain why negative gradient decreases
+  fastest locally, then show the update rule and a tiny check.
+- **Failure cases:** Starts with formulas only, assumes linear algebra mastery,
+  or skips the intuition-to-formal bridge.
+- **Target score:** 5.
+
+## 42. V0.7 Transfer To Similar Problems
+
+- **Prompt:** "I can solve `3x + 5 = 20`, but word problems with the same idea
+  confuse me. How do I recognize them?"
+- **Expected diagnosis behavior:** Identify a recognition and transfer gap, not
+  an algebra-procedure gap.
+- **Expected adaptive behavior:** Extract the underlying equation structure and
+  compare symbolic and word-problem versions.
+- **Expected teaching behavior:** Teach cues such as total, fixed amount,
+  repeated amount, unknown quantity, and give a near-transfer word problem.
+- **Failure cases:** Solves one word problem without teaching recognition cues.
+- **Target score:** 5.
+
+## 43. V0.7 Universal Mastery Beyond STEM
+
+- **Prompt:** "I can identify metaphors in poems when someone points them out,
+  but I miss them on my own. How do I practice?"
+- **Expected diagnosis behavior:** Identify a recognition and transfer gap in a
+  literature task.
+- **Expected adaptive behavior:** Diagnose a recognition and transfer gap in a
+  literature task.
+- **Expected teaching behavior:** Build a non-STEM practice ladder: literal
+  meaning, odd word choice, repeated image, evidence check, contrast with
+  non-metaphor, and a short teach-back.
+- **Failure cases:** Treats the skill as STEM-only or gives a generic "read
+  more poems" answer.
+- **Target score:** 5.
+
 ## Review Notes
 
 - Test across at least six rows for small edits and all rows for behavior
@@ -448,6 +590,10 @@ a failure mode.
   unavailable-or-insufficient source case.
 - For V0.6 specialty-source changes, include at least four V0.6 rows plus one
   source-specificity or source-refresh row.
+- For V0.7 adaptive-teaching changes, include rows that cover "I still don't
+  understand," wrong answers, simpler explanation, deeper explanation,
+  practice ladders, mistake analysis, STEM intuition-to-formal teaching,
+  transfer, and at least one non-STEM case.
 - Prefer natural answers over rigid template completion.
 - If any answer scores below 4, note whether the issue is diagnosis, depth,
   subject routing, safety boundary, or style.

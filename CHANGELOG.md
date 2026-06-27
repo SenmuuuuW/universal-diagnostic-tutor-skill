@@ -2,6 +2,41 @@
 
 All notable changes to this project will be documented in this file.
 
+## v0.7.0 - 2026-06-28
+
+### Added In v0.7.0
+
+- Adaptive teaching engine reference for multi-turn tutoring, knowledge-gap
+  diagnosis, "I still don't understand" handling, practice ladders, mistake
+  analysis, STEM intuition-to-formal teaching, and mastery signals.
+- Knowledge gap taxonomy for vocabulary, concept, notation, procedure,
+  reasoning, recognition, transfer, misconception, confidence, and resource
+  gaps.
+- Multiturn tutoring protocol for confused learners, wrong or partially correct
+  answers, simpler or deeper explanations, practice requests, overwhelmed
+  learners, and subject changes.
+- Practice ladder reference from recognition checks through real-world or
+  project-style application.
+- Mistake analysis protocol for distinguishing careless and conceptual errors,
+  repairing misconceptions, and assigning near-match practice.
+- STEM teaching sequence for math, programming, AI/ML, computer systems,
+  physics, electronics, and signals.
+- Output formats for adaptive multi-turn tutoring and practice ladder mode.
+- Examples for matrix-multiplication follow-up tutoring, still-confused
+  derivative handling, algebra mistake analysis, conditional-probability
+  misconception repair, recursion practice ladders, and gradient-descent
+  STEM teaching.
+- Manual test rows for V0.7 adaptive teaching behavior across STEM and
+  non-STEM learning scenarios.
+
+### Changed In v0.7.0
+
+- Updated `SKILL.md` to route confused learners, practice requests, mistake
+  analysis, and multi-turn tutoring through the adaptive teaching engine.
+- Expanded the evaluation checklist with adaptive teaching criteria.
+- Clarified depth adaptation so deeper answers change teaching strategy rather
+  than merely adding more detail.
+
 ## v0.6.0 - 2026-06-27
 
 ### Added In v0.6.0

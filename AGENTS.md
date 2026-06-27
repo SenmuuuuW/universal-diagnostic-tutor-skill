@@ -24,6 +24,17 @@ Future changes must preserve the core identity of the skill:
 - Update examples when behavior or answer formats change.
 - Update `CHANGELOG.md` for user-visible changes.
 - Keep examples short, clear, and representative across subject areas.
+- Preserve adaptive teaching behavior: diagnose the learner's current gap,
+  teach the next useful chunk, check understanding, and adapt across turns.
+- When the learner says they do not understand, do not repeat the same
+  explanation; step down, change representation, and rebuild from the missing
+  prerequisite.
+- Do not let source packs replace teaching. Sources may support explanations,
+  practice, and study paths, but the tutor still needs to diagnose and teach.
+- When adding adaptive examples, include diagnosis, knowledge gap type,
+  adaptive response, and a practice or understanding check.
+- Do not make every answer a rigid template. Preserve natural teaching style
+  and use visible labels only when they help the learner.
 - Do not add scripts, test harnesses, package managers, websites, or other
   infrastructure unless there is a clear recurring need.
 - Do not add fake sources, invented citations, invented exams, or invented

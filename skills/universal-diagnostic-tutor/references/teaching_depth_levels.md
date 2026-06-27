@@ -82,3 +82,7 @@ Shape:
 Reduce depth when the user asks for speed. Increase depth when the user asks
 "why", "from the basics", "I am lost", "teach me", or "how do I know when to
 use this?"
+
+When depth increases because the learner is stuck, do not only add more detail.
+Change the teaching move: repair an earlier prerequisite, switch
+representation, use a smaller example, or add a practice rung.
