@@ -28,15 +28,16 @@ asks for an extremely short answer:
 2. Identify the specific topic, skill, or task type.
 3. Identify prerequisite knowledge needed for the task.
 4. Diagnose likely knowledge gaps or misconceptions.
-5. Decide where the explanation should begin.
-6. Teach the necessary foundations first.
-7. Explain step by step.
-8. Explain why each step makes sense.
-9. Give the final answer, conclusion, interpretation, or working solution.
-10. Summarize how to solve similar problems.
-11. Point out common mistakes.
-12. Connect to real-world applications when useful.
-13. Give a short practice or understanding-check question.
+5. Select a teaching mode: Auto, Zero-Base, Standard, or Advanced.
+6. Decide where the explanation should begin.
+7. Teach the necessary foundations first.
+8. Explain step by step.
+9. Explain why each step makes sense.
+10. Give the final answer, conclusion, interpretation, or working solution.
+11. Summarize how to solve similar problems.
+12. Point out common mistakes.
+13. Connect to real-world applications when useful.
+14. Give a short practice or understanding-check question.
 
 Keep the diagnosis concise. The learner should feel oriented, not delayed.
 For short-answer requests, use compact diagnosis: answer first when appropriate,
@@ -52,6 +53,11 @@ escalate to advanced courses, standards, or specifications only when the
 prerequisites are ready.
 Use teacher-like pacing: one subproblem at a time, teach one useful chunk,
 pause at meaningful stop points, and continue after a focused check.
+If the learner declares zero-base, beginner, or "from scratch," use Zero-Base
+Mode. If they show normal classroom exposure, use Standard Mode. If they ask
+for rigor, proof, derivation, edge cases, transfer, or concise advanced
+explanation, use Advanced Mode. If no mode is declared, infer the mode or ask a
+short calibration question when the level would change the answer.
 
 ## Teaching Depth Levels
 
@@ -163,6 +169,9 @@ See `references/subject_teaching_modes.md` for more detail.
 - Before citing sources, use a short source note check: choose appropriate
   source types, prefer specific pages, avoid unverifiable citations, and explain
   how the source helps the learner continue studying.
+- Format mathematical expressions as Markdown/LaTeX math, not fenced code
+  blocks. Reserve code blocks for actual code, commands, file paths, or literal
+  text where spacing is essential.
 
 ## Output Guidance
 
@@ -188,6 +197,14 @@ Load reference files only when useful:
   is ambiguous or mixed.
 - Use `references/teaching_depth_levels.md` when choosing how detailed the
   answer should be.
+- Use `references/teaching_mode_selection_protocol.md` when selecting or
+  switching between Auto, Zero-Base, Standard, and Advanced teaching modes.
+- Use `references/beginner_foundation_teaching_protocol.md` when the learner
+  is zero-base, missing prerequisites, or confused by objects, notation,
+  vocabulary, or symbols.
+- Use `references/standard_and_advanced_mode_protocol.md` when calibrating
+  standard problem-solving help versus advanced proof, derivation, rigor,
+  efficiency, assumptions, edge cases, or transfer.
 - Use `references/subject_teaching_modes.md` when subject-specific teaching
   strategy matters.
 - Use `references/adaptive_teaching_engine.md` when the learner is confused,
@@ -238,6 +255,10 @@ Load reference files only when useful:
   formula, theorem, derivation, or algorithm works.
 - Use `references/stem_problem_solving_protocol.md` when solving, debugging,
   modeling, deriving, or teaching STEM / AI-CS problem-solving methods.
+- Use `references/math_formatting_protocol.md` whenever mathematical formulas,
+  derivations, equations, or proofs appear.
+- Use `references/user_mode_onboarding_guide.md` when documentation, examples,
+  or a first tutoring turn should invite the learner to choose a learning mode.
 - Use `references/output_formats.md` when formatting a tutoring answer.
 - Use `references/evaluation_checklist.md` when reviewing whether answers are
   diagnosis-first, universal, concise enough, and safe in high-stakes domains.
@@ -303,6 +324,10 @@ Load reference files only when useful:
   find authoritative learning resources; if it is unavailable, say so clearly.
 - Do not let resource discovery become link dumping, a copied course pack, a
   RAG system, or a replacement for direct teaching.
+- Do not assume a beginner knows notation, symbols, object types, or
+  prerequisites. Do not slow down advanced learners unnecessarily.
+- Do not put ordinary mathematical formulas, algebra, calculus, probability,
+  linear algebra, or proof steps in fenced code blocks.
 - Do not claim that one framework fits every subject. Adapt the explanation to
   the discipline and the learner's apparent level.
 - Do not turn mastery tracking into a rigid scoring system, persistent memory,

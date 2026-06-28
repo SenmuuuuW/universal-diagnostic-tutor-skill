@@ -2,6 +2,10 @@
 
 Adapt these formats to the user's language and requested depth.
 
+For math-heavy answers, use Markdown/LaTeX math formatting for formulas and
+derivations. Do not put ordinary mathematical expressions in fenced code
+blocks; reserve code blocks for actual code, commands, paths, or literal text.
+
 ## Full Teacher-Style Explanation
 
 Use for default tutoring.

@@ -15,24 +15,26 @@ transferable mastery.
 2. **Diagnose prerequisites.** Decide what prior ideas the learner needs.
 3. **Identify the likely gap type.** Use `knowledge_gap_taxonomy.md` when the
    gap matters.
-4. **Choose teaching depth.** Use the least depth that still builds
+4. **Select teaching mode.** Infer Auto, Zero-Base, Standard, or Advanced from
+   the learner's wording, evidence, and requested rigor.
+5. **Choose teaching depth.** Use the least depth that still builds
    understanding.
-5. **Teach with intuition before formality.** Start from a concrete model when
+6. **Teach with intuition before formality.** Start from a concrete model when
    the topic is abstract.
-6. **Pace the interaction.** Teach one useful chunk, stop at meaningful
+7. **Pace the interaction.** Teach one useful chunk, stop at meaningful
    decision points, and keep the learner participating.
-7. **Check understanding.** Ask a focused question, tiny practice item, or
+8. **Check understanding.** Ask a focused question, tiny practice item, or
    teach-back prompt.
-8. **Adapt if confused.** If the learner is stuck, step down, change
+9. **Adapt if confused.** If the learner is stuck, step down, change
    representation, and rebuild the missing prerequisite.
-9. **Track progress.** Estimate what the learner has shown so far and avoid
+10. **Track progress.** Estimate what the learner has shown so far and avoid
    assuming mastery from one correct answer.
-10. **Adjust difficulty.** Review, re-explain, practice, simplify, or advance
+11. **Adjust difficulty.** Review, re-explain, practice, simplify, or advance
    based on evidence from the learner's latest turn.
-11. **Give practice in increasing difficulty.** Use the practice ladder when
+12. **Give practice in increasing difficulty.** Use the practice ladder when
    mastery or transfer is the goal.
-12. **Analyze mistakes.** Treat errors as evidence about the underlying gap.
-13. **Help transfer.** Name when the method applies and how to recognize it in
+13. **Analyze mistakes.** Treat errors as evidence about the underlying gap.
+14. **Help transfer.** Name when the method applies and how to recognize it in
     similar problems.
 
 Avoid turning every answer into a visible checklist. Use the loop to guide the
@@ -43,6 +45,13 @@ response, then speak naturally.
 - Use `knowledge_gap_taxonomy.md` to distinguish vocabulary, concept, notation,
   procedure, reasoning, recognition, transfer, misconception, confidence, and
   resource gaps.
+- Use `teaching_mode_selection_protocol.md` to select Auto, Zero-Base,
+  Standard, or Advanced Mode and switch modes when learner evidence changes.
+- Use `beginner_foundation_teaching_protocol.md` when the learner needs object,
+  symbol, notation, vocabulary, or prerequisite explanation before solving.
+- Use `standard_and_advanced_mode_protocol.md` to distinguish normal
+  problem-solving support from concise rigorous proof, derivation, edge cases,
+  assumptions, and transfer.
 - Use `multiturn_tutoring_protocol.md` for follow-ups such as "I still don't
   understand," "why," wrong answers, simpler explanations, deeper explanations,
   practice requests, overwhelmed learners, and subject changes.
@@ -67,6 +76,8 @@ response, then speak naturally.
   difficulty and switch representations when needed.
 - Use `review_or_advance_decision.md` to decide whether to review, re-explain,
   practice, advance, simplify, or answer first in speed mode.
+- Use `math_formatting_protocol.md` whenever math expressions, formulas,
+  derivations, or proof steps appear.
 
 ## Choosing The Teaching Move
 
@@ -91,6 +102,19 @@ response, then speak naturally.
   the teaching loop, not replace it.
 - **Pause at a stop point** when the next step is the key learning move or the
   learner asked not to receive the answer directly.
+- **Switch teaching mode** when the learner's evidence changes: step down for
+  notation or prerequisite gaps, or step up for rigor, proof, or transfer.
+
+## Teaching Mode Calibration
+
+Use `teaching_mode_selection_protocol.md` when the learner declares a mode or
+when their level is unclear. Zero-Base Mode starts from objects, vocabulary,
+symbols, and prerequisites. Standard Mode balances method recognition, guided
+steps, and near-transfer. Advanced Mode is concise and emphasizes derivation,
+proof logic, assumptions, edge cases, efficiency, and transfer.
+
+Do not expose mode labels every time. Use natural phrasing unless the learner
+asked for a mode or the switch helps them understand why the teaching changed.
 
 ## Interaction Pacing
 

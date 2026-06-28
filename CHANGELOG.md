@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.2.0 - 2026-06-28
+
+### Added In v1.2.0
+
+- Teaching mode selection protocol for Auto, Zero-Base, Standard, and Advanced
+  tutoring modes.
+- Beginner foundation teaching protocol for true zero-base learners who need
+  concepts, symbols, object types, and prerequisites before solving.
+- Standard and advanced mode protocol for balancing normal method recognition
+  and guided practice against concise rigorous derivation, proof, assumptions,
+  edge cases, efficiency, and transfer.
+- Math formatting protocol requiring Markdown/LaTeX math for formulas and
+  reserving code blocks for actual code, commands, paths, or literal text.
+- User mode onboarding guide with Chinese copyable prompts.
+- Examples for zero-base vector teaching, standard series convergence,
+  advanced derivative proof, mode switching, and math formatting good-vs-bad
+  behavior.
+
+### Changed In v1.2.0
+
+- Updated `SKILL.md`, README files, evaluation checklist, and manual test
+  matrix to route V1.2 teaching modes and math-formatting behavior.
+- Preserved V1.1 teacher-like pacing and stop points while adding learner-level
+  calibration.
+
 ## v1.1.0 - 2026-06-28
 
 ### Added In v1.1.0

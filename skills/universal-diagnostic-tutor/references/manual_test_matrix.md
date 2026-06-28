@@ -947,6 +947,140 @@ a failure mode.
   contrast, or a generic full solution with no pacing.
 - **Target score:** 5.
 
+## 67. V1.2 Zero-Base Vector Foundation
+
+- **Prompt:** "我是零基础。vector = endpoint - start point 是什么意思？"
+- **Expected mode behavior:** Select Zero-Base Mode from explicit learner
+  wording.
+- **Expected diagnosis behavior:** Identify vocabulary, notation, and
+  object-type gaps around points, vectors, and displacement.
+- **Expected teaching behavior:** Explain point vs vector before calculation,
+  use a real-world movement or visual analogy, and avoid formalism overload.
+- **Expected pacing/check behavior:** Stop before calculation and ask whether a
+  vector means location or movement.
+- **Expected formatting behavior:** Use inline/display math, not code blocks.
+- **Failure cases:** Starts subtracting coordinates immediately, assumes vector
+  knowledge, or formats the formula as code.
+- **Target score:** 5.
+
+## 68. V1.2 Standard Series Convergence
+
+- **Prompt:** "I learned series tests, but I cannot tell which one to use for
+  $\sum 1/(n(n+1))$."
+- **Expected mode behavior:** Select Standard Mode because the learner has
+  class exposure but needs method recognition.
+- **Expected diagnosis behavior:** Identify recognition gap around telescoping
+  or related convergence-test cues.
+- **Expected teaching behavior:** Name the cue in $n(n+1)$, set up partial
+  fraction or telescoping reasoning, and avoid re-teaching what a series is.
+- **Expected pacing/check behavior:** Stop before the key algebraic
+  decomposition and ask what numerator equality must hold.
+- **Expected formatting behavior:** Use LaTeX math, not code blocks.
+- **Failure cases:** Gives a full convergence proof without a stop point,
+  reteaches series from zero, or dumps a list of tests without cue diagnosis.
+- **Target score:** 5.
+
+## 69. V1.2 Advanced Derivative Proof
+
+- **Prompt:** "I know the power rule. Give me a concise rigorous proof that the
+  derivative of $x^2$ is $2x$."
+- **Expected mode behavior:** Select Advanced Mode.
+- **Expected diagnosis behavior:** Identify a reasoning/proof gap, not a
+  zero-base derivative gap.
+- **Expected teaching behavior:** Use the limit definition efficiently, justify
+  the $h \neq 0$ simplification, state the assumption, and interpret the
+  result.
+- **Expected pacing/check behavior:** May include one concise proof-hinge check
+  but should not slow down unnecessarily.
+- **Expected formatting behavior:** Use aligned display math, not a code block.
+- **Failure cases:** Re-explains slope from scratch, gives only the power rule,
+  or renders the derivation as monospaced code.
+- **Target score:** 5.
+
+## 70. V1.2 Mode Switching For Notation Gap
+
+- **Prompt:** "Use normal mode for $Ax=b$, but I don't understand what $b$ is.
+  Is it a point?"
+- **Expected mode behavior:** Start Standard, then step down briefly to
+  Zero-Base explanation for the notation blocker.
+- **Expected diagnosis behavior:** Identify notation/object-type gap around
+  $b$ as output vector.
+- **Expected teaching behavior:** Explain $A$, $x$, and $b$ roles without
+  solving; then return to the original problem.
+- **Expected pacing/check behavior:** Ask which object is unknown before row
+  reduction or solving.
+- **Expected formatting behavior:** Use math formatting for $Ax=b$.
+- **Failure cases:** Stays in standard mode and manipulates symbols, labels the
+  learner rigidly, or never returns to the original problem.
+- **Target score:** 5.
+
+## 71. V1.2 Concise Advanced Explanation
+
+- **Prompt:** "I understand recursion. Be concise and explain the proof idea
+  for why this recursive algorithm is correct."
+- **Expected mode behavior:** Select Advanced Mode from declared background and
+  concise proof request.
+- **Expected diagnosis behavior:** Identify proof/invariant or induction need.
+- **Expected teaching behavior:** State invariant or induction structure,
+  assumptions, base case, inductive step, termination, and edge case compactly.
+- **Expected pacing/check behavior:** Ask one proof-hinge check if useful, but
+  do not force beginner scaffolding.
+- **Expected formatting behavior:** Use code blocks only if actual code is
+  shown.
+- **Failure cases:** Explains what recursion is from scratch, gives a generic
+  correctness claim, or ignores termination.
+- **Target score:** 5.
+
+## 72. V1.2 Math Formatting
+
+- **Prompt:** "Show the derivation of the derivative of $x^2$."
+- **Expected mode behavior:** Use Standard or Advanced based on learner wording;
+  if unclear, infer from context or ask if rigor level matters.
+- **Expected diagnosis behavior:** Identify derivation/proof task.
+- **Expected teaching behavior:** Use the derivative definition and explain the
+  key simplification.
+- **Expected pacing/check behavior:** Stop before cancellation if the learner
+  asked to participate; otherwise finish with a concise check.
+- **Expected formatting behavior:** Use display or aligned LaTeX math for the
+  derivation; do not put formulas in fenced code blocks.
+- **Failure cases:** Formats algebra as code, uses ASCII fractions in a code
+  fence, or hides the proof inside a monospaced block.
+- **Target score:** 5.
+
+## 73. V1.2 Auto Mode Calibration
+
+- **Prompt:** "Can you help me understand this matrix equation?"
+- **Expected mode behavior:** Use Auto Mode; infer from available context or
+  ask "你希望我按零基础、普通还是进阶方式讲？" if the level would change the
+  answer.
+- **Expected diagnosis behavior:** Identify likely matrix-equation topic and
+  unknown learner level.
+- **Expected teaching behavior:** If not asking, start with a compact Standard
+  explanation and adapt quickly if notation confusion appears.
+- **Expected pacing/check behavior:** Ask one small object-role or method cue
+  check.
+- **Expected formatting behavior:** Use math formatting for matrix equations.
+- **Failure cases:** Assumes advanced knowledge, launches a long zero-base
+  lecture without evidence, or never calibrates.
+- **Target score:** 5.
+
+## 74. V1.2 Beginner Real-World Analogy
+
+- **Prompt:** "我是初学者，能不能用生活中的例子解释什么是 derivative?"
+- **Expected mode behavior:** Select Zero-Base or beginner-friendly mode from
+  explicit beginner wording.
+- **Expected diagnosis behavior:** Identify vocabulary/concept gap around
+  derivative as instant rate of change.
+- **Expected teaching behavior:** Use a real-world analogy such as speed at one
+  instant before introducing formal notation; explain why the idea matters.
+- **Expected pacing/check behavior:** Ask one small check, such as whether the
+  speedometer shows a whole-trip average or a moment-by-moment rate.
+- **Expected formatting behavior:** Use math formatting only if a formula is
+  needed; avoid code blocks for math.
+- **Failure cases:** Starts with the limit definition, uses formal notation too
+  early, gives no analogy, or asks a question requiring calculus vocabulary.
+- **Target score:** 5.
+
 ## Review Notes
 
 - Test across at least six rows for small edits and all rows for behavior
@@ -971,6 +1105,10 @@ a failure mode.
 - For V1.1 pacing and autonomous-resource changes, include rows that cover
   one-subproblem pacing, hints-only stop points, active source discovery,
   resource-orchestrated teaching, exam-pattern traps, and generic-AI contrast.
+- For V1.2 teaching-mode and math-formatting changes, include rows that cover
+  zero-base, standard, advanced, mode switching, concise advanced explanation,
+  math formula rendering, Auto Mode calibration, and beginner real-world
+  analogy.
 - Prefer natural answers over rigid template completion.
 - If any answer scores below 4, note whether the issue is diagnosis, depth,
   subject routing, safety boundary, or style.

@@ -157,6 +157,36 @@ multiple independent questions without learner participation, searches only for
 show, dumps links, fabricates sources, waits passively for uploaded materials
 when useful web/search access exists, or gives a generic final-answer response.
 
+## V1.2 Teaching Mode And Math Formatting Criteria
+
+For tutoring answers with varying learner levels or mathematical content, pass
+if the answer:
+
+- Correctly selects Zero-Base, Standard, Advanced, or Auto Mode from learner
+  evidence.
+- Asks a short calibration question when learner level is unclear and the mode
+  would change the answer.
+- Avoids assuming prerequisites for zero-base learners.
+- Explains vocabulary, notation, symbols, and object types before solving when
+  the learner is new or confused by representation.
+- Avoids over-explaining basics to advanced learners.
+- Uses concise rigor, proof, derivation, assumptions, edge cases, and transfer
+  when Advanced Mode is appropriate.
+- Switches mode when learner evidence changes, such as stepping down for a
+  notation gap or stepping up after independent explanation.
+- Preserves V1.1 teach-check-continue pacing and one-subproblem focus.
+- Stops after a check question when learner participation is the point.
+- Formats mathematical expressions with Markdown/LaTeX math rather than fenced
+  code blocks.
+- Uses code blocks only for actual code, commands, paths, literal text, or an
+  intentionally bad formatting example.
+- Makes README guidance clear enough that users can choose a learning mode.
+
+Fail if the answer treats mode labels as rigid learner identities, gives
+zero-base learners formal notation before object meaning, slows advanced
+learners with unnecessary basics, ignores evidence that the mode should change,
+continues after a stop-point check, or renders ordinary math as code.
+
 ## High-Stakes Domain Criteria
 
 For law, medical, finance, safety, immigration, tax, or other high-stakes

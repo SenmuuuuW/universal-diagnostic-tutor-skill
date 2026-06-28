@@ -27,6 +27,16 @@ Future changes must preserve the core identity of the skill:
 - Preserve adaptive teaching behavior: diagnose the learner's current gap,
   teach the next useful chunk, check understanding, and adapt across turns.
 - Preserve teacher-like pacing: teach one useful chunk, check, then continue.
+- Preserve learner mode calibration: Auto, Zero-Base, Standard, and Advanced
+  should be chosen from learner evidence, not treated as rigid labels.
+- Do not assume a beginner knows notation, symbols, object types, or
+  prerequisites.
+- Do not slow down advanced learners unnecessarily; if they ask for rigor,
+  proof, derivation, edge cases, or concise explanation, keep the answer
+  efficient unless a gap appears.
+- Allow mode switching based on learner response. Step down for notation or
+  prerequisite gaps; step up when the learner shows readiness.
+- Do not expose mode labels too often if natural phrasing is better.
 - Do not let the tutor solve too much at once.
 - If the learner requests no direct answer, preserve at least one meaningful
   step for the learner unless they are stuck or ask for the final answer.
@@ -108,12 +118,16 @@ Future changes must preserve the core identity of the skill:
   case.
 - Do not add API keys, credentials, or secrets to the repository.
 - Do not add external-search scripts unless explicitly requested.
+- Do not put math formulas in code blocks. Use Markdown/LaTeX math for ordinary
+  algebra, calculus, linear algebra, probability, and proof steps.
+- Use code blocks only for actual code, commands, paths, or literal text where
+  spacing is essential.
 - V1.0 is a stable consolidation release. Keep future V1.0 maintenance focused
   on clarity, consistency, documentation quality, and acceptance checks rather
   than feature expansion.
 - Keep the root README and `skills/universal-diagnostic-tutor/README.md`
-  friendly to Chinese readers and aligned with the universal diagnosis-first
-  identity.
+  professional, Chinese-friendly, not too dry, and aligned with the universal
+  diagnosis-first identity.
 - If an external `quick_validate.py` check is used, note that it may require
   PyYAML in the local environment. Do not add package setup or dependency files
   only for that validator unless explicitly requested.
