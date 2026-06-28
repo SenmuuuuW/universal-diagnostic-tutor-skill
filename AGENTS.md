@@ -35,6 +35,19 @@ Future changes must preserve the core identity of the skill:
   adaptive response, and a practice or understanding check.
 - Do not make every answer a rigid template. Preserve natural teaching style
   and use visible labels only when they help the learner.
+- V0.8 focuses on STEM / AI-CS teaching calibration while preserving universal
+  scope.
+- Do not make adaptive STEM teaching overly robotic or over-labeled.
+- Do not expose internal gap labels such as "notation gap" or "concept gap"
+  unless naming the label genuinely helps the learner.
+- Prefer natural teacher language such as "The part that may be causing trouble
+  is..." over diagnostic labels.
+- For STEM examples, include diagnosis, gap type, ask-vs-explain choice,
+  adaptive response, and a practice or understanding check.
+- Ask guiding questions only when they help learning and the learner has enough
+  foundation to reason one step.
+- Explain directly when the learner lacks the vocabulary, notation, concept, or
+  technical background needed to answer.
 - Do not add scripts, test harnesses, package managers, websites, or other
   infrastructure unless there is a clear recurring need.
 - Do not add fake sources, invented citations, invented exams, or invented

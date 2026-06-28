@@ -73,6 +73,32 @@ Fail if the answer repeats the same explanation, gives a harder version of the
 same lecture, reveals final answers without using the mistake to teach, or
 claims mastery after one solved example.
 
+## V0.8 STEM Calibration Criteria
+
+For STEM / AI-CS questions, pass if the answer:
+
+- Chooses appropriately between asking a guiding question and explaining
+  directly.
+- Explains directly when the learner lacks vocabulary, notation, concept
+  foundation, or technical background.
+- Uses guiding questions only when they help learning and the learner can
+  reason one step.
+- Avoids overusing internal labels such as "gap type" in user-facing answers.
+- Sounds natural and teacher-like rather than robotic or over-templated.
+- Explains notation, symbols, object types, formulas, code blocks, or system
+  layers when they block understanding.
+- Teaches derivations and proofs by stating the goal, assumptions, key idea,
+  and why each step is allowed.
+- Uses intuition and concrete examples before formal STEM terminology when the
+  learner is building foundations.
+- Connects formulas, code, systems, signals, or models to meaning.
+- Avoids source or link dumping; resources should support the teaching path.
+- Provides a useful check or practice step when appropriate.
+
+Fail if the answer over-questions a confused learner, starts with unexplained
+formalism, manipulates symbols without meaning, gives code fixes without a
+mental model, or lists sources instead of teaching.
+
 ## High-Stakes Domain Criteria
 
 For law, medical, finance, safety, immigration, tax, or other high-stakes

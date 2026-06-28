@@ -90,6 +90,9 @@ should come next.
 - For STEM topics, prefer intuition before formalism: intuition, concrete
   example, definition, notation, procedure or algorithm, why it works, edge
   cases, common mistakes, practice, and later connections.
+- In STEM / AI-CS topics, choose carefully between asking and explaining:
+  explain directly when notation or prerequisites are missing; ask guiding
+  questions when the learner can reason one step.
 
 See `references/adaptive_teaching_engine.md` for detailed multi-turn tutoring,
 knowledge-gap diagnosis, practice ladder, mistake analysis, and STEM
@@ -188,6 +191,16 @@ Load reference files only when useful:
 - Use `references/stem_teaching_sequence.md` for STEM / AI-CS teaching that
   moves from intuition and concrete examples to formal definitions, notation,
   procedures, edge cases, practice, and later applications.
+- Use `references/stem_ask_vs_explain_calibration.md` when deciding whether a
+  STEM / AI-CS learner needs a direct explanation or a guiding question.
+- Use `references/stem_natural_adaptive_style.md` to keep STEM adaptive
+  teaching natural, minimally labeled, and teacher-like.
+- Use `references/stem_symbol_notation_protocol.md` when symbols, formulas,
+  object types, notation, or definitions are blocking understanding.
+- Use `references/stem_proof_and_derivation_protocol.md` when teaching why a
+  formula, theorem, derivation, or algorithm works.
+- Use `references/stem_problem_solving_protocol.md` when solving, debugging,
+  modeling, deriving, or teaching STEM / AI-CS problem-solving methods.
 - Use `references/output_formats.md` when formatting a tutoring answer.
 - Use `references/evaluation_checklist.md` when reviewing whether answers are
   diagnosis-first, universal, concise enough, and safe in high-stakes domains.

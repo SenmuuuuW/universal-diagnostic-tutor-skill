@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
+## v0.8.0 - 2026-06-28
+
+### Added In v0.8.0
+
+- STEM ask-vs-explain calibration for choosing between guiding questions and
+  direct explanation in technical learning.
+- STEM natural adaptive style guidance for keeping gap diagnosis teacher-like
+  and minimally labeled.
+- Symbol and notation teaching protocol for formulas, object types, code-like
+  notation, systems notation, ML tensors, and physical quantities.
+- Proof and derivation protocol for explaining why formulas, theorems, and
+  algorithms work.
+- STEM problem-solving protocol for equations, diagrams, code traces,
+  algorithms, debugging, systems, and ML workflows.
+- STEM adaptive teaching examples for matrix notation, derivative derivation,
+  binary search proof, Python debugging, virtual memory, physical signals, and
+  AI/ML prerequisite bridges.
+
 ## v0.7.0 - 2026-06-28
 
 ### Added In v0.7.0

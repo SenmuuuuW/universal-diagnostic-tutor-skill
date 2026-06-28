@@ -77,6 +77,11 @@ universal-diagnostic-tutor-skill/
         │   ├── practice_ladder.md
         │   ├── mistake_analysis_protocol.md
         │   ├── stem_teaching_sequence.md
+        │   ├── stem_ask_vs_explain_calibration.md
+        │   ├── stem_natural_adaptive_style.md
+        │   ├── stem_symbol_notation_protocol.md
+        │   ├── stem_proof_and_derivation_protocol.md
+        │   ├── stem_problem_solving_protocol.md
         │   ├── teaching_depth_levels.md
         │   ├── subject_teaching_modes.md
         │   ├── output_formats.md
@@ -134,7 +139,14 @@ universal-diagnostic-tutor-skill/
             ├── resource_augmented_math_example.md
             ├── source_pack_usage_example.md
             ├── source_limited_answer_example.md
+            ├── stem_ai_ml_bridge_example.md
+            ├── stem_debugging_example.md
+            ├── stem_derivation_example.md
             ├── stem_intuition_to_formal_example.md
+            ├── stem_notation_gap_example.md
+            ├── stem_physics_signal_example.md
+            ├── stem_proof_example.md
+            ├── stem_systems_abstraction_example.md
             ├── stem_teaching_sequence_example.md
             ├── still_confused_example.md
             ├── writing_revision_example.md
@@ -237,6 +249,21 @@ This release strengthens teaching behavior, not source collection. It adds no
 new source packs, scripts, websites, APIs, package setup, PDFs, secrets, or
 infrastructure.
 
+## V0.8 Improvements
+
+V0.8 adds STEM / AI-CS adaptive teaching calibration for the current primary
+learning path: university-level mathematics, programming, AI/ML, computer
+systems, physics, electronics, signals, and engineering foundations.
+
+It adds guidance for when a technical tutor should ask a guiding question
+versus explain directly, how to keep adaptive STEM teaching natural, how to
+teach symbols and notation, how to explain proofs and derivations, and how to
+teach STEM problem solving without hiding the method behind formulas or code.
+
+V0.8 focuses on STEM / AI-CS examples while preserving the universal tutor
+identity. It does not add non-STEM examples, source packs, websites, scripts,
+APIs, package setup, PDFs, secrets, or infrastructure.
+
 ## Use With Codex
 
 To use the skill locally, copy the skill folder into your Codex skills
@@ -279,6 +306,8 @@ When updating the skill:
 - V0.6: Specialty source addendums and source maintenance guidance.
 - V0.7: Adaptive teaching engine for multi-turn tutoring, mistake analysis,
   practice ladders, and mastery building.
+- V0.8: STEM / AI-CS adaptive teaching calibration for ask-vs-explain,
+  notation, proofs, derivations, and problem solving.
 - V1.0: Stable reusable tutor skill.
 
 ## 中文简介

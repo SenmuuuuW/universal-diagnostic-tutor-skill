@@ -580,6 +580,148 @@ a failure mode.
   more poems" answer.
 - **Target score:** 5.
 
+## 44. V0.8 Matrix Notation Confusion
+
+- **Prompt:** "I keep seeing `Ax = b`. What are `A`, `x`, and `b` actually
+  supposed to mean?"
+- **Expected diagnosis behavior:** Identify notation and concept gaps around
+  object types and matrix equation roles.
+- **Expected ask-vs-explain choice:** Explain first; the learner lacks the
+  notation foundation needed for a useful guiding question.
+- **Expected adaptive tutor behavior:** Translate each symbol, identify matrix
+  and vector object types, explain what the equation means, and use a tiny
+  numerical example.
+- **Expected check/practice behavior:** Ask which object is unknown or what `A`
+  does to `x`.
+- **Failure cases:** Starts row reduction, treats all symbols as scalars, or
+  gives only formal notation.
+- **Target score:** 5.
+
+## 45. V0.8 Derivative Derivation
+
+- **Prompt:** "Why is the derivative of `x^2` equal to `2x`?"
+- **Expected diagnosis behavior:** Identify a reasoning gap around why the
+  power rule works.
+- **Expected ask-vs-explain choice:** Explain first because the user asks for a
+  derivation.
+- **Expected adaptive tutor behavior:** State the derivation goal, use the
+  derivative definition, explain expansion/cancellation, and interpret `2x` as
+  rate of change.
+- **Expected check/practice behavior:** Ask why `h` can be canceled before the
+  limit or ask for the next step in a similar derivation.
+- **Failure cases:** Cites the power rule only, gives equation steps without
+  reasons, or skips the meaning after the derivation.
+- **Target score:** 5.
+
+## 46. V0.8 Binary Search Correctness Proof
+
+- **Prompt:** "Why is binary search correct? I know the code, but not the
+  proof."
+- **Expected diagnosis behavior:** Identify a reasoning gap around invariants
+  and sorted-order assumptions.
+- **Expected ask-vs-explain choice:** Explain first by naming the invariant;
+  then ask a proof check.
+- **Expected adaptive tutor behavior:** State the invariant, explain why each
+  discard step preserves it, mention termination, and connect correctness to
+  sorted order.
+- **Expected check/practice behavior:** Ask which assumption allows discarding
+  half the array.
+- **Failure cases:** Restates code, skips invariant, or asserts correctness
+  without proof reasoning.
+- **Target score:** 5.
+
+## 47. V0.8 Python Loop/List Debugging
+
+- **Prompt:** "My Python loop prints values but my result list is empty. What
+  am I missing?"
+- **Expected diagnosis behavior:** Identify a state/data-flow gap between
+  printing and storing, and check list initialization location.
+- **Expected ask-vs-explain choice:** Ask one guiding question if code is
+  visible; otherwise explain likely causes directly.
+- **Expected adaptive tutor behavior:** Use observe, hypothesize, isolate,
+  test, fix, explain; teach why `print` does not mutate a list.
+- **Expected check/practice behavior:** Ask where `result = []` should be or
+  where `append` occurs.
+- **Failure cases:** Gives only a patched snippet, ignores state, or treats it
+  as a syntax-only problem.
+- **Target score:** 5.
+
+## 48. V0.8 Virtual Memory Abstraction
+
+- **Prompt:** "Why is virtual memory not just more RAM?"
+- **Expected diagnosis behavior:** Identify a systems abstraction-layer
+  misconception about virtual vs physical addresses.
+- **Expected ask-vs-explain choice:** Explain first; the learner lacks the
+  layer distinction.
+- **Expected adaptive tutor behavior:** Explain address translation, program
+  view vs physical memory, isolation, protection, and paging as secondary.
+- **Expected check/practice behavior:** Ask whether two processes using the
+  same virtual address must share the same physical address.
+- **Failure cases:** Mentions only swapping, starts with page-table details too
+  early, or says simply "it extends RAM."
+- **Target score:** 5.
+
+## 49. V0.8 Physical Signal To Digital Data
+
+- **Prompt:** "How does a physical signal become digital data?"
+- **Expected diagnosis behavior:** Identify a bridge gap from physical
+  phenomenon to sensor, analog signal, sampling, quantization, and numbers.
+- **Expected ask-vs-explain choice:** Explain first; the learner needs the
+  pathway before equations.
+- **Expected adaptive tutor behavior:** Start with measurable quantity, then
+  sensor voltage, sampling, quantization, digital representation, and limits.
+- **Expected check/practice behavior:** Ask whether sampling or quantization
+  turns a continuous signal into time-separated measurements.
+- **Failure cases:** Dumps ADC jargon, starts with transform formulas, or skips
+  physical meaning and units.
+- **Target score:** 5.
+
+## 50. V0.8 Gradient Descent Math Bridge
+
+- **Prompt:** "Why does gradient descent need calculus and linear algebra?"
+- **Expected diagnosis behavior:** Identify prerequisite bridge gaps across
+  loss, parameters, derivatives, gradients, vectors, and matrices.
+- **Expected ask-vs-explain choice:** Explain first, then ask a small check.
+- **Expected adaptive tutor behavior:** Connect data, model, loss,
+  optimization, gradient, and parameter update without starting from formal
+  notation.
+- **Expected check/practice behavior:** Ask whether the gradient is a single
+  number or a vector of directions for many parameters.
+- **Failure cases:** Says only "gradients are derivatives," assumes advanced
+  linear algebra, or skips the ML objects.
+- **Target score:** 5.
+
+## 51. V0.8 When To Ask A STEM Guiding Question
+
+- **Prompt:** "I know derivatives and vectors. For gradient descent, should the
+  update move with the gradient or against it?"
+- **Expected diagnosis behavior:** Identify that prerequisites are probably
+  present and the learner needs a one-step direction check.
+- **Expected ask-vs-explain choice:** Ask a guiding question first, such as
+  "Which direction increases the loss fastest?"
+- **Expected adaptive tutor behavior:** Use the learner's known prerequisites
+  to prompt reasoning, then confirm and explain briefly.
+- **Expected check/practice behavior:** Ask a tiny vector-direction check.
+- **Failure cases:** Gives a full lecture, withholds confirmation too long, or
+  asks a question requiring unstated background.
+- **Target score:** 5.
+
+## 52. V0.8 When To Explain Directly In STEM
+
+- **Prompt:** "I do not know what the gradient symbol means. Why does gradient
+  descent use it?"
+- **Expected diagnosis behavior:** Identify a vocabulary/notation prerequisite
+  gap.
+- **Expected ask-vs-explain choice:** Explain directly before asking questions.
+- **Expected adaptive tutor behavior:** Define gradient as a vector of partial
+  derivatives, connect it to steepest increase, then explain why the negative
+  gradient is used.
+- **Expected check/practice behavior:** Ask whether negative gradient points
+  uphill or downhill locally.
+- **Failure cases:** Starts with a Socratic question, assumes notation mastery,
+  or gives only the update formula.
+- **Target score:** 5.
+
 ## Review Notes
 
 - Test across at least six rows for small edits and all rows for behavior
@@ -594,6 +736,9 @@ a failure mode.
   understand," wrong answers, simpler explanation, deeper explanation,
   practice ladders, mistake analysis, STEM intuition-to-formal teaching,
   transfer, and at least one non-STEM case.
+- For V0.8 STEM calibration changes, include rows that cover notation,
+  derivation, proof, debugging, systems abstraction, signals, AI/ML bridges,
+  when to ask, and when to explain directly.
 - Prefer natural answers over rigid template completion.
 - If any answer scores below 4, note whether the issue is diagnosis, depth,
   subject routing, safety boundary, or style.
