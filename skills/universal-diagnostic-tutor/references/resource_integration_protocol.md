@@ -8,6 +8,10 @@ is available.
 This protocol adds resources to the diagnosis-first workflow; it does not
 replace the tutor's responsibility to teach.
 
+For active web/search behavior, use `autonomous_resource_discovery_protocol.md`.
+For turning searched, curated, or user-provided sources into tutoring, use
+`resource_orchestrated_tutoring_protocol.md`.
+
 ## When To Look Up Resources
 
 Look up resources when the user asks about:
@@ -17,6 +21,10 @@ Look up resources when the user asks about:
 - Official documentation, standards, APIs, algorithms, or technical methods.
 - A topic where current source links would help the learner continue studying.
 - Conflicting explanations, named courses, named textbooks, or source requests.
+
+When web/search access is available and resources would improve the answer, do
+not wait for the learner to upload materials. Infer the knowledge point and
+search for authoritative learning resources.
 
 Use internal explanation without search when the user asks for a quick concept
 check and no external source is needed. Still offer to use sources if the
@@ -97,6 +105,10 @@ Do not dump summaries. Use sources to support a path:
 7. Suggest a learning path.
 8. Suggest practice direction.
 9. List sources.
+
+Use `exam_pattern_resource_analysis.md` when public exams, problem sets, or
+exercise sources can clarify tested concepts, traps, recognition cues, and
+practice priorities.
 
 ## Exam And Problem-Set Analysis
 

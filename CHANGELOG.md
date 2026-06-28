@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.1.0 - 2026-06-28
+
+### Added In v1.1.0
+
+- Interaction pacing protocol for one-subproblem-at-a-time tutoring,
+  teach-check-continue rhythm, and avoiding over-solving.
+- Teacher-like stop point protocol for pausing after translation, target
+  identification, method choice, misconception repair, new representations, or
+  before final calculations.
+- Autonomous resource discovery protocol for actively searching authoritative
+  learning resources when web/search access is available and useful.
+- Resource-orchestrated tutoring protocol for turning searched resources,
+  curated source packs, or user-provided materials into teaching rather than
+  link lists.
+- Exam-pattern resource analysis for tested concepts, common traps,
+  recognition cues, and short practice ladders.
+- Skill-vs-generic-AI advantage guidance to clarify the Skill's unique
+  diagnosis, pacing, resource, and mastery behavior.
+- Examples for interaction pacing, autonomous resource discovery, probability
+  exam traps, and generic-AI-vs-Skill comparison.
+
+### Changed In v1.1.0
+
+- Updated `SKILL.md`, README files, evaluation checklist, and manual test
+  matrix to route V1.1 pacing and resource-discovery behavior.
+- Clarified that V1.1 is still Markdown-only teaching behavior: no website,
+  scripts, APIs, package setup, databases, persistent memory, real RAG/vector
+  database, PDFs, copied materials, curriculum map, or new source packs.
+
 ## v1.0.0 - 2026-06-28
 
 ### Added In v1.0.0

@@ -126,6 +126,37 @@ repeats the same explanation after repeated confusion, quizzes the learner when
 they need direct support, labels the learner rigidly, or turns a tutoring turn
 into a course roadmap.
 
+## V1.1 Pacing And Resource Discovery Criteria
+
+For tutoring, resource-augmented teaching, exam-pattern analysis, or
+multi-question prompts, pass if the answer:
+
+- Avoids solving too much at once.
+- Handles one problem or subproblem at a time unless the user requests a full
+  multi-question solution.
+- Uses teach-check-continue pacing after important ideas.
+- Stops before the key step when the learner asked not to receive the answer
+  directly.
+- Uses teacher-like stop points after translation, target identification,
+  method choice, formula setup, misconception repair, new representation, or
+  before moving to the next subproblem.
+- Actively searches for authoritative resources when web/search access is
+  available and resources would improve teaching, verification, practice
+  design, or exam-pattern analysis.
+- Does not depend on user-uploaded materials.
+- Integrates resources into teaching instead of dumping links.
+- Avoids fabricated resources, citations, exams, course pages, authors, page
+  numbers, or links.
+- Connects the question to common exam patterns, traps, recognition cues, or
+  mistakes when appropriate.
+- Clearly differs from a generic AI answer through diagnosis, pacing, stop
+  points, resource orchestration, checks, and transfer support.
+
+Fail if the answer completes every step despite a hints-only request, solves
+multiple independent questions without learner participation, searches only for
+show, dumps links, fabricates sources, waits passively for uploaded materials
+when useful web/search access exists, or gives a generic final-answer response.
+
 ## High-Stakes Domain Criteria
 
 For law, medical, finance, safety, immigration, tax, or other high-stakes

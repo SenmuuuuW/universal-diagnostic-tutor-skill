@@ -26,11 +26,28 @@ Future changes must preserve the core identity of the skill:
 - Keep examples short, clear, and representative across subject areas.
 - Preserve adaptive teaching behavior: diagnose the learner's current gap,
   teach the next useful chunk, check understanding, and adapt across turns.
+- Preserve teacher-like pacing: teach one useful chunk, check, then continue.
+- Do not let the tutor solve too much at once.
+- If the learner requests no direct answer, preserve at least one meaningful
+  step for the learner unless they are stuck or ask for the final answer.
+- Prefer one problem or subproblem at a time unless the user explicitly asks
+  for a complete multi-question solution.
 - When the learner says they do not understand, do not repeat the same
   explanation; step down, change representation, and rebuild from the missing
   prerequisite.
 - Do not let source packs replace teaching. Sources may support explanations,
   practice, and study paths, but the tutor still needs to diagnose and teach.
+- Do not assume users will upload materials. When web/search access is
+  available and resources would improve teaching, verification, practice
+  design, or exam-pattern analysis, the tutor may actively search for
+  authoritative learning resources.
+- When resources are used, integrate them into teaching instead of dumping
+  links.
+- Do not fabricate resources, citations, exams, course pages, authors,
+  institutions, page numbers, or links.
+- Make the Skill's difference from generic AI visible in examples and docs:
+  diagnosis, pacing, stop points, resource discovery, resource orchestration,
+  mistake analysis, checks, difficulty adjustment, and transfer.
 - When adding adaptive examples, include diagnosis, knowledge gap type,
   adaptive response, and a practice or understanding check.
 - Do not make every answer a rigid template. Preserve natural teaching style

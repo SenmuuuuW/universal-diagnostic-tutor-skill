@@ -48,6 +48,7 @@
 
 - **知识漏洞诊断**：区分词汇、概念、符号、步骤、推理、识别、迁移、误解、信心和资源需求等不同类型的问题。
 - **自适应多轮教学**：当学习者说“还是不懂”、答错、答对但说不出原因、或换了主题时，选择下一步教学动作。
+- **教师式节奏控制**：一次处理一个问题或子问题，在关键步骤停下来检查理解，避免一口气讲完整套解法。
 - **STEM 符号和记号解释**：把公式、变量、矩阵、张量、代码符号、单位、系统层级等翻译成普通语言。
 - **公式、证明和推导教学**：不只展示步骤，还解释每一步为什么合法、用了什么定义、假设、模型或不变量。
 - **编程和调试指导**：用 observe -> hypothesize -> isolate -> test -> fix -> explain 的方式解释 bug，而不是只贴修复代码。
@@ -57,6 +58,7 @@
 - **错题分析**：定位表层错误和深层误解，说明错误为什么诱人，再给相近但稍微变化的练习。
 - **对话内掌握状态跟踪**：在当前对话里轻量判断学习者处于 exposure、recognition、guided understanding、independent application、transfer 等阶段，但不做永久记忆。
 - **资源支持式教学**：用 source trust hierarchy 选择课程、教材、官方文档、题集等可靠资源，并把资源变成学习路径，而不是链接堆砌。
+- **自主资源发现**：当 agent 环境有 web/search 能力且资源确实能改善教学时，主动寻找教材、大学课程资料、公开课程、官方文档、过往试题、problem sets、练习来源和权威参考。
 - **回答长度校准**：根据用户需要选择超短、短答、标准解释或深入讲解。
 - **高风险领域边界**：法律、医疗、金融、税务、安全等内容保持教育性解释，不提供个性化专业建议。
 
@@ -70,6 +72,7 @@
 -> 判断可能的知识漏洞或误解
 -> 选择回答深度
 -> 先讲直觉和具体例子
+-> 在关键步骤停下来让学习者参与
 -> 再讲正式定义、符号、公式、步骤或算法
 -> 检查理解
 -> 根据回答调整难度
@@ -168,6 +171,16 @@ universal-diagnostic-tutor-skill/
 - `examples/`：不同学科和教学场景的示例回答，用来展示好回答应该怎样组织。
 - `references/source_packs/`：轻量资源包，帮助 STEM / AI-CS 场景选择可信学习资源。它们不是教材复制件，也不是答案库。
 
+## V1.1 更新亮点
+
+V1.1 强化了这个 Skill 和普通 GPT / Codex 答案之间的差异：它不只是“会解释”，还要更像老师一样控制节奏、设置停顿点、让学习者参与关键步骤。
+
+- 改进 teacher-like pacing：优先一个子问题一个子问题推进。
+- 增加 stop-point guidance：在翻译题意、选择表示、套公式、消元、最终计算等关键点停下来检查。
+- 增加 autonomous resource discovery：有 web/search 能力时，不依赖用户上传资料，而是主动查找权威学习资源。
+- 强化 resource-orchestrated tutoring：把教材、大学课程笔记、公开课程、官方文档、过往试题、problem sets、练习来源和权威参考转化成教学、练习和错题修复，而不是堆链接。
+- 增加 exam-pattern resource analysis：在合适时帮助学习者理解知识点如何被考、常见陷阱是什么、如何识别题型。
+
 ## 版本历史摘要
 
 - **V0.1**：核心通用诊断型导师 Skill。
@@ -180,6 +193,7 @@ universal-diagnostic-tutor-skill/
 - **V0.8**：STEM / AI-CS 教学校准，包括 ask-vs-explain、符号解释、证明推导和问题求解。
 - **V0.9**：掌握状态和跨轮进度协议，帮助 tutor 判断复习、练习、降难度或推进。
 - **V1.0**：稳定版整理发布，重点是中文 GitHub README、Skill 中文使用指南和项目身份说明。
+- **V1.1**：教师式节奏、停顿点、自主资源发现、资源编排式教学和 exam-pattern 分析。
 
 ## 质量原则
 
@@ -202,7 +216,7 @@ universal-diagnostic-tutor-skill/
 
 ## 维护与验证提示
 
-V1.0 是稳定整理版本，不引入新功能、网站、脚本、API、包管理、数据库、持久记忆、PDF 或新 source packs。
+V1.1 是 Markdown-only 教学行为更新，不引入网站、脚本、API、包管理、数据库、持久记忆、真实 RAG / vector database、PDF、课程地图或新 source packs。
 
 维护者可以使用 `skills/universal-diagnostic-tutor/references/evaluation_checklist.md` 和 `manual_test_matrix.md` 做人工验收。若使用外部 Skill 创建工具里的 `quick_validate.py`，该脚本可能需要 PyYAML；本仓库不为此添加 package setup 或依赖文件。缺少 PyYAML 时，可以改用环境中已有的 YAML 工具验证 `SKILL.md` front matter。
 

@@ -852,6 +852,101 @@ a failure mode.
   question requiring page-table details not yet taught.
 - **Target score:** 5.
 
+## 61. V1.1 Multi-Question Image Pacing
+
+- **Prompt:** "This image has two linear algebra questions. Help me, but don't
+  just give the answers."
+- **Expected diagnosis behavior:** Identify a multi-subproblem linear algebra
+  task and likely method-recognition gap.
+- **Expected pacing behavior:** Identify both questions, then start with the
+  first one rather than solving both.
+- **Expected stop/check behavior:** Stop before the key scalar comparison,
+  elimination, or method-choice step and ask one focused check.
+- **Expected source behavior:** Do not search unless resources would improve
+  practice or the user asks for sources.
+- **Failure cases:** Solves all visible questions in one long response,
+  completes the final answer despite the learner's request, or skips the check.
+- **Target score:** 5.
+
+## 62. V1.1 Hints-Only Algebra Stop Point
+
+- **Prompt:** "Solve `2x + y = 7` and `x - y = 2`, but don't give me the final
+  answer. I want to understand elimination."
+- **Expected diagnosis behavior:** Identify a procedure/reasoning gap around
+  elimination.
+- **Expected pacing behavior:** Explain the cue that `+y` and `-y` can cancel,
+  then pause.
+- **Expected stop/check behavior:** Ask whether to add or subtract the
+  equations before carrying out the elimination.
+- **Expected source behavior:** No source needed.
+- **Failure cases:** Gives `x = 3, y = 1`, hides the answer in a hint, or
+  teaches elimination as a memorized rule only.
+- **Target score:** 5.
+
+## 63. V1.1 Autonomous Resource Discovery
+
+- **Prompt:** "What does `Ax = b` mean? Use good sources if you can."
+- **Expected diagnosis behavior:** Identify a notation/object-type gap around
+  matrix equations.
+- **Expected resource behavior:** If web/search access is available, actively
+  search for authoritative university/open textbook resources or exact course
+  sections; do not wait for uploaded materials.
+- **Expected teaching behavior:** Use sources to support object-role teaching,
+  not to dump links; explain `A`, `x`, and `b` directly.
+- **Expected stop/check behavior:** Ask which object is unknown before solving.
+- **Failure cases:** Does not search despite useful available search, invents
+  sources, cites broad homepages only, dumps links, or starts row reduction.
+- **Target score:** 5.
+
+## 64. V1.1 Resource-Orchestrated Programming
+
+- **Prompt:** "My Python list stays empty even though the loop prints values.
+  Can you use official docs if needed?"
+- **Expected diagnosis behavior:** Identify a state/data-flow gap: printing is
+  not storing, and list mutation must happen in the right scope.
+- **Expected resource behavior:** If search is useful and available, prefer
+  official Python documentation for list methods or language behavior.
+- **Expected teaching behavior:** Explain the mental model first, then use the
+  official source as implementation verification.
+- **Expected stop/check behavior:** Ask where `append` happens or where the
+  list is initialized.
+- **Failure cases:** Gives only patched code, lists docs without teaching,
+  fabricates documentation links, or ignores state mutation.
+- **Target score:** 5.
+
+## 65. V1.1 Exam Pattern Conditional Probability
+
+- **Prompt:** "I keep dividing by the total outcomes in conditional
+  probability. How is this tested?"
+- **Expected diagnosis behavior:** Identify a repeated misconception and
+  recognition gap around the conditioned sample space.
+- **Expected exam-pattern behavior:** Name common cues such as "given,"
+  "among," or "if we know"; identify the denominator trap and why it feels
+  tempting.
+- **Expected resource behavior:** If search is available and useful, prefer
+  reputable public problem sets, open textbook exercises, or sample exams.
+- **Expected practice/check behavior:** Give one near-match denominator check
+  or short practice rung.
+- **Failure cases:** Gives only Bayes' formula, dumps problem links, copies
+  solutions, or skips the misconception repair.
+- **Target score:** 5.
+
+## 66. V1.1 Generic AI Contrast
+
+- **Prompt:** "Show me why your tutoring style is different from just asking a
+  generic AI to solve this derivative problem."
+- **Expected diagnosis behavior:** Identify that the request is about tutoring
+  behavior and method understanding, not only the derivative answer.
+- **Expected pacing behavior:** Contrast a too-fast answer with a
+  diagnosis-first answer that stops at a meaningful step.
+- **Expected teaching behavior:** Emphasize prerequisite diagnosis, intuition,
+  stop points, checks, and transfer.
+- **Expected source behavior:** Search only if the learner asks for external
+  resources or practice; otherwise no source needed.
+- **Failure cases:** Self-promotional claims without a concrete teaching
+  contrast, or a generic full solution with no pacing.
+- **Target score:** 5.
+
 ## Review Notes
 
 - Test across at least six rows for small edits and all rows for behavior
@@ -873,6 +968,9 @@ a failure mode.
   without explanation, guided success, repeated confusion, overload, independent
   application, transfer, review-or-advance decisions, and one-question
   understanding checks.
+- For V1.1 pacing and autonomous-resource changes, include rows that cover
+  one-subproblem pacing, hints-only stop points, active source discovery,
+  resource-orchestrated teaching, exam-pattern traps, and generic-AI contrast.
 - Prefer natural answers over rigid template completion.
 - If any answer scores below 4, note whether the issue is diagnosis, depth,
   subject routing, safety boundary, or style.

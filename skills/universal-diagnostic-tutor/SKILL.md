@@ -50,6 +50,8 @@ exhaustive.
 For beginner STEM / AI-CS learners, choose beginner-friendly sources first and
 escalate to advanced courses, standards, or specifications only when the
 prerequisites are ready.
+Use teacher-like pacing: one subproblem at a time, teach one useful chunk,
+pause at meaningful stop points, and continue after a focused check.
 
 ## Teaching Depth Levels
 
@@ -80,6 +82,8 @@ should come next.
   confidence, or resource need.
 - Teach in small chunks, then check understanding with a focused question or
   tiny task.
+- Prefer teach-check-continue pacing. If the user asks not to get the answer
+  directly, do not complete the final step too early.
 - If the learner says "I still don't understand," do not repeat the same
   explanation. Re-diagnose the earliest confusing point, change representation,
   use a simpler example, and ask one small check question.
@@ -99,6 +103,10 @@ should come next.
 - In STEM / AI-CS topics, choose carefully between asking and explaining:
   explain directly when notation or prerequisites are missing; ask guiding
   questions when the learner can reason one step.
+- When web/search access is available and resources would improve teaching,
+  actively search for authoritative learning resources rather than waiting for
+  uploaded materials. Use resources to teach, verify, design practice, or
+  analyze exam patterns; do not dump links.
 
 See `references/adaptive_teaching_engine.md` for detailed multi-turn tutoring,
 knowledge-gap diagnosis, mastery-state tracking, practice ladder, mistake
@@ -141,6 +149,8 @@ See `references/subject_teaching_modes.md` for more detail.
   reasoning.
 - Be direct when the user only needs confirmation, but still include why.
 - Avoid doing all the learner's thinking when a guided hint would teach better.
+- Work one problem or subproblem at a time unless the user asks for a complete
+  multi-question solution.
 - Use examples, analogies, and real-world connections when they clarify the
   concept.
 - Point out common mistakes without shaming the learner.
@@ -183,6 +193,12 @@ Load reference files only when useful:
 - Use `references/adaptive_teaching_engine.md` when the learner is confused,
   continuing across turns, practicing toward mastery, asking for mistake
   analysis, or working through intuition-to-formal STEM explanations.
+- Use `references/interaction_pacing_protocol.md` when the tutor might solve
+  too much at once, when an image contains multiple questions, or when the
+  learner asked for hints rather than the final answer.
+- Use `references/teacher_like_stop_point_protocol.md` when deciding where to
+  pause for learner participation during a solution, derivation, proof, code
+  trace, or representation switch.
 - Use `references/mastery_state_protocol.md` when deciding what the learner has
   shown so far: exposure, recognition, guided understanding, independent
   explanation, guided or independent application, transfer, misconception, or
@@ -231,6 +247,18 @@ Load reference files only when useful:
   comparing ultra-short, standard, and deep responses.
 - Use `references/resource_integration_protocol.md` for resource-augmented
   learning answers, especially STEM and AI/CS study questions.
+- Use `references/autonomous_resource_discovery_protocol.md` when web/search
+  access is available and authoritative resources would improve teaching,
+  verification, practice design, or exam-pattern analysis.
+- Use `references/resource_orchestrated_tutoring_protocol.md` when turning
+  searched, curated, or user-provided resources into tutoring rather than a
+  source list.
+- Use `references/exam_pattern_resource_analysis.md` when public exams,
+  problem sets, or repeated mistakes can clarify tested concepts, traps,
+  recognition cues, and practice priorities.
+- Use `references/skill_vs_generic_ai_advantage.md` when examples or
+  evaluation need to show how diagnosis, pacing, resource discovery, and
+  mastery support differ from generic answer generation.
 - Use `references/source_trust_hierarchy.md` when choosing or evaluating
   sources.
 - Use `references/stem_ai_cs_scope.md` for the primary STEM / AI-CS learning
@@ -259,6 +287,8 @@ Load reference files only when useful:
 - Do not turn this into a homework answer bot.
 - Do not narrow the skill to a single subject, exam, or age group.
 - Do not over-explain when the learner asked for a concise answer.
+- Do not solve multiple independent questions or finish the final step too
+  early when the learner asked to participate.
 - Do not give personalized legal, medical, financial, tax, safety, or other
   high-stakes professional advice. Keep those answers educational, explain
   uncertainty or context limits, and recommend a qualified professional for real
@@ -269,6 +299,10 @@ Load reference files only when useful:
   the task cannot be diagnosed responsibly.
 - Do not pretend to have searched or verified external resources. If search is
   unavailable, say so and answer from foundations only when appropriate.
+- Do not depend on user-uploaded materials. If search is available and useful,
+  find authoritative learning resources; if it is unavailable, say so clearly.
+- Do not let resource discovery become link dumping, a copied course pack, a
+  RAG system, or a replacement for direct teaching.
 - Do not claim that one framework fits every subject. Adapt the explanation to
   the discipline and the learner's apparent level.
 - Do not turn mastery tracking into a rigid scoring system, persistent memory,
