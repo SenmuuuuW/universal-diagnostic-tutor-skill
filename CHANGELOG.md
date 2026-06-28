@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.0.0 - 2026-06-28
+
+### Added In v1.0.0
+
+- Stable consolidation release for the `universal-diagnostic-tutor` Skill.
+- Rewritten Chinese GitHub README explaining project identity, intended users,
+  capabilities, usage, repository structure, quality principles, limitations,
+  and license.
+- Skill-level Chinese README for `skills/universal-diagnostic-tutor/`, covering
+  when to use the Skill, when not to use it, STEM / AI-CS strengths, prompt
+  examples, reference-file roles, and maintenance notes.
+
+### Changed In v1.0.0
+
+- Clarified that the project is a reusable diagnosis-first teaching behavior
+  layer, not a website, app, database, course platform, curriculum roadmap, or
+  persistent learner-memory system.
+- Documented the optional `quick_validate.py` PyYAML requirement without adding
+  dependency files or package setup.
+- Kept V1.0 as documentation polish and stable consolidation only; no new
+  teaching protocols, source packs, scripts, APIs, PDFs, secrets, or
+  infrastructure were added.
+
 ## v0.9.0 - 2026-06-28
 
 ### Added In v0.9.0

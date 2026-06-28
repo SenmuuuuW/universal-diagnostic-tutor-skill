@@ -1,351 +1,211 @@
-# universal-diagnostic-tutor-skill
+# Universal Diagnostic Tutor Skill｜诊断型智能导师 Skill
 
-A reusable Codex Agent Skill for diagnosis-first tutoring across subjects.
+`universal-diagnostic-tutor` 是一个可复用的 AI Tutor Skill，目标是把 AI 助手从“先给答案”的答题工具，变成“先诊断、再教学、再练习”的诊断型导师。它适用于多学科学习场景，目前最强的使用重点是大学层级的 STEM / AI / CS 学习。
 
-This project contains `universal-diagnostic-tutor`, a universal teaching skill
-for Codex and ChatGPT-style assistants. It is designed for learning-related
-questions in math, science, humanities, social sciences, law, economics,
-history, geography, literature, language learning, writing, coding, AI, exam
-prep, and general concept learning.
+## 这是什么？
 
-## Not Answer-First, Diagnosis-First
+这是一个 Markdown-based Skill，面向 Codex、Claude Code 风格的 agent 工作流，以及其他支持 Skill / project instruction / agent instruction 的 AI 学习助手环境。
 
-Many tutoring interactions jump straight to the final answer. That can be fast,
-but it often hides the real problem: the learner may be missing a prerequisite,
-misreading the task, using the wrong mental model, or not seeing why a step
-makes sense.
+它定义的是一种“教学行为层”：
 
-This skill asks the assistant to diagnose first:
+- 如何判断问题属于哪个学科和主题。
+- 如何诊断学习者缺少的前置知识、概念、符号、步骤或推理能力。
+- 如何选择解释深度、教学顺序、练习方式和反馈方式。
+- 如何在多轮对话中跟踪学习者目前理解到哪一步。
+- 如何使用可靠资源辅助学习，但不让资源列表取代教学。
 
-1. What subject is this?
-2. What topic or skill is being tested?
-3. What prerequisite ideas matter?
-4. What knowledge gaps are likely?
-5. Where should the explanation begin?
+它不是网站、不是 App、不是数据库、不是课程平台，也不是自动保存学习记录的系统。它只是一个可复用的教学行为规范和参考资料集合。
 
-Only after that diagnosis should the assistant teach, solve, summarize, and
-offer practice.
+## 适合谁？
 
-## Why This Skill Exists
+这个项目适合：
 
-The goal is mastery, not just completion. A strong tutor does more than produce
-answers. It finds the right starting point, builds the missing foundation,
-explains the reasoning, names common mistakes, and helps the learner transfer
-the method to the next problem.
+- 正在学习大学层级数学、编程、算法、AI / ML、操作系统、网络、物理、电子、信号等内容的学生。
+- 不只想要最终答案，而是想知道“为什么这样做”的学习者。
+- 经常遇到“我能看懂例题，但自己做不出来”的人。
+- 想让 AI 帮自己分析错题、补前置知识、做分层练习的人。
+- 想构建自己的 AI tutor、学习助手或 agent workflow 的开发者。
 
-This skill is intentionally universal. It must not become SAT-only, math-only,
-coding-only, or limited to any single school subject.
+它仍然是跨学科的通用导师 Skill，可用于写作、文学、历史、经济、法律常识、考试备考等学习问题；只是当前资料最完整、测试最密集的方向是 STEM / AI-CS。
 
-## How It Works
+## 核心理念
 
-When a learning-related request triggers the skill, the assistant follows this
-core pattern:
+这个 Skill 的核心不是“快点给答案”，而是帮助学习者真正掌握。
 
-1. Identify the subject domain.
-2. Identify the specific topic or skill.
-3. Identify prerequisite knowledge.
-4. Diagnose likely knowledge gaps.
-5. Decide where the explanation should begin.
-6. Teach necessary foundations first.
-7. Explain step by step.
-8. Explain why each step makes sense.
-9. Give the final answer or conclusion.
-10. Summarize how to solve similar problems.
-11. Point out common mistakes.
-12. Connect to real-world applications when useful.
-13. Give a short practice or understanding-check question.
+它要求 AI Tutor：
 
-The skill also defines teaching depth levels, subject-specific teaching modes,
-and reusable answer formats.
+- 先诊断，再回答。
+- 需要时先补前置知识。
+- 先讲概念，再讲步骤。
+- 先建立直觉，再进入形式化定义、公式、符号或代码。
+- 检查理解，而不是假设听懂了。
+- 把错误当作诊断线索，而不是只判对错。
+- 根据学习者状态调整难度。
+- 用练习梯度帮助学习者从识别走向迁移。
+- 不因为一次答对就认为已经掌握。
 
-## Repository Structure
+## 主要能力
+
+- **知识漏洞诊断**：区分词汇、概念、符号、步骤、推理、识别、迁移、误解、信心和资源需求等不同类型的问题。
+- **自适应多轮教学**：当学习者说“还是不懂”、答错、答对但说不出原因、或换了主题时，选择下一步教学动作。
+- **STEM 符号和记号解释**：把公式、变量、矩阵、张量、代码符号、单位、系统层级等翻译成普通语言。
+- **公式、证明和推导教学**：不只展示步骤，还解释每一步为什么合法、用了什么定义、假设、模型或不变量。
+- **编程和调试指导**：用 observe -> hypothesize -> isolate -> test -> fix -> explain 的方式解释 bug，而不是只贴修复代码。
+- **AI / ML 数学桥接**：帮助学习者把线性代数、微积分、概率、优化和模型训练联系起来。
+- **系统抽象解释**：解释虚拟内存、进程、地址、网络分层等概念时，区分程序视角、操作系统抽象和硬件机制。
+- **练习梯度**：从识别检查、基础概念、补全例题、近迁移、陷阱题、混合题到真实应用逐步推进。
+- **错题分析**：定位表层错误和深层误解，说明错误为什么诱人，再给相近但稍微变化的练习。
+- **对话内掌握状态跟踪**：在当前对话里轻量判断学习者处于 exposure、recognition、guided understanding、independent application、transfer 等阶段，但不做永久记忆。
+- **资源支持式教学**：用 source trust hierarchy 选择课程、教材、官方文档、题集等可靠资源，并把资源变成学习路径，而不是链接堆砌。
+- **回答长度校准**：根据用户需要选择超短、短答、标准解释或深入讲解。
+- **高风险领域边界**：法律、医疗、金融、税务、安全等内容保持教育性解释，不提供个性化专业建议。
+
+## 它如何教学？
+
+典型教学流程是：
+
+```text
+用户问题
+-> 诊断学科、主题和任务类型
+-> 判断可能的知识漏洞或误解
+-> 选择回答深度
+-> 先讲直觉和具体例子
+-> 再讲正式定义、符号、公式、步骤或算法
+-> 检查理解
+-> 根据回答调整难度
+-> 给合适层级的练习
+-> 决定复习、换解释、继续练习还是推进到迁移
+```
+
+这个流程不是僵硬模板。好的回答应该像自然老师一样，根据学习者当前状态选择最少但足够的教学动作。
+
+## 示例使用场景
+
+你可以用它处理这类问题：
+
+- “我不懂 `Ax = b` 里的 `b` 是点还是向量。”
+- “为什么 `x^2` 的导数是 `2x`，不要只告诉我规则。”
+- “我知道 binary search 怎么写，但为什么它一定正确？”
+- “我的 Python loop 打印对了，但是 list 还是空的。”
+- “为什么 gradient descent 需要 calculus 和 linear algebra？”
+- “我做对了，但是我说不出为什么。”
+- “我能跟着例题做，但换个题就不会了。”
+- “这道概率题我又错了，帮我看是概念错还是步骤错。”
+
+## 如何使用
+
+1. Clone 这个仓库：
+
+```bash
+git clone https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill.git
+cd universal-diagnostic-tutor-skill
+```
+
+2. 找到 Skill 目录：
+
+```text
+skills/universal-diagnostic-tutor/
+```
+
+3. 在你的 Codex / Claude Code 风格 agent 环境中引用或安装这个 Skill 目录。
+
+如果你的环境支持 project skills 或 user skills，把 `skills/universal-diagnostic-tutor/` 放到该环境要求的 skills 位置，或者在项目配置中引用这个目录。不同 agent 工具的安装路径不同，请以你的工具文档为准。
+
+4. 然后自然提问，例如：
+
+```text
+请用诊断型导师方式教我这道线性代数题，不要直接给答案。
+```
+
+## 可复制的提示词示例
+
+```text
+请用诊断型导师方式教我这道线性代数题，不要直接给答案。
+```
+
+```text
+我不懂这个公式里的符号，先帮我翻译成普通语言。
+```
+
+```text
+我做错了这道概率题，帮我分析是概念错还是步骤错。
+```
+
+```text
+我能跟着做，但不能独立做，请给我一个从简单到迁移的练习梯度。
+```
+
+```text
+我刚刚答对了，但我不确定自己是否真的懂，请检查我的理解。
+```
+
+```text
+我还是不懂，请不要重复刚才的解释，换一个更小的例子。
+```
+
+## 仓库结构
 
 ```text
 universal-diagnostic-tutor-skill/
 ├── README.md
-├── LICENSE
 ├── CHANGELOG.md
 ├── AGENTS.md
+├── LICENSE
 └── skills/
     └── universal-diagnostic-tutor/
         ├── SKILL.md
+        ├── README.md
         ├── references/
-        │   ├── subject_routing.md
-        │   ├── adaptive_teaching_engine.md
-        │   ├── knowledge_gap_taxonomy.md
-        │   ├── multiturn_tutoring_protocol.md
-        │   ├── practice_ladder.md
-        │   ├── mistake_analysis_protocol.md
-        │   ├── stem_teaching_sequence.md
-        │   ├── stem_ask_vs_explain_calibration.md
-        │   ├── stem_natural_adaptive_style.md
-        │   ├── stem_symbol_notation_protocol.md
-        │   ├── stem_proof_and_derivation_protocol.md
-        │   ├── stem_problem_solving_protocol.md
-        │   ├── mastery_state_protocol.md
-        │   ├── cross_turn_progress_protocol.md
-        │   ├── understanding_check_protocol.md
-        │   ├── difficulty_adjustment_protocol.md
-        │   ├── review_or_advance_decision.md
-        │   ├── teaching_depth_levels.md
-        │   ├── subject_teaching_modes.md
-        │   ├── output_formats.md
-        │   ├── evaluation_checklist.md
-        │   ├── manual_test_matrix.md
-        │   ├── response_length_calibration.md
-        │   ├── resource_integration_protocol.md
-        │   ├── resource_augmented_output.md
-        │   ├── source_trust_hierarchy.md
-        │   ├── stem_ai_cs_scope.md
-        │   ├── source_note_checklist.md
-        │   ├── source_packs/
-        │   │   ├── ai_ml_data.md
-        │   │   ├── crypto_security_addendum.md
-        │   │   ├── exam_problem_set_sources.md
-        │   │   ├── graphics_multimedia_hci_software.md
-        │   │   ├── math_foundations.md
-        │   │   ├── networks_from_zero.md
-        │   │   ├── numerical_hpc_control.md
-        │   │   ├── physics_electronics_signals.md
-        │   │   ├── programming_and_cs_foundations.md
-        │   │   ├── source_refresh_maintenance.md
-        │   │   ├── source_pack_usage_guide.md
-        │   │   ├── source_specificity_guidelines.md
-        │   │   ├── systems_networks_security.md
-        │   │   ├── theory_formal_methods.md
-        │   │   └── vr_multimedia_addendum.md
-        │   └── maintenance_notes.md
         └── examples/
-            ├── adaptive_multiturn_example.md
-            ├── ai_concept_example.md
-            ├── bad_vs_good_example.md
-            ├── cross_turn_progress_example.md
-            ├── economics_business_example.md
-            ├── finance_boundary_example.md
-            ├── health_boundary_example.md
-            ├── humanities_evidence_example.md
-            ├── math_example.md
-            ├── science_example.md
-            ├── humanities_example.md
-            ├── coding_example.md
-            ├── cryptography_foundation_example.md
-            ├── formal_languages_example.md
-            ├── law_civics_example.md
-            ├── language_literature_example.md
-            ├── mastery_state_matrix_example.md
-            ├── mixed_subject_example.md
-            ├── mistake_analysis_example.md
-            ├── mistake_analysis_teaching_example.md
-            ├── natural_style_example.md
-            ├── networks_from_zero_source_example.md
-            ├── numerical_analysis_example.md
-            ├── practice_ladder_example.md
-            ├── resource_augmented_ai_example.md
-            ├── resource_augmented_cs_example.md
-            ├── resource_augmented_exam_pattern_example.md
-            ├── resource_augmented_math_example.md
-            ├── source_pack_usage_example.md
-            ├── source_limited_answer_example.md
-            ├── stem_ai_ml_bridge_example.md
-            ├── stem_debugging_example.md
-            ├── stem_derivation_example.md
-            ├── difficulty_adjustment_example.md
-            ├── stem_intuition_to_formal_example.md
-            ├── stem_notation_gap_example.md
-            ├── stem_physics_signal_example.md
-            ├── stem_proof_example.md
-            ├── stem_systems_abstraction_example.md
-            ├── stem_teaching_sequence_example.md
-            ├── review_or_advance_example.md
-            ├── still_confused_example.md
-            ├── writing_revision_example.md
-            └── exam_prep_example.md
 ```
 
-## V0.2 Improvements
+- `README.md`：GitHub 项目介绍，面向使用者和维护者。
+- `CHANGELOG.md`：版本历史和每个版本的主要变化。
+- `AGENTS.md`：维护这个仓库时需要遵守的规则。
+- `LICENSE`：MIT License。
+- `skills/universal-diagnostic-tutor/SKILL.md`：Skill 的核心入口，定义触发说明、教学工作流、路由和守则。
+- `references/`：详细教学协议和评估资料，例如知识漏洞分类、多轮教学、STEM 记号、证明推导、练习梯度、资源信任层级等。
+- `examples/`：不同学科和教学场景的示例回答，用来展示好回答应该怎样组织。
+- `references/source_packs/`：轻量资源包，帮助 STEM / AI-CS 场景选择可信学习资源。它们不是教材复制件，也不是答案库。
 
-V0.2 improves real-world reliability without changing the skill's identity. It
-adds a manual evaluation checklist, fuller diagnosis-first examples, compact
-short-answer guidance, bad-vs-good contrast, mixed-subject routing guidance, and
-stronger educational boundaries for high-stakes domains such as law and
-finance.
+## 版本历史摘要
 
-To manually test the skill, use prompts from several subject areas and score the
-answers with
-`skills/universal-diagnostic-tutor/references/evaluation_checklist.md`. A good
-answer should diagnose the learning task, teach from the right starting point,
-adapt to the subject, avoid over-explaining simple questions, and stay
-educational in high-stakes contexts.
+- **V0.1**：核心通用诊断型导师 Skill。
+- **V0.2**：评估清单和更完整示例。
+- **V0.3**：回答长度校准、人工测试矩阵和高风险边界示例。
+- **V0.4**：资源整合协议和资源增强回答格式。
+- **V0.5**：STEM / AI-CS 轻量 source packs。
+- **V0.6**：理论、密码学、安全、数值计算、HPC、控制、网络、VR 等专项资源补充。
+- **V0.7**：自适应教学引擎、知识漏洞分类、多轮教学、练习梯度和错题分析。
+- **V0.8**：STEM / AI-CS 教学校准，包括 ask-vs-explain、符号解释、证明推导和问题求解。
+- **V0.9**：掌握状态和跨轮进度协议，帮助 tutor 判断复习、练习、降难度或推进。
+- **V1.0**：稳定版整理发布，重点是中文 GitHub README、Skill 中文使用指南和项目身份说明。
 
-## V0.3 Improvements
+## 质量原则
 
-V0.3 adds a lightweight Markdown-only manual test system. The manual test
-matrix in `skills/universal-diagnostic-tutor/references/manual_test_matrix.md`
-covers 12 subject and boundary scenarios, while
-`skills/universal-diagnostic-tutor/references/response_length_calibration.md`
-shows how to tune ultra-short, short, standard, and deep answers without losing
-diagnosis-first reasoning.
+- **先诊断，后回答。** 不把学习问题当成单纯答题。
+- **掌握优先于完成。** 目标是让学习者能解释、应用和迁移。
+- **直觉先于形式化。** 对抽象主题，先建立图像、例子或机制，再进入公式和证明。
+- **资源辅助教学。** 可靠来源可以支持学习，但不能替代解释、练习和反馈。
+- **不因一次答对就假设掌握。** 还要看学习者是否能说明为什么、能否独立应用、能否迁移。
+- **自然教师风格。** 内部可以诊断 gap type，外部表达要像老师，不像表格。
+- **安全教育边界。** 高风险领域只做概念教育，不替代专业人士。
 
-V0.3 also adds health and finance educational boundary examples, a humanities
-evidence example for interpretive uncertainty, and a natural style example that
-shows how to avoid robotic template language.
+## 限制
 
-## V0.4 Improvements
+- 它不会保存永久学习记忆，也不包含数据库或账户系统。
+- 它不能替代真实老师、助教或专家审阅。
+- 它不能保证宿主 AI 的每个回答都正确，关键学习和高风险内容仍应人工核查。
+- 它不是医疗、法律、金融、税务或安全顾问。
+- 它的效果取决于宿主 AI agent 是否认真遵守 `SKILL.md` 和 `references/` 中的规则。
+- 它不提供完整大学课程地图，也不试图成为课程平台。
 
-V0.4 adds a resource-augmented learning protocol for university-level STEM,
-AI, and computer science study while preserving the universal tutor identity.
-For STEM / AI-CS questions, the tutor should use reliable learning resources
-when web access is available, explain what sources were used, and turn those
-sources into a teaching path rather than a source dump.
+## 维护与验证提示
 
-The new source trust hierarchy prioritizes official documentation, official
-course materials, university open courseware, textbooks and open textbooks,
-official problem sets, authoritative technical sources, and reputable tutorials.
-When external resources are used, answers should cite or list sources. When
-internet access is unavailable, the tutor should say that sources could not be
-verified instead of inventing links, textbooks, exams, or papers.
+V1.0 是稳定整理版本，不引入新功能、网站、脚本、API、包管理、数据库、持久记忆、PDF 或新 source packs。
 
-V0.4 does not add API dependencies, scripts, websites, copied textbooks, or
-scraped course materials. This remains a universal diagnosis-first tutor skill,
-not a CS-only skill.
+维护者可以使用 `skills/universal-diagnostic-tutor/references/evaluation_checklist.md` 和 `manual_test_matrix.md` 做人工验收。若使用外部 Skill 创建工具里的 `quick_validate.py`，该脚本可能需要 PyYAML；本仓库不为此添加 package setup 或依赖文件。缺少 PyYAML 时，可以改用环境中已有的 YAML 工具验证 `SKILL.md` front matter。
 
-## V0.5 Improvements
+## License
 
-V0.5 adds curated, lightweight source packs for university-level STEM, AI, and
-computer science learning. These packs give the tutor better starting points
-for resource-augmented teaching in math foundations, programming and CS,
-systems, networks, security, AI/ML/data, physics/electronics/signals,
-graphics/HCI/software, and exam or problem-set practice.
-
-Source packs are for source selection, study-path design, and citation
-discipline. They are not copied textbooks, downloaded course archives, answer
-banks, or a substitute for teaching. No API dependency, search integration,
-website, package setup, PDFs, or copyrighted source material is included.
-
-When sources are used, the tutor should still verify links when possible, cite
-specific useful pages, and explain how each source supports the learner's next
-step. STEM / AI-CS is the primary current use case, but the skill remains a
-universal diagnosis-first tutor across all subjects.
-
-## V0.6 Improvements
-
-V0.6 strengthens the source-pack system with specialty addendums for
-theory/formal methods, cryptography/security, numerical analysis, HPC, control,
-beginner computer networks, VR, and multimedia. It also adds source specificity
-guidance so the tutor prefers exact lecture, assignment, documentation,
-standard, or textbook pages over broad homepages when possible.
-
-The networks-from-zero pack gives beginners a gentler path before advanced
-networking courses or RFCs. Source refresh maintenance guidance explains how to
-mark stale, unverified, or term-specific links without turning source packs into
-large dumps. This remains a universal diagnosis-first tutor skill; STEM / AI-CS
-coverage is strengthened without making the skill STEM-only.
-
-## V0.7 Improvements
-
-V0.7 returns attention to the core teaching engine. It adds an adaptive
-teaching engine, knowledge-gap taxonomy, multiturn tutoring protocol, practice
-ladder, mistake analysis protocol, and STEM teaching sequence.
-
-The new adaptive teaching reference keeps resource use in its proper role:
-sources can support teaching, but they do not replace diagnosis, explanation,
-practice, feedback, and transfer. V0.7 remains universal across subjects, with
-examples for matrix multiplication follow-up tutoring, calculus confusion,
-algebra mistake analysis, conditional-probability misconception repair,
-recursion practice ladders, and STEM / AI-CS intuition-to-formal reasoning.
-
-This release strengthens teaching behavior, not source collection. It adds no
-new source packs, scripts, websites, APIs, package setup, PDFs, secrets, or
-infrastructure.
-
-## V0.8 Improvements
-
-V0.8 adds STEM / AI-CS adaptive teaching calibration for the current primary
-learning path: university-level mathematics, programming, AI/ML, computer
-systems, physics, electronics, signals, and engineering foundations.
-
-It adds guidance for when a technical tutor should ask a guiding question
-versus explain directly, how to keep adaptive STEM teaching natural, how to
-teach symbols and notation, how to explain proofs and derivations, and how to
-teach STEM problem solving without hiding the method behind formulas or code.
-
-V0.8 focuses on STEM / AI-CS examples while preserving the universal tutor
-identity. It does not add non-STEM examples, source packs, websites, scripts,
-APIs, package setup, PDFs, secrets, or infrastructure.
-
-## V0.9 Improvements
-
-V0.9 adds teaching-progress guidance for adaptive STEM / AI-CS tutoring while
-preserving the universal diagnosis-first identity. It helps the tutor track
-what the learner has shown in the current conversation, such as exposure,
-recognition, guided understanding, independent explanation, guided or
-independent application, transfer, misconception, or overload.
-
-The new guidance covers cross-turn progress handling, supportive understanding
-checks, difficulty adjustment, and review-or-advance decisions. The tutor should
-not assume mastery from one correct answer; it should distinguish getting the
-answer from understanding why, then decide whether to review, re-explain,
-practice, simplify, or advance.
-
-V0.9 strengthens teaching progress rather than curriculum planning. It does not
-add course roadmap files, university curriculum maps, new source packs,
-websites, scripts, APIs, package setup, PDFs, secrets, persistent memory,
-databases, or infrastructure.
-
-## Use With Codex
-
-To use the skill locally, copy the skill folder into your Codex skills
-directory:
-
-```bash
-mkdir -p ~/.codex/skills
-cp -R skills/universal-diagnostic-tutor ~/.codex/skills/
-```
-
-Then start a new Codex session and ask a learning-related question, such as:
-
-```text
-Use the universal diagnostic tutor to help me understand why supply curves slope
-upward.
-```
-
-Codex should load the skill when the request is about learning, teaching,
-explaining, studying, practicing, debugging for understanding, exam prep, or
-concept mastery.
-
-## Maintain And Update
-
-When updating the skill:
-
-- Keep it universal across subjects.
-- Preserve the diagnosis-first teaching philosophy.
-- Keep `SKILL.md` concise and move detailed guidance into `references/`.
-- Update examples when behavior changes.
-- Update `CHANGELOG.md` for user-visible changes.
-- Avoid scripts or infrastructure unless the skill truly needs them.
-
-## Roadmap
-
-- V0.1: Core universal tutor skill.
-- V0.2: Stronger examples, subject routing, and manual evaluation checklist.
-- V0.3: Manual test matrix and response length calibration.
-- V0.4: STEM / AI-CS resource integration reference pack.
-- V0.5: Curated STEM / AI-CS source packs for resource-augmented tutoring.
-- V0.6: Specialty source addendums and source maintenance guidance.
-- V0.7: Adaptive teaching engine for multi-turn tutoring, mistake analysis,
-  practice ladders, and mastery building.
-- V0.8: STEM / AI-CS adaptive teaching calibration for ask-vs-explain,
-  notation, proofs, derivations, and problem solving.
-- V0.9: Mastery-state tracking and cross-turn progress guidance for review,
-  practice, difficulty adjustment, and advancement decisions.
-- V1.0: Stable reusable tutor skill.
-
-## 中文简介
-
-这个项目是一个通用的 Codex 教学 Skill。它不是先给答案的
-"答案机器人", 而是先判断学科、主题、前置知识和可能的知识漏洞,
-再像老师一样从合适的位置开始讲解。
-
-它适用于数学、科学、人文社科、语言文学、写作、编程、法律、经济、
-考试备考等多种学习场景。核心目标是帮助学习者真正理解, 而不是只把
-题目做完。
+本项目使用 MIT License。详情见 [LICENSE](LICENSE)。

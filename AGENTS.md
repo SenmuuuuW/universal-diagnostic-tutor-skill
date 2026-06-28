@@ -91,6 +91,15 @@ Future changes must preserve the core identity of the skill:
   case.
 - Do not add API keys, credentials, or secrets to the repository.
 - Do not add external-search scripts unless explicitly requested.
+- V1.0 is a stable consolidation release. Keep future V1.0 maintenance focused
+  on clarity, consistency, documentation quality, and acceptance checks rather
+  than feature expansion.
+- Keep the root README and `skills/universal-diagnostic-tutor/README.md`
+  friendly to Chinese readers and aligned with the universal diagnosis-first
+  identity.
+- If an external `quick_validate.py` check is used, note that it may require
+  PyYAML in the local environment. Do not add package setup or dependency files
+  only for that validator unless explicitly requested.
 
 ## Editing Notes
 
