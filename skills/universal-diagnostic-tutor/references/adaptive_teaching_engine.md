@@ -2,7 +2,7 @@
 
 Use this reference when a learner is confused, continuing across turns, asking
 for practice, showing work, making mistakes, or trying to move from intuition
-to formal understanding. It is the hub for V0.7 adaptive teaching guidance.
+to formal understanding. It is the hub for adaptive teaching guidance.
 
 The tutor's job is not to deliver the same explanation harder. It is to notice
 what did not land, change the teaching move, and help the learner build
@@ -23,16 +23,20 @@ transferable mastery.
    teach-back prompt.
 7. **Adapt if confused.** If the learner is stuck, step down, change
    representation, and rebuild the missing prerequisite.
-8. **Give practice in increasing difficulty.** Use the practice ladder when
+8. **Track progress.** Estimate what the learner has shown so far and avoid
+   assuming mastery from one correct answer.
+9. **Adjust difficulty.** Review, re-explain, practice, simplify, or advance
+   based on evidence from the learner's latest turn.
+10. **Give practice in increasing difficulty.** Use the practice ladder when
    mastery or transfer is the goal.
-9. **Analyze mistakes.** Treat errors as evidence about the underlying gap.
-10. **Help transfer.** Name when the method applies and how to recognize it in
+11. **Analyze mistakes.** Treat errors as evidence about the underlying gap.
+12. **Help transfer.** Name when the method applies and how to recognize it in
     similar problems.
 
 Avoid turning every answer into a visible checklist. Use the loop to guide the
 response, then speak naturally.
 
-## Detailed V0.7 References
+## Detailed References
 
 - Use `knowledge_gap_taxonomy.md` to distinguish vocabulary, concept, notation,
   procedure, reasoning, recognition, transfer, misconception, confidence, and
@@ -46,6 +50,17 @@ response, then speak naturally.
   underlying gap, and give near-match practice.
 - Use `stem_teaching_sequence.md` for STEM / AI-CS intuition-to-formal teaching
   in math, programming, AI/ML, systems, physics, electronics, and signals.
+- Use `mastery_state_protocol.md` to estimate whether the learner is at
+  exposure, recognition, guided understanding, independent explanation, guided
+  or independent application, transfer, misconception, or overload.
+- Use `cross_turn_progress_protocol.md` to carry forward progress within the
+  current conversation without making a visible tracking table.
+- Use `understanding_check_protocol.md` to choose supportive checks that guide
+  the next teaching move.
+- Use `difficulty_adjustment_protocol.md` to decrease, maintain, or increase
+  difficulty and switch representations when needed.
+- Use `review_or_advance_decision.md` to decide whether to review, re-explain,
+  practice, advance, simplify, or answer first in speed mode.
 
 ## Choosing The Teaching Move
 
@@ -61,6 +76,10 @@ response, then speak naturally.
   understand after one explanation.
 - **Move to practice** when the learner can explain the idea but needs
   recognition, procedure, transfer, or confidence.
+- **Maintain difficulty and check reasoning** when the learner gives a correct
+  answer but cannot explain why.
+- **Advance gradually** when the learner explains correctly, solves without
+  hints, or transfers the idea to a new context.
 - **Recommend resources** when the learner needs structured study, verified
   practice, official documentation, or a longer path. Resources should support
   the teaching loop, not replace it.
@@ -87,12 +106,48 @@ Carry forward the learner model across turns:
 When the learner answers a check question:
 
 - If correct, explain why it is correct and increase difficulty by one step.
+- If correct but unexplained, ask a reasoning check before advancing.
 - If partly correct, keep the correct part, isolate the wrong part, and repair
   only that gap.
 - If wrong, do not simply reveal the answer. Show the earliest decision point
   where the path changed.
 - If vague, ask one narrow diagnostic question instead of giving a broad new
   lecture.
+
+See `cross_turn_progress_protocol.md` for how to track progress across turns
+without assuming mastery too early.
+
+## Mastery-State Tracking
+
+Use `mastery_state_protocol.md` when the tutor needs to decide what the
+learner has actually shown. Track state lightly and locally inside the current
+conversation:
+
+- Exposure is not understanding.
+- Recognition is not application.
+- A correct answer is not proof of reasoning.
+- Guided success is not independent application.
+- Independent application is not transfer until the learner handles a new
+  context.
+
+Do not turn mastery states into grades or visible labels. Use them to choose
+the next teaching move.
+
+## Review, Practice, Or Advance
+
+Use `review_or_advance_decision.md` when the tutor is choosing the next move:
+
+- Review vocabulary or notation before solving.
+- Re-explain with intuition when the learner knows terms but cannot reason.
+- Give guided practice when the learner follows but cannot solve.
+- Give near-transfer when the learner succeeds with hints.
+- Advance when the learner solves independently and can explain why.
+- Simplify when the learner is overwhelmed.
+- Answer first when the learner asks for speed.
+
+Use `difficulty_adjustment_protocol.md` to tune abstraction, notation density,
+number of steps, proof rigor, coding complexity, system layers, and source
+load.
 
 ## "I Still Don't Understand" Handling
 

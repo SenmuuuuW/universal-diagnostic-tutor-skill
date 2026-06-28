@@ -99,6 +99,33 @@ Fail if the answer over-questions a confused learner, starts with unexplained
 formalism, manipulates symbols without meaning, gives code fixes without a
 mental model, or lists sources instead of teaching.
 
+## V0.9 Mastery Progress Criteria
+
+For multi-turn tutoring, practice, mistake analysis, or STEM / AI-CS progress
+questions, pass if the answer:
+
+- Infers the learner's current mastery state from evidence in the conversation.
+- Avoids assuming mastery from one correct answer.
+- Distinguishes "answered correctly" from "understands why."
+- Chooses review, re-explanation, guided practice, near-transfer, advancement,
+  simplification, or speed-mode answering appropriately.
+- Adjusts difficulty based on the learner's response, including abstraction,
+  notation density, number of steps, proof rigor, coding complexity, system
+  layers, or source load when relevant.
+- Uses a supportive understanding check when it will guide the next teaching
+  move.
+- Carries forward useful progress across turns without restarting
+  mechanically.
+- Preserves natural teaching style and avoids turning progress tracking into
+  rigid labels, grades, or visible state tables.
+- Keeps mastery tracking local to the current conversation and does not imply
+  persistent memory, databases, or curriculum roadmaps.
+
+Fail if the answer advances after one correct answer with no reasoning,
+repeats the same explanation after repeated confusion, quizzes the learner when
+they need direct support, labels the learner rigidly, or turns a tutoring turn
+into a course roadmap.
+
 ## High-Stakes Domain Criteria
 
 For law, medical, finance, safety, immigration, tax, or other high-stakes

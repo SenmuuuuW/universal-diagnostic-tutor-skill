@@ -722,6 +722,136 @@ a failure mode.
   or gives only the update formula.
 - **Target score:** 5.
 
+## 53. V0.9 Correct Answer But Cannot Explain
+
+- **Prompt:** After being asked for the derivative of `x^3`, the learner says:
+  "It is `3x^2`, but I don't know why. I just memorized the rule."
+- **Expected mastery-state diagnosis:** Recognition or procedure recall, not
+  independent explanation.
+- **Expected tutor decision:** Maintain difficulty and review the reasoning
+  before advancing.
+- **Expected adaptive response:** Confirm the correct answer, explain that the
+  reasoning is the part to strengthen, give a compact intuition or derivation
+  cue, and avoid harder derivatives for the moment.
+- **Expected practice/check behavior:** Use one reasoning check, such as why a
+  power function uses the power rule or what the derivative is measuring.
+- **Failure cases:** Treats the correct answer as mastery, gives harder
+  problems immediately, or says only "memorize the rule."
+- **Target score:** 5.
+
+## 54. V0.9 Learner Succeeds With Hints
+
+- **Prompt:** The learner completes a recursive factorial function after two
+  hints about the base case and smaller input, then asks: "What should I try
+  next?"
+- **Expected mastery-state diagnosis:** Guided application; the learner solved
+  with support but has not shown independent application.
+- **Expected tutor decision:** Move to near-transfer with fewer hints.
+- **Expected adaptive response:** Briefly summarize what the learner now has,
+  then give a similar recursion task such as summing a list or counting items.
+- **Expected practice/check behavior:** Ask for the base case and recursive
+  case, with fewer scaffolds than before.
+- **Failure cases:** Gives a full project, repeats the same factorial problem,
+  or assumes independent mastery.
+- **Target score:** 5.
+
+## 55. V0.9 Confused Twice
+
+- **Prompt:** After two explanations of matrix multiplication as rows times
+  columns, the learner says: "I still don't understand why this operation means
+  composition."
+- **Expected mastery-state diagnosis:** Misconception or concept gap with
+  repeated confusion; current explanation mode failed.
+- **Expected tutor decision:** Re-explain by switching representation, not by
+  repeating row-column computation.
+- **Expected adaptive response:** Use transformations or basis vectors as the
+  new representation, connect `A(Bx)` to `(AB)x`, and keep the example small.
+- **Expected practice/check behavior:** Ask which transformation happens first
+  in `ABx` or give one tiny composition check.
+- **Failure cases:** Gives a longer row-column lecture, dumps formulas, or
+  implies the learner should understand by now.
+- **Target score:** 5.
+
+## 56. V0.9 Overwhelmed By Notation
+
+- **Prompt:** "This gradient descent formula has too many symbols. I don't
+  know what theta or alpha are and now I'm lost."
+- **Expected mastery-state diagnosis:** Overloaded with notation and concept
+  prerequisites missing.
+- **Expected tutor decision:** Decrease difficulty and simplify.
+- **Expected adaptive response:** Remove dense notation, explain one adjustable
+  parameter and one step size in plain language, then return to symbols only
+  after the intuition lands.
+- **Expected practice/check behavior:** Ask one confidence or prediction check,
+  such as which direction to move if error rises to the right.
+- **Failure cases:** Defines all symbols in a dense list, adds sources, or
+  continues the full vector formula.
+- **Target score:** 5.
+
+## 57. V0.9 Learner Solves Independently
+
+- **Prompt:** The learner solves a near-transfer linear equation without hints
+  and explains why each inverse operation preserves equality.
+- **Expected mastery-state diagnosis:** Independent application with reasoning
+  evidence.
+- **Expected tutor decision:** Increase difficulty one step toward transfer or
+  a trap case.
+- **Expected adaptive response:** Confirm the reasoning, name the reusable
+  method, and give a slightly different word problem or trap involving the same
+  equation structure.
+- **Expected practice/check behavior:** Ask the learner to identify the method
+  in the new wording before solving.
+- **Failure cases:** Keeps drilling identical equations, declares total mastery,
+  or jumps to unrelated advanced algebra.
+- **Target score:** 5.
+
+## 58. V0.9 Learner Transfers Method To New Problem
+
+- **Prompt:** After learning recursion with factorial, the learner explains how
+  the same base-case/smaller-input idea applies to walking a folder tree.
+- **Expected mastery-state diagnosis:** Transfer for the recursion concept.
+- **Expected tutor decision:** Mark strong understanding naturally and connect
+  to the next useful application or edge case.
+- **Expected adaptive response:** Summarize the transfer cue, then offer a
+  small edge case such as an empty folder or a folder with nested folders.
+- **Expected practice/check behavior:** Ask how the base case changes for the
+  edge case.
+- **Failure cases:** Reteaches factorial, ignores the transfer, or starts a
+  broad data-structures roadmap.
+- **Target score:** 5.
+
+## 59. V0.9 Review Vs Advance Decision
+
+- **Prompt:** "I can plug numbers into Bayes' theorem, but I don't know when I
+  should use it. Can we do harder problems?"
+- **Expected mastery-state diagnosis:** Procedure familiarity with recognition
+  gap; not ready for harder mixed problems yet.
+- **Expected tutor decision:** Review recognition cues before advancing.
+- **Expected adaptive response:** Explain that the next progress step is
+  identifying conditional-probability structure, then contrast a Bayes case
+  with a non-Bayes case.
+- **Expected practice/check behavior:** Use a classify-the-method check before
+  solving.
+- **Failure cases:** Gives harder Bayes calculations, starts a probability
+  curriculum map, or ignores the recognition gap.
+- **Target score:** 5.
+
+## 60. V0.9 One-Question Understanding Check
+
+- **Prompt:** After explaining virtual memory address translation, the tutor
+  needs to check understanding without making the learner feel tested.
+- **Expected mastery-state diagnosis:** Guided understanding after explanation;
+  needs one signal before advancing.
+- **Expected tutor decision:** Use one supportive understanding check.
+- **Expected adaptive response:** Frame the check naturally, such as "Tiny check
+  so I know where to aim next," then ask whether two processes using the same
+  virtual address must share the same physical RAM.
+- **Expected practice/check behavior:** One focused question only; adapt based
+  on the answer.
+- **Failure cases:** Gives a quiz list, skips the check and advances, or asks a
+  question requiring page-table details not yet taught.
+- **Target score:** 5.
+
 ## Review Notes
 
 - Test across at least six rows for small edits and all rows for behavior
@@ -739,6 +869,10 @@ a failure mode.
 - For V0.8 STEM calibration changes, include rows that cover notation,
   derivation, proof, debugging, systems abstraction, signals, AI/ML bridges,
   when to ask, and when to explain directly.
+- For V0.9 teaching-progress changes, include rows that cover correct answers
+  without explanation, guided success, repeated confusion, overload, independent
+  application, transfer, review-or-advance decisions, and one-question
+  understanding checks.
 - Prefer natural answers over rigid template completion.
 - If any answer scores below 4, note whether the issue is diagnosis, depth,
   subject routing, safety boundary, or style.

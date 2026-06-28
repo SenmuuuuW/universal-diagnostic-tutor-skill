@@ -48,6 +48,21 @@ Future changes must preserve the core identity of the skill:
   foundation to reason one step.
 - Explain directly when the learner lacks the vocabulary, notation, concept, or
   technical background needed to answer.
+- V0.9 focuses on teaching progress within the current conversation, not on
+  curriculum roadmaps or university course maps.
+- Do not turn V0.9 into a roadmap, planner, persistent learner profile,
+  database, or memory system.
+- Do not assume mastery from one correct answer. Check whether the learner can
+  explain why, apply with less help, or transfer the idea.
+- Preserve teaching-progress focus: learner state, tutor decision, next
+  teaching move.
+- Keep mastery tracking lightweight and conversational; avoid rigid labels,
+  scores, or visible state tables unless the user asks for a progress summary.
+- Future mastery/progress examples should show learner state, tutor decision,
+  example response, and why the tutor reviews, practices, simplifies, or
+  advances.
+- Do not add persistent memory, databases, telemetry, accounts, or storage
+  unless explicitly requested.
 - Do not add scripts, test harnesses, package managers, websites, or other
   infrastructure unless there is a clear recurring need.
 - Do not add fake sources, invented citations, invented exams, or invented

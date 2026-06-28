@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file.
 
+## v0.9.0 - 2026-06-28
+
+### Added In v0.9.0
+
+- Mastery state protocol for tracking local learner evidence such as exposure,
+  recognition, guided understanding, independent explanation, guided or
+  independent application, transfer, misconception, and overload.
+- Cross-turn progress protocol for carrying forward what the learner has shown
+  within the current conversation without assuming mastery too early.
+- Understanding check protocol for supportive one-question, explain-it-back,
+  method-classification, prediction, error-spotting, near-transfer, and
+  confidence checks.
+- Difficulty adjustment protocol for decreasing, maintaining, or increasing
+  abstraction, notation density, number of steps, proof rigor, coding
+  complexity, system layers, and source load.
+- Review-or-advance decision guidance for choosing whether to review,
+  re-explain, guide practice, give near-transfer, advance, simplify, or answer
+  first in speed mode.
+- Mastery and progress examples for matrix notation, recursion across turns,
+  gradient-descent overload, and derivative review-versus-advance decisions.
+
+### Changed In v0.9.0
+
+- Updated `SKILL.md` and the adaptive teaching engine to route cross-turn
+  tutoring through mastery-state, difficulty, understanding-check, and
+  review-or-advance guidance.
+- Expanded the manual test matrix and evaluation checklist with V0.9 teaching
+  progress criteria.
+
 ## v0.8.0 - 2026-06-28
 
 ### Added In v0.8.0

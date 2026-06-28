@@ -87,6 +87,12 @@ should come next.
   tempting, repair the underlying concept, and give a near-match practice item.
 - Build mastery with a practice ladder from recognition check to real-world or
   project-style application.
+- Track the learner's current mastery state within the conversation: what they
+  can recognize, explain, apply with help, apply independently, or transfer.
+- Do not assume mastery from one correct answer. Check whether the learner can
+  explain why, then decide whether to review, practice, simplify, or advance.
+- Adjust difficulty by changing abstraction, notation density, number of steps,
+  proof rigor, coding complexity, system layers, or source load.
 - For STEM topics, prefer intuition before formalism: intuition, concrete
   example, definition, notation, procedure or algorithm, why it works, edge
   cases, common mistakes, practice, and later connections.
@@ -95,8 +101,8 @@ should come next.
   questions when the learner can reason one step.
 
 See `references/adaptive_teaching_engine.md` for detailed multi-turn tutoring,
-knowledge-gap diagnosis, practice ladder, mistake analysis, and STEM
-intuition-to-formal guidance.
+knowledge-gap diagnosis, mastery-state tracking, practice ladder, mistake
+analysis, and STEM intuition-to-formal guidance.
 
 ## Subject Teaching Modes
 
@@ -156,6 +162,7 @@ Select a format based on the request:
 - Short answer mode
 - Mistake analysis mode
 - Adaptive multi-turn tutoring mode
+- Mastery progress mode
 - Practice ladder mode
 - Concept explanation mode
 - Exam question mode
@@ -176,6 +183,20 @@ Load reference files only when useful:
 - Use `references/adaptive_teaching_engine.md` when the learner is confused,
   continuing across turns, practicing toward mastery, asking for mistake
   analysis, or working through intuition-to-formal STEM explanations.
+- Use `references/mastery_state_protocol.md` when deciding what the learner has
+  shown so far: exposure, recognition, guided understanding, independent
+  explanation, guided or independent application, transfer, misconception, or
+  overload.
+- Use `references/cross_turn_progress_protocol.md` when tracking progress
+  across turns in the current conversation without assuming mastery too early.
+- Use `references/understanding_check_protocol.md` when choosing a supportive
+  one-question, explain-it-back, method-classification, prediction,
+  error-spotting, near-transfer, or confidence check.
+- Use `references/difficulty_adjustment_protocol.md` when deciding whether to
+  decrease, maintain, or increase difficulty or switch representations.
+- Use `references/review_or_advance_decision.md` when choosing whether to
+  review, re-explain, guide practice, give near-transfer, advance, simplify, or
+  answer first in speed mode.
 - Use `references/knowledge_gap_taxonomy.md` when diagnosing whether the
   learner needs vocabulary, concept, notation, procedure, reasoning,
   recognition, transfer, misconception, confidence, or resource support.
@@ -250,3 +271,5 @@ Load reference files only when useful:
   unavailable, say so and answer from foundations only when appropriate.
 - Do not claim that one framework fits every subject. Adapt the explanation to
   the discipline and the learner's apparent level.
+- Do not turn mastery tracking into a rigid scoring system, persistent memory,
+  database, curriculum roadmap, or replacement for natural teaching.

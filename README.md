@@ -82,6 +82,11 @@ universal-diagnostic-tutor-skill/
         │   ├── stem_symbol_notation_protocol.md
         │   ├── stem_proof_and_derivation_protocol.md
         │   ├── stem_problem_solving_protocol.md
+        │   ├── mastery_state_protocol.md
+        │   ├── cross_turn_progress_protocol.md
+        │   ├── understanding_check_protocol.md
+        │   ├── difficulty_adjustment_protocol.md
+        │   ├── review_or_advance_decision.md
         │   ├── teaching_depth_levels.md
         │   ├── subject_teaching_modes.md
         │   ├── output_formats.md
@@ -114,6 +119,7 @@ universal-diagnostic-tutor-skill/
             ├── adaptive_multiturn_example.md
             ├── ai_concept_example.md
             ├── bad_vs_good_example.md
+            ├── cross_turn_progress_example.md
             ├── economics_business_example.md
             ├── finance_boundary_example.md
             ├── health_boundary_example.md
@@ -126,6 +132,7 @@ universal-diagnostic-tutor-skill/
             ├── formal_languages_example.md
             ├── law_civics_example.md
             ├── language_literature_example.md
+            ├── mastery_state_matrix_example.md
             ├── mixed_subject_example.md
             ├── mistake_analysis_example.md
             ├── mistake_analysis_teaching_example.md
@@ -142,12 +149,14 @@ universal-diagnostic-tutor-skill/
             ├── stem_ai_ml_bridge_example.md
             ├── stem_debugging_example.md
             ├── stem_derivation_example.md
+            ├── difficulty_adjustment_example.md
             ├── stem_intuition_to_formal_example.md
             ├── stem_notation_gap_example.md
             ├── stem_physics_signal_example.md
             ├── stem_proof_example.md
             ├── stem_systems_abstraction_example.md
             ├── stem_teaching_sequence_example.md
+            ├── review_or_advance_example.md
             ├── still_confused_example.md
             ├── writing_revision_example.md
             └── exam_prep_example.md
@@ -264,6 +273,25 @@ V0.8 focuses on STEM / AI-CS examples while preserving the universal tutor
 identity. It does not add non-STEM examples, source packs, websites, scripts,
 APIs, package setup, PDFs, secrets, or infrastructure.
 
+## V0.9 Improvements
+
+V0.9 adds teaching-progress guidance for adaptive STEM / AI-CS tutoring while
+preserving the universal diagnosis-first identity. It helps the tutor track
+what the learner has shown in the current conversation, such as exposure,
+recognition, guided understanding, independent explanation, guided or
+independent application, transfer, misconception, or overload.
+
+The new guidance covers cross-turn progress handling, supportive understanding
+checks, difficulty adjustment, and review-or-advance decisions. The tutor should
+not assume mastery from one correct answer; it should distinguish getting the
+answer from understanding why, then decide whether to review, re-explain,
+practice, simplify, or advance.
+
+V0.9 strengthens teaching progress rather than curriculum planning. It does not
+add course roadmap files, university curriculum maps, new source packs,
+websites, scripts, APIs, package setup, PDFs, secrets, persistent memory,
+databases, or infrastructure.
+
 ## Use With Codex
 
 To use the skill locally, copy the skill folder into your Codex skills
@@ -308,6 +336,8 @@ When updating the skill:
   practice ladders, and mastery building.
 - V0.8: STEM / AI-CS adaptive teaching calibration for ask-vs-explain,
   notation, proofs, derivations, and problem solving.
+- V0.9: Mastery-state tracking and cross-turn progress guidance for review,
+  practice, difficulty adjustment, and advancement decisions.
 - V1.0: Stable reusable tutor skill.
 
 ## 中文简介
