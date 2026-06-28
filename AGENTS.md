@@ -128,6 +128,12 @@ Future changes must preserve the core identity of the skill:
 - Keep the root README and `skills/universal-diagnostic-tutor/README.md`
   professional, Chinese-friendly, not too dry, and aligned with the universal
   diagnosis-first identity.
+- Keep the root README as the polished GitHub landing page and
+  `skills/universal-diagnostic-tutor/README.md` as the Skill usage guide.
+- Use emojis in README files sparingly and consistently as visual anchors;
+  keep the tone serious, trustworthy, and not childish.
+- Do not let README polish alter core Skill behavior, teaching protocols,
+  source-pack scope, or repository infrastructure.
 - If an external `quick_validate.py` check is used, note that it may require
   PyYAML in the local environment. Do not add package setup or dependency files
   only for that validator unless explicitly requested.

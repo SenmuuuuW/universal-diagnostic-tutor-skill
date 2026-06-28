@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.2.1 - 2026-06-28
+
+### Changed In v1.2.1
+
+- Polished the Chinese GitHub README for a stronger first impression and more
+  readable open-source landing page.
+- Improved visual structure, tasteful emoji anchors, section hierarchy, and
+  new-user onboarding.
+- Added clearer learning mode presentation for Zero-Base, Standard, Advanced,
+  and Auto Mode.
+- Added a clearer Skill-vs-generic-AI comparison and core teaching loop.
+- Clarified quick-start instructions, copyable Chinese prompts, example topic
+  areas, limitations, and repository structure.
+- Kept V1.2.1 as documentation polish only: no core Skill behavior changes,
+  new teaching protocols, source packs, scripts, websites, APIs, package setup,
+  databases, persistent memory, PDFs, secrets, curriculum maps, real RAG/vector
+  DB, or infrastructure.
+
 ## v1.2.0 - 2026-06-28
 
 ### Added In v1.2.0
