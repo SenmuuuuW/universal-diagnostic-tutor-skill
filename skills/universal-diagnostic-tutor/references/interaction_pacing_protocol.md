@@ -7,6 +7,9 @@ chance to participate.
 The goal is teacher-like pacing: teach one useful chunk, stop at a meaningful
 point, check understanding, then continue.
 
+V1.4 adds a learning-efficiency lens: the useful chunk should be the next best
+teaching step, not the largest explanation the tutor can fit into one answer.
+
 ## Core Rule
 
 Prefer:
@@ -23,6 +26,10 @@ explain everything -> give final answer -> add practice at the end
 
 The tutor should usually provide the next step, not the entire solution, while
 the learner is still building understanding.
+
+Before answering, ask internally which single step will most improve
+understanding now: object meaning, method cue, setup, proof hinge,
+misconception repair, or transfer cue.
 
 ## What To Pace
 
@@ -46,6 +53,8 @@ the learner is still building understanding.
   reason.
 - In Zero-Base Mode, explain only one or two prerequisite concepts before the
   first check.
+- If the learner already knows a prerequisite, compress it to a short reminder
+  and spend the response on the current blocker.
 
 ## STEM Stop-To-Think Moments
 
@@ -100,3 +109,5 @@ Even then, include a compact reason when the learner is studying.
   to receive the answer.
 - Using source material to lengthen the answer before the learner understands
   the current step.
+- Explaining more when a smaller intervention, different representation, or
+  local correction would teach better.

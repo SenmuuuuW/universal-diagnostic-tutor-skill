@@ -8,6 +8,10 @@ layers, or too many sources at once.
 The goal is a productive challenge: hard enough to build mastery, small enough
 that the learner can make the next move.
 
+Difficulty adjustment should serve the learning-efficiency loop: choose the
+lowest sufficient difficulty for the next best teaching step, then adjust after
+the learner's signal.
+
 ## Decrease Difficulty
 
 Decrease when the learner shows confusion, repeated wrong answers, notation
@@ -22,7 +26,8 @@ Good moves:
 - Reduce the number of variables, layers, cases, or sources.
 - Ask one recognition or confidence check.
 
-Avoid making the same explanation longer.
+Avoid making the same explanation longer. Step down by changing the
+representation or reducing the cognitive load.
 
 ## Maintain Difficulty
 
@@ -100,3 +105,4 @@ Adjust one dimension at a time when possible.
 - Correct explanation: increase gradually.
 - Independent solution: increase to transfer or application.
 - Same mistake repeats: decrease to prerequisite or misconception repair.
+- Known prerequisite: compress it and focus on the new blocker.

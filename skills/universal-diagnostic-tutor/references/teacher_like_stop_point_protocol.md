@@ -4,6 +4,9 @@ Use this protocol to decide where a professional tutor should pause and invite
 the learner to participate. Stop points are not delays; they are places where
 the learner can do meaningful thinking.
 
+For V1.4 learning efficiency, choose the stop point that reveals the most about
+the learner's next needed intervention with the least extra cognitive load.
+
 ## Stop Point 1: After Translating The Problem
 
 - **Why it matters:** Translation reveals whether the learner understands what
@@ -109,7 +112,7 @@ the learner can do meaningful thinking.
 
 Use one or two stop points in a normal answer. Too many pauses can feel like a
 quiz. Pick the stop point where the learner's next action would reveal the most
-about their understanding.
+about their understanding and guide the next best teaching step.
 
 In Zero-Base Mode, the first stop point should usually come after one or two
 new objects or symbols. Once the tutor asks the check, stop and wait; do not

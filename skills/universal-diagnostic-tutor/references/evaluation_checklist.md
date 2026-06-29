@@ -248,6 +248,34 @@ problem into a course roadmap, gives applications that distract from the
 current concept, ends without any transfer cue when transfer is the learner's
 need, or leaks internal protocols instead of teaching naturally.
 
+## V1.4 Learning Efficiency Optimization Criteria
+
+For substantial tutoring answers, especially STEM / science / AI-CS questions,
+pass if the answer:
+
+- Chooses the next best teaching step instead of trying to explain everything.
+- Identifies the smallest current blocker: object meaning, symbol meaning,
+  method cue, setup, proof hinge, misconception repair, or transfer cue.
+- Avoids over-explaining prerequisites the learner already knows.
+- Manages cognitive load by mode: one or two new ideas for Zero-Base Mode,
+  method cue and setup for Standard Mode, concise hinge or assumption for
+  Advanced Mode.
+- Teaches one compact unit before checking understanding.
+- Interprets learner responses beyond right/wrong: correct with reasoning,
+  guessed, partially correct, wrong concept, wrong symbol, wrong method,
+  calculation slip, deeper request, faster/slower request, or overload.
+- Compresses explanations when the learner knows prerequisites while still
+  preserving diagnosis-first reasoning.
+- Matches error type to intervention type: notation translation, intuition
+  bridge, method-cue comparison, setup translation, proof invariant, local
+  correction, transfer cue, counterexample, or why-step check.
+- Preserves stop points, no-internal-leakage behavior, and math formatting.
+
+Fail if the answer responds to confusion only by making the same explanation
+longer, restarts from zero despite evidence of understanding, gives a full
+lecture when one symbol or cue is blocking progress, advances after a guessed
+answer, or treats every mistake as needing the same generic re-explanation.
+
 ## High-Stakes Domain Criteria
 
 For law, medical, finance, safety, immigration, tax, or other high-stakes

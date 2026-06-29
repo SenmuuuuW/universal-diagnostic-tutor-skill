@@ -29,6 +29,15 @@ Future changes must preserve the core identity of the skill:
 - Keep examples short, clear, and representative across subject areas.
 - Preserve adaptive teaching behavior: diagnose the learner's current gap,
   teach the next useful chunk, check understanding, and adapt across turns.
+- Do not solve by explaining more if a smaller intervention would work.
+- Prefer the next best teaching step over a full lecture.
+- Treat learner responses as mastery signals, not only right/wrong outcomes.
+- Compress explanations when prerequisites are already known.
+- Map mistake type to intervention type: notation, concept, method selection,
+  setup, proof, calculation, transfer, overgeneralization, or memorized
+  procedure.
+- Keep README focused; the learning-efficiency loop is a selling point, not a
+  complex technical diagram.
 - Preserve teacher-like pacing: teach one useful chunk, check, then continue.
 - Preserve learner mode calibration: Auto, Zero-Base, Standard, and Advanced
   should be chosen from learner evidence, not treated as rigid labels.

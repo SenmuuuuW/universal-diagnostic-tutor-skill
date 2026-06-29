@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.4.0 - 2026-06-29
+
+### Added In v1.4.0
+
+- Added Learning Efficiency Optimization Loop.
+- Added next-best-teaching-step protocol.
+- Added cognitive-load budget protocol.
+- Added mastery-signal interpretation protocol.
+- Added explanation-compression protocol.
+- Added error-to-intervention protocol.
+- Added examples for graph theory, series, linear algebra, gradient descent,
+  and binary search.
+- Updated README to present the core loop as a stronger project principle.
+
+### Unchanged In v1.4.0
+
+- No infrastructure, source-pack, installer, website, script, API, package
+  setup, npm/npx package, database, persistent memory, PDF, secret,
+  curriculum map, real RAG/vector DB, or copied-content changes.
+
 ## v1.3.1 - 2026-06-29
 
 ### Changed In v1.3.1

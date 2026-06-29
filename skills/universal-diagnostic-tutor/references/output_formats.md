@@ -9,6 +9,9 @@ In user-facing tutoring responses, prefer `\(...\)` for inline math and
 `\[...\]` for display math; avoid raw `$...$` formulas such as `$K_n$` or
 `$A+B=0$` except when intentionally discussing formatting.
 
+For V1.4 learning efficiency, use these formats as compact guides. Do not fill
+every section if one next-best teaching step and one check would teach better.
+
 ## Full Teacher-Style Explanation
 
 Use for default tutoring.
@@ -91,6 +94,24 @@ If that felt hard: [what the answer would reveal about the gap]
 
 Keep the response focused on the next learning move. Do not restart the whole
 lesson unless the learner asks to start over.
+
+## Learning Efficiency Mode
+
+Use when the learner has a specific blocker, when a response could become too
+large, or when the tutor needs to choose one high-value intervention.
+
+```text
+Current blocker: [specific concept, symbol, cue, proof hinge, or error type]
+
+Smallest useful step: [one compact teaching unit]
+
+Check: [one diagnostic question or tiny task]
+
+Next decision: [advance, transfer, compress, re-explain, or step down based on
+the learner's response]
+```
+
+In normal tutoring, this can be expressed naturally without labels.
 
 ## Mastery Progress Mode
 
@@ -264,3 +285,5 @@ Before answering, decide the smallest useful depth:
   learning requests.
 - If the user asks for speed, answer first and teach with the fewest words that
   preserve the core reasoning.
+- If the learner already knows a prerequisite, compress that part and spend the
+  response on the current blocker.

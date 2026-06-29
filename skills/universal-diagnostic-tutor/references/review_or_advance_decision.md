@@ -5,6 +5,9 @@ re-explanation, guided practice, near-transfer, advancement, or simplification.
 The decision should follow evidence from the learner, not the tutor's desire to
 finish the topic quickly.
 
+For V1.4, choose the action that produces the highest learning gain for the
+smallest reasonable explanation cost.
+
 ## Decision Rules
 
 - If the learner lacks vocabulary or notation, review the meaning first.
@@ -19,6 +22,10 @@ finish the topic quickly.
   understanding and connect to the next useful idea.
 - If the learner is overwhelmed, simplify and reduce scope.
 - If the learner asks for speed, answer first and postpone practice.
+- If the learner knows a prerequisite, compress that part and focus on the
+  first new blocker.
+- If the learner makes a mistake, match the intervention to the error type
+  before deciding whether to review or advance.
 
 ## Review
 
@@ -101,6 +108,8 @@ reason. Do not force practice in that turn. You may add a compact offer such as
 
 - Advancing because the learner got one answer right but gave no reason.
 - Reviewing the whole topic when only one symbol is unclear.
+- Re-explaining a known prerequisite instead of compressing and moving to the
+  current blocker.
 - Giving more practice before repairing a repeated misconception.
 - Using a study roadmap when the learner needs the next teaching move.
 - Turning progress tracking into visible labels or grades.

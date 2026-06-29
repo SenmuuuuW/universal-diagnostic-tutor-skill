@@ -1283,6 +1283,118 @@ a failure mode.
   itself, or exposes internal protocol names.
 - **Target score:** 5.
 
+## 87. V1.4 Zero-Base Graph Theory Next Step
+
+- **Prompt:** "我是零基础，请教我这道题：\(\chi'(K_n)=n\) when \(n\) is odd,
+  and \(n-1\) when \(n\) is even. 不要直接证明。"
+- **Expected diagnosis behavior:** State discrete math -> graph theory ->
+  complete graph edge coloring / edge chromatic number.
+- **Expected next-best-step behavior:** Choose symbol and object meaning as the
+  smallest useful step; do not start the parity proof.
+- **Expected cognitive-load behavior:** Explain only \(K_n\), \(\chi'(G)\), and
+  edge coloring enough to orient the learner.
+- **Expected stop/check behavior:** Ask whether the problem colors vertices or
+  edges, then stop.
+- **Failure cases:** Proves the theorem, explains matching theory, gives the
+  final proof idea, or continues after the check.
+- **Target score:** 5.
+
+## 88. V1.4 Standard Series Next Best Step
+
+- **Prompt:** "我学过级数判敛，但不知道
+  \(\sum_{n=1}^{\infty}1/(n(n+1))\) 该用什么方法。"
+- **Expected diagnosis behavior:** Identify calculus / mathematical analysis ->
+  series convergence -> method recognition.
+- **Expected next-best-step behavior:** Choose structural cue recognition:
+  adjacent factors \(n(n+1)\) suggest partial fractions or telescoping.
+- **Expected cognitive-load behavior:** Do not reteach what a series is and do
+  not list every test.
+- **Expected stop/check behavior:** Set up the partial-fraction form and ask the
+  learner to identify the numerator equality or next algebra step.
+- **Failure cases:** Solves the whole proof, dumps a convergence-test catalog,
+  or skips the method cue.
+- **Target score:** 5.
+
+## 89. V1.4 Partially Correct Linear Algebra Answer
+
+- **Prompt:** After a scalar-multiple check, the learner says: "\([3,6]\) is a
+  scalar multiple of \([1,2]\) because both numbers got bigger."
+- **Expected diagnosis behavior:** Identify partial mastery: the learner sees a
+  component relationship but misses the same-scalar condition.
+- **Expected mastery-signal behavior:** Preserve the correct part and repair
+  only the missing condition.
+- **Expected teaching behavior:** Explain that one scalar \(c\) must satisfy
+  \(u=cv\) for every component.
+- **Expected check/practice behavior:** Ask one near-transfer check such as
+  whether \([2,6]\) is a scalar multiple of \([1,2]\).
+- **Failure cases:** Says only wrong, restarts from vector basics, or advances
+  without checking the same-scalar idea.
+- **Target score:** 5.
+
+## 90. V1.4 Explanation Compression For Gradient Descent
+
+- **Prompt:** "我知道导数是什么意思，但不懂 gradient descent。请不要从导数重新讲。"
+- **Expected diagnosis behavior:** Identify a bridge gap from derivatives to
+  optimization, not a derivative-definition gap.
+- **Expected compression behavior:** Trust the prerequisite provisionally and
+  skip derivative basics.
+- **Expected teaching behavior:** Focus compactly on loss, parameter, gradient,
+  and update direction.
+- **Expected check/practice behavior:** Ask whether lowering loss means moving
+  with or against the gradient.
+- **Failure cases:** Reteaches derivatives from zero, gives only the update
+  formula, or launches a full optimization lecture.
+- **Target score:** 5.
+
+## 91. V1.4 Binary Search Proof Error Intervention
+
+- **Prompt:** "Binary search is correct because it keeps checking the middle and
+  halves the array, so eventually it finds the target."
+- **Expected diagnosis behavior:** Identify a proof error: termination intuition
+  is present, but the invariant is missing.
+- **Expected intervention behavior:** Teach the invariant rather than generic
+  algorithm steps.
+- **Expected teaching behavior:** Explain that if the target exists, it remains
+  inside the current search interval after each discard, relying on sorted
+  order.
+- **Expected check/practice behavior:** Ask which assumption lets binary search
+  safely discard half the array.
+- **Failure cases:** Restates code, says only "because it is sorted," ignores
+  the invariant, or reteaches loops and indices.
+- **Target score:** 5.
+
+## 92. V1.4 Learner Says Go Faster
+
+- **Prompt:** "I know the basics of \(Ax=b\). Go faster and explain why row
+  operations do not change the solution."
+- **Expected diagnosis behavior:** Identify a reasoning gap about row-operation
+  invariance, not a zero-base notation gap.
+- **Expected compression behavior:** Skip detailed definitions of matrix,
+  vector, and equation roles unless the learner's answer later shows weakness.
+- **Expected teaching behavior:** Focus on why allowed row operations preserve
+  the same set of solutions.
+- **Expected check/practice behavior:** Ask one hinge check such as whether
+  adding one equation to another changes the set of \(x\) satisfying both.
+- **Failure cases:** Starts from \(A\), \(x\), and \(b\) definitions, gives a
+  full Gaussian elimination tutorial, or dumps the final solution.
+- **Target score:** 5.
+
+## 93. V1.4 Still Confused After Explanation
+
+- **Prompt:** After a gradient-descent explanation, the learner says: "I still
+  don't get it. The notation is too much."
+- **Expected diagnosis behavior:** Identify overload and notation gap around
+  parameter update.
+- **Expected next-best-step behavior:** Step down to one parameter, one loss
+  value, and one direction rather than repeating the formula.
+- **Expected cognitive-load behavior:** Remove optional notation and avoid
+  sources, edge cases, or full vector formulas.
+- **Expected check/practice behavior:** Ask one small prediction check about
+  whether to move left or right to lower error.
+- **Failure cases:** Repeats the same formula with more words, adds more
+  symbols, or gives a long optimization lecture.
+- **Target score:** 5.
+
 ## Review Notes
 
 - Test across at least six rows for small edits and all rows for behavior
@@ -1319,6 +1431,10 @@ a failure mode.
   internal-tool leakage prevention, compact knowledge-system mapping,
   intuition/application bridges, transfer-pattern extraction, avoiding long
   roadmaps, and stopping after checks.
+- For V1.4 learning-efficiency changes, include rows that cover next-best-step
+  selection, cognitive-load budgeting, mastery-signal interpretation,
+  explanation compression, targeted error-to-intervention mapping, known
+  prerequisite compression, and "I still don't get it" step-down behavior.
 - Prefer natural answers over rigid template completion.
 - If any answer scores below 4, note whether the issue is diagnosis, depth,
   subject routing, safety boundary, or style.
