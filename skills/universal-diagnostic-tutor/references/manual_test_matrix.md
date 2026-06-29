@@ -1169,6 +1169,120 @@ a failure mode.
   math, or gives the full solved decomposition without a check.
 - **Target score:** 5.
 
+## 80. V1.3 Student-Facing Graph Theory
+
+- **Prompt:** "我是零基础，请教我这道题：\(\chi'(K_n)=n\) when \(n\) is odd,
+  and \(n-1\) when \(n\) is even. 不要直接证明。"
+- **Expected teacher-presence behavior:** Does not mention Skill names,
+  versions, protocols, or internal files.
+- **Expected domain diagnosis:** State discrete math -> graph theory -> complete
+  graph edge coloring / edge chromatic number.
+- **Expected prerequisite behavior:** Explain \(K_n\), \(\chi'(G)\), and edge
+  coloring before proof or theorem use.
+- **Expected pacing behavior:** Stop after asking whether the problem is about
+  vertex coloring or edge coloring.
+- **Expected formatting behavior:** Use \(...\) and \[...\] math delimiters,
+  not raw dollar-sign formulas or code-block math.
+- **Failure cases:** Says "I will use universal-diagnostic-tutor," starts the
+  proof immediately, gives the parity result, or continues after the check.
+- **Target score:** 5.
+
+## 81. V1.3 Knowledge-System Series Convergence
+
+- **Prompt:** "我学过级数判敛，但不知道
+  \(\sum_{n=1}^{\infty}1/(n(n+1))\) 该用什么方法。"
+- **Expected teacher-presence behavior:** Natural teacher language, no internal
+  protocol or version references.
+- **Expected domain diagnosis:** State math analysis / calculus -> series
+  convergence -> method recognition.
+- **Expected knowledge-map behavior:** Identify the adjacent-factor cue
+  \(n(n+1)\) and relevant prerequisite of partial fractions or telescoping.
+- **Expected pacing behavior:** Stop before the key algebraic decomposition or
+  before solving constants.
+- **Expected transfer behavior:** Add a compact cue for future problems, such as
+  looking for adjacent factors that suggest telescoping.
+- **Failure cases:** Lists every convergence test, gives a full proof without a
+  stop point, or turns the answer into a course roadmap.
+- **Target score:** 5.
+
+## 82. V1.3 Gradient Descent Intuition And Application
+
+- **Prompt:** "我知道一点导数，但不懂 gradient descent 为什么重要。它在机器学习里到底干什么？"
+- **Expected teacher-presence behavior:** Teaches naturally without mentioning
+  internal Skill machinery.
+- **Expected domain diagnosis:** State machine learning -> optimization ->
+  gradient descent.
+- **Expected bridge behavior:** Explain loss, parameters, and gradient through
+  an intuition such as adjusting knobs to reduce error.
+- **Expected application behavior:** Connect the idea to AI/ML model training
+  without overloading the learner with advanced optimization.
+- **Expected pacing behavior:** Ask one small check, such as whether to move
+  with or against the gradient to reduce loss, then stop.
+- **Failure cases:** Starts with only formulas, skips why it matters, gives a
+  long application list, or continues past the check.
+- **Target score:** 5.
+
+## 83. V1.3 Linear Algebra Transfer Pattern
+
+- **Prompt:** "我刚会判断 \([3,6]\) 是 \([1,2]\) 的标量倍数了。以后遇到类似题，我该看什么线索？"
+- **Expected teacher-presence behavior:** Responds as a tutor, not as a
+  protocol explanation.
+- **Expected diagnosis behavior:** Identify a transfer and method-recognition
+  need rather than reteaching the solved example.
+- **Expected transfer behavior:** Extract the clue: scalar multiple wording
+  suggests translating to \(u=cv\) and comparing components with the same
+  scalar.
+- **Expected trap behavior:** Warn not to check only one component.
+- **Expected practice behavior:** Give one tiny near-transfer question.
+- **Failure cases:** Solves many new vector problems, gives no reusable cue, or
+  turns transfer into an advanced linear algebra roadmap.
+- **Target score:** 5.
+
+## 84. V1.3 No Internal Tool Leakage
+
+- **Prompt:** "我是零基础，\(Ax=b\) 到底是什么意思？请像老师一样讲。"
+- **Expected teacher-presence behavior:** Does not say "I am using
+  universal-diagnostic-tutor," "according to the protocol," or mention Skill
+  versions/files.
+- **Expected domain diagnosis:** State linear algebra -> matrix equation or
+  vector equation roles.
+- **Expected teaching behavior:** Explain \(A\), \(x\), and \(b\) naturally,
+  then ask which object is usually unknown.
+- **Expected pacing behavior:** Stop after the object-role check.
+- **Failure cases:** Leaks Skill/version/protocol details, over-labels the
+  learner, starts row reduction, or continues after the check.
+- **Target score:** 5.
+
+## 85. V1.3 Avoid Overdone Knowledge Mapping
+
+- **Prompt:** "这个线性代数小题为什么要看是不是 span？简单讲。"
+- **Expected knowledge-map behavior:** Give at most one compact orientation
+  line, such as linear algebra -> span / linear combinations -> method cue.
+- **Expected teaching behavior:** Explain the immediate cue and next step, not
+  a long prerequisite chain.
+- **Expected pacing behavior:** Ask one focused method-recognition check if
+  useful.
+- **Expected transfer behavior:** Optionally add a one-sentence cue for future
+  span questions.
+- **Failure cases:** Produces a full linear algebra curriculum map, delays the
+  answer with taxonomy, or ignores the user's request for simplicity.
+- **Target score:** 5.
+
+## 86. V1.3 Stop After Check Question
+
+- **Prompt:** "不要直接证明。先告诉我 \(K_n\) 和 \(\chi'(G)\) 是什么，然后问我一个检查问题。"
+- **Expected domain diagnosis:** State discrete math -> graph theory -> edge
+  coloring if useful.
+- **Expected prerequisite behavior:** Explain only the requested symbols and
+  object types.
+- **Expected pacing behavior:** Ask one check question and stop. Do not proceed
+  to the theorem, parity argument, or proof idea.
+- **Expected formatting behavior:** Use reliable math delimiters and no
+  code-block formulas.
+- **Failure cases:** Continues into proof after the check, answers the check
+  itself, or exposes internal protocol names.
+- **Target score:** 5.
+
 ## Review Notes
 
 - Test across at least six rows for small edits and all rows for behavior
@@ -1201,6 +1315,10 @@ a failure mode.
   domain diagnosis, zero-base symbol/object explanation before proof, stopping
   after a check, multi-problem image pacing, and \(...\) / \[...\] math
   delimiters without raw dollar-sign formulas.
+- For V1.3 teacher-presence and transfer changes, include rows that cover
+  internal-tool leakage prevention, compact knowledge-system mapping,
+  intuition/application bridges, transfer-pattern extraction, avoiding long
+  roadmaps, and stopping after checks.
 - Prefer natural answers over rigid template completion.
 - If any answer scores below 4, note whether the issue is diagnosis, depth,
   subject routing, safety boundary, or style.

@@ -94,6 +94,16 @@ flowchart LR
 - 📚 **Resource-orchestrated tutoring**：把资源转化成讲解、练习、错题修复和考试题型分析，而不是甩链接。
 - 🛡️ **Safe educational boundaries**：高风险领域保持教育性解释，不替代专业建议。
 
+## 🧑‍🏫 V1.3 更新重点
+
+V1.3 让 Tutor 的回答更像真实老师，而不是暴露内部工具流程：
+
+- 避免在普通教学回答里提到 Skill 名称、版本号、协议名或仓库文件。
+- 加强知识系统定位：告诉学习者这题属于哪个领域、知识点和前置概念。
+- 增加直觉 / 应用桥梁：把抽象 STEM 概念连到图像、现实现象、工程系统或 AI-CS 应用。
+- 强化迁移教学：讲完一个小步骤后，提炼以后遇到类似题该看什么线索。
+- 保留 V1.1 节奏、V1.2 学习模式、V1.2.2 数学显示和 STEM-first 定位。
+
 ## 🚀 Quick Start
 
 Clone 这个仓库：
@@ -111,6 +121,51 @@ skills/universal-diagnostic-tutor/
 
 在你的 Codex / Claude Code 风格 agent 工作流中，按本地环境要求引用或安装这个 Skill 目录即可。不同工具的 Skill 安装路径和加载方式不同，请以你的工具文档为准。
 
+## 🔄 如何更新到最新版
+
+如果你已经 clone 过这个仓库，通常**不需要重新 clone**。进入你本地的仓库目录，然后更新：
+
+```bash
+cd path/to/universal-diagnostic-tutor-skill
+git pull
+git log --oneline -1
+```
+
+- `git pull` 会把本地仓库更新到 GitHub 上的最新版。
+- `git log --oneline -1` 用来查看你本地当前最新 commit。
+- 这个最新 commit 应该和 `CHANGELOG.md` 里最新版本对应。
+
+如果你从来没有 clone 过这个仓库，才需要先下载：
+
+```bash
+git clone https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill.git
+cd universal-diagnostic-tutor-skill
+```
+
+如果你曾经把 Skill 复制 / 安装到另一个 agent 的 skills 目录里，要注意：`git pull` 只会更新这个 GitHub repo 的本地副本，**不会自动更新已经复制出去的 Skill**。
+
+- 源仓库里的 Skill 目录是：`skills/universal-diagnostic-tutor/`
+- 如果你的 agent 实际读取的是另一个位置里的复制版 Skill，你需要把更新后的 `skills/universal-diagnostic-tutor/` 同步到那个 agent 真正读取的 skills 目录。
+- 不同 agent 工具的 Skill 目录不同，请按你自己的环境文档操作。
+
+如果更新后 agent 仍然显示旧版本，请检查：
+
+- 你是不是在正确的本地仓库里运行了 `git pull`？
+- 电脑上是否有多个 `universal-diagnostic-tutor-skill` 副本？
+- agent 是否读取了某个旧的复制版 Skill，而不是 GitHub repo 里的新版目录？
+- 更新后是否重启或新开了 agent chat/session，让它重新加载 Skill？
+
+### 常见问题
+
+- **“我需要重新下载吗？”**
+  通常不需要。如果已经 clone 过，运行 `git pull` 即可。
+- **“为什么 GitHub 是新版，但我的 Codex 还显示旧版？”**
+  因为 Codex 可能正在读取旧的复制版 Skill 目录，或者当前 session 还在使用缓存的旧指令。
+- **“更新后要重新开 chat 吗？”**
+  推荐新开一个 agent session，让它重新加载最新 Skill instructions。
+- **“怎么确认我现在是哪一版？”**
+  查看 `CHANGELOG.md`、`README.md`，并运行 `git log --oneline -1`。
+
 ## 📋 可复制提示词
 
 ```text
@@ -123,6 +178,14 @@ skills/universal-diagnostic-tutor/
 
 ```text
 请先告诉我这是离散数学、线性代数、微积分还是机器学习里的什么知识点。
+```
+
+```text
+请先告诉我这题属于哪个领域和知识点。
+```
+
+```text
+我是零基础，请先把符号翻译成人话。
 ```
 
 ```text
@@ -151,6 +214,14 @@ skills/universal-diagnostic-tutor/
 
 ```text
 我还是不懂，请不要重复刚才的解释，换一个更小的例子。
+```
+
+```text
+讲完这个小步骤后，请告诉我以后遇到类似题该看什么线索。
+```
+
+```text
+不要提工具或版本，直接像老师一样教我。
 ```
 
 ## 🧪 可以学习什么？
@@ -208,6 +279,8 @@ universal-diagnostic-tutor-skill/
 
 | Version | Focus |
 | --- | --- |
+| V1.3 | Teacher-like user-facing responses, knowledge-system maps, intuition/application bridges, transfer patterns |
+| V1.2.3 | Math-formatting cleanup in older examples |
 | V1.2.2 | STEM-first positioning, domain diagnosis, zero-base pacing, math rendering |
 | V1.2.1 | README polish and visual onboarding |
 | V1.2 | Teaching modes + math formatting |
@@ -240,7 +313,7 @@ universal-diagnostic-tutor-skill/
 
 ## 🧭 维护与验证
 
-V1.2.2 是一个小型优化 release。它澄清 STEM / 理科 / AI-CS 优先定位，强化技术题的领域诊断、零基础停顿节奏和 `\(...\)` / `\[...\]` 数学显示规则；不新增大型教学协议、source packs、网站、脚本、API、包管理、数据库、持久记忆、真实 RAG / vector database、PDF、课程地图或基础设施。
+V1.3 是一个 Markdown-only 教学行为 release。它强化自然教师表达、知识系统定位、直觉 / 应用桥梁和迁移线索，同时继续保留 V1.1 节奏、V1.2 学习模式、V1.2.2 数学显示规则和 STEM-first 定位；不新增 source packs、网站、脚本、API、包管理、数据库、持久记忆、真实 RAG / vector database、PDF、课程地图或基础设施。
 
 维护者可以使用 `skills/universal-diagnostic-tutor/references/evaluation_checklist.md` 和 `skills/universal-diagnostic-tutor/references/manual_test_matrix.md` 做人工验收。若使用外部 Skill 创建工具里的 `quick_validate.py`，该脚本可能需要 PyYAML；本仓库不为此添加 package setup 或依赖文件。
 

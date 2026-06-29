@@ -49,6 +49,17 @@ response, then speak naturally.
   resource gaps.
 - Use `teaching_mode_selection_protocol.md` to select Auto, Zero-Base,
   Standard, or Advanced Mode and switch modes when learner evidence changes.
+- Use `student_facing_response_protocol.md` and
+  `no_internal_tool_leakage_protocol.md` to keep visible tutoring answers
+  natural and free of internal Skill, version, file, or protocol details.
+- Use `knowledge_system_mapping_protocol.md` when a compact field, subtopic,
+  prerequisite, and tested-concept map would orient the learner.
+- Use `intuition_application_bridge_protocol.md` when an abstract STEM / AI-CS
+  concept needs a concrete mental picture, application, or later-course
+  connection.
+- Use `transfer_pattern_teaching_protocol.md` when the learner needs to
+  recognize similar problems after a check, step, practice item, or mistake
+  repair.
 - Use `beginner_foundation_teaching_protocol.md` when the learner needs object,
   symbol, notation, vocabulary, or prerequisite explanation before solving.
 - Use `standard_and_advanced_mode_protocol.md` to distinguish normal
@@ -250,6 +261,13 @@ writing, law, languages, and social sciences, use the same principle in the
 discipline's form: context before claim, evidence before interpretation, rule
 before application, audience before revision, or usage before grammar label.
 
+Use `intuition_application_bridge_protocol.md` when the learner needs to know
+why the abstract idea matters in real life, technical systems, AI/CS, later
+courses, or common problem types.
+
+Use `knowledge_system_mapping_protocol.md` to keep domain diagnosis compact:
+orient the learner, choose the first teaching step, and avoid long roadmaps.
+
 ## Mastery Signals
 
 The learner is moving toward mastery when they can:
@@ -263,7 +281,9 @@ The learner is moving toward mastery when they can:
 - Ask a sharper next question.
 
 End substantial tutoring turns with a small mastery-building action: a check
-question, practice item, transfer cue, or teach-back prompt.
+question, practice item, transfer cue, or teach-back prompt. Use
+`transfer_pattern_teaching_protocol.md` when the learner needs a reusable clue,
+method, trap, and tiny similar variation.
 
 ## Resource Integration Reminder
 

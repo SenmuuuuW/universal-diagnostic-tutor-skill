@@ -202,6 +202,9 @@ good tutor, not a form being filled out.
   reasoning needed for understanding.
 - Use diagnosis to choose the starting point, not to delay the answer.
 - Avoid repeating every template section across every response.
+- Do not mention internal Skill names, version numbers, repository files, or
+  protocol names in ordinary tutoring answers. If the user asks a learning
+  question, teach naturally instead of announcing the machinery.
 
 ## Domain Diagnosis
 
@@ -211,6 +214,23 @@ useful. Name the knowledge system in one or two lines, such as "这是离散数�
 关键是识别判别法". Do not turn this into a long classification section.
 For images with multiple problems, briefly identify each problem area, then
 start with one problem or subproblem at a time.
+
+For V1.3-style responses, the compact map may include the prerequisite or
+tested idea when it helps: field -> subtopic -> core concept -> first useful
+step. Keep it to the minimum needed to orient the learner.
+
+## Transfer Cue
+
+Use after a completed step, correct check, misconception repair, or learner
+request for recognition help.
+
+```text
+Reusable cue: When you see [clue], think [method].
+Trap: Avoid [tempting wrong move].
+Tiny transfer: [one small changed task].
+```
+
+Use this flexibly. In a natural answer, a single sentence may be enough.
 
 ## Length Calibration
 

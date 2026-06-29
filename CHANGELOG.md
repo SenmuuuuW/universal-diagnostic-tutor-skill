@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.3.0 - 2026-06-29
+
+### Added In v1.3.0
+
+- Student-facing response protocol for natural teacher-like tutoring answers.
+- Knowledge-system mapping protocol for compact field, subtopic, prerequisite,
+  and tested-concept orientation.
+- Intuition/application bridge protocol for connecting abstract STEM concepts
+  to concrete examples, real phenomena, technical systems, AI/CS applications,
+  later courses, and common problem types.
+- Transfer-pattern teaching protocol for extracting reusable clues, methods,
+  traps, and near-transfer variations after a step or check.
+- No-internal-tool-leakage protocol to prevent ordinary tutoring answers from
+  mentioning Skill versions, repository files, internal protocols, or hidden
+  implementation details.
+- Examples for graph theory, series convergence, gradient descent, linear
+  algebra transfer, and bad-vs-good internal leakage behavior.
+- Chinese update guidance in the root README and a shorter Skill-level update
+  note for users with cloned or copied Skill directories.
+
+### Unchanged In v1.3.0
+
+- No infrastructure, source-pack, database, roadmap, persistent memory,
+  website, script, API, package setup, PDF, secret, or copied-content changes.
+
 ## v1.2.3 - 2026-06-29
 
 ### Changed In v1.2.3
