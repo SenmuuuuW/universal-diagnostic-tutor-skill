@@ -157,6 +157,16 @@ Future changes must preserve the core identity of the skill:
   diagnosis-first identity.
 - Keep the root README as the polished GitHub landing page and
   `skills/universal-diagnostic-tutor/README.md` as the Skill usage guide.
+- Keep installation docs safe and conservative. Do not overclaim platform
+  compatibility or imply native support where only manual adaptation is known.
+- Distinguish native Skill use from manual prompt or project-instruction
+  adaptation.
+- Do not add npm, npx, package setup, install scripts, path-detection scripts,
+  or automated installers unless explicitly requested later.
+- If installers are considered in the future, document risks, permissions,
+  platform differences, and maintenance requirements first.
+- Keep README concise; prefer replacing duplicated install/update text with
+  links to `INSTALL.md` over appending long repeated sections.
 - Use emojis in README files sparingly and consistently as visual anchors;
   keep the tone serious, trustworthy, and not childish.
 - Do not let README polish alter core Skill behavior, teaching protocols,

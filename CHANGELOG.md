@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.3.1 - 2026-06-29
+
+### Changed In v1.3.1
+
+- Added Chinese `INSTALL.md` for installation, update, and troubleshooting.
+- Clarified what users should download and which folder is the actual Skill:
+  `skills/universal-diagnostic-tutor/`.
+- Added an agent-assisted installation prompt for Codex / Claude Code-style
+  agents.
+- Clarified platform / AI compatibility for Codex, Claude Code-style agents,
+  instruction-based agents, ordinary chat, and local / IDE agents.
+- Polished README structure by linking to `INSTALL.md` instead of repeating
+  full installation details.
+
+### Unchanged In v1.3.1
+
+- No core Skill behavior, teaching protocol, source-pack, website, script, API,
+  package setup, npm package, database, persistent memory, PDF, secret,
+  curriculum map, real RAG/vector DB, or infrastructure changes.
+
 ## v1.3.0 - 2026-06-29
 
 ### Added In v1.3.0
