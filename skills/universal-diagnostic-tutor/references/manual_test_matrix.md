@@ -966,12 +966,12 @@ a failure mode.
 ## 68. V1.2 Standard Series Convergence
 
 - **Prompt:** "I learned series tests, but I cannot tell which one to use for
-  $\sum 1/(n(n+1))$."
+  \(\sum 1/(n(n+1))\)."
 - **Expected mode behavior:** Select Standard Mode because the learner has
   class exposure but needs method recognition.
 - **Expected diagnosis behavior:** Identify recognition gap around telescoping
   or related convergence-test cues.
-- **Expected teaching behavior:** Name the cue in $n(n+1)$, set up partial
+- **Expected teaching behavior:** Name the cue in \(n(n+1)\), set up partial
   fraction or telescoping reasoning, and avoid re-teaching what a series is.
 - **Expected pacing/check behavior:** Stop before the key algebraic
   decomposition and ask what numerator equality must hold.
@@ -983,12 +983,12 @@ a failure mode.
 ## 69. V1.2 Advanced Derivative Proof
 
 - **Prompt:** "I know the power rule. Give me a concise rigorous proof that the
-  derivative of $x^2$ is $2x$."
+  derivative of \(x^2\) is \(2x\)."
 - **Expected mode behavior:** Select Advanced Mode.
 - **Expected diagnosis behavior:** Identify a reasoning/proof gap, not a
   zero-base derivative gap.
 - **Expected teaching behavior:** Use the limit definition efficiently, justify
-  the $h \neq 0$ simplification, state the assumption, and interpret the
+  the \(h \neq 0\) simplification, state the assumption, and interpret the
   result.
 - **Expected pacing/check behavior:** May include one concise proof-hinge check
   but should not slow down unnecessarily.
@@ -999,17 +999,17 @@ a failure mode.
 
 ## 70. V1.2 Mode Switching For Notation Gap
 
-- **Prompt:** "Use normal mode for $Ax=b$, but I don't understand what $b$ is.
+- **Prompt:** "Use normal mode for \(Ax=b\), but I don't understand what \(b\) is.
   Is it a point?"
 - **Expected mode behavior:** Start Standard, then step down briefly to
   Zero-Base explanation for the notation blocker.
 - **Expected diagnosis behavior:** Identify notation/object-type gap around
-  $b$ as output vector.
-- **Expected teaching behavior:** Explain $A$, $x$, and $b$ roles without
+  \(b\) as output vector.
+- **Expected teaching behavior:** Explain \(A\), \(x\), and \(b\) roles without
   solving; then return to the original problem.
 - **Expected pacing/check behavior:** Ask which object is unknown before row
   reduction or solving.
-- **Expected formatting behavior:** Use math formatting for $Ax=b$.
+- **Expected formatting behavior:** Use math formatting for \(Ax=b\).
 - **Failure cases:** Stays in standard mode and manipulates symbols, labels the
   learner rigidly, or never returns to the original problem.
 - **Target score:** 5.
@@ -1033,7 +1033,7 @@ a failure mode.
 
 ## 72. V1.2 Math Formatting
 
-- **Prompt:** "Show the derivation of the derivative of $x^2$."
+- **Prompt:** "Show the derivation of the derivative of \(x^2\)."
 - **Expected mode behavior:** Use Standard or Advanced based on learner wording;
   if unclear, infer from context or ask if rigor level matters.
 - **Expected diagnosis behavior:** Identify derivation/proof task.
@@ -1081,6 +1081,94 @@ a failure mode.
   early, gives no analogy, or asks a question requiring calculus vocabulary.
 - **Target score:** 5.
 
+## 75. V1.2.2 Zero-Base Graph Theory Edge Coloring
+
+- **Prompt:** "我是零基础。老师写了 \(\chi'(K_n)\)，我完全不知道这是什么。不要直接证明。"
+- **Expected positioning behavior:** Treat this as a STEM / discrete math
+  tutoring prompt, not a generic all-subject explanation.
+- **Expected domain diagnosis:** State briefly that this is discrete math ->
+  graph theory -> edge coloring / edge chromatic number.
+- **Expected zero-base behavior:** Explain \(K_n\), edge coloring, and
+  \(\chi'(G)\) before any proof or theorem.
+- **Expected pacing/check behavior:** Explain only one or two prerequisite
+  objects at a time, then stop with a check such as whether the problem colors
+  vertices or edges.
+- **Expected formatting behavior:** Use \(...\) and \[...\] math delimiters,
+  not raw dollar-sign formulas or code-block formulas.
+- **Failure cases:** Starts proving Vizing-style facts, gives the final parity
+  result immediately, skips symbol meaning, continues after the check, or uses
+  raw dollar-sign math in normal tutoring text.
+- **Target score:** 5.
+
+## 76. V1.2.2 Linear Algebra Image With Multiple Subproblems
+
+- **Prompt:** "这张图里有两个线代小问。不要直接给答案，先带我做。"
+- **Expected domain diagnosis:** Briefly identify the problem areas, such as
+  linear algebra -> vector equation / matrix equation / linear system, then
+  start with the first subproblem.
+- **Expected pacing behavior:** Work one subproblem at a time and avoid solving
+  every visible question in one response.
+- **Expected zero-base behavior:** If notation confusion appears, explain the
+  symbols and objects before row reduction or final calculation.
+- **Expected stop/check behavior:** Stop after a translation, target, or method
+  check before continuing.
+- **Expected formatting behavior:** Use \(...\) for expressions such as
+  \(Ax=b\); do not put formulas in code blocks.
+- **Failure cases:** Solves both questions at once, skips domain diagnosis,
+  starts manipulating symbols without object meaning, or continues after a
+  check question.
+- **Target score:** 5.
+
+## 77. V1.2.2 Standard Series Domain Diagnosis
+
+- **Prompt:** "我学过级数判敛，但不知道 \(\sum_{n=1}^{\infty} 1/(n(n+1))\) 该用什么方法。"
+- **Expected mode behavior:** Select Standard Mode because the learner has seen
+  series tests but needs method recognition.
+- **Expected domain diagnosis:** State briefly that this is calculus -> series
+  convergence -> test or telescoping recognition.
+- **Expected teaching behavior:** Name the adjacent-factor cue \(n(n+1)\), set
+  up the decomposition or telescoping idea, and avoid re-teaching series from
+  zero.
+- **Expected pacing/check behavior:** Stop before solving for constants or
+  finishing the convergence proof.
+- **Expected formatting behavior:** Use \(...\) and \[...\] delimiters, not raw
+  dollar-sign formulas or code-block math.
+- **Failure cases:** Gives a full proof without a stop point, lists every test,
+  or formats math as monospaced text.
+- **Target score:** 5.
+
+## 78. V1.2.2 Advanced Proof Request
+
+- **Prompt:** "我知道导数规则。请用进阶模式简洁证明为什么 \(d(x^2)/dx=2x\)。"
+- **Expected mode behavior:** Select Advanced Mode and avoid beginner basics.
+- **Expected domain diagnosis:** State calculus -> derivative -> proof from
+  definition or power-rule derivation.
+- **Expected teaching behavior:** Use the limit definition efficiently, justify
+  the \(h \neq 0\) simplification, and interpret the result.
+- **Expected pacing/check behavior:** Include at most one concise proof-hinge
+  check; do not slow down unless a gap appears.
+- **Expected formatting behavior:** Use aligned display math with \[...\], not
+  a code block or raw dollar-sign formulas.
+- **Failure cases:** Starts from zero-base slope intuition, cites the power
+  rule only, skips the key assumption, or renders the derivation as code.
+- **Target score:** 5.
+
+## 79. V1.2.2 Math Rendering Check
+
+- **Prompt:** "解释一下部分分式 \(1/[n(n+1)] = A/n + B/(n+1)\)，但不要用代码块写数学。"
+- **Expected domain diagnosis:** State calculus / algebra -> partial fractions
+  or telescoping setup.
+- **Expected teaching behavior:** Explain why constants \(A\) and \(B\) are
+  chosen and what equality the numerator must satisfy.
+- **Expected pacing/check behavior:** Stop before solving both constants if the
+  learner asked to participate.
+- **Expected formatting behavior:** Use \(...\) inline and \[...\] display
+  math; no raw `$...$` formulas in normal text and no fenced code block for the
+  algebra.
+- **Failure cases:** Uses code fences for formulas, shows raw dollar-delimited
+  math, or gives the full solved decomposition without a check.
+- **Target score:** 5.
+
 ## Review Notes
 
 - Test across at least six rows for small edits and all rows for behavior
@@ -1109,6 +1197,10 @@ a failure mode.
   zero-base, standard, advanced, mode switching, concise advanced explanation,
   math formula rendering, Auto Mode calibration, and beginner real-world
   analogy.
+- For V1.2.2 STEM positioning and rendering changes, include rows that cover
+  domain diagnosis, zero-base symbol/object explanation before proof, stopping
+  after a check, multi-problem image pacing, and \(...\) / \[...\] math
+  delimiters without raw dollar-sign formulas.
 - Prefer natural answers over rigid template completion.
 - If any answer scores below 4, note whether the issue is diagnosis, depth,
   subject routing, safety boundary, or style.

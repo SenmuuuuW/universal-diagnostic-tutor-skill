@@ -6,10 +6,12 @@
 
 `universal-diagnostic-tutor` 是一个可复用的 Markdown-based Tutor Skill。它面向 Codex、Claude Code 风格的 agent 工作流，以及其他支持 Skill / project instruction / agent instruction 的 AI 学习助手环境。
 
+**当前重点：大学理科 / STEM / AI-CS 学习**，包括数学、编程、算法、机器学习、系统、网络、物理、信号与工程基础等。它保留跨学科诊断式教学能力，但不是把自己定位成泛泛的“什么都教”助手。
+
 | Highlight | What It Means |
 | --- | --- |
 | 🎯 Diagnosis-first | 先判断学科、主题、前置知识和知识漏洞，再教学 |
-| 🧭 STEM / AI-CS focused | 当前重点覆盖大学层级数学、编程、AI/ML、系统、网络、物理与信号 |
+| 🧭 STEM / 理科 / AI-CS focused | 当前重点覆盖大学层级数学、编程、AI/ML、系统、网络、物理、信号与工程基础 |
 | 🌱📘🚀 Learning modes | 支持零基础、普通、进阶和 Auto Mode |
 | 🧑‍🏫 Teacher-like pacing | Teach → check → continue，不一口气倒完整套答案 |
 | 🔍 Resource-aware | 有搜索能力时主动找权威资源，并整合进教学 |
@@ -22,7 +24,7 @@
 
 它定义的是：
 
-- AI Tutor 如何诊断学习问题属于哪个学科、主题和任务类型。
+- AI Tutor 如何诊断学习问题属于哪个学科、知识系统、子主题和任务类型。
 - 如何判断学习者缺少的是概念、符号、步骤、推理、识别、迁移还是误解修复。
 - 如何选择教学模式、解释深度、练习梯度和反馈方式。
 - 如何在多轮对话里判断学习者目前理解到哪一步。
@@ -64,6 +66,8 @@ flowchart LR
 ```
 
 这个流程不是僵硬模板。好的回答应该自然、简洁、像老师一样：只做当前最有用的教学动作，然后根据学习者回应继续。
+
+在技术学习里，Tutor 会先用一两句话帮你定位知识系统，例如“这是离散数学 -> 图论 -> 边染色”或“这是线性代数 -> 向量方程 -> 线性方程组”，再开始讲概念、符号和方法。
 
 ## 🎚️ 选择你的学习模式
 
@@ -114,6 +118,14 @@ skills/universal-diagnostic-tutor/
 ```
 
 ```text
+我是零基础，请先判断这题属于哪个领域，再从概念和符号开始讲。
+```
+
+```text
+请先告诉我这是离散数学、线性代数、微积分还是机器学习里的什么知识点。
+```
+
+```text
 我学过一点，但不知道该用什么方法，请用普通模式一步一步带我做。
 ```
 
@@ -123,6 +135,10 @@ skills/universal-diagnostic-tutor/
 
 ```text
 问我问题后请停下来，等我回答再继续。
+```
+
+```text
+数学公式不要用代码块，请用正常公式格式。
 ```
 
 ```text
@@ -141,7 +157,7 @@ skills/universal-diagnostic-tutor/
 
 | Area | Example Topics |
 | --- | --- |
-| Linear algebra | vectors, matrices, span, basis, transformations, $Ax=b$ |
+| Linear algebra | vectors, matrices, span, basis, transformations, \(Ax=b\) |
 | Calculus | limits, derivatives, integrals, series, optimization |
 | Programming | loops, recursion, debugging, state, code tracing |
 | Algorithms | binary search, invariants, correctness, complexity |
@@ -155,11 +171,11 @@ STEM / AI-CS 是当前资料最完整、测试最密集的方向；但这个 Ski
 
 ## 🧮 数学公式显示
 
-数学公式应该显示成数学，而不是代码块。普通代数、微积分、线性代数、概率和证明步骤应优先使用 Markdown / LaTeX math，例如 $Ax=b$ 或：
+数学公式应该显示成数学，而不是代码块。普通代数、微积分、线性代数、概率和证明步骤应优先使用 Markdown / LaTeX math。面向学习者的回答推荐使用 `\(...\)` 和 `\[...\]`，例如 \(Ax=b\) 或：
 
-$$
+\[
 f'(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}
-$$
+\]
 
 代码块只用于真正的代码、命令、路径，或必须保留空格的 literal text。
 
@@ -192,6 +208,7 @@ universal-diagnostic-tutor-skill/
 
 | Version | Focus |
 | --- | --- |
+| V1.2.2 | STEM-first positioning, domain diagnosis, zero-base pacing, math rendering |
 | V1.2.1 | README polish and visual onboarding |
 | V1.2 | Teaching modes + math formatting |
 | V1.1 | Teacher-like pacing + autonomous resource discovery |
@@ -223,7 +240,7 @@ universal-diagnostic-tutor-skill/
 
 ## 🧭 维护与验证
 
-V1.2.1 是一个小型 README polish release。它只改善 GitHub README 的视觉层级、中文可读性和新用户 onboarding，不改变核心 Skill 行为，不新增教学协议、source packs、网站、脚本、API、包管理、数据库、持久记忆、真实 RAG / vector database、PDF、课程地图或基础设施。
+V1.2.2 是一个小型优化 release。它澄清 STEM / 理科 / AI-CS 优先定位，强化技术题的领域诊断、零基础停顿节奏和 `\(...\)` / `\[...\]` 数学显示规则；不新增大型教学协议、source packs、网站、脚本、API、包管理、数据库、持久记忆、真实 RAG / vector database、PDF、课程地图或基础设施。
 
 维护者可以使用 `skills/universal-diagnostic-tutor/references/evaluation_checklist.md` 和 `skills/universal-diagnostic-tutor/references/manual_test_matrix.md` 做人工验收。若使用外部 Skill 创建工具里的 `quick_validate.py`，该脚本可能需要 PyYAML；本仓库不为此添加 package setup 或依赖文件。
 

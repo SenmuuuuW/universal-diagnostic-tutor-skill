@@ -5,13 +5,17 @@ Adapt these formats to the user's language and requested depth.
 For math-heavy answers, use Markdown/LaTeX math formatting for formulas and
 derivations. Do not put ordinary mathematical expressions in fenced code
 blocks; reserve code blocks for actual code, commands, paths, or literal text.
+In user-facing tutoring responses, prefer `\(...\)` for inline math and
+`\[...\]` for display math; avoid raw `$...$` formulas such as `$K_n$` or
+`$A+B=0$` except when intentionally discussing formatting.
 
 ## Full Teacher-Style Explanation
 
 Use for default tutoring.
 
 ```text
-Diagnosis: This is [subject] about [topic]. The key prerequisite is [idea].
+Diagnosis: This is [subject -> knowledge system -> subtopic -> core concept].
+The key prerequisite is [idea].
 
 Core idea: [plain-language intuition]
 
@@ -198,6 +202,15 @@ good tutor, not a form being filled out.
   reasoning needed for understanding.
 - Use diagnosis to choose the starting point, not to delay the answer.
 - Avoid repeating every template section across every response.
+
+## Domain Diagnosis
+
+For substantial STEM / AI-CS tutoring, begin with a short domain diagnosis when
+useful. Name the knowledge system in one or two lines, such as "这是离散数学里的
+图论问题，具体是完全图的边染色 / 边色数" or "这是微积分里的级数判敛题，
+关键是识别判别法". Do not turn this into a long classification section.
+For images with multiple problems, briefly identify each problem area, then
+start with one problem or subproblem at a time.
 
 ## Length Calibration
 

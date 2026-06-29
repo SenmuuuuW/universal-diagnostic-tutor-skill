@@ -13,6 +13,15 @@ the learner can do meaningful thinking.
 - **If correct:** Confirm and move to the next representation or operation.
 - **If stuck:** Restate the story with smaller numbers or label each object.
 
+## Stop Point 1A: After Domain Diagnosis
+
+- **Why it matters:** STEM learners often need to know which knowledge system
+  they are entering before a method makes sense.
+- **Tutor wording:** "先判断领域：这是离散数学里的图论问题，具体是完全图的边染色。"
+- **If correct:** Move to the first object or symbol needed for the problem.
+- **If stuck:** Translate the domain label into ordinary language instead of
+  adding more classification.
+
 ## Stop Point 2: After Identifying The Target Quantity
 
 - **Why it matters:** Many mistakes happen because the learner solves for the
@@ -49,6 +58,15 @@ the learner can do meaningful thinking.
   measure?"
 - **If correct:** Apply the formula step by step.
 - **If stuck:** Translate symbols into plain language and use one tiny example.
+
+## Stop Point 5A: Before Proving A Statement
+
+- **Why it matters:** Beginners cannot follow a proof if they do not yet know
+  what the statement says.
+- **Tutor wording:** "Before proving it, let's translate the symbols. What does
+  \(K_n\) mean in this statement?"
+- **If correct:** Ask for the proof's first idea or give one narrow scaffold.
+- **If stuck:** Explain one or two objects, then ask a check and stop.
 
 ## Stop Point 6: Before The Final Calculation
 
@@ -92,3 +110,7 @@ the learner can do meaningful thinking.
 Use one or two stop points in a normal answer. Too many pauses can feel like a
 quiz. Pick the stop point where the learner's next action would reveal the most
 about their understanding.
+
+In Zero-Base Mode, the first stop point should usually come after one or two
+new objects or symbols. Once the tutor asks the check, stop and wait; do not
+continue into the next proof step, subproblem, theorem idea, or final result.

@@ -18,6 +18,9 @@ Future changes must preserve the core identity of the skill:
 
 - Do not narrow this skill into a SAT-only, math-only, coding-only, or
   single-subject tutor.
+- Keep STEM / science / AI-CS as the clearest public positioning while
+  preserving universal-capable diagnosis-first tutoring.
+- Do not describe the Skill primarily as a generic all-subject assistant.
 - Preserve the diagnosis-first workflow in `SKILL.md`.
 - Keep `SKILL.md` concise enough to load as a skill body.
 - Put detailed subject guidance in `skills/universal-diagnostic-tutor/references/`.
@@ -31,6 +34,10 @@ Future changes must preserve the core identity of the skill:
   should be chosen from learner evidence, not treated as rigid labels.
 - Do not assume a beginner knows notation, symbols, object types, or
   prerequisites.
+- In Zero-Base Mode, explain symbols and objects before proof, theorem use, or
+  full solution.
+- After a check question, stop and wait for the learner instead of continuing
+  to the next proof step, subproblem, theorem idea, or final result.
 - Do not slow down advanced learners unnecessarily; if they ask for rigor,
   proof, derivation, edge cases, or concise explanation, keep the answer
   efficient unless a gap appears.
@@ -69,6 +76,8 @@ Future changes must preserve the core identity of the skill:
   unless naming the label genuinely helps the learner.
 - Prefer natural teacher language such as "The part that may be causing trouble
   is..." over diagnostic labels.
+- For STEM tutoring, prefer a short domain diagnosis before teaching: subject
+  -> knowledge system -> subtopic -> core concept.
 - For STEM examples, include diagnosis, gap type, ask-vs-explain choice,
   adaptive response, and a practice or understanding check.
 - Ask guiding questions only when they help learning and the learner has enough
@@ -120,6 +129,9 @@ Future changes must preserve the core identity of the skill:
 - Do not add external-search scripts unless explicitly requested.
 - Do not put math formulas in code blocks. Use Markdown/LaTeX math for ordinary
   algebra, calculus, linear algebra, probability, and proof steps.
+- In user-facing tutoring responses, prefer `\(...\)` and `\[...\]` for math;
+  avoid raw `$...$` inline formulas because some chat environments render them
+  badly.
 - Use code blocks only for actual code, commands, paths, or literal text where
   spacing is essential.
 - V1.0 is a stable consolidation release. Keep future V1.0 maintenance focused

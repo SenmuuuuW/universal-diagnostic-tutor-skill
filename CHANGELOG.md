@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.2.2 - 2026-06-29
+
+### Changed In v1.2.2
+
+- Clarified STEM / science / AI-CS-first positioning while preserving
+  universal-capable diagnosis-first tutoring.
+- Added and strengthened compact domain diagnosis guidance for substantial
+  STEM tutoring: subject -> knowledge system -> subtopic -> core concept.
+- Tightened Zero-Base Mode pacing so the tutor explains objects and symbols
+  before proof or solution, introduces only one or two new concepts, asks a
+  check, then stops.
+- Improved math rendering guidance to prefer `\(...\)` and `\[...\]` in
+  user-facing tutoring responses and avoid raw dollar-sign formulas.
+- Polished README and Skill README prompt examples around domain diagnosis,
+  stop-after-check behavior, and math formatting.
+- Updated evaluation checklist, manual test matrix, and existing examples for
+  V1.2.2 acceptance coverage.
+
+### Unchanged In v1.2.2
+
+- No new major teaching features, source packs, websites, scripts, APIs,
+  package setup, databases, persistent memory, PDFs, secrets, copied content,
+  curriculum maps, real RAG/vector DB, or infrastructure.
+
 ## v1.2.1 - 2026-06-28
 
 ### Changed In v1.2.1

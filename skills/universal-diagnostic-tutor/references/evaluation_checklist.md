@@ -187,6 +187,36 @@ zero-base learners formal notation before object meaning, slows advanced
 learners with unnecessary basics, ignores evidence that the mode should change,
 continues after a stop-point check, or renders ordinary math as code.
 
+## V1.2.2 STEM Positioning, Domain Diagnosis, And Math Rendering Criteria
+
+For STEM / science / AI-CS tutoring answers, pass if the answer:
+
+- Presents the skill or response as STEM / AI-CS focused while preserving
+  universal-capable diagnosis-first tutoring.
+- Begins substantial technical tutoring with a compact domain diagnosis when
+  useful: subject -> knowledge system -> subtopic -> core concept.
+- Keeps domain diagnosis to one or two natural lines instead of a long
+  classification section.
+- For images or prompts with multiple technical problems, briefly identifies
+  the problem areas, then starts with one problem or subproblem at a time.
+- In Zero-Base Mode, explains objects and symbols before proof, theorem use,
+  calculation, or full solution.
+- For proof or theorem questions, translates what the statement says before
+  proving it.
+- Explains at most one or two new prerequisite concepts before asking a check
+  question.
+- Stops after a check question when learner participation is the point.
+- Uses `\(...\)` for inline math and `\[...\]` for display math in
+  user-facing tutoring responses.
+- Avoids raw `$...$` formulas and avoids fenced code blocks for ordinary math
+  formulas, except when intentionally showing a bad formatting example.
+
+Fail if the answer presents the skill mainly as a generic all-subject helper,
+skips domain diagnosis for a substantial technical prompt, starts a zero-base
+proof before explaining the symbols, asks a check and then continues into the
+answer, shows raw dollar-sign math in normal tutoring text, or puts formulas in
+code blocks.
+
 ## High-Stakes Domain Criteria
 
 For law, medical, finance, safety, immigration, tax, or other high-stakes

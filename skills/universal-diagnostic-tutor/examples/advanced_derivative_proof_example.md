@@ -3,7 +3,7 @@
 ## User Question
 
 "I know the power rule. Give me a more rigorous concise explanation of why the
-derivative of $x^2$ is $2x$."
+derivative of \(x^2\) is \(2x\)."
 
 ## Selected Mode
 
@@ -23,15 +23,17 @@ advanced explanation.
 
 ## Example Tutor Response
 
+Domain: calculus -> derivatives -> proof from the limit definition.
+
 Use the derivative definition:
 
-$$
+\[
 f'(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}
-$$
+\]
 
-For $f(x)=x^2$:
+For \(f(x)=x^2\):
 
-$$
+\[
 \begin{aligned}
 f'(x)
 &= \lim_{h\to 0}\frac{(x+h)^2-x^2}{h} \\
@@ -40,17 +42,17 @@ f'(x)
 &= \lim_{h\to 0}(2x+h) \\
 &= 2x
 \end{aligned}
-$$
+\]
 
 The key assumption in the simplification step is that while forming the
-difference quotient, $h \neq 0$, so dividing by $h$ is valid. Only after
-simplifying do we take the limit as $h \to 0$.
+difference quotient, \(h \neq 0\), so dividing by \(h\) is valid. Only after
+simplifying do we take the limit as \(h \to 0\).
 
-Interpretation: the local slope of $x^2$ at input $x$ is $2x$.
+Interpretation: the local slope of \(x^2\) at input \(x\) is \(2x\).
 
 ## Stop Point Or Check Question
 
-"Which step would fail if we substituted $h=0$ before simplifying?"
+"Which step would fail if we substituted \(h=0\) before simplifying?"
 
 ## Why This Mode Fits The Learner
 

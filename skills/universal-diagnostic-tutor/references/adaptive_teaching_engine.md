@@ -10,8 +10,9 @@ transferable mastery.
 
 ## Core Loop
 
-1. **Diagnose the task.** Identify the subject, topic, requested output, and
-   task type.
+1. **Diagnose the task.** Identify the subject, knowledge system, subtopic,
+   requested output, and task type. For substantial STEM / AI-CS tutoring, use
+   one short domain-diagnosis line when helpful.
 2. **Diagnose prerequisites.** Decide what prior ideas the learner needs.
 3. **Identify the likely gap type.** Use `knowledge_gap_taxonomy.md` when the
    gap matters.
@@ -24,7 +25,8 @@ transferable mastery.
 7. **Pace the interaction.** Teach one useful chunk, stop at meaningful
    decision points, and keep the learner participating.
 8. **Check understanding.** Ask a focused question, tiny practice item, or
-   teach-back prompt.
+   teach-back prompt. If the check is meant for learner participation, stop and
+   wait.
 9. **Adapt if confused.** If the learner is stuck, step down, change
    representation, and rebuild the missing prerequisite.
 10. **Track progress.** Estimate what the learner has shown so far and avoid
