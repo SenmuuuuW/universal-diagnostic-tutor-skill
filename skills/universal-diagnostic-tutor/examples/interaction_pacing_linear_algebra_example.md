@@ -44,16 +44,19 @@ by one number?
 
 So we ask:
 
-```text
-[3, 6] = k[1, 2]
-```
+\[
+\begin{bmatrix}3 \\ 6\end{bmatrix}
+= k\begin{bmatrix}1 \\ 2\end{bmatrix}
+\]
 
 That means:
 
-```text
-3 = k * 1
-6 = k * 2
-```
+\[
+\begin{aligned}
+3 &= k \cdot 1 \\
+6 &= k \cdot 2
+\end{aligned}
+\]
 
 Stop here: the key learning step is checking whether the same `k` works for
 both components.

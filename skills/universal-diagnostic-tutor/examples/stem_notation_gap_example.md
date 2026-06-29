@@ -30,22 +30,18 @@ guiding question productively.
 The part to pause on is the notation. In `Ax = b`, the letters are not all the
 same kind of object.
 
-```text
-A = a matrix
-x = an unknown vector
-b = a known vector
-```
+- \(A\): a matrix
+- \(x\): an unknown vector
+- \(b\): a known vector
 
 So the equation means: "Find the vector `x` that gets transformed by matrix `A`
 into the vector `b`."
 
 A tiny example:
 
-```text
-A = [2]
-x = [3]
-b = [6]
-```
+\[
+A = [2], \quad x = [3], \quad b = [6]
+\]
 
 Here `Ax = b` says `2 * 3 = 6`. In higher dimensions, `A` can stretch, rotate,
 mix, or project a vector. The equation asks which input vector would produce

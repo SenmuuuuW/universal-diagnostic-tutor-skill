@@ -21,9 +21,9 @@ Level 1 or Level 2, because the user asked for speed.
 
 So the solutions are:
 
-```text
-x = 3 or x = -3
-```
+\[
+x = 3 \quad \text{or} \quad x = -3
+\]
 
 Compact rule: when solving `x^2 = a`, check both the positive and negative
 values, because squaring removes the sign.
@@ -41,9 +41,9 @@ produce the same square.
 
 Bad answer:
 
-```text
-x = +/-3
-```
+\[
+x = \pm 3
+\]
 
 That is correct but does not explain the concept, so the learner may make the
 same mistake again.

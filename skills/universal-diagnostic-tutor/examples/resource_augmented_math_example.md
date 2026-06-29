@@ -34,15 +34,15 @@ Think of a matrix `A` as a transformation. When you compute `A x`, you apply
 that transformation to vector `x`. If another matrix `B` acts first, then the
 combined action is:
 
-```text
+\[
 A(Bx)
-```
+\]
 
 Matrix multiplication defines a new matrix `AB` so that:
 
-```text
+\[
 (AB)x = A(Bx)
-```
+\]
 
 That is why `AB` means "do `B` first, then `A`." The formula for matrix
 multiplication is not random; it is the coordinate rule that makes composition

@@ -28,9 +28,9 @@ Level 4: Step down and rebuild from a smaller example.
 
 A derivative is the slope of the tangent line. Formally:
 
-```text
-f'(x) = lim h->0 (f(x+h) - f(x)) / h
-```
+\[
+f'(x) = \lim_{h \to 0}\frac{f(x+h) - f(x)}{h}
+\]
 
 ## Better Adaptive Response
 
@@ -40,9 +40,9 @@ think of a car's position changing over time.
 Average speed asks, "How much did the position change over this whole time
 interval?"
 
-```text
-average speed = change in position / change in time
-```
+\[
+\text{average speed} = \frac{\text{change in position}}{\text{change in time}}
+\]
 
 A derivative asks for the same kind of rate, but at one instant. Since an
 instant has no wide interval, we imagine shrinking the interval around that
@@ -51,9 +51,9 @@ right there.
 
 So for position:
 
-```text
-position function -> derivative -> instant speed
-```
+\[
+\text{position function} \rightarrow \text{derivative} \rightarrow \text{instant speed}
+\]
 
 Tiny check: If a position graph is flat at one moment, what should the
 instant speed be at that moment?

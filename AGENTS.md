@@ -132,6 +132,9 @@ Future changes must preserve the core identity of the skill:
 - In user-facing tutoring responses, prefer `\(...\)` and `\[...\]` for math;
   avoid raw `$...$` inline formulas because some chat environments render them
   badly.
+- When editing old examples, migrate user-facing math from `$...$` / `$$...$$`
+  to `\(...\)` / `\[...\]`, and keep intentional bad-formatting examples
+  clearly labeled.
 - Use code blocks only for actual code, commands, paths, or literal text where
   spacing is essential.
 - V1.0 is a stable consolidation release. Keep future V1.0 maintenance focused

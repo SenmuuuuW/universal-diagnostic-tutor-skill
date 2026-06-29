@@ -32,9 +32,9 @@ changes a vector first, and matrix `A` changes the result after that, then
 
 So the meaning is:
 
-```text
+\[
 ABx = A(Bx)
-```
+\]
 
 The row-times-column calculation is just the bookkeeping that builds the
 combined machine.

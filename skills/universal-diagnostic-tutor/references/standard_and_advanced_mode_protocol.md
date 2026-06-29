@@ -67,12 +67,12 @@ Avoid:
 - **Standard:** Use the derivative definition with a small expansion and stop
   before cancellation.
 - **Advanced:** Use the limit definition efficiently, justify algebraic
-  simplification for $h \neq 0$, then take the limit and interpret local linear
+  simplification for \(h \neq 0\), then take the limit and interpret local linear
   behavior.
 
 ### Matrix Equation
 
-- **Standard:** Identify object types in $Ax=b$, explain method cue, then ask
+- **Standard:** Identify object types in \(Ax=b\), explain method cue, then ask
   what is unknown.
 - **Advanced:** Discuss linear map, solvability, rank, null space, uniqueness,
   and geometric interpretation.

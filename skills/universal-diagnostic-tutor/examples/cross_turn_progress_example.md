@@ -38,10 +38,8 @@ near-transfer task only after the learner fixes the distinction.
 You have one important part right: recursion needs a stopping case. The part to
 separate is this:
 
-```text
-base case = the direct answer that stops the calls
-recursive case = the call on a smaller input
-```
+- Base case: the direct answer that stops the calls.
+- Recursive case: the call on a smaller input.
 
 `n * factorial(n - 1)` is the recursive case, because it still calls
 `factorial` again.

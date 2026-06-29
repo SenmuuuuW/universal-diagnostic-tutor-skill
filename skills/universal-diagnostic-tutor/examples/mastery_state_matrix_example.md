@@ -38,11 +38,9 @@ the input vector we are trying to find.
 
 Let's try the same idea in a tiny case:
 
-```text
-A = [3]
-x = [?]
-b = [12]
-```
+\[
+A = [3], \quad x = [?], \quad b = [12]
+\]
 
 Here `Ax = b` means `3 * x = 12`. What value of `x` would produce the output
 `12`?

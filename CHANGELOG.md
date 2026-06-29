@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.2.3 - 2026-06-29
+
+### Changed In v1.2.3
+
+- Cleaned up remaining raw dollar-sign math in older examples.
+- Standardized user-facing math examples toward `\(...\)` and `\[...\]`.
+- Replaced formula-only fenced code blocks in older examples with math displays.
+- Preserved intentional bad-formatting examples only where clearly labeled.
+- Made no behavior, protocol, infrastructure, or source-pack changes.
+
 ## v1.2.2 - 2026-06-29
 
 ### Changed In v1.2.2

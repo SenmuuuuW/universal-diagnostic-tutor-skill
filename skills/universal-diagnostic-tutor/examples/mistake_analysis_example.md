@@ -27,24 +27,26 @@ Level 3: Standard teacher-style mistake analysis.
 
 Your setup is close. The exact mistake happens here:
 
-```text
+\[
 2(x - 3) -> 2x - 3
-```
+\]
 
 The `2` has to multiply the whole group inside the parentheses, not just the
 `x`. So it should be:
 
-```text
-2(x - 3) = 2*x - 2*3 = 2x - 6
-```
+\[
+2(x - 3) = 2 \cdot x - 2 \cdot 3 = 2x - 6
+\]
 
 Now solve:
 
-```text
-2x - 6 = 10
-2x = 16
-x = 8
-```
+\[
+\begin{aligned}
+2x - 6 &= 10 \\
+2x &= 16 \\
+x &= 8
+\end{aligned}
+\]
 
 Why your mistake is tempting: the `x` catches your eye, so it feels like the
 outside number belongs only to the variable. But parentheses mean "treat this

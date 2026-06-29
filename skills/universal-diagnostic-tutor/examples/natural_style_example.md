@@ -23,9 +23,9 @@ Because both `3` and `-3` become `9` when squared: `3 * 3 = 9`, and
 The key idea is that squaring removes the sign, so solving `x^2 = 9` means
 finding every number that turns into `9` after squaring. That gives:
 
-```text
+\[
 x = 3 or x = -3
-```
+\]
 
 The common trap is mixing up `sqrt(9)`, which means the principal positive
 square root, with solving an equation, where you need all values that work.

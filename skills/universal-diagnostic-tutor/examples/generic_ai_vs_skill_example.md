@@ -29,20 +29,20 @@ No source required; use teacher-like stop points.
 
 Add the equations:
 
-```text
-2x + y = 7
-x - y = 2
----------
-3x = 9
-x = 3
-```
+\[
+\begin{aligned}
+2x + y &= 7 \\
+x - y &= 2 \\
+3x &= 9 \\
+x &= 3
+\end{aligned}
+\]
 
 Then plug in:
 
-```text
-3 - y = 2
-y = 1
-```
+\[
+3 - y = 2, \quad y = 1
+\]
 
 Answer: `x = 3`, `y = 1`.
 
@@ -54,17 +54,18 @@ Elimination means: combine equations so one variable disappears.
 
 Here are the equations:
 
-```text
-2x + y = 7
-x - y = 2
-```
+\[
+\begin{aligned}
+2x + y &= 7 \\
+x - y &= 2
+\end{aligned}
+\]
 
 Look at the `y` terms:
 
-```text
-+y
--y
-```
+\[
++y \quad \text{and} \quad -y
+\]
 
 That is the useful cue. If we combine the equations in the right way, those two
 terms cancel.

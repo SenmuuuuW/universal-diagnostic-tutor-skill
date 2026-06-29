@@ -33,9 +33,9 @@ in the direction of steepest increase.
 
 So if the gradient points uphill, gradient descent moves the opposite way:
 
-```text
-new parameters = old parameters - learning_rate * gradient
-```
+\[
+\text{new parameters} = \text{old parameters} - \text{learning rate} \cdot \text{gradient}
+\]
 
 The symbols mean:
 

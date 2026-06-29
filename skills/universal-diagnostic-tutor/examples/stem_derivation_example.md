@@ -29,33 +29,33 @@ Goal: show why the slope of `f(x) = x^2` at input `x` is `2x`.
 
 The derivative means the limit of average rate of change over a tiny interval:
 
-```text
-f'(x) = lim h->0 (f(x + h) - f(x)) / h
-```
+\[
+f'(x) = \lim_{h \to 0}\frac{f(x + h) - f(x)}{h}
+\]
 
 For `f(x) = x^2`, substitute into the definition:
 
-```text
-((x + h)^2 - x^2) / h
-```
+\[
+\frac{(x + h)^2 - x^2}{h}
+\]
 
 Expand the square:
 
-```text
-(x^2 + 2xh + h^2 - x^2) / h
-```
+\[
+\frac{x^2 + 2xh + h^2 - x^2}{h}
+\]
 
 The `x^2` terms cancel:
 
-```text
-(2xh + h^2) / h = 2x + h
-```
+\[
+\frac{2xh + h^2}{h} = 2x + h
+\]
 
 Now let `h` shrink to `0`:
 
-```text
-2x + h -> 2x
-```
+\[
+2x + h \to 2x
+\]
 
 So the derivative is `2x`. Meaning: at the point `x`, the graph of `x^2` is
 changing at a rate of `2x`.

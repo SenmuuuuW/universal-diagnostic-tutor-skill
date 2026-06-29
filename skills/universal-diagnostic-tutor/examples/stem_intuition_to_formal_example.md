@@ -27,21 +27,21 @@ direction where the function increases fastest.
 
 So if:
 
-```text
-gradient = steepest uphill direction
-```
+\[
+\text{gradient} = \text{steepest uphill direction}
+\]
 
 then:
 
-```text
-negative gradient = steepest local downhill direction
-```
+\[
+\text{negative gradient} = \text{steepest local downhill direction}
+\]
 
 That is why gradient descent uses an update like:
 
-```text
-new point = current point - step_size * gradient
-```
+\[
+\text{new point} = \text{current point} - \text{step size} \cdot \text{gradient}
+\]
 
 The `step_size` controls how far you move. The gradient controls which
 direction counts as uphill from your current point.
