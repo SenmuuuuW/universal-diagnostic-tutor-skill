@@ -201,18 +201,23 @@ Future changes must preserve the core identity of the skill:
   links to `INSTALL.md` over appending long repeated sections.
 - README can be polished and showcase-like, but must not overclaim, sound
   salesy, or imply benchmark results without real eval data.
-- README should include at most one or two high-quality showcase examples.
+- Showcase examples should live in root `EXAMPLES.md`, not as long blocks in
+  README.
+- README may include one short example preview and link to `EXAMPLES.md`.
 - Keep showcase examples short, accurate, and aligned with actual Skill
   behavior: diagnosis-first, next best step, check-and-stop, and normal math
   formatting.
-- Prefer concrete architecture snapshots, examples, capability matrices, and
-  navigation tables over vague marketing claims.
+- The Core Reasoning Flow diagram is a public-facing selling point; keep it
+  accurate, compact, and not overcomplicated.
+- Prefer concrete examples, diagrams, capability matrices, and navigation
+  tables over vague marketing claims.
 - Keep README concise by linking to dedicated docs for installation,
   portability, evals, rubrics, failure taxonomy, and feedback workflow.
 - Do not claim every platform has full native support; distinguish Full Skill,
   Custom Bot, Lite Prompt, and API Prompt usage.
 - README should not duplicate `CHANGELOG.md`; keep only the latest major
-  release highlight in the main body.
+  release highlight in the main body and send detailed history to the compact
+  Version Timeline plus `CHANGELOG.md`.
 - Put older versions in a compact Version Timeline and link to
   `CHANGELOG.md` for details.
 - Describe current capabilities as present capabilities, not repeated

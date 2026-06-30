@@ -6,12 +6,14 @@ All notable changes to this project will be documented in this file.
 
 ### Changed In v1.6.3
 
-- Added a concise answer-first vs diagnosis-first README example.
-- Cleaned up the root README version/update layout.
-- Kept only the latest major release highlight in the main README body.
-- Moved older version details into a compact Version Timeline.
-- Improved README as a public-facing landing page without making it
-  changelog-like.
+- Added root `EXAMPLES.md` with concise answer-first vs diagnosis-first
+  showcase examples.
+- Restored and polished the README core reasoning / teaching flow diagram.
+- Linked README and Skill README to `EXAMPLES.md` instead of keeping long
+  showcase examples inside README.
+- Cleaned README version/update layout so older version details live in Version
+  Timeline / CHANGELOG.
+- Kept README as a public-facing landing page without making it changelog-like.
 - Collapsed Skill README historical notes into a compact version pointer.
 
 ### Unchanged In v1.6.3
