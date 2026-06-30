@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.6.3 - 2026-06-30
+
+### Changed In v1.6.3
+
+- Cleaned up the root README version/update layout.
+- Kept only the latest major release highlight in the main README body.
+- Moved older version details into a compact Version Timeline.
+- Reduced changelog-like repetition in README.
+- Collapsed Skill README historical notes into a compact version pointer.
+
+### Unchanged In v1.6.3
+
+- No core tutoring behavior, infrastructure, installer, source-pack, API
+  integration code, package setup, database, persistent memory, real
+  RAG/vector DB, PDF, secret, copied-content, curriculum map, platform adapter,
+  or website changes.
+
 ## v1.6.2 - 2026-06-30
 
 ### Changed In v1.6.2

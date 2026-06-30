@@ -207,6 +207,12 @@ Future changes must preserve the core identity of the skill:
   portability, evals, rubrics, failure taxonomy, and feedback workflow.
 - Do not claim every platform has full native support; distinguish Full Skill,
   Custom Bot, Lite Prompt, and API Prompt usage.
+- README should not duplicate `CHANGELOG.md`; keep only the latest major
+  release highlight in the main body.
+- Put older versions in a compact Version Timeline and link to
+  `CHANGELOG.md` for details.
+- Describe current capabilities as present capabilities, not repeated
+  historical release notes.
 - Use emojis in README files sparingly and consistently as visual anchors;
   keep the tone serious, trustworthy, and not childish.
 - Do not let README polish alter core Skill behavior, teaching protocols,

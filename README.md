@@ -78,6 +78,19 @@ Advance / Transfer / Compress / Step Down
 | Quality system | EVALS / rubric / failure taxonomy / feedback loop |
 | Platform adapters | Full Skill / Custom Bot / Lite Prompt / API Prompt |
 
+## 🆕 Latest Major Update: V1.6 Cross-Platform Prompt Adapters
+
+V1.6 让这个 Tutor 不只适合 Codex / Claude Code-style agents，也能以更轻量的方式迁移到普通聊天和自定义 bot 环境。
+
+| Usage Level | Best Fit |
+| --- | --- |
+| Full Skill | Codex / Claude Code-style agents |
+| Custom Bot | GPTs / Gemini Gems / Coze / Doubao-style bots |
+| Lite Prompt | 普通 ChatGPT / Gemini / DeepSeek / 豆包 / Kimi / Qwen chat |
+| API Prompt | DeepSeek-compatible / OpenAI-compatible API-style usage |
+
+不是所有平台都是满血版；README 和 [PORTABILITY.md](PORTABILITY.md) 会区分 Full / Custom Bot / Lite / API usage。适配文件见 [platforms/](platforms/)。
+
 ## 🎚️ 选择你的学习模式
 
 你可以先告诉导师你希望用哪种方式学习。如果不选择，Tutor 会进入 Auto Mode，根据你的问题、用词、错误和信心自动判断；不确定时只问一个很短的校准问题。
@@ -88,42 +101,6 @@ Advance / Transfer / Compress / Step Down
 | 📘 Standard Mode / 普通模式 | 学过一点但不会做题 | 方法识别 + 分步引导 + 小检查 |
 | 🚀 Advanced Mode / 进阶模式 | 有基础，想深入 | 证明、推导、边界、假设和迁移 |
 | 🤖 Auto Mode | 不确定水平 | 自动判断，必要时问一个校准问题 |
-
-## 🧑‍🏫 V1.3 更新重点
-
-V1.3 让 Tutor 的回答更像真实老师，而不是暴露内部工具流程：
-
-- 避免在普通教学回答里提到 Skill 名称、版本号、协议名或仓库文件。
-- 加强知识系统定位：告诉学习者这题属于哪个领域、知识点和前置概念。
-- 增加直觉 / 应用桥梁：把抽象 STEM 概念连到图像、现实现象、工程系统或 AI-CS 应用。
-- 强化迁移教学：讲完一个小步骤后，提炼以后遇到类似题该看什么线索。
-- 保留 V1.1 节奏、V1.2 学习模式、V1.2.2 数学显示和 STEM-first 定位。
-
-## ⚙️ V1.4 更新重点
-
-V1.4 强化“学习效率优化”：Tutor 会优先选择最小但最关键的下一步教学动作，控制认知负荷，把学习者的回答当作掌握信号来决定推进、迁移、压缩解释、换讲法或降难度。
-
-## 🧭 Skill Reliability & Context Portability
-
-V1.5 让 Skill 更容易被 agent 正确触发、路由、评估和跨聊天接续，同时不让普通教学回答变复杂。
-
-- 增加更清晰的内部路由架构和 trigger / mode matrix，帮助 agent 根据“零基础”“我会一点但做不出来”“我知道 X 但不懂 Y”“继续上次”等信号选择合适教学动作。
-- 增加 [EVALS.md](EVALS.md)、[QUALITY_RUBRIC.md](QUALITY_RUBRIC.md)、[FAILURE_TAXONOMY.md](FAILURE_TAXONOMY.md) 和 [FEEDBACK_TO_IMPROVEMENT.md](FEEDBACK_TO_IMPROVEMENT.md)，让后续改进更可测试、更有证据。
-- 增加 Learning State Card：用户可以把学习状态复制到新 chat，让 Tutor 从当前卡点继续，而不是从零重讲。
-
-简短示例：
-
-```text
-Learning State Card:
-- Subject: Linear algebra
-- Topic: scalar-multiple vectors
-- Already understood: vector components
-- Still weak: one scalar must work for every component
-- Next best step: near-transfer check
-- Suggested continue prompt: Continue from this card; do not restart from vector basics.
-```
-
-Learning State Card 是用户可见、可复制的学习状态摘要，不是隐藏记忆、数据库或持久学习档案。
 
 ## 🌐 Cross-Platform Usage
 
@@ -317,24 +294,19 @@ universal-diagnostic-tutor-skill/
 
 | Version | Focus |
 | --- | --- |
-| V1.6.2 | README showcase polish for first-screen positioning, engine snapshot, capability matrix, and navigation |
-| V1.6.1 | Portability adapter clarity for Ultra-Lite memory wording and generic API prompt usage |
-| V1.6 | Cross-platform prompt adapters for full Skill, custom bots, Lite Prompt, and API prompt usage |
-| V1.5 | Skill reliability, routing, evals, failure taxonomy, and Learning State Cards |
-| V1.4 | Learning efficiency optimization loop and next-best-step tutoring |
-| V1.3.1 | Installation guide and platform compatibility documentation |
-| V1.3 | Teacher-like user-facing responses, knowledge-system maps, intuition/application bridges, transfer patterns |
-| V1.2.3 | Math-formatting cleanup in older examples |
-| V1.2.2 | STEM-first positioning, domain diagnosis, zero-base pacing, math rendering |
-| V1.2.1 | README polish and visual onboarding |
-| V1.2 | Teaching modes + math formatting |
-| V1.1 | Teacher-like pacing + autonomous resource discovery |
-| V1.0 | Stable Chinese README and Skill usage guide |
-| V0.9 | Mastery progress tracking within the current conversation |
-| V0.8 | STEM / AI-CS teaching calibration |
-| V0.7 | Adaptive teaching engine, practice ladder, mistake analysis |
-| V0.4-V0.6 | Resource integration and curated STEM / AI-CS source guidance |
-| V0.1-V0.3 | Core universal tutor behavior, examples, evaluation, boundaries |
+| V1.6.3 | README version/update layout cleanup |
+| V1.6.2 | README showcase polish and clearer landing-page structure |
+| V1.6.1 | Small portability clarity patch for Ultra-Lite and API prompt wording |
+| V1.6.0 | Cross-platform prompt adapters: Full Skill, Custom Bot, Lite Prompt, API Prompt |
+| V1.5.0 | Skill reliability, evals/rubric/failure taxonomy, Learning State Card context portability |
+| V1.4.0 | Learning Efficiency Optimization Loop and next-best-step tutoring |
+| V1.3.0 | Teacher presence, no internal leakage, knowledge-system mapping, intuition/application bridges |
+| V1.2.x | Teaching modes, math formatting, STEM-first positioning |
+| V1.1.x | Teacher-like pacing, autonomous resource tutoring, stop-point discipline |
+| V1.0.0 | Stable Chinese README and initial public-ready documentation |
+| V0.x | Early protocol, examples, source packs, and evaluation foundations |
+
+For detailed changes, see [CHANGELOG.md](CHANGELOG.md).
 
 ## 🛡️ 质量原则
 
