@@ -4,7 +4,7 @@
 
 这个文件是 Skill 目录内的使用指南，重点说明什么时候使用这个 Skill、怎样提问、各类参考文件有什么作用，以及未来维护时应注意什么。
 
-如果你是第一次了解这个项目，建议先看根目录的 [GitHub README](../../README.md)。根 README 更像项目 landing page；本文件更偏 Skill 使用和维护指南。
+如果你是第一次了解这个项目，建议先看根目录的 [GitHub README](../../README.md)。根 README 更像项目 landing page，包含平台概览、Core Learning Engine 和质量评估入口；本文件更偏 Skill 使用和维护指南。
 
 安装和更新请看根目录的 [INSTALL.md](../../INSTALL.md)。这个 Skill 目录本身是 `skills/universal-diagnostic-tutor/`。
 

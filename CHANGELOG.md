@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.6.2 - 2026-06-30
+
+### Changed In v1.6.2
+
+- Polished the root README first-screen positioning.
+- Added a compact Core Learning Engine snapshot.
+- Added a compact capability matrix.
+- Clarified how diagnosis-first tutoring differs from answer-first style.
+- Improved public-facing navigation to install, portability, adapters, evals,
+  rubric, failure taxonomy, and feedback docs.
+
+### Unchanged In v1.6.2
+
+- No core tutoring behavior, infrastructure, installer, source-pack, API
+  integration code, package setup, database, persistent memory, real
+  RAG/vector DB, PDF, secret, copied-content, curriculum map, platform adapter,
+  or website changes.
+
 ## v1.6.1 - 2026-06-30
 
 ### Changed In v1.6.1

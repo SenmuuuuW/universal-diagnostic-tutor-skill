@@ -199,6 +199,14 @@ Future changes must preserve the core identity of the skill:
   platform differences, and maintenance requirements first.
 - Keep README concise; prefer replacing duplicated install/update text with
   links to `INSTALL.md` over appending long repeated sections.
+- README can be polished and showcase-like, but must not overclaim, sound
+  salesy, or imply benchmark results without real eval data.
+- Prefer concrete architecture snapshots, examples, capability matrices, and
+  navigation tables over vague marketing claims.
+- Keep README concise by linking to dedicated docs for installation,
+  portability, evals, rubrics, failure taxonomy, and feedback workflow.
+- Do not claim every platform has full native support; distinguish Full Skill,
+  Custom Bot, Lite Prompt, and API Prompt usage.
 - Use emojis in README files sparingly and consistently as visual anchors;
   keep the tone serious, trustworthy, and not childish.
 - Do not let README polish alter core Skill behavior, teaching protocols,

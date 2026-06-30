@@ -1,22 +1,21 @@
 # 🧠 Universal Diagnostic Tutor Skill
 
-### 诊断型智能导师 Skill：不是答题器，而是会诊断、会教学、会带你掌握知识的 AI Tutor
+### A diagnosis-first STEM / AI-CS Tutor Skill that teaches by finding the learner's current knowledge gap, not by dumping full answers.
 
-> 把 AI 从“直接给答案”变成“像专业老师一样诊断、讲解、检查、练习、迁移”的学习助手。
+它不是先给答案，而是先判断领域、基础、符号和知识缺口，再选择下一步最值得教的内容。
 
-`universal-diagnostic-tutor` 是一个可复用的 Markdown-based Tutor Skill。它面向 Codex、Claude Code 风格的 agent 工作流，以及其他支持 Skill / project instruction / agent instruction 的 AI 学习助手环境。
+`universal-diagnostic-tutor` 是一个可复用、Markdown-only、透明可审查的 AI Tutor Skill。它面向 Codex、Claude Code 风格的 agent 工作流，也提供 Custom Bot、Lite Prompt 和 API Prompt 适配方式。
 
 **当前重点：大学理科 / STEM / AI-CS 学习**，包括数学、编程、算法、机器学习、系统、网络、物理、信号与工程基础等。它保留跨学科诊断式教学能力，但不是把自己定位成泛泛的“什么都教”助手。
 
 | Highlight | What It Means |
 | --- | --- |
-| 🎯 Diagnosis-first | 先判断学科、主题、前置知识和知识漏洞，再教学 |
-| 🧭 STEM / 理科 / AI-CS focused | 当前重点覆盖大学层级数学、编程、AI/ML、系统、网络、物理、信号与工程基础 |
-| 🌱📘🚀 Learning modes | 支持零基础、普通、进阶和 Auto Mode |
-| 🧑‍🏫 Teacher-like pacing | Teach → check → continue，不一口气倒完整套答案 |
-| 🔍 Resource-aware | 有搜索能力时主动找权威资源，并整合进教学 |
-| 🔁 Mastery-oriented | 在当前对话内跟踪理解、练习、迁移和下一步 |
-| 🧾 Portable context | 用 Learning State Card 帮助跨 chat 接续学习，不依赖隐藏记忆 |
+| 🎯 Diagnosis-first | 先判断领域、主题、前置知识和当前知识缺口 |
+| ⚙️ Next-best-step engine | 选择最小但最能推进理解的下一步 |
+| 🧭 STEM / 理科 / AI-CS focused | 当前重点覆盖大学数学、编程、AI/ML、系统、物理、信号与工程基础 |
+| 🌐 Portable prompts | Full Skill / Custom Bot / Lite Prompt / API Prompt |
+| 🧾 Continuity | Learning State Card 跨 chat 接续学习，不依赖隐藏记忆 |
+| 🧪 Quality system | EVALS / rubric / failure taxonomy / feedback loop |
 | 🧮 Math-friendly | 数学公式使用 Markdown / LaTeX math，而不是塞进代码块 |
 
 ## 🎯 这个项目是什么？
@@ -38,65 +37,46 @@
 - 教材搬运、PDF 仓库、答案库或课程地图。
 - 医疗、法律、金融、税务或安全建议工具。
 
-## 🧩 适用于哪些平台 / AI？
+## ⚙️ Core Learning Engine
 
-| 环境 | 适配方式 | 说明 |
-| --- | --- | --- |
-| OpenAI Codex | 推荐 / 主要适配 | 使用 `skills/universal-diagnostic-tutor/` 作为 Skill 目录。 |
-| Claude Code / Claude Code-style agents | 可参考适配 | 如果支持 Skills 或 project instructions，可作为教学行为层使用。 |
-| 其他 instruction-based agents | 可手动适配 | 引用 `SKILL.md`、README 和 references。 |
-| 普通 ChatGPT / 网页聊天 | 非原生 Skill | 可手动复制提示词，但不会自动加载整个 Skill 目录。 |
-| 本地 / IDE Agent | 取决于环境 | 需要能读取 Markdown instructions 和项目文件。 |
-
-不要把它理解成网站、App、插件市场里的插件或自动安装包。它本质上是一个 Markdown-based Tutor Skill / teaching behavior layer。不同工具的 Skill 路径、加载方式和缓存机制不同，请以各自工具文档为准。
-
-## 🧩 它和普通 GPT / Codex 答案有什么不同？
-
-| Generic AI Answer | Universal Diagnostic Tutor Skill |
-| --- | --- |
-| Answers quickly | Diagnoses first |
-| Solves the current problem | Builds transferable understanding |
-| Assumes prerequisites | Teaches missing foundations |
-| Long explanation all at once | Teach → check → continue |
-| May dump links | Integrates resources into teaching |
-| Stops after answer | Tracks mastery and next step |
-
-这个 Skill 的目标不是让 AI 显得更会讲，而是让它更像一个真正关心学习过程的老师：知道什么时候该解释，什么时候该停，什么时候该降难度，什么时候该让学习者自己走一步。
-
-## 🧠 核心教学循环
-
-```mermaid
-flowchart LR
-  A[User Question] --> B[Diagnose Subject + Gap]
-  B --> C[Choose Teaching Mode]
-  C --> D[Teach Intuition + Notation]
-  D --> E[Stop Point / Check]
-  E --> F{Understood?}
-  F -->|Yes| G[Practice / Transfer]
-  F -->|No| H[Step Down / Re-explain]
-  G --> I[Review or Advance]
-  H --> D
+```text
+User Question
+  ↓
+Domain & Gap Diagnosis
+  ↓
+Next Best Teaching Step
+  ↓
+Teach One Compact Unit
+  ↓
+Check Mastery Signal
+  ↓
+Advance / Transfer / Compress / Step Down
 ```
 
-这个流程不是僵硬模板。好的回答应该自然、简洁、像老师一样：只做当前最有用的教学动作，然后根据学习者回应继续。
+这个 Skill 不追求一次讲最多内容，而是追求每一步都选择最能提升理解的教学动作。
 
 在技术学习里，Tutor 会先用一两句话帮你定位知识系统，例如“这是离散数学 -> 图论 -> 边染色”或“这是线性代数 -> 向量方程 -> 线性方程组”，再开始讲概念、符号和方法。
 
-## ⚙️ Learning Efficiency Optimization Loop
+## ✨ Why This Is Different
 
-V1.4 的核心原则是：不追求一次讲最多内容，而是追求每一步最有效。
+很多 answer-first 风格的 AI 会太早给完整解法。这个 Skill 会先把用户的问题当作诊断问题：到底是符号没懂、概念缺口、方法识别困难，还是已经会了前置知识但卡在某个关键步骤？
 
-Tutor 会先判断当前最小知识缺口，选择下一步最值得教的内容；如果你已经懂了某个前置知识，它会压缩解释并推进；如果你还没懂，它会降低难度、换直觉例子，或回到符号和对象本身。
+它的核心问题是：**现在最小的缺失块是什么？** 然后只教一个紧凑步骤、检查理解，再决定推进、迁移、压缩解释或降难度。
 
-目标是用更少的解释成本，换来更高的理解收益。
+如果学习要跨 chat 继续，它会生成 Learning State Card，让下一次可以从当前卡点接上，而不是假装拥有隐藏记忆。
 
-```text id="z4c5lt"
-Diagnose Gap
-→ Pick Next Best Step
-→ Teach One Compact Unit
-→ Check Mastery Signal
-→ Advance / Transfer / Compress / Step Down
-```
+## 🧩 Capability Matrix
+
+| Layer | What It Does |
+| --- | --- |
+| Diagnosis-first tutoring | 判断领域、知识点、符号缺口、方法缺口 |
+| Teaching modes | 零基础 / 普通 / 进阶 / 自动判断 |
+| Learning efficiency loop | 选择下一步最值得教的内容，控制认知负荷 |
+| Mistake intervention | 根据错误类型选择解释方式，而不是重复讲一遍 |
+| Transfer teaching | 讲完后提炼类似题线索 |
+| Learning State Card | 跨 chat 继续学习，不依赖隐藏记忆 |
+| Quality system | EVALS / rubric / failure taxonomy / feedback loop |
+| Platform adapters | Full Skill / Custom Bot / Lite Prompt / API Prompt |
 
 ## 🎚️ 选择你的学习模式
 
@@ -108,20 +88,6 @@ Diagnose Gap
 | 📘 Standard Mode / 普通模式 | 学过一点但不会做题 | 方法识别 + 分步引导 + 小检查 |
 | 🚀 Advanced Mode / 进阶模式 | 有基础，想深入 | 证明、推导、边界、假设和迁移 |
 | 🤖 Auto Mode | 不确定水平 | 自动判断，必要时问一个校准问题 |
-
-## ✅ 主要能力
-
-- 🧩 **Knowledge gap diagnosis**：区分词汇、概念、符号、步骤、推理、识别、迁移、误解、信心和资源需求。
-- 🧑‍🏫 **Teacher-like pacing**：一次处理一个问题或子问题，在关键步骤停下来检查理解。
-- 🧮 **STEM notation and formula teaching**：把公式、变量、矩阵、张量、代码符号、单位和系统层级翻译成普通语言。
-- 🧠 **Proof / derivation explanation**：解释公式和证明为什么成立，而不是只展示步骤。
-- 🐍 **Programming and debugging guidance**：解释状态、数据流、循环、递归和 bug mental model，而不是只贴修复代码。
-- 🤖 **AI / ML math bridge**：连接线性代数、微积分、概率、优化、loss、gradient 和模型训练。
-- 🧪 **Practice ladder**：从识别检查、基础概念、补全例题、近迁移到真实应用逐级练习。
-- 🔁 **Mastery progress tracking**：在当前对话内判断学习者是否只是看过、能识别、能解释、能独立应用或能迁移。
-- 🔍 **Autonomous resource discovery**：有 web/search 能力且资源确实有帮助时，主动寻找权威课程、教材、文档或 problem sets。
-- 📚 **Resource-orchestrated tutoring**：把资源转化成讲解、练习、错题修复和考试题型分析，而不是甩链接。
-- 🛡️ **Safe educational boundaries**：高风险领域保持教育性解释，不替代专业建议。
 
 ## 🧑‍🏫 V1.3 更新重点
 
@@ -159,9 +125,16 @@ Learning State Card:
 
 Learning State Card 是用户可见、可复制的学习状态摘要，不是隐藏记忆、数据库或持久学习档案。
 
-## 🌐 跨平台使用
+## 🌐 Cross-Platform Usage
 
-Codex / Claude Code-style agents 最适合使用完整 Skill 目录；GPTs、Gemini Gems、Coze / 豆包风格 bot 可以使用自定义 instruction packs；普通 ChatGPT / Gemini / DeepSeek / 豆包 / Kimi / Qwen 聊天可以使用 Lite Prompt，但这不是满血版；API models 可以使用 system prompt pack，并由开发者手动传入上下文或 Learning State Card。
+不是所有平台都是满血版；[PORTABILITY.md](PORTABILITY.md) 会清楚区分 Full Skill、Custom Bot、Lite Prompt 和 API Prompt。
+
+| Use Case | Recommended File |
+| --- | --- |
+| Full Skill: Codex / Claude Code-style agents | `skills/universal-diagnostic-tutor/` |
+| Custom Bot: GPTs / Gemini Gems / Coze / Doubao-style bots | `platforms/chatgpt-gpt/INSTRUCTIONS.md`, `platforms/gemini-gems/GEM_INSTRUCTIONS.md`, `platforms/coze-doubao/BOT_PROMPT.md` |
+| Lite Prompt: ordinary ChatGPT / Gemini / DeepSeek / 豆包 / Kimi / Qwen chat | `platforms/generic-chat/TUTOR_LITE_PROMPT.md` |
+| API Prompt: DeepSeek-compatible / OpenAI-compatible API-style usage | `platforms/deepseek-api/SYSTEM_PROMPT.md` |
 
 - 总览：[PORTABILITY.md](PORTABILITY.md)
 - 普通聊天 Lite Prompt：[platforms/generic-chat/TUTOR_LITE_PROMPT.md](platforms/generic-chat/TUTOR_LITE_PROMPT.md)
@@ -171,6 +144,17 @@ Codex / Claude Code-style agents 最适合使用完整 Skill 目录；GPTs、Gem
 - API system prompt：[platforms/deepseek-api/SYSTEM_PROMPT.md](platforms/deepseek-api/SYSTEM_PROMPT.md)（适用于 DeepSeek-compatible / OpenAI-compatible API-style usage；开发者需要手动传入上下文或 Learning State Card）
 
 不要过度理解为“所有平台都原生支持 Skill”。不同平台的 instruction、知识文件、上下文窗口和记忆机制不同，实际效果会有差异。
+
+## 🚀 Start Here
+
+| I Want To... | Go To |
+| --- | --- |
+| Install / update | [INSTALL.md](INSTALL.md) |
+| Use across platforms | [PORTABILITY.md](PORTABILITY.md) |
+| Try in normal chat AI | [platforms/generic-chat/TUTOR_LITE_PROMPT.md](platforms/generic-chat/TUTOR_LITE_PROMPT.md) |
+| Build a Custom GPT | [platforms/chatgpt-gpt/INSTRUCTIONS.md](platforms/chatgpt-gpt/INSTRUCTIONS.md) |
+| Evaluate quality | [EVALS.md](EVALS.md) / [QUALITY_RUBRIC.md](QUALITY_RUBRIC.md) |
+| Report failures | [FAILURE_TAXONOMY.md](FAILURE_TAXONOMY.md) / [FEEDBACK_TO_IMPROVEMENT.md](FEEDBACK_TO_IMPROVEMENT.md) |
 
 ## 🚀 Quick Start
 
@@ -333,6 +317,7 @@ universal-diagnostic-tutor-skill/
 
 | Version | Focus |
 | --- | --- |
+| V1.6.2 | README showcase polish for first-screen positioning, engine snapshot, capability matrix, and navigation |
 | V1.6.1 | Portability adapter clarity for Ultra-Lite memory wording and generic API prompt usage |
 | V1.6 | Cross-platform prompt adapters for full Skill, custom bots, Lite Prompt, and API prompt usage |
 | V1.5 | Skill reliability, routing, evals, failure taxonomy, and Learning State Cards |
@@ -372,7 +357,7 @@ universal-diagnostic-tutor-skill/
 
 ## 🧭 维护与验证
 
-V1.6 是一个 Markdown-only cross-platform prompt adapter release。它把现有 Tutor Skill 打包成 full Skill、custom bot、Lite Prompt 和 API prompt 用法，同时继续保留 V1.1 节奏、V1.2 学习模式、V1.2.2 数学显示规则、V1.3 自然教师表达、V1.4 学习效率优化、V1.5 Learning State Card 和 STEM-first 定位；不新增 source packs、网站、脚本、API 集成代码、包管理、数据库、持久记忆、真实 RAG / vector database、PDF、课程地图或基础设施。
+V1.6 系列是 Markdown-only cross-platform prompt adapter 和 README polish release。它把现有 Tutor Skill 打包成 full Skill、custom bot、Lite Prompt 和 API prompt 用法，并让根 README 更清楚展示 Core Learning Engine、平台入口和质量评估入口；不新增 source packs、网站、脚本、API 集成代码、包管理、数据库、持久记忆、真实 RAG / vector database、PDF、课程地图或基础设施。
 
 维护者可以使用 [EVALS.md](EVALS.md)、[QUALITY_RUBRIC.md](QUALITY_RUBRIC.md)、[FAILURE_TAXONOMY.md](FAILURE_TAXONOMY.md)、`skills/universal-diagnostic-tutor/references/evaluation_checklist.md` 和 `skills/universal-diagnostic-tutor/references/manual_test_matrix.md` 做人工验收。若使用外部 Skill 创建工具里的 `quick_validate.py`，该脚本可能需要 PyYAML；本仓库不为此添加 package setup 或依赖文件。
 
