@@ -23,9 +23,12 @@ Future changes must preserve the core identity of the skill:
 - Do not describe the Skill primarily as a generic all-subject assistant.
 - Preserve the diagnosis-first workflow in `SKILL.md`.
 - Keep `SKILL.md` concise enough to load as a skill body.
+- Keep `SKILL.md` as a router, not a duplicate of every protocol.
 - Put detailed subject guidance in `skills/universal-diagnostic-tutor/references/`.
+- Prefer routing clarity over protocol sprawl.
 - Update examples when behavior or answer formats change.
 - Update `CHANGELOG.md` for user-visible changes.
+- Add eval cases for repeated failures before broadening the Skill.
 - Keep examples short, clear, and representative across subject areas.
 - Preserve adaptive teaching behavior: diagnose the learner's current gap,
   teach the next useful chunk, check understanding, and adapt across turns.
@@ -38,6 +41,8 @@ Future changes must preserve the core identity of the skill:
   procedure.
 - Keep README focused; the learning-efficiency loop is a selling point, not a
   complex technical diagram.
+- Do not make README too long; link dedicated evaluation, rubric, taxonomy, and
+  improvement docs instead of duplicating them.
 - Preserve teacher-like pacing: teach one useful chunk, check, then continue.
 - Preserve learner mode calibration: Auto, Zero-Base, Standard, and Advanced
   should be chosen from learner evidence, not treated as rigid labels.
@@ -120,6 +125,10 @@ Future changes must preserve the core identity of the skill:
   advances.
 - Do not add persistent memory, databases, telemetry, accounts, or storage
   unless explicitly requested.
+- Use Learning State Cards for cross-chat continuity, and do not imply hidden
+  memory across chats.
+- Context handoff should use user-visible cards or summaries, not persistent
+  learner profiles.
 - Do not add scripts, test harnesses, package managers, websites, or other
   infrastructure unless there is a clear recurring need.
 - Do not add fake sources, invented citations, invented exams, or invented

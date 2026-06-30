@@ -276,6 +276,39 @@ longer, restarts from zero despite evidence of understanding, gives a full
 lecture when one symbol or cue is blocking progress, advances after a guessed
 answer, or treats every mistake as needing the same generic re-explanation.
 
+## V1.5 Skill Reliability And Context Portability Criteria
+
+For tutoring, continuation, maintenance review, or multi-turn learning prompts,
+pass if the answer:
+
+- Routes to the correct protocol or behavior from the user signal, such as
+  zero-base, standard problem-solving, advanced proof, known-X-not-Y,
+  still-confused, wrong reasoning, resource request, cross-chat continuation,
+  or final-answer request.
+- Uses the smallest relevant protocol set instead of applying every protocol at
+  once.
+- Keeps `SKILL.md` style behavior invisible in ordinary tutoring; user-facing
+  language stays natural and teacher-like.
+- Uses Learning State Cards when the user wants to continue later or across
+  chats.
+- Continues from a provided Learning State Card without restarting from zero.
+- Trusts "Already understood" provisionally while focusing on "Still weak" and
+  "Current blocker."
+- Avoids pretending to remember unavailable prior chats.
+- Uses short stateless recovery when the user says "continue" but provides no
+  context: ask for a card, one-line topic summary, or one or two calibration
+  signals.
+- Compresses long sessions into useful checkpoints with learned concepts,
+  unresolved gaps, next best step, mistakes to watch, and a continue prompt.
+- Preserves V1.4 learning efficiency, V1.1 stop points, V1.2 modes, V1.2.2 math
+  formatting, V1.3 no-internal-leakage behavior, and resource integrity.
+
+Fail if the answer restarts from zero despite a useful handoff card, claims it
+remembers an unavailable prior chat, turns the handoff into a full transcript
+or persistent profile, applies every protocol visibly, ignores the user's mode
+signal, or lets context portability become hidden memory, database behavior, or
+curriculum planning.
+
 ## High-Stakes Domain Criteria
 
 For law, medical, finance, safety, immigration, tax, or other high-stakes

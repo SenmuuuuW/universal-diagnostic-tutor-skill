@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.5.0 - 2026-06-30
+
+### Added In v1.5.0
+
+- Added Skill routing architecture.
+- Added trigger and mode activation matrix.
+- Added `EVALS.md` for manual Skill behavior evaluation.
+- Added `QUALITY_RUBRIC.md` for 1-5 tutoring quality scoring.
+- Added `FAILURE_TAXONOMY.md` for evidence-based failure classification.
+- Added `FEEDBACK_TO_IMPROVEMENT.md` for turning repeated failures into small,
+  testable Skill improvements.
+- Added Learning State Card protocol.
+- Added context handoff protocol.
+- Added context compression checkpoint protocol.
+- Added stateless recovery protocol.
+- Added cross-chat continuity examples for graph theory, linear algebra,
+  series, stateless recovery, and known-X-not-Y handoff.
+- Updated README, Skill README, AGENTS, evaluation checklist, and manual test
+  matrix for V1.5 reliability and context portability.
+
+### Unchanged In v1.5.0
+
+- No infrastructure, source-pack, installer, website, script, API, package
+  setup, npm/npx package, database, persistent memory, PDF, secret,
+  curriculum map, real RAG/vector DB, or copied-content changes.
+
 ## v1.4.0 - 2026-06-29
 
 ### Added In v1.4.0

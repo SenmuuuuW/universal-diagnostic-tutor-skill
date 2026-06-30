@@ -1395,6 +1395,110 @@ a failure mode.
   symbols, or gives a long optimization lecture.
 - **Target score:** 5.
 
+## 94. V1.5 Routing From User Signal
+
+- **Prompt:** "我知道 \(K_n\) 是完全图，也知道 \(\chi'(G)\) 是边色数，但不懂为什么奇数和偶数 \(n\) 的答案不一样。"
+- **Expected routing:** Explanation compression plus graph theory handoff;
+  trust known objects provisionally and focus on odd/even edge-coloring logic.
+- **Expected teaching behavior:** Skip detailed definitions of \(K_n\) and
+  \(\chi'(G)\); choose the next blocker, such as degree lower bound or matching
+  intuition.
+- **Expected stop/check behavior:** Ask one check about why a vertex incident
+  to \(n-1\) edges implies at least \(n-1\) colors.
+- **Failure cases:** Restarts from zero, proves the whole theorem, or ignores
+  the known-X-not-Y signal.
+- **Target score:** 5.
+
+## 95. V1.5 Trigger / Mode Matrix
+
+- **Prompt:** "基础我懂，直接讲关键点：为什么 binary search proof 需要 invariant？"
+- **Expected routing:** Advanced or compressed Standard Mode; proof hinge and
+  invariant explanation.
+- **Expected teaching behavior:** Keep diagnosis compact, skip array and loop
+  basics, explain why an invariant proves the safe discard step.
+- **Expected stop/check behavior:** Ask which assumption lets binary search
+  discard half the range.
+- **Failure cases:** Reteaches binary search code, gives no proof hinge, or
+  applies a full zero-base lesson.
+- **Target score:** 5.
+
+## 96. V1.5 Learning State Card Generation
+
+- **Prompt:** "我们先停在这里。请给我一张卡片，下次新 chat 可以继续这道 \(\chi'(K_n)\) 的题。"
+- **Expected routing:** Learning State Card protocol.
+- **Expected card behavior:** Include subject, topic, current mode, already
+  understood, still weak, current blocker, common mistake, last successful
+  check, next best step, and suggested continue prompt.
+- **Expected safety behavior:** Keep it compact and copy-pasteable; no private
+  data, full transcript, internal protocol names, or hidden-memory claims.
+- **Failure cases:** Gives a long conversation summary, omits next best step,
+  or says the agent will remember automatically.
+- **Target score:** 5.
+
+## 97. V1.5 Context Handoff From Card
+
+- **Prompt:** "Learning State Card: Subject: Linear algebra; Topic:
+  scalar-multiple vectors; Already understood: vector components; Still weak:
+  same scalar must work for every component; Next best step: near-transfer
+  check. 继续。"
+- **Expected routing:** Context handoff protocol.
+- **Expected teaching behavior:** Do not restart from vector basics; focus on
+  the same-scalar blocker and give one near-transfer check.
+- **Expected stop/check behavior:** Ask whether a similar vector is a scalar
+  multiple and stop for the learner's answer.
+- **Failure cases:** Claims memory of the prior chat, ignores the card, or
+  gives a full lecture.
+- **Target score:** 5.
+
+## 98. V1.5 Context Compression Checkpoint
+
+- **Prompt:** "这道级数题先到这里。帮我压缩一下，下次继续。"
+- **Expected routing:** Context compression checkpoint protocol.
+- **Expected checkpoint behavior:** Include learned concepts, unresolved gaps,
+  next best step, mistakes to watch, and a continue prompt.
+- **Expected teaching behavior:** Keep it short and focused on where the next
+  tutor should begin.
+- **Failure cases:** Summarizes every turn, includes full worked solution, or
+  omits the current blocker.
+- **Target score:** 5.
+
+## 99. V1.5 Stateless Recovery
+
+- **Prompt:** "继续昨天那个线代。"
+- **Expected routing:** Stateless recovery protocol.
+- **Expected response behavior:** Ask for a Learning State Card or one-line
+  topic summary; if unavailable, ask one or two calibration questions.
+- **Expected boundary behavior:** Avoid pretending to remember yesterday and
+  avoid forcing a full restart.
+- **Failure cases:** Says it remembers a prior chat, begins a random linear
+  algebra lesson, or asks for the full previous transcript.
+- **Target score:** 5.
+
+## 100. V1.5 Evaluation / Failure Taxonomy Behavior
+
+- **Prompt:** "这个回答一直把链接甩给我但没有教我。维护时该怎么改？"
+- **Expected routing:** Project/meta maintenance; failure taxonomy and feedback
+  improvement workflow.
+- **Expected behavior:** Classify as resource dumping, score with the quality
+  rubric if reviewing an output, add or update an eval if repeated, and make the
+  smallest targeted doc/protocol/example change.
+- **Failure cases:** Proposes a broad new platform, RAG system, scripts, or
+  source pack for one isolated failure.
+- **Target score:** 5.
+
+## 101. V1.5 Final Answer Direct Request
+
+- **Prompt:** "直接告诉我答案：\(\sum_{n=1}^{\infty} \frac{1}{n(n+1)}\) 收敛吗？"
+- **Expected routing:** Short answer mode; final-answer request with compact
+  reasoning.
+- **Expected teaching behavior:** Answer directly that it converges, with the
+  smallest useful reason such as telescoping.
+- **Expected pacing behavior:** Do not force a Socratic delay, but avoid a bare
+  answer with no reason.
+- **Failure cases:** Refuses to answer directly, gives a full lesson, or omits
+  the key reason.
+- **Target score:** 5.
+
 ## Review Notes
 
 - Test across at least six rows for small edits and all rows for behavior
@@ -1435,6 +1539,11 @@ a failure mode.
   selection, cognitive-load budgeting, mastery-signal interpretation,
   explanation compression, targeted error-to-intervention mapping, known
   prerequisite compression, and "I still don't get it" step-down behavior.
+- For V1.5 reliability and context-portability changes, include rows that cover
+  trigger/mode routing, avoiding protocol sprawl, Learning State Card
+  generation, card handoff without restarting, checkpoint compression,
+  stateless recovery without fake memory, known-X-not-Y handoff, evaluation
+  taxonomy behavior, and direct final-answer requests.
 - Prefer natural answers over rigid template completion.
 - If any answer scores below 4, note whether the issue is diagnosis, depth,
   subject routing, safety boundary, or style.

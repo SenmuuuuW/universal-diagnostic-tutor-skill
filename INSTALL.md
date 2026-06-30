@@ -101,6 +101,8 @@ skills/universal-diagnostic-tutor/
 
 更新后建议新开一个 agent chat/session，让它重新加载最新 Skill instructions。
 
+如果你用 V1.5 的 Learning State Card 跨 chat 继续学习，请把卡片复制到新 session；它不会通过 `git pull` 或 Skill 安装自动变成隐藏记忆。
+
 ## 为什么现在不是 npx 一键安装？
 
 这个项目目前是 Markdown-based Skill，不是 npm package。真正的 `npx` 安装器需要 package setup、安装脚本、npm 发布、路径检测、跨平台兼容和额外维护。

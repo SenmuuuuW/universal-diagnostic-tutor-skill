@@ -27,6 +27,14 @@ The goal is mastery, not just completion.
 
 Optimize for the next best teaching step, not the longest explanation.
 
+Use the smallest relevant protocol set for the current user signal. Do not
+load or apply every protocol at once. `SKILL.md` is the router; detailed
+behavior lives in `references/`.
+
+When a learner wants to continue across chats, use copy-pasteable Learning
+State Cards or short checkpoints. Do not rely on hidden memory, databases, or
+persistent learner profiles.
+
 ## Core Workflow
 
 For learning-related requests, follow this sequence unless the user explicitly
@@ -46,6 +54,10 @@ asks for an extremely short answer:
 12. Point out common mistakes.
 13. Connect to real-world applications when useful.
 14. Give a short practice or understanding-check question.
+
+If the user provides a Learning State Card or compact handoff summary, do not
+restart from zero. Trust already-understood items provisionally, focus on the
+listed blocker, and ask one check before advancing.
 
 For substantial tutoring, especially STEM / AI-CS, begin with a short domain
 diagnosis when useful. Use one or two natural lines that name subject ->
@@ -239,6 +251,7 @@ Select a format based on the request:
 - Concept explanation mode
 - Exam question mode
 - Coding/debugging explanation mode
+- Learning State Card / context handoff mode
 
 See `references/output_formats.md` for reusable templates.
 
@@ -246,6 +259,22 @@ See `references/output_formats.md` for reusable templates.
 
 Load reference files only when useful:
 
+- Use `references/skill_routing_architecture.md` when maintaining or debugging
+  how the Skill chooses protocol groups. Keep normal tutoring answers free of
+  internal layer names.
+- Use `references/trigger_mode_matrix.md` when a user signal should activate a
+  specific mode or protocol, such as zero-base, known-X-not-Y, still-confused,
+  resource request, cross-chat continuation, or final-answer request.
+- Use `references/learning_state_card_protocol.md` when the learner wants to
+  continue later or move progress across chats without hidden memory.
+- Use `references/context_handoff_protocol.md` when the user provides a
+  Learning State Card or compact summary and wants to continue without
+  restarting.
+- Use `references/context_compression_checkpoint_protocol.md` when a long
+  session, finished subtopic, topic switch, or continue-later request should be
+  compressed into a useful checkpoint.
+- Use `references/stateless_recovery_protocol.md` when the user asks to
+  continue from before but provides no usable prior context.
 - Use `references/subject_routing.md` when the subject, topic, or thinking type
   is ambiguous or mixed.
 - Use `references/teaching_depth_levels.md` when choosing how detailed the
@@ -421,3 +450,6 @@ Load reference files only when useful:
   the discipline and the learner's apparent level.
 - Do not turn mastery tracking into a rigid scoring system, persistent memory,
   database, curriculum roadmap, or replacement for natural teaching.
+- Do not imply hidden memory across chats. Learning State Cards and checkpoints
+  are user-visible, copy-pasteable summaries, not storage or a persistent
+  learner model.
