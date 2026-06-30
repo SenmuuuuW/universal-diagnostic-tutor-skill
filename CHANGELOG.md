@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.6.0 - 2026-06-30
+
+### Added In v1.6.0
+
+- Added `PORTABILITY.md` for full Skill, custom bot, Lite Prompt, and API prompt
+  usage guidance.
+- Added platform-specific prompt adapters under `platforms/`.
+- Added generic Lite and Ultra-Lite prompts for ordinary chat AIs.
+- Added ChatGPT GPT, ChatGPT Project, Gemini Gem, Coze / Doubao, DeepSeek / API,
+  Codex, and Claude Code-style usage notes.
+- Clarified full Skill vs custom bot vs Lite Prompt vs API prompt usage.
+- Added a small portability eval for adapter selection and overclaiming checks.
+
+### Unchanged In v1.6.0
+
+- No core teaching behavior, script, installer, API integration code,
+  infrastructure, source-pack, website, package setup, npm/npx package,
+  database, persistent memory, PDF, secret, curriculum map, real RAG/vector DB,
+  or copied-content changes.
+
 ## v1.5.0 - 2026-06-30
 
 ### Added In v1.5.0

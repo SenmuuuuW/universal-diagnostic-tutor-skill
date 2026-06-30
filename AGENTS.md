@@ -179,6 +179,16 @@ Future changes must preserve the core identity of the skill:
   compatibility or imply native support where only manual adaptation is known.
 - Distinguish native Skill use from manual prompt or project-instruction
   adaptation.
+- Platform adapters must stay shorter than the full `SKILL.md` and should not
+  duplicate the full reference system.
+- Do not overclaim native compatibility for GPTs, Gemini Gems, Coze / Doubao,
+  ordinary chat apps, API models, or local agents.
+- Keep Lite Prompt usable without file references, repo access, or automatic
+  loading of `references/` and `examples/`.
+- Keep full Skill behavior in `skills/universal-diagnostic-tutor/`; platform
+  adapters are downstream packaging.
+- When core teaching behavior changes, update adapters only if the visible
+  user-facing behavior changes.
 - Do not add npm, npx, package setup, install scripts, path-detection scripts,
   or automated installers unless explicitly requested later.
 - If installers are considered in the future, document risks, permissions,

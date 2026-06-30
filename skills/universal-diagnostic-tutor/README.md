@@ -30,6 +30,8 @@ universal-diagnostic-tutor
 
 这个目录是 Markdown-based Skill directory，主要面向 Codex-style Skill workflow。Claude Code-style agents 或其他支持 project instructions / custom instructions 的 agent 可以参考适配。普通网页聊天环境可以手动复制提示词或核心说明，但通常不会自动加载 `references/` 和 `examples/`。
 
+非 agent 平台请看根目录 [PORTABILITY.md](../../PORTABILITY.md) 和 [platforms/](../../platforms/)。本 README 说明的是完整 Skill 版本；Lite Prompt、Custom GPT、Gemini Gem、Coze / 豆包和 API prompt 是下游适配包，能力通常弱于完整 Skill。
+
 ## 什么时候使用？
 
 适合在这些场景使用：
@@ -346,3 +348,7 @@ V1.4 增加 Learning Efficiency Optimization Loop：Tutor 会优先选择 next b
 ## V1.5 说明
 
 V1.5 增加 Skill routing architecture、trigger / mode matrix、人工 eval / rubric / failure taxonomy / feedback workflow，以及 Learning State Card、context handoff、checkpoint compression 和 stateless recovery。学习者可以用可复制的 Learning State Card 跨 chat 继续学习；这不是隐藏记忆、数据库或持久学习档案。它仍是 Markdown-only 可靠性与上下文可移植性更新，不新增 source packs、脚本、网站、API、数据库、包管理、真实 RAG / vector DB 或基础设施。
+
+## V1.6 说明
+
+V1.6 增加跨平台 prompt adapters：完整 Skill 用法、ChatGPT GPT / Project instructions、Gemini Gem instructions、Coze / 豆包 bot prompt、API system prompt，以及普通聊天 Lite / Ultra-Lite Prompt。它只打包现有 Tutor 行为，不改变核心教学协议；不新增脚本、安装器、API 集成代码、包管理、数据库、持久记忆、真实 RAG / vector DB、source packs 或基础设施。

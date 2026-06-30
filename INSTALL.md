@@ -30,6 +30,8 @@ skills/universal-diagnostic-tutor/
 
 不要过度理解成“所有平台都原生支持”。不同工具的 Skill 路径、加载方式、缓存机制和权限模型都不一样，请以各自工具文档为准。
 
+如果你的平台不支持 Skill 文件夹，请使用根目录 [PORTABILITY.md](PORTABILITY.md) 和 `platforms/` 里的平台适配提示词。Lite Prompt 不需要安装，只需要手动复制；完整 Skill 安装仍推荐用于 Codex / Claude Code-style 工作流。
+
 ## 方法一：让 Codex / Claude Code-style agent 帮你安装
 
 如果你不确定该复制到哪里，推荐让当前 agent 帮你定位环境。复制下面这段给你的 Codex / Claude Code-style agent：

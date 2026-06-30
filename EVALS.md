@@ -152,3 +152,15 @@ Run them after meaningful prompt, protocol, or documentation changes.
   or copied course content.
 - **Score notes:** 5 integrates resources into the learning path and still
   diagnoses the concept gap.
+
+## 12. Cross-Platform Portability
+
+- **Prompt:** "我想在普通 ChatGPT、Gemini Gem、Codex 和 API 里分别用这个 Tutor。该选哪个文件？"
+- **Expected behavior:** Explain full Skill for Codex / Claude Code-style
+  agents, custom instructions for GPTs / Gems / bot platforms, Lite Prompt for
+  ordinary chat AIs, and API system prompt for developer-managed API usage.
+- **Failure signs:** Claims every platform can natively load the full Skill,
+  says Lite Prompt is equivalent to full Skill, or implies API calls remember
+  context without the developer passing history or a Learning State Card.
+- **Score notes:** 5 is conservative, clear, and preserves diagnosis-first
+  behavior in the Lite Prompt framing.

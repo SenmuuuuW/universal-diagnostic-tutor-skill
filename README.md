@@ -159,6 +159,19 @@ Learning State Card:
 
 Learning State Card 是用户可见、可复制的学习状态摘要，不是隐藏记忆、数据库或持久学习档案。
 
+## 🌐 跨平台使用
+
+Codex / Claude Code-style agents 最适合使用完整 Skill 目录；GPTs、Gemini Gems、Coze / 豆包风格 bot 可以使用自定义 instruction packs；普通 ChatGPT / Gemini / DeepSeek / 豆包 / Kimi / Qwen 聊天可以使用 Lite Prompt，但这不是满血版；API models 可以使用 system prompt pack，并由开发者手动传入上下文或 Learning State Card。
+
+- 总览：[PORTABILITY.md](PORTABILITY.md)
+- 普通聊天 Lite Prompt：[platforms/generic-chat/TUTOR_LITE_PROMPT.md](platforms/generic-chat/TUTOR_LITE_PROMPT.md)
+- ChatGPT GPT instructions：[platforms/chatgpt-gpt/INSTRUCTIONS.md](platforms/chatgpt-gpt/INSTRUCTIONS.md)
+- Gemini Gem instructions：[platforms/gemini-gems/GEM_INSTRUCTIONS.md](platforms/gemini-gems/GEM_INSTRUCTIONS.md)
+- Coze / 豆包 bot prompt：[platforms/coze-doubao/BOT_PROMPT.md](platforms/coze-doubao/BOT_PROMPT.md)
+- API system prompt：[platforms/deepseek-api/SYSTEM_PROMPT.md](platforms/deepseek-api/SYSTEM_PROMPT.md)
+
+不要过度理解为“所有平台都原生支持 Skill”。不同平台的 instruction、知识文件、上下文窗口和记忆机制不同，实际效果会有差异。
+
 ## 🚀 Quick Start
 
 完整安装、更新和 agent-assisted install prompt 见 [INSTALL.md](INSTALL.md)。
@@ -293,6 +306,8 @@ universal-diagnostic-tutor-skill/
 ├── QUALITY_RUBRIC.md
 ├── FAILURE_TAXONOMY.md
 ├── FEEDBACK_TO_IMPROVEMENT.md
+├── PORTABILITY.md
+├── platforms/
 ├── LICENSE
 └── skills/
     └── universal-diagnostic-tutor/
@@ -307,6 +322,7 @@ universal-diagnostic-tutor-skill/
 - `CHANGELOG.md`：版本历史和每个版本的主要变化。
 - `AGENTS.md`：维护这个仓库时需要遵守的规则。
 - `EVALS.md` / `QUALITY_RUBRIC.md` / `FAILURE_TAXONOMY.md` / `FEEDBACK_TO_IMPROVEMENT.md`：人工评估、质量评分、失败分类和反馈改进流程。
+- `PORTABILITY.md` 和 `platforms/`：跨平台使用说明，以及 Custom GPT、Gemini Gem、Coze / 豆包、API、普通聊天 Lite Prompt 等适配文件。
 - `LICENSE`：MIT License。
 - `skills/universal-diagnostic-tutor/SKILL.md`：Skill 核心入口，定义触发说明、教学工作流、路由和守则。
 - `skills/universal-diagnostic-tutor/README.md`：Skill 目录内的使用指南。
@@ -317,6 +333,7 @@ universal-diagnostic-tutor-skill/
 
 | Version | Focus |
 | --- | --- |
+| V1.6 | Cross-platform prompt adapters for full Skill, custom bots, Lite Prompt, and API prompt usage |
 | V1.5 | Skill reliability, routing, evals, failure taxonomy, and Learning State Cards |
 | V1.4 | Learning efficiency optimization loop and next-best-step tutoring |
 | V1.3.1 | Installation guide and platform compatibility documentation |
@@ -354,7 +371,7 @@ universal-diagnostic-tutor-skill/
 
 ## 🧭 维护与验证
 
-V1.5 是一个 Markdown-only reliability / context portability release。它强化 Skill 路由、触发矩阵、人工 eval、质量 rubric、失败分类、反馈改进流程和 Learning State Card 交接，同时继续保留 V1.1 节奏、V1.2 学习模式、V1.2.2 数学显示规则、V1.3 自然教师表达、V1.4 学习效率优化和 STEM-first 定位；不新增 source packs、网站、脚本、API、包管理、数据库、持久记忆、真实 RAG / vector database、PDF、课程地图或基础设施。
+V1.6 是一个 Markdown-only cross-platform prompt adapter release。它把现有 Tutor Skill 打包成 full Skill、custom bot、Lite Prompt 和 API prompt 用法，同时继续保留 V1.1 节奏、V1.2 学习模式、V1.2.2 数学显示规则、V1.3 自然教师表达、V1.4 学习效率优化、V1.5 Learning State Card 和 STEM-first 定位；不新增 source packs、网站、脚本、API 集成代码、包管理、数据库、持久记忆、真实 RAG / vector database、PDF、课程地图或基础设施。
 
 维护者可以使用 [EVALS.md](EVALS.md)、[QUALITY_RUBRIC.md](QUALITY_RUBRIC.md)、[FAILURE_TAXONOMY.md](FAILURE_TAXONOMY.md)、`skills/universal-diagnostic-tutor/references/evaluation_checklist.md` 和 `skills/universal-diagnostic-tutor/references/manual_test_matrix.md` 做人工验收。若使用外部 Skill 创建工具里的 `quick_validate.py`，该脚本可能需要 PyYAML；本仓库不为此添加 package setup 或依赖文件。
 
