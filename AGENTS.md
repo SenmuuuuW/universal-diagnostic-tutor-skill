@@ -201,6 +201,10 @@ Future changes must preserve the core identity of the skill:
   links to `INSTALL.md` over appending long repeated sections.
 - README can be polished and showcase-like, but must not overclaim, sound
   salesy, or imply benchmark results without real eval data.
+- README should include at most one or two high-quality showcase examples.
+- Keep showcase examples short, accurate, and aligned with actual Skill
+  behavior: diagnosis-first, next best step, check-and-stop, and normal math
+  formatting.
 - Prefer concrete architecture snapshots, examples, capability matrices, and
   navigation tables over vague marketing claims.
 - Keep README concise by linking to dedicated docs for installation,

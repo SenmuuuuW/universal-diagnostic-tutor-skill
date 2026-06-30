@@ -65,6 +65,26 @@ Advance / Transfer / Compress / Step Down
 
 如果学习要跨 chat 继续，它会生成 Learning State Card，让下一次可以从当前卡点接上，而不是假装拥有隐藏记忆。
 
+## 🧪 Example: Answer-first vs Diagnosis-first
+
+> 我是零基础。题目说两个向量平行，我不知道怎么开始。不要直接给完整答案，先从概念和符号讲。
+
+### Answer-first style
+
+两个向量平行就是它们是标量倍数，设 \(u = c v\)，把分量列成方程解 \(c\) 就行。
+
+这个回答并不一定错，但它太快跳到了方程，零基础学习者可能还没明白“同一个数”为什么重要。
+
+### Universal Diagnostic Tutor style
+
+这是线性代数 → 向量 → 标量倍数 / 平行关系。这里的卡点不是先算，而是理解“平行”在向量里是什么意思。
+
+“两个向量平行”不是“每个分量相等”，而是“一个向量可以由另一个向量乘**同一个数**得到”，也就是 \(u = c v\)。
+
+先做一个小检查：如果 \(v=(2,3)\)，那么 \(2v\) 是多少？它和 \(v\) 是不是平行？
+
+这就是这个 Skill 的核心：不是一次讲完，而是先找出当前知识缺口，再教最值得教的下一步。
+
 ## 🧩 Capability Matrix
 
 | Layer | What It Does |
@@ -294,17 +314,14 @@ universal-diagnostic-tutor-skill/
 
 | Version | Focus |
 | --- | --- |
-| V1.6.3 | README version/update layout cleanup |
-| V1.6.2 | README showcase polish and clearer landing-page structure |
-| V1.6.1 | Small portability clarity patch for Ultra-Lite and API prompt wording |
-| V1.6.0 | Cross-platform prompt adapters: Full Skill, Custom Bot, Lite Prompt, API Prompt |
-| V1.5.0 | Skill reliability, evals/rubric/failure taxonomy, Learning State Card context portability |
-| V1.4.0 | Learning Efficiency Optimization Loop and next-best-step tutoring |
-| V1.3.0 | Teacher presence, no internal leakage, knowledge-system mapping, intuition/application bridges |
+| V1.6.x | Cross-platform adapters, portability polish, README showcase |
+| V1.5.x | Skill reliability, evals/rubric/failure taxonomy, Learning State Card context portability |
+| V1.4.x | Learning Efficiency Optimization Loop |
+| V1.3.x | Teacher presence, no internal leakage, knowledge-system mapping |
 | V1.2.x | Teaching modes, math formatting, STEM-first positioning |
-| V1.1.x | Teacher-like pacing, autonomous resource tutoring, stop-point discipline |
-| V1.0.0 | Stable Chinese README and initial public-ready documentation |
-| V0.x | Early protocol, examples, source packs, and evaluation foundations |
+| V1.1.x | Teacher-like pacing, resource-aware tutoring, stop points |
+| V1.0.0 | Stable public README and documentation foundation |
+| V0.x | Early protocols, examples, source packs, and evaluation foundations |
 
 For detailed changes, see [CHANGELOG.md](CHANGELOG.md).
 

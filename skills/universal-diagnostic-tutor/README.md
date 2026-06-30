@@ -6,6 +6,8 @@
 
 如果你是第一次了解这个项目，建议先看根目录的 [GitHub README](../../README.md)。根 README 更像项目 landing page，包含平台概览、Core Learning Engine 和质量评估入口；本文件更偏 Skill 使用和维护指南。
 
+想快速看效果，可以先看根目录 README 的 Example 部分。
+
 安装和更新请看根目录的 [INSTALL.md](../../INSTALL.md)。这个 Skill 目录本身是 `skills/universal-diagnostic-tutor/`。
 
 ## Skill 名称

@@ -6,10 +6,12 @@ All notable changes to this project will be documented in this file.
 
 ### Changed In v1.6.3
 
+- Added a concise answer-first vs diagnosis-first README example.
 - Cleaned up the root README version/update layout.
 - Kept only the latest major release highlight in the main README body.
 - Moved older version details into a compact Version Timeline.
-- Reduced changelog-like repetition in README.
+- Improved README as a public-facing landing page without making it
+  changelog-like.
 - Collapsed Skill README historical notes into a compact version pointer.
 
 ### Unchanged In v1.6.3
