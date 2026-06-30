@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.6.1 - 2026-06-30
+
+### Changed In v1.6.1
+
+- Clarified that the Ultra-Lite Prompt should not claim cross-chat memory and
+  should ask for a Learning State Card when continuing prior study.
+- Clarified that the DeepSeek/API adapter is usable for DeepSeek-compatible and
+  OpenAI-compatible API-style usage.
+
+### Unchanged In v1.6.1
+
+- No core tutoring behavior, infrastructure, installer, source-pack, API
+  integration code, package setup, database, persistent memory, real
+  RAG/vector DB, PDF, secret, copied-content, curriculum map, or website
+  changes.
+
 ## v1.6.0 - 2026-06-30
 
 ### Added In v1.6.0

@@ -68,7 +68,7 @@ developer sends prior messages, summaries, or a Learning State Card.
 | ChatGPT Projects | Project instructions | Medium | Use project instructions and selected files |
 | Gemini Gems | Gem instructions | Medium | Copy Gem instructions; no full repo auto-loading |
 | Coze / Doubao-style bots | Bot prompt | Medium | Use bot prompt and optional knowledge files |
-| DeepSeek / API models | API system prompt | Medium | Developer must pass system prompt and context manually |
+| DeepSeek-compatible / OpenAI-compatible API models | API system prompt | Medium | Developer must pass system prompt and context manually |
 | Ordinary ChatGPT / Gemini / DeepSeek / 豆包 / Kimi / Qwen chat | Lite Prompt | Light | Manual copy-paste; not full Skill |
 | Local / IDE agents | Depends | Medium to full | Depends on whether the agent can read Markdown instructions and project files |
 
@@ -81,7 +81,9 @@ developer sends prior messages, summaries, or a Learning State Card.
 - ChatGPT Project instructions: `platforms/chatgpt-project/PROJECT_INSTRUCTIONS.md`
 - Gemini Gem instructions: `platforms/gemini-gems/GEM_INSTRUCTIONS.md`
 - Coze / Doubao bot prompt: `platforms/coze-doubao/BOT_PROMPT.md`
-- API system prompt: `platforms/deepseek-api/SYSTEM_PROMPT.md`
+- API system prompt: `platforms/deepseek-api/SYSTEM_PROMPT.md` keeps DeepSeek
+  visible as a common target, but the prompt is also for OpenAI-compatible or
+  similar chat completion APIs.
 - Generic chat Lite Prompt: `platforms/generic-chat/TUTOR_LITE_PROMPT.md`
 - Generic chat Ultra-Lite Prompt: `platforms/generic-chat/TUTOR_ULTRA_LITE_PROMPT.md`
 

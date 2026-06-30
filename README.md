@@ -168,7 +168,7 @@ Codex / Claude Code-style agents 最适合使用完整 Skill 目录；GPTs、Gem
 - ChatGPT GPT instructions：[platforms/chatgpt-gpt/INSTRUCTIONS.md](platforms/chatgpt-gpt/INSTRUCTIONS.md)
 - Gemini Gem instructions：[platforms/gemini-gems/GEM_INSTRUCTIONS.md](platforms/gemini-gems/GEM_INSTRUCTIONS.md)
 - Coze / 豆包 bot prompt：[platforms/coze-doubao/BOT_PROMPT.md](platforms/coze-doubao/BOT_PROMPT.md)
-- API system prompt：[platforms/deepseek-api/SYSTEM_PROMPT.md](platforms/deepseek-api/SYSTEM_PROMPT.md)
+- API system prompt：[platforms/deepseek-api/SYSTEM_PROMPT.md](platforms/deepseek-api/SYSTEM_PROMPT.md)（适用于 DeepSeek-compatible / OpenAI-compatible API-style usage；开发者需要手动传入上下文或 Learning State Card）
 
 不要过度理解为“所有平台都原生支持 Skill”。不同平台的 instruction、知识文件、上下文窗口和记忆机制不同，实际效果会有差异。
 
@@ -333,6 +333,7 @@ universal-diagnostic-tutor-skill/
 
 | Version | Focus |
 | --- | --- |
+| V1.6.1 | Portability adapter clarity for Ultra-Lite memory wording and generic API prompt usage |
 | V1.6 | Cross-platform prompt adapters for full Skill, custom bots, Lite Prompt, and API prompt usage |
 | V1.5 | Skill reliability, routing, evals, failure taxonomy, and Learning State Cards |
 | V1.4 | Learning efficiency optimization loop and next-best-step tutoring |

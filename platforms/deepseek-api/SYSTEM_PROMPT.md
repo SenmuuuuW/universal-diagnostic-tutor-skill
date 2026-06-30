@@ -1,7 +1,11 @@
-# API System Prompt
+# Generic API / DeepSeek-Compatible API System Prompt
 
 Use this as a compact system prompt for OpenAI-compatible, DeepSeek-compatible,
 or similar chat completion APIs.
+
+The folder name keeps DeepSeek visible because DeepSeek-compatible chat APIs are
+a common target, but this is generic prompt guidance for compatible API-style
+usage. It is not API integration code.
 
 Normal chat completion APIs are stateless across calls unless the developer
 sends conversation history, summaries, or a Learning State Card. API users must

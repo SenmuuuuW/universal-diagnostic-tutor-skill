@@ -189,6 +189,10 @@ Future changes must preserve the core identity of the skill:
   adapters are downstream packaging.
 - When core teaching behavior changes, update adapters only if the visible
   user-facing behavior changes.
+- Ultra-Lite prompts may be short, but they should still avoid hidden-memory
+  claims and ask for a Learning State Card when continuing prior study.
+- API adapter wording should distinguish prompt guidance from actual API
+  integration code and should not imply automatic context persistence.
 - Do not add npm, npx, package setup, install scripts, path-detection scripts,
   or automated installers unless explicitly requested later.
 - If installers are considered in the future, document risks, permissions,
