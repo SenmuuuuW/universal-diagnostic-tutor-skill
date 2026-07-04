@@ -164,3 +164,60 @@ Run them after meaningful prompt, protocol, or documentation changes.
   context without the developer passing history or a Learning State Card.
 - **Score notes:** 5 is conservative, clear, and preserves diagnosis-first
   behavior in the Lite Prompt framing.
+
+## 13. V1.7 Skill Pack Invocation
+
+- **Prompt:** "/study-plan 我下周考线代，矩阵和向量都很乱。"
+- **Expected behavior:** Treat `/study-plan` as an intent shortcut, not a CLI
+  command. Give a brief plan with current state, goal, top gaps, suggested
+  order, today's first step, and one check.
+- **Failure signs:** Ignores the slash flow, prints an internal protocol, gives
+  a giant curriculum map, or promises score improvement.
+- **Score notes:** 5 is practical, short, and still diagnosis-first.
+
+## 14. V1.7 STEM Exam Track
+
+- **Prompt:** "/exam-track 我高数级数总是不会选判别法，帮我诊断。"
+- **Expected behavior:** Identify calculus / series convergence / method
+  recognition. Name likely cue gaps, give a short review order, and include one
+  practice or check step.
+- **Failure signs:** Claims 押题, predicts exam content, guarantees score
+  improvement, dumps a question bank, or solves without teaching the pattern.
+- **Score notes:** 5 is exam-aware without becoming answer-first or overclaiming.
+
+## 15. V1.7 Resource Scan
+
+- **Prompt:** "/resource-scan 我想补线代向量和矩阵，有哪些可信资料方向？"
+- **Expected behavior:** Do a compact topic scan and recommend trusted resource
+  types or verified sources if browsing is available. Explain how each resource
+  supports the current learning step.
+- **Failure signs:** Fabricates links, dumps resources without teaching, or
+  recommends advanced material before checking prerequisites.
+- **Score notes:** 5 keeps resources supportive, not dominant.
+
+## 16. V1.7 Visualize
+
+- **Prompt:** "/visualize 我不懂为什么 \(v\) 和 \(2v\) 平行。"
+- **Expected behavior:** Use a simple vector visual, table, or description tied
+  to the scalar-multiple gap; then ask one check.
+- **Failure signs:** Adds decorative visuals, complex diagrams, no diagnosis,
+  or no connection between the visual and the concept.
+- **Score notes:** 5 uses the smallest visual that clarifies the blocker.
+
+## 17. V1.7 Learner Profile / Task Cards
+
+- **Prompt:** "我准备考研数学，线代和概率都弱。帮我生成一张长期偏好卡和当前任务卡。"
+- **Expected behavior:** Produce compact visible Learner Profile Card and
+  Learning Task Card. Include only user-provided or learning-relevant details.
+- **Failure signs:** Claims hidden memory, includes private/sensitive details
+  without permission, dumps a transcript, or turns the card into a gradebook.
+- **Score notes:** 5 is copy-pasteable and user-controlled.
+
+## 18. V1.7 Topic Scan Without Bloat
+
+- **Prompt:** "我会一点线代，但不知道这题为什么看 span。简单讲。"
+- **Expected behavior:** Give a compact topic scan and immediate method cue.
+  Do not force resources, visuals, or a full plan unless useful.
+- **Failure signs:** Turns every answer into a resource list, visual, and study
+  plan; or skips the learner's request for simplicity.
+- **Score notes:** 5 proves V1.7 additions do not bloat ordinary tutoring.

@@ -19,7 +19,12 @@ Prefer targeted fixes over broad feature additions.
 | Raw dollar math / formula formatting failure | Uses `$...$` or `$$...$$` in normal tutoring examples. | Shows `$Ax=b$` in a user-facing answer. | math formatting, examples, docs | Normal |
 | Formula-only code block | Puts ordinary math in fenced code blocks. | Displays partial fractions as a code block. | math formatting, output formats | Normal |
 | Resource dumping | Lists links instead of teaching. | Provides five course links and no explanation. | resource-orchestrated tutoring, evals | Normal |
+| Resource overuse | Forces resources into answers where direct teaching is enough. | Adds source lists to a simple vector meaning question. | topic scan, resource protocols, evals | Normal |
 | Fake source or weak source | Invents a citation or uses an unreliable source as authority. | Mentions a nonexistent MIT page. | source trust, source note checklist | Urgent |
+| Exam overclaim | Promises score gains, predicts exams, claims 押题, or uses leaked materials. | "This will guarantee 20 more points" or "this is sure to appear." | exam track, evals, README | Urgent |
+| Slash-flow ignored | Fails to treat user-invoked flows as intent signals. | `/study-plan` receives a normal answer with no plan. | skill pack invocation, adapters, evals | Normal |
+| Profile card too verbose | Turns visible cards into transcripts, gradebooks, or persistent labels. | Learner Profile Card contains full chat history and rigid scores. | learner profile/task card, context portability | Normal |
+| Visualization without learning purpose | Adds diagrams or images that do not clarify the current gap. | Generates a fancy graph when a one-line explanation was needed. | visualization protocol, examples | Normal |
 | Context-loss failure | Cannot continue from provided context or long-session summary. | Restarts vector basics despite a Learning State Card. | handoff, state card, checkpoint protocols | Normal |
 | Stale copied Skill / install confusion | User updated repo but agent reads an older copied skill. | GitHub shows V1.5, local agent behaves like V1.2. | README, INSTALL, AGENTS | Minor |
 | Non-STEM overgeneralization | Claims one STEM tutoring pattern fits every field. | Treats literature analysis like formula solving. | subject modes, universal scope docs | Normal |

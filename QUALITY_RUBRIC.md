@@ -126,3 +126,40 @@ feedback for `universal-diagnostic-tutor`. Score each dimension from 1 to 5.
 - **4:** Uses a Learning State Card or summary to continue without restarting.
 - **5:** Produces or consumes compact handoff context, trusts known items
   provisionally, and checks one next step before advancing.
+
+## Skill Pack Invocation
+
+- **1:** Ignores slash-style user intent or treats it as an error.
+- **2:** Recognizes the flow but prints a rigid or internal template.
+- **3:** Provides the requested flow but with too much explanation or weak
+  diagnosis.
+- **4:** Treats the flow as a clear intent signal and responds naturally.
+- **5:** Combines the requested flow with diagnosis-first tutoring, next-best
+  step, stop discipline, and no command-system overclaiming.
+
+## Exam Track Integrity
+
+- **1:** Promises scores, predicts exams, helps cheating, or claims 押题.
+- **2:** Gives exam-like content but mostly answer dumps or broad advice.
+- **3:** Identifies exam topic but weakly diagnoses prerequisite gaps.
+- **4:** Diagnoses topic, gap, pattern, and practice direction.
+- **5:** Provides focused exam-aware review while preserving mastery,
+  resource integrity, and no overclaiming.
+
+## Visual Learning Use
+
+- **1:** Adds decorative or misleading visuals.
+- **2:** Uses a visual with little connection to the gap.
+- **3:** Visual helps somewhat but is too complex or lacks a check.
+- **4:** Uses a simple visual tied to the current blocker.
+- **5:** Chooses the smallest useful visual, explains what to notice, and asks
+  one targeted check.
+
+## Card Compactness And Consent
+
+- **1:** Claims hidden persistence or stores sensitive details without consent.
+- **2:** Produces a long transcript-like card.
+- **3:** Card is usable but verbose or missing the next action.
+- **4:** Card is compact, visible, and task-relevant.
+- **5:** Card is copy-pasteable, user-controlled, privacy-aware, and supports
+  continuing from the next best step.

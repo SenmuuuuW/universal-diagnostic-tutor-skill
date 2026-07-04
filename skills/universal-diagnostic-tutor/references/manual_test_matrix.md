@@ -1499,6 +1499,70 @@ a failure mode.
   the key reason.
 - **Target score:** 5.
 
+## 102. V1.7 Study Plan Invocation
+
+- **Prompt:** "/study-plan 我下周考线代，矩阵和向量都很乱。"
+- **Expected routing:** Skill Pack invocation plus brief study plan.
+- **Expected behavior:** Treat `/study-plan` as an intent shortcut, not a CLI
+  command; give current state, goal, top gaps, suggested order, today's first
+  step, and one check.
+- **Failure cases:** Ignores the slash flow, gives a huge curriculum map,
+  exposes internal protocols, or promises score improvement.
+- **Target score:** 5.
+
+## 103. V1.7 STEM Exam Track Series
+
+- **Prompt:** "/exam-track 我高数级数总是不会选判别法，帮我诊断。"
+- **Expected routing:** STEM Exam Track / 理科备考 Track.
+- **Expected behavior:** Identify calculus -> series convergence -> method
+  recognition; name cue gaps, common traps, short review order, and one
+  practice/check step.
+- **Failure cases:** Claims 押题, predicts exam content, guarantees score
+  gains, dumps a question bank, or solves without teaching the pattern.
+- **Target score:** 5.
+
+## 104. V1.7 Resource Scan Without Link Dumping
+
+- **Prompt:** "/resource-scan 我想补线代向量和矩阵，有哪些可信资料方向？"
+- **Expected routing:** Topic scan plus trusted resources.
+- **Expected behavior:** Give a compact topic scan and source roles. If search
+  is available, prefer verified university/open textbook or reputable visual
+  resources; if not, avoid fake links and suggest source types.
+- **Failure cases:** Fabricates links, dumps resources without teaching, or
+  recommends advanced material before checking prerequisites.
+- **Target score:** 5.
+
+## 105. V1.7 Visualization For Vector Scaling
+
+- **Prompt:** "/visualize 我不懂为什么 \(v\) 和 \(2v\) 平行。"
+- **Expected routing:** Basic STEM visualization plus zero-base vector concept.
+- **Expected behavior:** Use a simple vector sketch, table, or description tied
+  to scalar multiples; explain direction preservation and ask one check.
+- **Failure cases:** Adds decorative visuals, complex diagrams, no diagnosis,
+  or a visual unrelated to the blocker.
+- **Target score:** 5.
+
+## 106. V1.7 Learner Profile And Task Cards
+
+- **Prompt:** "我准备考研数学，线代和概率都弱。帮我生成一张长期偏好卡和当前任务卡。"
+- **Expected routing:** Learner profile / learning task card protocol.
+- **Expected behavior:** Produce compact visible cards with preferred language,
+  subjects, level, weak areas, pace, exam goal, task, topic, blocker, next
+  action, and checkpoint.
+- **Failure cases:** Claims hidden memory, includes sensitive details without
+  permission, dumps a transcript, or turns the card into a gradebook.
+- **Target score:** 5.
+
+## 107. V1.7 Topic Scan Without Bloat
+
+- **Prompt:** "我会一点线代，但不知道这题为什么看 span。简单讲。"
+- **Expected routing:** Compact topic scan and next-best-step teaching.
+- **Expected behavior:** Give one short orientation line and immediate method
+  cue; avoid forcing a plan, resources, card, or visual unless useful.
+- **Failure cases:** Turns the answer into a full V1.7 feature showcase,
+  ignores the user's request for simplicity, or skips diagnosis entirely.
+- **Target score:** 5.
+
 ## Review Notes
 
 - Test across at least six rows for small edits and all rows for behavior
@@ -1544,6 +1608,10 @@ a failure mode.
   generation, card handoff without restarting, checkpoint compression,
   stateless recovery without fake memory, known-X-not-Y handoff, evaluation
   taxonomy behavior, and direct final-answer requests.
+- For V1.7 Skill Pack, Exam Track, and visual-learning changes, include rows
+  that cover slash-style invocations, brief study plans, STEM Exam Track
+  integrity, topic scan with trusted resources, visible learner/task cards,
+  visual learning, and ordinary tutoring without feature bloat.
 - Prefer natural answers over rigid template completion.
 - If any answer scores below 4, note whether the issue is diagnosis, depth,
   subject routing, safety boundary, or style.

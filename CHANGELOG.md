@@ -2,6 +2,38 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.7.0 - 2026-07-04
+
+### Added In v1.7.0
+
+- Added Matt-style Skill Pack invocation layer for `/tutor`, `/diagnose-gap`,
+  `/study-plan`, `/exam-track`, `/state-card`, `/resource-scan`, `/visualize`,
+  and `/mistake-review`.
+- Added `GROUP_GUIDE.md` for ordinary users, students, and community sharing.
+- Added Topic Scan + Trusted Resources protocol.
+- Added Brief Study Plan protocol.
+- Added STEM Exam Track / 理科备考 Track.
+- Added learner profile and learning task card protocol.
+- Added basic STEM visualization guidance.
+- Added V1.7 examples for invocation flows, topic scan/resources, machine
+  learning study planning, exam-track series review, learner/task cards, and
+  vector visualization.
+
+### Changed In v1.7.0
+
+- Updated `SKILL.md` routing for V1.7 flows, cards, topic scan, study plans,
+  exam track, and visualization.
+- Updated README, Skill README, platform adapters, evals, rubric, failure
+  taxonomy, feedback workflow, output formats, evaluation checklist, and manual
+  test matrix for V1.7 behavior.
+
+### Unchanged In v1.7.0
+
+- No infrastructure, database, hidden memory, installer, source-pack, website,
+  script, API integration code, package setup, npm/npx package, PDF, secret,
+  copied-content, curriculum map, real RAG/vector DB, or account-system
+  changes.
+
 ## v1.6.3 - 2026-06-30
 
 ### Changed In v1.6.3

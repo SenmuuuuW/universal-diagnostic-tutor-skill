@@ -226,6 +226,21 @@ Future changes must preserve the core identity of the skill:
   keep the tone serious, trustworthy, and not childish.
 - Do not let README polish alter core Skill behavior, teaching protocols,
   source-pack scope, or repository infrastructure.
+- Slash-style flows such as `/tutor`, `/study-plan`, `/exam-track`,
+  `/state-card`, `/resource-scan`, and `/visualize` are user-facing intent
+  shortcuts, not actual shell commands.
+- Keep cards visible and user-controlled. Learner Profile Cards, Learning Task
+  Cards, and Learning State Cards must never imply hidden persistence,
+  databases, accounts, or automatic memory.
+- STEM Exam Track must not promise score gains, predict exams, claim 押题, use
+  leaked materials, or help with cheating.
+- Topic Scan should stay compact and should not force resources into every
+  answer.
+- Visualizations must serve learning, not decoration. Do not add graphing
+  scripts, image pipelines, or diagram infrastructure unless explicitly
+  requested later.
+- Keep Lite Prompt short enough for ordinary chat platforms; it should carry
+  V1.7 intent shortcuts without duplicating the full Skill reference system.
 - If an external `quick_validate.py` check is used, note that it may require
   PyYAML in the local environment. Do not add package setup or dependency files
   only for that validator unless explicitly requested.
