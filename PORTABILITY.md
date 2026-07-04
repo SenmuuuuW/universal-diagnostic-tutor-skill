@@ -4,6 +4,9 @@
 environments can use different packaging levels, but they do not all support
 native Skill loading.
 
+For a step-by-step Chinese beginner tutorial from GitHub entry to each platform
+choice, see [USER_GUIDE.md](USER_GUIDE.md).
+
 Use the strongest pack your environment can actually load.
 
 ## Four Usage Packs

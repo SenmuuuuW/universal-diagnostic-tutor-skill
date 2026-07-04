@@ -142,6 +142,7 @@ V1.7 还加入了 Topic Scan + Trusted Resources、Brief Study Plan、Learner Pr
 
 | I Want To... | Go To |
 | --- | --- |
+| Learn how to use it from zero | [USER_GUIDE.md](USER_GUIDE.md) |
 | Install / update | [INSTALL.md](INSTALL.md) |
 | Use across platforms | [PORTABILITY.md](PORTABILITY.md) |
 | Share with ordinary users | [GROUP_GUIDE.md](GROUP_GUIDE.md) |
@@ -150,6 +151,17 @@ V1.7 还加入了 Topic Scan + Trusted Resources、Brief Study Plan、Learner Pr
 | Build a Custom GPT | [platforms/chatgpt-gpt/INSTRUCTIONS.md](platforms/chatgpt-gpt/INSTRUCTIONS.md) |
 | Evaluate quality | [EVALS.md](EVALS.md) / [QUALITY_RUBRIC.md](QUALITY_RUBRIC.md) |
 | Report failures | [FAILURE_TAXONOMY.md](FAILURE_TAXONOMY.md) / [FEEDBACK_TO_IMPROVEMENT.md](FEEDBACK_TO_IMPROVEMENT.md) |
+
+## 📘 New User Tutorial
+
+如果你是普通用户，先看 [USER_GUIDE.md](USER_GUIDE.md)。它从点进 GitHub 开始，说明不同 AI 平台该选哪种用法。
+
+- [USER_GUIDE.md](USER_GUIDE.md)：从 GitHub 入口到普通 AI chat、Custom GPT、Gemini Gem、豆包 / Coze、Codex / Claude Code-style agents 的完整教程。
+- [GROUP_GUIDE.md](GROUP_GUIDE.md)：适合发给微信群 / 社群的简短教程。
+- [INSTALL.md](INSTALL.md)：安装、更新和复制版 Skill 同步。
+- [PORTABILITY.md](PORTABILITY.md)：Full Skill / Custom Bot / Lite Prompt / API Prompt 怎么选。
+
+如果你只用普通 ChatGPT / Gemini / DeepSeek / 豆包 / Kimi / Qwen 聊天窗口，最简单方式是打开 [Lite Prompt](platforms/generic-chat/TUTOR_LITE_PROMPT.md)，复制到 chat 里再提问。
 
 ## 🚀 Quick Start
 
@@ -292,6 +304,7 @@ universal-diagnostic-tutor-skill/
 ├── README.md
 ├── EXAMPLES.md
 ├── GROUP_GUIDE.md
+├── USER_GUIDE.md
 ├── INSTALL.md
 ├── CHANGELOG.md
 ├── AGENTS.md
@@ -313,6 +326,7 @@ universal-diagnostic-tutor-skill/
 - `README.md`：GitHub landing page，面向新用户和维护者。
 - `EXAMPLES.md`：简短 showcase examples，展示 answer-first 与 diagnosis-first 的差异。
 - `GROUP_GUIDE.md`：适合发给普通学生、群友或社区用户的中文使用指南。
+- `USER_GUIDE.md`：从 GitHub 入口到不同 AI 平台使用方式的完整中文新手教程。
 - `INSTALL.md`：中文安装、更新、agent-assisted install 和兼容性说明。
 - `CHANGELOG.md`：版本历史和每个版本的主要变化。
 - `AGENTS.md`：维护这个仓库时需要遵守的规则。

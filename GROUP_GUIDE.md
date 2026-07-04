@@ -2,6 +2,8 @@
 
 这是一份可以直接发到群里的简明说明。它面向普通用户、学生和自学者，不要求你懂 GitHub、Codex 或 Claude Code。
 
+如果你需要从“点进 GitHub 后先看哪里”开始的完整教程，请看 `USER_GUIDE.md`。这份文件保持短一点，方便直接发群。
+
 ## 这是什么？
 
 这是一个诊断式学习导师提示词 / Skill。它的重点不是“立刻把答案给你”，而是先判断：
@@ -30,6 +32,8 @@
 1. 打开这个文件：`platforms/generic-chat/TUTOR_LITE_PROMPT.md`
 2. 把里面的 Lite Prompt 复制到聊天窗口。
 3. 再发你的题目或问题。
+
+如果你不会 GitHub，先打开 `platforms/generic-chat/TUTOR_LITE_PROMPT.md`，复制到你常用的 AI chat 里。普通用户不需要先 clone repo。
 
 普通聊天不会自动读取整个仓库，所以它是 Lite 版，但核心风格仍然是：先诊断，再教学。
 

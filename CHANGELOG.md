@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.7.1 - 2026-07-04
+
+### Added In v1.7.1
+
+- Added `USER_GUIDE.md`, a Chinese-first beginner tutorial from opening the
+  GitHub repository to choosing platform-specific usage.
+- Added a shareable generated PDF user guide output for group sharing.
+
+### Changed In v1.7.1
+
+- Improved README tutorial navigation for normal users.
+- Linked `GROUP_GUIDE.md`, `INSTALL.md`, and `PORTABILITY.md` to the full user
+  tutorial without duplicating the full content.
+- Added maintenance notes for keeping `USER_GUIDE.md` canonical and generated
+  PDFs derived from Markdown source.
+
+### Unchanged In v1.7.1
+
+- No core tutoring behavior, teaching protocol, infrastructure, installer,
+  database, hidden memory, source-pack, API integration code, package setup,
+  real RAG/vector DB, secret, copied-content, or curriculum-map changes.
+
 ## v1.7.0 - 2026-07-04
 
 ### Added In v1.7.0

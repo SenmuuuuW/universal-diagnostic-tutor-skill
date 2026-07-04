@@ -241,6 +241,16 @@ Future changes must preserve the core identity of the skill:
   requested later.
 - Keep Lite Prompt short enough for ordinary chat platforms; it should carry
   V1.7 intent shortcuts without duplicating the full Skill reference system.
+- `USER_GUIDE.md` is the canonical beginner tutorial for non-technical users.
+- `GROUP_GUIDE.md` should stay short and shareable; link to `USER_GUIDE.md`
+  instead of duplicating the full tutorial.
+- Generated PDFs should come from Markdown source and should not become the
+  canonical source.
+- Do not duplicate full tutorial content across README, INSTALL, PORTABILITY,
+  or GROUP_GUIDE. Link to `USER_GUIDE.md` for step-by-step instructions.
+- Keep non-technical user instructions simple: choose platform, copy the right
+  prompt, ask a first learning question, and use Learning State Card to
+  continue later.
 - If an external `quick_validate.py` check is used, note that it may require
   PyYAML in the local environment. Do not add package setup or dependency files
   only for that validator unless explicitly requested.
