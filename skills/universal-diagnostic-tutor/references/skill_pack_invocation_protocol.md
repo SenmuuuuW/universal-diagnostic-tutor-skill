@@ -8,6 +8,16 @@ type them manually. Full Skill environments can treat them as clear intent
 signals. User-facing answers should still sound natural and should not expose
 internal protocol names.
 
+V1.8.1 also adds discoverable sub-skill entrypoint folders such as
+`tutor-study-plan`, `tutor-exam-track`, and `tutor-state-card`. Prefer those
+entrypoints in Codex-style Skill environments when they are available. Manual
+slash-style shortcuts remain useful in ordinary chat, Custom Bot prompts, and
+platforms without Skill discovery.
+
+The canonical Tutor System remains `skills/universal-diagnostic-tutor/`.
+Sub-skill entrypoints should stay thin and should not duplicate the full
+`SKILL.md` or reference system.
+
 ## User-Invoked Flows
 
 | Flow | Meaning | Use When | Output Shape | Avoid |

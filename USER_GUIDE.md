@@ -207,6 +207,26 @@ skills/universal-diagnostic-tutor/
 
 更新后建议新开一个 agent session，让它重新加载最新 instructions。
 
+## 如果你在 Codex 里想直接选功能入口
+
+如果你的 Codex / agent UI 支持 skill list 或 skill picker，可以直接选择
+`tutor-*` entrypoints：
+
+- `tutor-learn-anything`：大目标学习，不知道从哪里开始。
+- `tutor-study-plan`：短学习计划。
+- `tutor-exam-track`：理科 / STEM / CS 备考。
+- `tutor-state-card`：生成或继续使用学习状态卡。
+- `tutor-resource-scan`：定位知识点和可信资源方向。
+- `tutor-visualize`：用图示、表格或流程图辅助理解。
+- `tutor-mistake-review`：错因分析。
+- `tutor-diagnose-gap`：先判断缺哪个知识点或方法。
+
+如果你的环境只显示主 Skill，就选择 `universal-diagnostic-tutor`，然后手动输入
+`/study-plan`、`/exam-track`、`/state-card` 等文字快捷方式。不同客户端的 UI
+可能不一样，不要把这些名称理解成固定菜单按钮。
+
+完整选择指南见 [COMMAND_SURFACE.md](COMMAND_SURFACE.md)。
+
 ## 10. 常用调用方式
 
 这些 slash-style flow 是意图快捷方式，不是 shell command。普通聊天用户可以直接手动输入。

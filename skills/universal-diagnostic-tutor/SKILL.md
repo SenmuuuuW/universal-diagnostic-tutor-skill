@@ -49,6 +49,12 @@ can type them manually; full Skill environments can route from them more
 clearly. User-facing answers should remain natural and should not over-label
 internal protocols.
 
+V1.8.1 also provides thin `tutor-*` sub-skill entrypoints such as
+`tutor-study-plan`, `tutor-exam-track`, and `tutor-state-card` for environments
+that discover skills by folder. Keep this main skill as the canonical
+orchestrator; sub-skill entrypoints should route back to the shared Tutor
+System rather than duplicating it.
+
 ## Core Workflow
 
 For learning-related requests, follow this sequence unless the user explicitly

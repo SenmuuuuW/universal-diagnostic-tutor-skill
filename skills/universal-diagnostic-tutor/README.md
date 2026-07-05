@@ -49,6 +49,22 @@ V1.7 增加了短的 user-invoked flows，方便学习者在普通聊天或 Full
 
 这些流程不应让普通回答变成模板。Tutor 仍然要保持自然教师表达、next-best-step、teach-check-stop、数学格式和无内部泄漏。
 
+## Related sub-skill entrypoints
+
+V1.8.1 增加了轻量 `tutor-*` folders，方便 Codex-style skill discovery。它们不是
+独立产品，也不复制完整主 Skill；它们只是进入同一套 Tutor System 的 focused doors。
+
+- `../tutor-learn-anything/`：大目标学习入口。
+- `../tutor-study-plan/`：短学习计划入口。
+- `../tutor-exam-track/`：STEM / 理科备考入口。
+- `../tutor-state-card/`：Learning State / Profile / Task Cards 入口。
+- `../tutor-resource-scan/`：Topic scan + trusted resources 入口。
+- `../tutor-visualize/`：简单学习可视化入口。
+- `../tutor-mistake-review/`：错因分析入口。
+- `../tutor-diagnose-gap/`：知识缺口诊断入口。
+
+完整 command surface 说明见根目录 [COMMAND_SURFACE.md](../../COMMAND_SURFACE.md)。
+
 ## 什么时候使用？
 
 适合在这些场景使用：

@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.8.1 - 2026-07-05
+
+### Added In v1.8.1
+
+- Added Codex-style sub-skill entrypoints for study plans, exam track, state
+  cards, resource scan, visualization, mistake review, gap diagnosis, and broad
+  learning goals.
+- Added `COMMAND_SURFACE.md` tutorial for choosing the main Skill,
+  `tutor-*` entrypoints, and manual slash-style prompt shortcuts.
+
+### Changed In v1.8.1
+
+- Improved README capability and entrypoint explanation.
+- Updated USER_GUIDE, GROUP_GUIDE, INSTALL, PORTABILITY, main Skill README,
+  Skill Pack invocation protocol, AGENTS, and quality docs for entrypoint
+  discoverability.
+
+### Unchanged In v1.8.1
+
+- No new teaching protocols, scripts, infrastructure, source packs, database,
+  hidden memory, tools, assignment/grading/course generation, website, API
+  integration code, package setup, PDF, or real graphing changes.
+
 ## v1.8.0 - 2026-07-05
 
 ### Added In v1.8.0

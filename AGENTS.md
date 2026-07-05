@@ -241,6 +241,14 @@ Future changes must preserve the core identity of the skill:
   requested later.
 - Keep Lite Prompt short enough for ordinary chat platforms; it should carry
   V1.7 intent shortcuts without duplicating the full Skill reference system.
+- `skills/universal-diagnostic-tutor/` is canonical. `skills/tutor-*` folders
+  are thin V1.8.1 entrypoints for discoverability, not separate Tutor systems.
+- Do not duplicate the full Tutor Skill, reference system, or long protocol
+  text inside each `tutor-*` sub-skill.
+- Keep entrypoint `description` fields short, unique, and discoverable.
+- If adding a new user-facing capability later, decide whether it needs a
+  protocol reference, prompt shortcut, sub-skill entrypoint, and README /
+  `COMMAND_SURFACE.md` documentation.
 - V1.8 is a learning architecture layer, not a new tool, assignment generator,
   grading system, course generator, graphing tool, database, or hidden-memory
   system.

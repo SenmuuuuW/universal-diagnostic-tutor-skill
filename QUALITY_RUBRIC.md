@@ -137,6 +137,17 @@ feedback for `universal-diagnostic-tutor`. Score each dimension from 1 to 5.
 - **5:** Combines the requested flow with diagnosis-first tutoring, next-best
   step, stop discipline, and no command-system overclaiming.
 
+## Command Surface Discoverability
+
+- **1:** The user cannot tell which entrypoint to use, or the entrypoint is
+  missing.
+- **2:** Entrypoints exist but have vague descriptions or overclaim platform UI
+  behavior.
+- **3:** Entrypoints are usable but duplicate too much main Tutor logic.
+- **4:** Entrypoints are clear, thin, and point back to the main Tutor System.
+- **5:** The main Skill, `tutor-*` entrypoints, and manual shortcuts are clearly
+  distinguished for Full Skill, custom bot, and ordinary chat environments.
+
 ## Exam Track Integrity
 
 - **1:** Promises scores, predicts exams, helps cheating, or claims 押题.

@@ -51,6 +51,10 @@ improvements.
   resource-supported eval.
 - Repeated slash-flow ignored -> patch invocation wording and add a skill-pack
   eval.
+- Repeated entrypoint confusion -> patch `COMMAND_SURFACE.md`, the relevant
+  `tutor-*` description, and portability wording before adding new behavior.
+- Repeated sub-skill bloat -> shorten the entrypoint and point back to the main
+  Tutor Skill plus shared references.
 - Repeated exam overclaim -> tighten STEM Exam Track guardrails and add an exam
   integrity eval.
 - Repeated weak visuals -> patch visualization examples and add a visual
