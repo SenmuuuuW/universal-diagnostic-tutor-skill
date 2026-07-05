@@ -8,10 +8,10 @@ improvements.
 1. **Collect real tutoring output.** Save the prompt, visible answer, and user
    feedback. Do not include private or sensitive details unless the user has
    explicitly approved doing so.
-2. **Identify user intent and mode.** Note whether the request was zero-base,
-   standard, advanced, speed mode, mistake analysis, resource-supported
-   tutoring, context handoff, `/study-plan`, `/exam-track`, `/resource-scan`,
-   `/visualize`, or card generation.
+2. **Identify user intent and mode.** Note whether the request was a broad
+   learning goal, zero-base, standard, advanced, speed mode, mistake analysis,
+   resource-supported tutoring, context handoff, `/study-plan`, `/exam-track`,
+   `/resource-scan`, `/visualize`, or card generation.
 3. **Mark the failure type.** Use `FAILURE_TAXONOMY.md` to classify the most
    specific failure.
 4. **Score the output.** Use `QUALITY_RUBRIC.md` to score the relevant
@@ -56,3 +56,9 @@ improvements.
 - Repeated weak visuals -> patch visualization examples and add a visual
   learning eval.
 - Repeated card bloat -> tighten card format and add a card compactness eval.
+- Repeated skipped goal clarification -> patch the goal clarifier or trigger
+  matrix and add a broad-goal eval.
+- Repeated giant knowledge maps -> tighten knowledge-map output shape and add a
+  compact-map eval.
+- Repeated fake mastery across related concepts -> patch concept mastery map
+  guidance and add an advancement eval.

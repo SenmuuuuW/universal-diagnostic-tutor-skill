@@ -76,6 +76,7 @@ flowchart LR
 | Layer | What It Does |
 | --- | --- |
 | Diagnosis-first tutoring | 判断领域、知识点、符号缺口、方法缺口 |
+| Learning architecture | 先澄清目标，再确认方向、建小地图、选下一步 |
 | Teaching modes | 零基础 / 普通 / 进阶 / 自动判断 |
 | Learning efficiency loop | 选择下一步最值得教的内容，控制认知负荷 |
 | Mistake intervention | 根据错误类型选择解释方式，而不是重复讲一遍 |
@@ -88,9 +89,29 @@ flowchart LR
 | Quality system | EVALS / rubric / failure taxonomy / feedback loop |
 | Platform adapters | Full Skill / Custom Bot / Lite Prompt / API Prompt |
 
-## 🆕 Latest Major Update: V1.7 Skill Pack & Exam Track
+## 🧭 V1.8 Learning Architecture Layer
 
-V1.7 把这个 Tutor 进一步整理成更容易调用的学习系统：你可以用短的 skill-style invocation 表达意图，同时保留 diagnosis-first、next-best-step 和 check-and-stop 节奏。
+V1.7 让这个 Tutor 更容易被调用：`/tutor`、`/study-plan`、`/exam-track`、`/state-card` 等短提示能表达学习意图。
+
+V1.8 进一步解决“下一步到底该学什么”：当用户说“我想学机器学习”“我想补线代”“我想准备考试”这类大目标时，Tutor 会先澄清目标、确认方向，再给一个很小的知识地图，并选择第一步。
+
+```text
+Goal Clarification -> Goal Confirmation -> Knowledge Map -> Learning Path
+-> Sub-skill Routing -> Mastery Check -> State Update
+```
+
+新增学习架构组件：
+
+- **Goal Clarifier**：把大目标缩成可开始的学习目标。
+- **Goal Confirmation Loop**：先确认理解是否正确，再建路径。
+- **Knowledge Map Builder**：只建目标相关的小知识地图，不生成庞大课程图。
+- **Learning Path Selector**：选择当前最值得学的一步。
+- **Learning Orchestrator**：把目标、地图、子技能和状态卡串起来。
+- **Concept Mastery Map**：区分 explained / practiced / checked / confirmed / unconfirmed / weak / blocked，避免过早假设掌握。
+
+## 🧩 V1.7 Skill Pack & Exam Track
+
+V1.7 把这个 Tutor 整理成更容易调用的学习系统：你可以用短的 skill-style invocation 表达意图，同时保留 diagnosis-first、next-best-step 和 check-and-stop 节奏。
 
 | Flow | Use |
 | --- | --- |
@@ -342,6 +363,7 @@ universal-diagnostic-tutor-skill/
 
 | Version | Focus |
 | --- | --- |
+| V1.8.x | Learning Architecture Layer: goal clarification, compact maps, path selection |
 | V1.7.x | Skill-pack invocations, STEM Exam Track, topic scan, visual learning |
 | V1.6.x | Cross-platform adapters, portability polish, README showcase |
 | V1.5.x | Skill reliability, evals/rubric/failure taxonomy, Learning State Card context portability |
@@ -375,7 +397,7 @@ For detailed changes, see [CHANGELOG.md](CHANGELOG.md).
 
 ## 🧭 维护与验证
 
-V1.7 系列是 Markdown-only Skill Pack, Exam Track, Topic Scan, Card, and Visual Learning release。它让普通学生更容易调用导师能力，并让备考、资源选择、学习状态卡和简单图示更清楚；不新增 source packs、网站、脚本、API 集成代码、包管理、数据库、持久记忆、真实 RAG / vector database、PDF、课程地图或基础设施。
+V1.8 系列是 Markdown-only Learning Architecture Layer release。它让 Tutor 在教学前更会澄清目标、确认方向、建立小知识地图、选择下一步并路由到合适子流程；不新增 assignment generation、grading、course builder、real graphing tools、source packs、网站、脚本、API 集成代码、包管理、数据库、持久记忆、真实 RAG / vector database、PDF 或基础设施。
 
 维护者可以使用 [EVALS.md](EVALS.md)、[QUALITY_RUBRIC.md](QUALITY_RUBRIC.md)、[FAILURE_TAXONOMY.md](FAILURE_TAXONOMY.md)、`skills/universal-diagnostic-tutor/references/evaluation_checklist.md` 和 `skills/universal-diagnostic-tutor/references/manual_test_matrix.md` 做人工验收。若使用外部 Skill 创建工具里的 `quick_validate.py`，该脚本可能需要 PyYAML；本仓库不为此添加 package setup 或依赖文件。
 

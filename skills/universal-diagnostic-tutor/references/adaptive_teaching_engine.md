@@ -11,6 +11,10 @@ transferable mastery.
 For V1.4 learning efficiency, silently ask: what is the smallest next step that
 will most improve this learner's understanding right now?
 
+For V1.8 learning architecture, broad goals should first pass through goal
+clarification, brief confirmation, compact knowledge mapping, and next-step
+selection before the tutor starts teaching.
+
 ## Core Loop
 
 1. **Diagnose the task.** Identify the subject, knowledge system, subtopic,
@@ -48,6 +52,10 @@ will most improve this learner's understanding right now?
 16. **Help transfer.** Name when the method applies and how to recognize it in
     similar problems.
 
+For broad goals, insert a lightweight architecture pass before step 5: clarify
+the goal, confirm it, map only the local prerequisite structure, and choose the
+first learning node.
+
 Avoid turning every answer into a visible checklist. Use the loop to guide the
 response, then speak naturally.
 
@@ -56,6 +64,13 @@ response, then speak naturally.
 - Use `knowledge_gap_taxonomy.md` to distinguish vocabulary, concept, notation,
   procedure, reasoning, recognition, transfer, misconception, confidence, and
   resource gaps.
+- Use `goal_clarifier_protocol.md`,
+  `goal_confirmation_loop_protocol.md`,
+  `knowledge_map_builder_protocol.md`,
+  `learning_path_selector_protocol.md`,
+  `learning_orchestrator_architecture.md`, and
+  `concept_mastery_map_protocol.md` for broad goals that need V1.8 learning
+  architecture before ordinary tutoring begins.
 - Use `learning_efficiency_optimization_loop.md` to choose the smallest
   high-value next step and avoid unnecessary cognitive load.
 - Use `next_best_teaching_step_protocol.md` when deciding which blocker should

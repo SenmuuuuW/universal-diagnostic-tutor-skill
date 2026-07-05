@@ -342,6 +342,32 @@ Fail if slash flows are ignored, every answer becomes a plan/resource/visual,
 exam help overclaims outcomes, cards become transcript dumps or hidden memory,
 or visuals are decorative rather than educational.
 
+## V1.8 Learning Architecture Criteria
+
+For broad learning goals, weak-foundation repair, project/exam goals, or
+concepts that sit in a larger knowledge structure, pass if the answer:
+
+- Clarifies broad goals with 1-3 focused questions when needed.
+- Avoids over-questioning when the user already gives enough context.
+- Restates the understood goal briefly before building a path.
+- Uses compressed confirmation for urgent exam situations.
+- Builds a compact, goal-specific knowledge map rather than a full curriculum.
+- Marks uncertain mastery as unconfirmed instead of learned.
+- Chooses the next best learning step from the goal, current level, urgency,
+  prerequisite gaps, and mastery signals.
+- Routes to the smallest relevant sub-skill, such as concept tutoring, mistake
+  review, study planning, exam track, resource scan, visualization, or state
+  card generation.
+- Tracks concept status lightly as explained, practiced, checked, confirmed,
+  unconfirmed, weak, or blocked when that helps prevent premature advancement.
+- Preserves V1.1-V1.7 behavior: diagnosis-first identity, stop points, modes,
+  math formatting, no internal leakage, visible cards, and no hidden memory.
+
+Fail if the answer skips goal clarification for a broad goal, asks a long
+survey, generates a giant curriculum map, jumps to advanced topics before the
+unlocking prerequisite, assumes mastery of future nodes, or visibly applies
+every sub-skill at once.
+
 ## High-Stakes Domain Criteria
 
 For law, medical, finance, safety, immigration, tax, or other high-stakes

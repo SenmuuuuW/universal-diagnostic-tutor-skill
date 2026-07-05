@@ -26,6 +26,10 @@ Best for:
 This is the strongest version because the agent can route from `SKILL.md` into
 references and examples as needed.
 
+Full Skill environments can use the V1.8 learning architecture layer: clarify
+broad goals, confirm the target, build a compact knowledge map, select one
+next step, route to the right sub-skill, and update visible state cards.
+
 ### Custom Bot Version
 
 Use compact instructions for platforms such as ChatGPT GPTs, Gemini Gems, or
@@ -51,6 +55,8 @@ Best for:
 
 The Lite Prompt is not the full Skill. It preserves the core tutoring style,
 but it cannot automatically access the full reference system.
+For broad goals, it should still clarify and confirm before giving a small
+map and one next step.
 
 ### API Prompt Version
 

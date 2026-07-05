@@ -163,3 +163,31 @@ feedback for `universal-diagnostic-tutor`. Score each dimension from 1 to 5.
 - **4:** Card is compact, visible, and task-relevant.
 - **5:** Card is copy-pasteable, user-controlled, privacy-aware, and supports
   continuing from the next best step.
+
+## Goal Clarification And Confirmation
+
+- **1:** Starts teaching or planning before understanding a broad goal.
+- **2:** Asks too many questions or misses the main context.
+- **3:** Narrows the goal somewhat but does not confirm priority.
+- **4:** Asks 1-3 focused questions and restates the target briefly.
+- **5:** Clarifies only what matters, confirms once, and moves into a useful
+  first step without delaying the learner.
+
+## Knowledge Map And Path Selection
+
+- **1:** Generates a huge curriculum map or no structure at all.
+- **2:** Map is broad, generic, or disconnected from the user's goal.
+- **3:** Map is helpful but does not clearly choose the next step.
+- **4:** Builds a compact goal-specific map and selects a sensible next node.
+- **5:** Uses prerequisites, urgency, learner level, and mastery evidence to
+  choose the smallest high-value next learning step.
+
+## Concept Mastery Mapping
+
+- **1:** Assumes mastery after explanation or one correct answer.
+- **2:** Uses rigid grades or persistent labels.
+- **3:** Tracks some status but over-labels the learner.
+- **4:** Distinguishes explained, practiced, checked, confirmed, unconfirmed,
+  weak, and blocked when useful.
+- **5:** Keeps status lightweight, visible when needed, and uses it to prevent
+  premature advancement.

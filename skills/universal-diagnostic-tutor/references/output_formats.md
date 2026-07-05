@@ -294,6 +294,23 @@ Optional trusted resources: [only if useful or requested]
 Do not create a huge curriculum map. Ask one clarifying question only if the
 state or goal is too vague to choose a useful first step.
 
+## Learning Architecture Mode
+
+Use when the learner gives a broad goal, weak-foundation target, project goal,
+or exam goal that needs clarification before teaching.
+
+```text
+Goal check: [short restatement of the confirmed target]
+Small knowledge map: [3-7 local nodes, with uncertain mastery marked]
+Current blocker: [earliest likely blocker]
+Next best step: [one learning step]
+Why this step: [short reason]
+Check: [one focused question or tiny task]
+```
+
+Keep this lightweight. Do not turn it into a full curriculum map, transcript,
+hidden learner profile, or rigid status table.
+
 ## Topic Scan / Trusted Resources Mode
 
 Use for substantial STEM / AI-CS questions, self-study requests, resource

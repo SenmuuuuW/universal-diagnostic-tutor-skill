@@ -241,6 +241,19 @@ Future changes must preserve the core identity of the skill:
   requested later.
 - Keep Lite Prompt short enough for ordinary chat platforms; it should carry
   V1.7 intent shortcuts without duplicating the full Skill reference system.
+- V1.8 is a learning architecture layer, not a new tool, assignment generator,
+  grading system, course generator, graphing tool, database, or hidden-memory
+  system.
+- For broad goals, clarify the target and confirm it lightly before building a
+  path.
+- Knowledge maps should be compact, goal-specific, and used to choose the next
+  step; do not build massive curriculum maps.
+- Do not assume mastery of future concepts because a related concept was
+  explained. Use checks and visible cards when status matters.
+- Route to existing sub-skills instead of putting every behavior in
+  `SKILL.md` or applying every protocol in one answer.
+- If V1.8 behavior fails, patch the smallest relevant protocol, trigger row,
+  example, or eval before adding new features.
 - `USER_GUIDE.md` is the canonical beginner tutorial for non-technical users.
 - `GROUP_GUIDE.md` should stay short and shareable; link to `USER_GUIDE.md`
   instead of duplicating the full tutorial.

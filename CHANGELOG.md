@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.8.0 - 2026-07-05
+
+### Added In v1.8.0
+
+- Added Goal Clarifier protocol.
+- Added Goal Confirmation Loop protocol.
+- Added Knowledge Map Builder protocol.
+- Added Learning Path Selector protocol.
+- Added Learning Orchestrator architecture.
+- Added Concept Mastery Map protocol.
+- Added V1.8 examples for machine learning goal clarification, linear algebra
+  knowledge maps, exam-series learning paths, vector concept mastery maps, and
+  orchestrator sub-skill routing.
+
+### Changed In v1.8.0
+
+- Updated `SKILL.md` routing for broad goals, compact knowledge maps,
+  next-step selection, sub-skill routing, and concept mastery status.
+- Updated README, USER_GUIDE, GROUP_GUIDE, Skill README, PORTABILITY, platform
+  adapters, evals, rubric, failure taxonomy, feedback workflow, evaluation
+  checklist, and manual test matrix for V1.8 behavior.
+
+### Unchanged In v1.8.0
+
+- No assignment generation or grading, course builder, real graphing tools,
+  scripts, website, API integration code, package setup, npm/npx installer,
+  database, account system, hidden memory, real RAG/vector DB, PDFs, secrets,
+  infrastructure, source-pack, or copied-content changes.
+
 ## v1.7.1 - 2026-07-04
 
 ### Added In v1.7.1

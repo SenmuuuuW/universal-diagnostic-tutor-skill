@@ -1563,6 +1563,60 @@ a failure mode.
   ignores the user's request for simplicity, or skips diagnosis entirely.
 - **Target score:** 5.
 
+## 108. V1.8 Broad Machine Learning Goal
+
+- **Prompt:** "我想学机器学习，但是数学很弱。"
+- **Expected routing:** Goal Clarifier, then Goal Confirmation Loop if the user
+  answers.
+- **Expected behavior:** Ask 1-3 focused questions about project/exam/general
+  goal, current math/Python level, and desired output.
+- **Failure cases:** Starts neural networks immediately, asks a long survey, or
+  creates a full curriculum map.
+- **Target score:** 5.
+
+## 109. V1.8 Goal Confirmation And First Map
+
+- **Prompt:** "我线代很差，想补一下。主要为了考研，矩阵最乱。"
+- **Expected routing:** Goal Confirmation Loop plus Knowledge Map Builder.
+- **Expected behavior:** Restate the goal briefly, then create a compact map
+  such as vectors -> linear combinations -> matrix multiplication -> equations.
+- **Failure cases:** Skips confirmation, makes the wrong plan, or generates a
+  semester-long syllabus.
+- **Target score:** 5.
+
+## 110. V1.8 Learning Path Selector For Series Exam
+
+- **Prompt:** "我明天考级数，但总是不知道选什么判别法。"
+- **Expected routing:** Learning Path Selector plus STEM Exam Track.
+- **Expected behavior:** Choose method-recognition diagnosis as the first
+  step, identify structural cue checking, and ask one small setup task.
+- **Failure cases:** Lists every test, solves full examples, ignores urgency,
+  or claims 押题.
+- **Target score:** 5.
+
+## 111. V1.8 Concept Mastery Map
+
+- **Prompt:** "我已经懂 \(v\) 和 \(2v\) 平行了，那 span 和 basis 是不是也懂了？"
+- **Expected routing:** Concept Mastery Map plus understanding check.
+- **Expected behavior:** Keep scalar multiple as checked or confirmed based on
+  evidence, keep span and basis unconfirmed, and ask one small bridge check.
+- **Failure cases:** Assumes mastery of span/basis, creates rigid grades, or
+  restarts from vector basics.
+- **Target score:** 5.
+
+## 112. V1.8 Orchestrator Sub-skill Routing
+
+- **Prompt:** "我想准备考研数学，但线代和概率都很差，不知道怎么开始。"
+- **Expected routing:** Learning Orchestrator chooses Goal Clarifier, brief
+  confirmation, Knowledge Map Builder, Learning Path Selector, then Study
+  Planner or Exam Track.
+- **Expected behavior:** Ask for the most relevant missing context, confirm the
+  target, pick one first branch, and avoid applying resources, visuals, cards,
+  and full plans all at once.
+- **Failure cases:** Applies every feature visibly, gives a giant roadmap, or
+  starts solving random problems.
+- **Target score:** 5.
+
 ## Review Notes
 
 - Test across at least six rows for small edits and all rows for behavior
@@ -1612,6 +1666,10 @@ a failure mode.
   that cover slash-style invocations, brief study plans, STEM Exam Track
   integrity, topic scan with trusted resources, visible learner/task cards,
   visual learning, and ordinary tutoring without feature bloat.
+- For V1.8 learning-architecture changes, include rows that cover broad-goal
+  clarification, goal confirmation, compact knowledge maps, next-step
+  selection, sub-skill routing, concept mastery maps, avoiding giant
+  curricula, and avoiding premature mastery assumptions.
 - Prefer natural answers over rigid template completion.
 - If any answer scores below 4, note whether the issue is diagnosis, depth,
   subject routing, safety boundary, or style.

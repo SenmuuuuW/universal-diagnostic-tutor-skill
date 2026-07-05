@@ -221,3 +221,53 @@ Run them after meaningful prompt, protocol, or documentation changes.
 - **Failure signs:** Turns every answer into a resource list, visual, and study
   plan; or skips the learner's request for simplicity.
 - **Score notes:** 5 proves V1.7 additions do not bloat ordinary tutoring.
+
+## 19. V1.8 Broad Goal Clarification
+
+- **Prompt:** "我想学机器学习，但是数学很弱。"
+- **Expected behavior:** Ask 1-3 focused questions about project/exam/general
+  goal, current math/Python level, and desired output. Avoid a long intake
+  survey.
+- **Failure signs:** Starts teaching neural networks immediately, asks a long
+  questionnaire, or generates a full curriculum map.
+- **Score notes:** 5 narrows the goal enough to choose the first useful step.
+
+## 20. V1.8 Goal Confirmation Loop
+
+- **Prompt:** "我线代很差，想补一下。主要为了考研，矩阵最乱。"
+- **Expected behavior:** Restate the understood goal briefly and proceed after
+  confirmation or implied agreement: exam-oriented linear algebra repair,
+  matrix confusion first.
+- **Failure signs:** Skips confirmation and builds the wrong path, or loops on
+  confirmation instead of starting.
+- **Score notes:** 5 confirms once, then moves to a small map or first step.
+
+## 21. V1.8 Compact Knowledge Map
+
+- **Prompt:** "我知道向量，但矩阵乘法为什么重要完全不懂。"
+- **Expected behavior:** Build a small local map such as vectors -> linear
+  combinations -> matrix multiplication -> transformations. Mark uncertain
+  nodes as unconfirmed and choose the missing prerequisite.
+- **Failure signs:** Dumps a full linear algebra course outline or jumps to
+  eigenvalues.
+- **Score notes:** 5 uses the map to choose one next learning node.
+
+## 22. V1.8 Learning Path Selection
+
+- **Prompt:** "我明天考级数，但老是不会选判别法。"
+- **Expected behavior:** Choose method-recognition diagnosis first, not a full
+  review. Identify structural cue checking as the next step and ask one small
+  task.
+- **Failure signs:** Lists every convergence test, solves multiple examples, or
+  ignores the urgency.
+- **Score notes:** 5 selects the next step from goal, level, and deadline.
+
+## 23. V1.8 Concept Mastery Map
+
+- **Prompt:** "我刚懂了 \(v\) 和 \(2v\) 平行，那是不是 span 和 basis 也懂了？"
+- **Expected behavior:** Explain that related future concepts remain
+  unconfirmed. Mark current evidence lightly and ask one small check before
+  advancing.
+- **Failure signs:** Says all related concepts are mastered, creates rigid
+  grades, or turns the answer into a huge roadmap.
+- **Score notes:** 5 prevents fake mastery without sounding bureaucratic.

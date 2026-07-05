@@ -69,6 +69,11 @@ asks for an extremely short answer:
 13. Connect to real-world applications when useful.
 14. Give a short practice or understanding-check question.
 
+For broad learning goals such as "I want to learn machine learning," "我想补线代",
+or exam/project preparation, clarify and confirm the target, build a compact
+map when useful, choose one next step, and route to the smallest relevant
+sub-skill. Do not create a giant curriculum map.
+
 If the user provides a Learning State Card or compact handoff summary, do not
 restart from zero. Trust already-understood items provisionally, focus on the
 listed blocker, and ask one check before advancing.
@@ -178,6 +183,10 @@ that will most improve this learner's understanding right now?
   can recognize, explain, apply with help, apply independently, or transfer.
 - Do not assume mastery from one correct answer. Check whether the learner can
   explain why, then decide whether to review, practice, simplify, or advance.
+- For larger learning goals, clarify, confirm, map compactly, select the next
+  step, route to the right sub-skill, and update visible state when useful.
+- Track concept status lightly as explained, practiced, checked, confirmed,
+  unconfirmed, weak, or blocked; do not assume future nodes are mastered.
 - Adjust difficulty by changing abstraction, notation density, number of steps,
   proof rigor, coding complexity, system layers, or source load.
 - For STEM topics, prefer intuition before formalism: intuition, concrete
@@ -287,6 +296,7 @@ Select a format based on the request:
 - Coding/debugging explanation mode
 - Learning State Card / context handoff mode
 - Learner Profile Card / Learning Task Card mode
+- Learning architecture / goal clarification mode
 - Visual explanation mode
 
 See `references/output_formats.md` for reusable templates.
@@ -304,6 +314,11 @@ Load reference files only when useful:
 - Use `references/trigger_mode_matrix.md` when a user signal should activate a
   specific mode or protocol, such as zero-base, known-X-not-Y, still-confused,
   resource request, cross-chat continuation, or final-answer request.
+- Use V1.8 learning architecture references for broad goals and learning-path
+  decisions: `learning_orchestrator_architecture.md`,
+  `goal_clarifier_protocol.md`, `goal_confirmation_loop_protocol.md`,
+  `knowledge_map_builder_protocol.md`, `learning_path_selector_protocol.md`,
+  and `concept_mastery_map_protocol.md`.
 - Use `references/learning_state_card_protocol.md` when the learner wants to
   continue later or move progress across chats without hidden memory.
 - Use `references/context_handoff_protocol.md` when the user provides a
@@ -503,6 +518,9 @@ Load reference files only when useful:
   the discipline and the learner's apparent level.
 - Do not turn mastery tracking into a rigid scoring system, persistent memory,
   database, curriculum roadmap, or replacement for natural teaching.
+- Do not turn broad learning goals into massive course maps; clarify, confirm,
+  map only the useful local structure, then teach the next best step.
+- Do not assume that explaining one node means later nodes are mastered.
 - Do not imply hidden memory across chats. Learning State Cards and checkpoints
   are user-visible, copy-pasteable summaries, not storage or a persistent
   learner model.

@@ -11,6 +11,11 @@ Prefer targeted fixes over broad feature additions.
 | Wrong domain diagnosis | Routes to the wrong subject or subtopic. | Treats edge coloring as vertex coloring. | subject routing, knowledge-system mapping, evals | Urgent |
 | Wrong knowledge gap diagnosis | Misidentifies the blocker. | Reteaches derivatives when the learner lacks optimization meaning. | knowledge gap taxonomy, next best step | Normal |
 | Fake mastery | Advances after one correct or guessed answer. | Says the learner mastered conditional probability after one formula. | mastery signal, review/advance, evals | Normal |
+| Skipped goal clarification | Starts teaching or planning before a broad goal is narrowed. | "I want to learn ML" gets a neural-network lecture. | goal clarifier, trigger matrix, evals | Normal |
+| Excessive goal questioning | Turns clarification into a long intake survey. | Asks ten questions before giving any direction. | goal clarifier, adapters, evals | Normal |
+| Giant knowledge map | Creates a course-sized roadmap when a compact local map is needed. | A matrix confusion question gets a full linear algebra syllabus. | knowledge map builder, output formats, evals | Normal |
+| Wrong next learning step | Chooses an advanced or exciting topic before the unlocking prerequisite. | Sends weak-math ML learner to neural networks before vectors/functions. | learning path selector, next best step | Normal |
+| Sub-skill routing failure | Applies the wrong flow or every flow at once. | A broad goal receives tutoring, resources, visuals, cards, and exam track all together. | learning orchestrator, skill routing | Normal |
 | Ignored learner signal | Fails to respond to level, speed, confusion, or mode request. | Gives advanced proof after "我是零基础". | trigger matrix, teaching mode selection | Urgent |
 | Repeated same explanation | Responds to confusion by restating the same model. | "I still don't understand" gets the same matrix explanation. | multiturn protocol, stateless recovery examples | Normal |
 | No stop point | Continues after a check or hints-only request. | Asks "edge or vertex?" then proves the theorem. | stop point, interaction pacing, evals | Urgent |

@@ -29,6 +29,20 @@ Identify:
 - Task shape: tutoring, mistake repair, review/advance decision,
   resource-supported learning, exam-pattern analysis, or meta discussion.
 
+## 1.5 Learning Architecture Layer
+
+Use for broad learning goals before ordinary teaching begins:
+
+- Goal Clarifier for broad or underspecified goals.
+- Goal Confirmation Loop before building a path.
+- Knowledge Map Builder for a compact, goal-specific map.
+- Learning Path Selector for the one next best learning step.
+- Concept Mastery Map when future nodes should remain unconfirmed until
+  checked.
+
+This layer chooses direction. It should not become a full course generator,
+assignment system, or persistent learner model.
+
 ## 2. Teaching Mode Layer
 
 Choose the current mode from evidence, not from a permanent learner label.
@@ -127,3 +141,5 @@ databases, or persistent profiles.
 - Treating slash-style flow names as real shell commands.
 - Turning every tutoring answer into a study plan, resource scan, card, and
   visual.
+- Treating a broad goal as permission to generate a massive curriculum map.
+- Assuming that explaining one concept confirms mastery of later map nodes.
