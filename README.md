@@ -131,6 +131,8 @@ Goal Clarification -> Goal Confirmation -> Knowledge Map -> Learning Path
 - **Learning Orchestrator**：把目标、地图、子技能和状态卡串起来。
 - **Concept Mastery Map**：区分 explained / practiced / checked / confirmed / unconfirmed / weak / blocked，避免过早假设掌握。
 
+Study plans are discipline-first：对机器学习这类大目标，Tutor 会先说明需要哪些学科、每个学科要掌握哪些部分、最低入门标准、哪些可以先不学，以及下一步具体做什么。
+
 ## 🧩 V1.7 Skill Pack & Exam Track
 
 V1.7 把这个 Tutor 整理成更容易调用的学习系统：你可以用短的 skill-style invocation 表达意图，同时保留 diagnosis-first、next-best-step 和 check-and-stop 节奏。

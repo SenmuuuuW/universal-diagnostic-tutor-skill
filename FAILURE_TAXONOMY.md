@@ -14,6 +14,7 @@ Prefer targeted fixes over broad feature additions.
 | Skipped goal clarification | Starts teaching or planning before a broad goal is narrowed. | "I want to learn ML" gets a neural-network lecture. | goal clarifier, trigger matrix, evals | Normal |
 | Excessive goal questioning | Turns clarification into a long intake survey. | Asks ten questions before giving any direction. | goal clarifier, adapters, evals | Normal |
 | Giant knowledge map | Creates a course-sized roadmap when a compact local map is needed. | A matrix confusion question gets a full linear algebra syllabus. | knowledge map builder, output formats, evals | Normal |
+| Generic study plan failure | Gives a broad timeline but fails to name required disciplines, subtopics, minimum mastery standards, skip-for-now topics, or realistic dependency order. | "Learn vectors, matrices, functions, probability, then PyTorch" without saying what to study inside each subject. | brief study plan, study-plan examples, adapters, evals | Normal |
 | Wrong next learning step | Chooses an advanced or exciting topic before the unlocking prerequisite. | Sends weak-math ML learner to neural networks before vectors/functions. | learning path selector, next best step | Normal |
 | Sub-skill routing failure | Applies the wrong flow or every flow at once. | A broad goal receives tutoring, resources, visuals, cards, and exam track all together. | learning orchestrator, skill routing | Normal |
 | Ignored learner signal | Fails to respond to level, speed, confusion, or mode request. | Gives advanced proof after "我是零基础". | trigger matrix, teaching mode selection | Urgent |
@@ -44,3 +45,20 @@ Prefer targeted fixes over broad feature additions.
 - If one output has several failures, identify the earliest cause.
 - Repeated failures should become eval prompts.
 - Do not add a broad new protocol for one isolated weak answer.
+
+## Generic Study Plan Failure
+
+The tutor gives a broad timeline but fails to identify required disciplines,
+required subtopics, minimum mastery standards, skip-for-now topics, or realistic
+dependency order.
+
+Examples:
+
+- Says "learn vectors, matrices, functions, probability" without naming
+  disciplines.
+- Jumps from Python basics to scikit-learn or PyTorch too quickly.
+- Gives resources before clarifying the learning map.
+- Produces a plausible plan that does not tell the learner exactly what to
+  study inside each subject.
+
+Correction: use discipline-first study planning.

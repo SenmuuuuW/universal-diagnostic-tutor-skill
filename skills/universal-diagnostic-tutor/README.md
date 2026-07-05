@@ -126,6 +126,7 @@ V1.8.1 增加了轻量 `tutor-*` folders，方便 Codex-style skill discovery。
 - **主动找资源**：当环境有 web/search 能力且资源能改善教学时，搜索权威学习资源，并把资源转化成解释、练习、错题修复和考试题型分析。
 - **Topic Scan + Trusted Resources**：对较大的 STEM / AI-CS 问题先简短定位 subject -> module -> concept -> prerequisite，再决定是否需要资源。
 - **Brief Study Plan**：当学习者有当前状态和目标时，给短计划，不输出庞大课程路线图。
+- **Discipline-first study plans**：对机器学习等大目标，先说明所需学科、具体子主题、最低掌握标准、可暂时跳过内容和第一步。
 - **STEM Exam Track**：支持大学理科、考研数学和 CS 专业课复习，强调概念修复、题型识别、错因分析和练习顺序，不承诺分数或押题。
 - **可视化辅助**：当文字不够时，用简单图示、表格、Mermaid、trace table 或概念图帮助理解，但不为了好看而画图。
 - **自然教师表达**：普通教学回答不暴露 Skill 名称、版本号、协议名或内部文件，而是直接像老师一样讲。

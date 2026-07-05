@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.8.2 - 2026-07-05
+
+### Changed In v1.8.2
+
+- Improved `/study-plan` and `tutor-study-plan` behavior for broad STEM /
+  AI-CS goals with discipline-first planning.
+- Updated brief study plan guidance to name required disciplines, concrete
+  subtopics, minimum mastery standards, skip-for-now topics, dependency order,
+  today's first task, and one check question.
+- Added a machine learning discipline-first study plan example and refreshed
+  the older machine learning study plan example.
+- Updated Lite Prompt and Coze / Doubao prompt with a concise discipline-first
+  study-plan rule.
+- Added evaluation, rubric, failure taxonomy, and feedback-loop coverage for
+  generic study plan failures.
+
+### Unchanged In v1.8.2
+
+- No new major architecture, assignment generation, grading, course builder,
+  tools, scripts, API code, database, hidden memory, RAG/vector DB, website,
+  package setup, source packs, PDFs, or infrastructure.
+
 ## v1.8.1 - 2026-07-05
 
 ### Added In v1.8.1

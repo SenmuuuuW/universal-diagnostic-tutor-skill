@@ -64,5 +64,8 @@ improvements.
   matrix and add a broad-goal eval.
 - Repeated giant knowledge maps -> tighten knowledge-map output shape and add a
   compact-map eval.
+- Repeated generic study plans -> name the required disciplines, list concrete
+  subtopics, define minimum mastery, add skip-for-now topics, slow the
+  progression, and use readiness checks.
 - Repeated fake mastery across related concepts -> patch concept mastery map
   guidance and add an advancement eval.

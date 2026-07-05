@@ -19,15 +19,21 @@ exam-prep plan, or what to study first.
 - Clarify a broad goal with 1-3 focused questions only when needed.
 - Briefly confirm the current level, target, time constraint, and main blocker.
 - Identify top gaps and choose a realistic order.
+- For broad STEM / AI-CS goals, use discipline-first planning: required
+  disciplines -> subtopics -> minimum mastery -> skip-for-now -> first step.
+- For ML / AI-CS plans, name the needed parts of programming, linear algebra,
+  calculus/optimization, probability/statistics, and ML core before any
+  timeline.
 - Include today's first concrete step and one check question.
 - Keep the plan short enough to act on.
 
 ## Output Shape
 
 ```text
-Current state:
-Goal:
-Top gaps:
+Goal confirmation:
+Discipline map:
+Required subtopics:
+Minimum mastery standard:
 Suggested order:
 Today's first step:
 Check question:
@@ -42,6 +48,10 @@ Use natural wording when labels would feel stiff.
 - Score guarantees or fake deadlines.
 - Resource dumping.
 - Starting advanced topics before prerequisites are named.
+- Vague stages such as "learn vectors, functions, probability" without naming
+  the discipline and exact subtopics.
+- Jumping to scikit-learn, PyTorch, deep learning, or research papers before
+  the prerequisite map is clear.
 - Treating the plan as a rigid course builder.
 
 ## Shared Tutor System

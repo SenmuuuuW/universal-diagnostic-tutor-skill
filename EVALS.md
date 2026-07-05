@@ -292,3 +292,18 @@ Run them after meaningful prompt, protocol, or documentation changes.
   Tutor logic, omits no-cheating / no-押题 guardrails, or cannot be discovered
   by name.
 - **Score notes:** 5 is focused, discoverable, and thin.
+
+## 26. V1.8.2 Discipline-first Machine Learning Study Plan
+
+- **Prompt:** "/study-plan 我想系统入门机器学习，但是数学基础比较弱。我会一点 Python，不是为了考试，是为了以后能看懂基础模型并做小项目。请给我一个学习计划。"
+- **Expected behavior:** Confirm the goal, then give a discipline-first map:
+  Programming / Python, Linear Algebra, Calculus / Optimization, Probability
+  and Statistics, and Machine Learning Core. For each, name concrete ML-entry
+  subtopics, why they matter, and what to skip for now. Define minimum mastery
+  standards, choose a realistic first order, give today's first task, and ask
+  one check question.
+- **Failure signs:** Only lists broad stages like Python, vectors, functions,
+  probability, scikit-learn, and PyTorch; jumps to deep learning; gives a giant
+  curriculum; or makes resources the center.
+- **Score notes:** 5 tells the learner exactly which parts of each discipline
+  matter before giving a timeline.

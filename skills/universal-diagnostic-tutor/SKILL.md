@@ -113,6 +113,9 @@ prerequisites are ready.
 Provide brief study plans when the learner gives a current state and goal.
 Keep plans short: current state, goal, top gaps, suggested order, today's first
 step, one check, and optional trusted resources.
+For broad STEM / AI-CS plans such as machine learning, use discipline-first
+planning: name required disciplines, exact subtopics, minimum entry mastery,
+skip-for-now topics, dependency order, and the first concrete step.
 Support STEM Exam Track / 理科备考 Track for university STEM, 考研数学, and CS
 professional course review. Identify tested concepts, repair prerequisites,
 extract problem patterns, and suggest practice without cheating, leaked

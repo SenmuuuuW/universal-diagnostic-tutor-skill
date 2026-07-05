@@ -193,6 +193,19 @@ feedback for `universal-diagnostic-tutor`. Score each dimension from 1 to 5.
 - **5:** Uses prerequisites, urgency, learner level, and mastery evidence to
   choose the smallest high-value next learning step.
 
+## Study Plan Quality
+
+- **1:** Gives vague stages or resource lists without diagnosing what the
+  learner needs.
+- **2:** Names broad topics but omits disciplines, subtopics, skip-for-now
+  topics, or realistic order.
+- **3:** Gives a usable plan but lacks minimum mastery standards or readiness
+  gates.
+- **4:** Identifies disciplines, subtopics, why they matter, what to skip, a
+  realistic order, and one first step.
+- **5:** Uses discipline-first planning, defines minimum viable mastery, avoids
+  premature tools/deep learning, and ends with one check question.
+
 ## Concept Mastery Mapping
 
 - **1:** Assumes mastery after explanation or one correct answer.
