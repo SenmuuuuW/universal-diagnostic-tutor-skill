@@ -215,31 +215,27 @@ git pull
 
 ```text
 skills/universal-diagnostic-tutor/
+skills/tutor-*/
 ```
 
 同步到 agent 真正读取的位置。
 
 更新后建议新开一个 agent session，让它重新加载最新 instructions。
 
-## 如果你在 Codex 里想直接选功能入口
+## Codex 用户：直接选择 Tutor 入口
 
-如果你的 Codex / agent UI 支持 skill list 或 skill picker，可以直接选择
-`tutor-*` entrypoints：
+如果 Codex skill picker 里能看到 Tutor Study Plan、Tutor Exam Track、Tutor
+State Card、Tutor Visualize 等入口，就直接选择最贴近你任务的入口。
 
-- `tutor-learn-anything`：大目标学习，不知道从哪里开始。
-- `tutor-study-plan`：短学习计划。
-- `tutor-exam-track`：理科 / STEM / CS 备考。
-- `tutor-state-card`：生成或继续使用学习状态卡。
-- `tutor-resource-scan`：定位知识点和可信资源方向。
-- `tutor-visualize`：用图示、表格或流程图辅助理解。
-- `tutor-mistake-review`：错因分析。
-- `tutor-diagnose-gap`：先判断缺哪个知识点或方法。
+这些入口不是独立产品，而是同一个 Universal Diagnostic Tutor 的不同门。比如：
 
-如果你的环境只显示主 Skill，就选择 `universal-diagnostic-tutor`，然后手动输入
-`/study-plan`、`/exam-track`、`/state-card` 等文字快捷方式。不同客户端的 UI
-可能不一样，不要把这些名称理解成固定菜单按钮。
+- 想做学习计划：选 Tutor Study Plan。
+- 想备考：选 Tutor Exam Track。
+- 想保存进度：选 Tutor State Card。
+- 想用图理解：选 Tutor Visualize。
+- 不确定选哪个：选 Universal Diagnostic Tutor 或 Tutor Learn Anything。
 
-完整选择指南见 [COMMAND_SURFACE.md](COMMAND_SURFACE.md)。
+完整说明见 [COMMAND_SURFACE.md](COMMAND_SURFACE.md)。
 
 ## 10. 常用调用方式
 

@@ -1,108 +1,290 @@
-# Skill Entrypoints / Command Surface
+# Codex 技能入口使用教程
 
-## 1. 为什么要做这个？
+Universal Diagnostic Tutor 的 Command Surface / Skill Entrypoints 使用说明
 
-以前 `/study-plan`、`/exam-track`、`/state-card` 这些更像内部 prompt
-约定，不一定会出现在 Codex 的技能选择里。
+## 1. 现在 Codex 里能看到什么？
 
-V1.8.1 把常用能力拆成更清楚的 sub-skill entrypoints，方便用户在支持
-Skill discovery 的环境里选择。它们不是新的产品，也不是独立系统；它们只是进入
-Universal Diagnostic Tutor System 的不同门口。
+安装并同步后，Codex skill picker 里应该能看到：
 
-## 2. Main Skill vs Sub-skill
+- Tutor Visualize
+- Tutor Exam Track
+- Tutor State Card
+- Tutor Study Plan
+- Tutor Diagnose Gap
+- Tutor Resource Scan
+- Tutor Learn Anything
+- Tutor Mistake Review
+- Universal Diagnostic Tutor
 
-- `universal-diagnostic-tutor` = 主 Skill / orchestrator
-- `tutor-learn-anything` = 大目标学习入口
-- `tutor-study-plan` = 学习计划入口
-- `tutor-exam-track` = 理科备考入口
-- `tutor-state-card` = 学习状态卡入口
-- `tutor-resource-scan` = 可信资源入口
-- `tutor-visualize` = 可视化入口
-- `tutor-mistake-review` = 错题分析入口
-- `tutor-diagnose-gap` = 知识缺口诊断入口
+这些不是彼此独立的产品。它们是同一个 Universal Diagnostic Tutor system 的不同入口：
+一个主入口，加上一组更聚焦的学习任务入口。
 
-主 Skill 仍然是完整系统。`tutor-*` 文件夹是轻量 entrypoints，会指向同一套
-诊断、教学、检查、状态卡和资源使用规则。
+## 2. Main Skill 和 Tutor Entrypoints 的区别
 
-## 3. 在 Codex 里怎么用？
+`Universal Diagnostic Tutor` 是主 Skill / 总调度器，适合普通学习问题、概念讲解和综合诊断。
 
-如果你的 Codex UI 显示 skill list 或 slash skill picker，可以选择相关的
-`tutor-*` skill。
+`Tutor *` 是细分入口，适合你已经知道自己想做什么，比如做学习计划、错题分析、保存状态卡、找资源或用图理解。
 
-如果 UI 不显示直接的 sub-skill commands，可以在 skill picker / skills list
-里按名称寻找，例如 `tutor-study-plan` 或 `tutor-exam-track`。
+简单说：主 Skill 像总老师，Tutor Study Plan / Tutor Exam Track 这些像不同办公室的门。你可以从总老师开始，也可以直接进对应办公室。
 
-如果你的环境只支持主 Skill，仍然可以手动输入文字快捷方式：
+## 3. 什么时候用哪个？
+
+| Codex 里显示的入口 | 适合什么时候用 | 典型问题 |
+| --- | --- | --- |
+| Universal Diagnostic Tutor | 不确定选哪个、普通概念/题目讲解 | “两个向量平行是什么意思？” |
+| Tutor Learn Anything | 有一个很大的学习目标，不知道从哪里开始 | “我想学机器学习，但数学很弱。” |
+| Tutor Study Plan | 想要学习计划、复习安排、短期路线 | “我想系统入门机器学习，给我一个学习计划。” |
+| Tutor Exam Track | 大学理科/考研数学/CS 专业课备考 | “我高数级数判别法总不会选。” |
+| Tutor Diagnose Gap | 不知道自己到底卡在哪个知识点 | “我看答案懂，自己做不会。” |
+| Tutor Mistake Review | 已经做错了，想分析错因 | “我把平行向量理解成分量相等了。” |
+| Tutor State Card | 想保存进度、跨 chat 继续学习 | “帮我生成下次继续用的学习状态卡。” |
+| Tutor Resource Scan | 想找可信资源、课程、学习材料 | “我想系统补线代，有什么靠谱资源？” |
+| Tutor Visualize | 需要图像、图表、流程图辅助理解 | “画图解释为什么矩阵乘法是变换。” |
+
+## 4. 每个入口详细说明
+
+### Universal Diagnostic Tutor
+
+是什么：主 Tutor Skill / 总调度器。它会先判断学科、知识点、前置知识和当前卡点，再决定用解释、练习、错因分析、资源、图示还是状态卡。
+
+什么时候用：你只是想问一道题、一个概念，或者不确定该选哪个 Tutor 入口。
+
+不适合什么：不要把它当成只给最终答案的 homework bot，也不要期待它保存隐藏记忆。
+
+示例 prompt：
+
+```text
+两个向量平行是什么意思？我学过向量但总是和分量相等搞混。
+```
+
+### Tutor Learn Anything
+
+是什么：大目标学习入口。适合“我想学机器学习”“我想补线代”“我想学 AI/CS，但不知道从哪里开始”。
+
+它会触发 V1.8 Learning Architecture：
+
+```text
+Goal Clarification -> Goal Confirmation -> Knowledge Map -> Learning Path -> First Step
+```
+
+示例 prompt：
+
+```text
+我想学机器学习，但是数学很弱。我会一点 Python，目标是能看懂基础模型和做小项目。你先帮我判断从哪里开始。
+```
+
+### Tutor Study Plan
+
+是什么：学习计划入口。适合你已经有目标，想要一个短计划、复习安排或今天第一步。
+
+V1.8.2 之后，Study Plan 应该是 discipline-first：先拆学科，再给路线。尤其是机器学习、AI/CS、数据科学、算法、线代、统计这类大目标，不能只写“Python、线代、概率、PyTorch”。
+
+必须先拆：
+
+```text
+学科 -> 子知识点 -> 最低掌握标准 -> 暂时跳过 -> 顺序 -> 今天第一步
+```
+
+示例 prompt：
+
+```text
+我想系统入门机器学习，但数学基础比较弱。我会一点 Python，不是为了考试，是为了以后能看懂基础模型并做小项目。请给我一个学习计划。
+```
+
+### Tutor Exam Track
+
+是什么：理科 / STEM / AI-CS 备考入口。它会诊断弱点、识别题型线索、修复前置知识、分析错因并安排练习顺序。
+
+适合：
+
+- 高数 / 微积分
+- 线性代数
+- 概率统计
+- 离散数学
+- 大学物理
+- 数据结构
+- 算法
+- 计算机组成原理
+- 操作系统
+- 计算机网络
+- 机器学习基础
+
+不做：押题、作弊、泄题、保证提分、预测考试。
+
+示例 prompt：
+
+```text
+我准备考研数学，线代很弱，先从哪里补？
+```
+
+### Tutor Diagnose Gap
+
+是什么：知识缺口诊断入口。适合你感觉“看答案懂，自己做不会”，但不知道到底缺什么。
+
+它会诊断：
+
+- 概念缺口
+- 符号缺口
+- 前置知识缺口
+- 方法缺口
+- 证明缺口
+- 迁移缺口
+- 图像直觉缺口
+
+示例 prompt：
+
+```text
+这道级数题我看答案懂，自己做不会。帮我判断我到底缺什么。
+```
+
+### Tutor Mistake Review
+
+是什么：错因分析入口。它分析错误思路，而不是只告诉你正确答案。
+
+它会看：表层错误是什么、底层误解是什么、为什么这个错法看起来合理、怎么修复、下一道相似题怎么避免。
+
+示例 prompt：
+
+```text
+我把两个平行向量的每个分量都设成相等了，帮我分析错因。
+```
+
+### Tutor State Card
+
+是什么：学习状态卡入口。适合你想保存当前学习状态，或者换 chat 后继续。
+
+可以生成：
+
+- Learning State Card
+- Learner Profile Card
+- Learning Task Card
+
+重点：这不是隐藏记忆。它是用户可复制、可保存、可粘贴的学习状态。
+
+示例 prompt：
+
+```text
+帮我生成一个下次继续学习机器学习时可以直接复制使用的 Learning State Card。
+```
+
+### Tutor Resource Scan
+
+是什么：可信资源入口。它先做 topic scan，再给资源建议。
+
+它不应该乱甩链接，也不应该编造来源。好的回答会先说明你要学的主题属于哪个学科 / 模块 / 核心概念，再说明什么资源适合补哪个缺口。
+
+示例 prompt：
+
+```text
+我想系统补线性代数，尤其是向量、矩阵和矩阵乘法，有什么靠谱资源？
+```
+
+### Tutor Visualize
+
+是什么：可视化理解入口。适合文字解释不够、你需要图像或结构来理解的时候。
+
+适合：
+
+- 函数图像
+- 几何图
+- 向量关系
+- 矩阵变换
+- 流程图
+- 概念图
+- 算法流程
+
+它不会承诺不存在的真实图像工具。如果当前环境不能生成图片，它可以用文字图、表格、Mermaid 或简洁描述来辅助理解。
+
+示例 prompt：
+
+```text
+帮我用图解释为什么两个向量平行不是每个分量相等。
+```
+
+## 5. 推荐使用顺序
+
+如果你是大目标：
+
+1. Tutor Learn Anything
+2. Tutor Study Plan
+3. Universal Diagnostic Tutor
+4. Tutor Visualize / Tutor Diagnose Gap / Tutor Mistake Review
+5. Tutor State Card
+
+如果你是备考：
+
+1. Tutor Exam Track
+2. Tutor Diagnose Gap
+3. Tutor Mistake Review
+4. Tutor State Card
+
+如果你只是问一个概念：
+
+1. Universal Diagnostic Tutor
+2. Tutor Visualize if needed
+3. Tutor State Card if continuing later
+
+## 6. Codex 里怎么调用？
+
+在 Codex 里，优先从 skill picker 里选择可见的技能入口。你可能会看到这样的显示名：
+
+- Tutor Study Plan
+- Tutor Exam Track
+- Tutor State Card
+- Tutor Visualize
+
+不同 Codex UI 的显示方式可能不同，直接 slash 名称也可能不同。不要假设 `/study-plan` 一定是 Codex 原生命令。
+
+`/study-plan` 仍然是 Tutor 能理解的文字快捷方式；如果你的 Codex 里已经能看到 Tutor Study Plan / `tutor-study-plan`，优先直接选择这个入口。
+
+## 7. 普通聊天 AI 怎么办？
+
+普通 ChatGPT / 豆包 / DeepSeek / Kimi / Qwen 聊天窗口不会显示这些 Codex skill picker entries。
+
+普通聊天请使用 Lite Prompt：
+
+- [USER_GUIDE.md](USER_GUIDE.md)
+- [platforms/generic-chat/TUTOR_LITE_PROMPT.md](platforms/generic-chat/TUTOR_LITE_PROMPT.md)
+
+复制 Lite Prompt 后，可以手动输入：
 
 ```text
 /study-plan ...
 /exam-track ...
 /state-card ...
 /visualize ...
-/mistake-review ...
 ```
 
-不同 Codex 客户端、Claude Code-style agents、IDE agents 和普通聊天平台的 UI
-不完全一样，所以这里不承诺某个固定按钮或菜单名称。
+这些是 prompt shortcuts，不是普通聊天平台的真实菜单命令。
 
-## 4. 选择哪个入口？
+## 8. 常见问题
 
-| 你想做什么 | 选哪个 |
-| --- | --- |
-| 我有一个很大的学习目标，不知道从哪里开始 | `tutor-learn-anything` |
-| 我想要短学习计划 | `tutor-study-plan` |
-| 我要备考高数/线代/概率/CS 专业课 | `tutor-exam-track` |
-| 我想保存/继续学习状态 | `tutor-state-card` |
-| 我想找可信资源 | `tutor-resource-scan` |
-| 我需要函数图像/几何图/流程图辅助理解 | `tutor-visualize` |
-| 我做错题了，想分析错因 | `tutor-mistake-review` |
-| 我不知道自己到底缺哪个知识点 | `tutor-diagnose-gap` |
-| 我只是问一道题或一个概念 | `universal-diagnostic-tutor` |
+**为什么我看不到 Tutor Study Plan？**
 
-## 5. 例子
-
-Machine learning broad goal:
+检查 `skills/tutor-study-plan/` 是否已经同步到当前 Codex 实际读取的 skills 目录，例如：
 
 ```text
-tutor-learn-anything: 我想学机器学习，但是数学很弱，不知道从哪里开始。
+~/.codex/skills/tutor-study-plan/SKILL.md
 ```
 
-Linear algebra study plan:
+只同步 `skills/universal-diagnostic-tutor/` 不够；V1.8.1+ 的入口还需要同步所有 `skills/tutor-*` 文件夹。同步后重启 Codex 或打开新 session。
 
-```text
-tutor-study-plan: 我想系统补线代，矩阵那章很乱。帮我做一个短计划。
-```
+**`/study-plan` 为什么不弹出？**
 
-Exam track:
+`/study-plan` 是 Tutor 能理解的文字快捷方式，不一定是 Codex 原生命令。Codex 里如果已经显示 Tutor Study Plan，请优先选择 Tutor Study Plan。
 
-```text
-tutor-exam-track: 我明天考高数，级数判别法不会选，帮我诊断。
-```
+**这些 skill 是不是彼此独立？**
 
-State card:
+不是。它们是同一个 Universal Diagnostic Tutor system 的薄入口，核心教学逻辑仍然共享。
 
-```text
-tutor-state-card: 帮我生成下次继续用的 Learning State Card。
-```
+**普通用户应该选哪个？**
 
-Visualize vector:
+如果不确定，选 Universal Diagnostic Tutor。目标很大、不知道从哪里开始时，选 Tutor Learn Anything。
 
-```text
-tutor-visualize: 帮我画图理解两个向量平行为什么不是每个分量相等。
-```
+**会不会有隐藏记忆？**
 
-Mistake review:
+不会。跨 chat 继续学习请用 Tutor State Card 生成可复制的状态卡。
 
-```text
-tutor-mistake-review: 我把条件概率直接除以总样本数了，帮我分析错因。
-```
+**能不能押题/保证提分？**
 
-## 6. 注意事项
-
-- 这些 sub-skills 是 entrypoints，不是独立产品。
-- 主 tutor 逻辑仍然共享在 `skills/universal-diagnostic-tutor/`。
-- 不要声称有隐藏记忆；跨 chat 继续用 Learning State Card。
-- 不承诺提分、预测考试或押题。
-- 不帮助作弊，不使用泄露材料。
-- 普通聊天平台可能不会显示这些菜单命令；使用 Lite Prompt 或手动输入
-  `/study-plan`、`/exam-track` 等文字快捷方式即可。
+不能。Tutor Exam Track 做的是诊断、概念修复、题型识别和练习顺序，不做押题、作弊、泄题或提分保证。

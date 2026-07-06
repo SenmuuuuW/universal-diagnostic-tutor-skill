@@ -249,6 +249,13 @@ Future changes must preserve the core identity of the skill:
 - If adding a new user-facing capability later, decide whether it needs a
   protocol reference, prompt shortcut, sub-skill entrypoint, and README /
   `COMMAND_SURFACE.md` documentation.
+- README should only summarize the command surface. `COMMAND_SURFACE.md` is
+  the canonical detailed Chinese tutorial for visible Codex Tutor entrypoints.
+- Keep Chinese user-facing entrypoint explanations practical: what the user
+  sees, when to choose it, and one example prompt.
+- Do not promise exact Codex UI slash command behavior. `/study-plan` and
+  similar names remain Tutor text shortcuts unless the host UI exposes them.
+- Keep `tutor-*` entrypoints as thin wrappers around the main Tutor system.
 - V1.8 is a learning architecture layer, not a new tool, assignment generator,
   grading system, course generator, graphing tool, database, or hidden-memory
   system.

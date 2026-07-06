@@ -121,6 +121,28 @@ skills/tutor-*/
 
 如果你用 V1.5 的 Learning State Card 跨 chat 继续学习，请把卡片复制到新 session；它不会通过 `git pull` 或 Skill 安装自动变成隐藏记忆。
 
+## Tutor entrypoints 不显示怎么办？
+
+如果 Codex 里看不到 Tutor Study Plan、Tutor Exam Track、Tutor State Card 等入口，先确认文件夹是否存在于当前 Codex 实际读取的 skills 目录。例如：
+
+```text
+~/.codex/skills/tutor-study-plan/SKILL.md
+```
+
+只同步下面这个主 Skill 不够：
+
+```text
+skills/universal-diagnostic-tutor/
+```
+
+V1.8.1+ 的 Codex entrypoints 还需要同步所有：
+
+```text
+skills/tutor-*/
+```
+
+把这些 `skills/tutor-*` 文件夹复制到当前 Codex skills 目录后，重启 Codex 或打开新的 agent session，让 skill picker 重新加载。
+
 ## 为什么现在不是 npx 一键安装？
 
 这个项目目前是 Markdown-based Skill，不是 npm package。真正的 `npx` 安装器需要 package setup、安装脚本、npm 发布、路径检测、跨平台兼容和额外维护。

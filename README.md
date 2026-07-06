@@ -90,26 +90,24 @@ flowchart LR
 | Quality system | EVALS / rubric / failure taxonomy / feedback loop |
 | Platform adapters | Full Skill / Custom Bot / Lite Prompt / API Prompt |
 
-## 🧭 Skill Entrypoints
+## 🧭 Codex Skill Entrypoints
 
-V1.8.1 增加了更清楚的 command surface：主 Skill 仍然是
-`universal-diagnostic-tutor`，同时提供轻量 `tutor-*` sub-skill entrypoints。
-如果你的 Codex / agent 环境支持 skill discovery，可以直接选择对应入口；如果不支持，
-仍然可以使用主 Skill 或手动输入 `/study-plan` 这类文字快捷方式。
+Codex users can now select focused Tutor entrypoints such as Tutor Study Plan,
+Tutor Exam Track, Tutor State Card, and Tutor Visualize.
 
-| Entrypoint | Use when |
+| Need | Use |
 | --- | --- |
-| `universal-diagnostic-tutor` | general diagnosis-first tutoring |
-| `tutor-learn-anything` | broad learning goal |
-| `tutor-study-plan` | brief study plan |
-| `tutor-exam-track` | STEM / exam review |
-| `tutor-diagnose-gap` | identify missing concept/method |
-| `tutor-mistake-review` | analyze wrong reasoning |
-| `tutor-state-card` | continue across chats |
-| `tutor-resource-scan` | topic scan + trusted resources |
-| `tutor-visualize` | visual learning support |
+| General tutoring | Universal Diagnostic Tutor |
+| Big learning goal | Tutor Learn Anything |
+| Study plan | Tutor Study Plan |
+| Exam review | Tutor Exam Track |
+| Gap diagnosis | Tutor Diagnose Gap |
+| Mistake analysis | Tutor Mistake Review |
+| Learning continuity | Tutor State Card |
+| Resources | Tutor Resource Scan |
+| Visual explanation | Tutor Visualize |
 
-完整说明见 [COMMAND_SURFACE.md](COMMAND_SURFACE.md)。
+See [COMMAND_SURFACE.md](COMMAND_SURFACE.md) for the full Chinese tutorial.
 
 ## 🧭 V1.8 Learning Architecture Layer
 

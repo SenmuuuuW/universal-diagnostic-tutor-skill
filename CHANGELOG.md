@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.8.3 - 2026-07-06
+
+### Changed In v1.8.3
+
+- Improved Chinese documentation for Codex skill entrypoints.
+- Expanded `COMMAND_SURFACE.md` into the detailed second-level tutorial for
+  visible Tutor entrypoints.
+- Added a compact README entrypoint summary.
+- Added USER_GUIDE and GROUP_GUIDE notes for choosing visible Tutor entries.
+- Added INSTALL troubleshooting for missing `tutor-*` skills.
+- Clarified PORTABILITY wording for Codex skill entries, custom bots, and
+  ordinary chat shortcuts.
+
+### Unchanged In v1.8.3
+
+- No core behavior changes, new skills, teaching protocols, scripts, website,
+  API code, package setup, database, hidden memory, RAG/vector DB, PDFs,
+  secrets, infrastructure, source packs, assignment/grading/course generation,
+  graphing tools, or new integrations.
+
 ## v1.8.2 - 2026-07-05
 
 ### Changed In v1.8.2

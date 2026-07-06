@@ -22,6 +22,10 @@ Skill. They make study plans, exam track, state cards, resource scans,
 visualization, mistake review, gap diagnosis, and broad-goal learning easier
 to select without duplicating the main Tutor logic.
 
+When installed, Codex may show user-facing names such as Tutor Study Plan,
+Tutor Exam Track, Tutor State Card, and Tutor Visualize. These are focused
+entrypoints into the same Tutor system.
+
 Best for:
 
 - OpenAI Codex / Codex-style Skill workflows.
@@ -45,9 +49,9 @@ Coze / Doubao-style bots. These platforms may allow custom instructions and
 optional knowledge files, but they do not automatically behave like a Codex
 Skill.
 
-Custom GPTs, Gems, Projects, and bots do not necessarily show `tutor-*` as menu
-commands. Use their instruction field and ask with natural language or manual
-shortcuts such as `/study-plan`.
+Custom GPTs, Gems, Projects, and bots do not necessarily show Tutor Study Plan
+or other `tutor-*` entries as menu commands. Use their instruction field and
+ask with natural language or manual shortcuts such as `/study-plan`.
 
 Best for:
 
@@ -70,7 +74,7 @@ but it cannot automatically access the full reference system.
 For broad goals, it should still clarify and confirm before giving a small
 map and one next step.
 Ordinary chat platforms should use Lite Prompt shortcuts rather than expecting
-discoverable `tutor-*` skill entries.
+discoverable Tutor Study Plan / `tutor-*` skill entries.
 
 ### API Prompt Version
 
