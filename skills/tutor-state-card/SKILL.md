@@ -1,6 +1,6 @@
 ---
 name: tutor-state-card
-description: Generate or continue from visible Learning State Cards, Learner Profile Cards, and Learning Task Cards. Use when the learner asks for /state-card, wants to continue later, moves across chats or platforms, pastes a card, or asks for a compact checkpoint without hidden memory.
+description: Generate or continue from visible Learning State Cards, Learner Profile Cards, and Learning Task Cards. Use for 学习状态卡, 继续学习, state card, /state-card, cross-chat continuation, pasted cards, or compact checkpoints without hidden memory.
 ---
 
 # Tutor State Card

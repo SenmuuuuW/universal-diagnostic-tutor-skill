@@ -1,17 +1,72 @@
 # Claude Code-Style Usage
 
-Use the full `skills/universal-diagnostic-tutor/` directory if your environment
-supports Skill folders or repo-backed project instructions.
+Use the full `skills/universal-diagnostic-tutor/` directory if your Claude
+Code-style environment supports Skill folders or repo-backed project
+instructions.
 
-If your environment does not support native Skills, adapt `SKILL.md` plus a
-small set of relevant references as project instructions. The behavior depends
-on how that environment loads and prioritizes instructions.
+Exact discovery behavior varies by Claude Code setup, project configuration,
+and whether the environment supports native Skills, custom instruction folders,
+or project instructions. Do not assume every client shows the same skill picker
+or slash UI.
+
+## What To Install Or Reference
+
+For the strongest setup, keep the main Skill folder and focused entrypoint
+folders together in the location your environment reads:
+
+```text
+skills/universal-diagnostic-tutor/
+skills/tutor-study-plan/
+skills/tutor-exam-track/
+skills/tutor-state-card/
+skills/tutor-resource-scan/
+skills/tutor-visualize/
+skills/tutor-mistake-review/
+skills/tutor-diagnose-gap/
+skills/tutor-learn-anything/
+```
+
+Depending on your environment, these may be copied, symlinked, or referenced
+from a project instructions location. Follow your tool's own documentation for
+the exact path.
+
+## Focused Entrypoints
+
+- `tutor-learn-anything`: broad learning goals and first path.
+- `tutor-study-plan`: brief study plans and review order.
+- `tutor-exam-track`: STEM / AI-CS exam review without overclaims.
+- `tutor-state-card`: Learning State / Profile / Task Cards.
+- `tutor-resource-scan`: topic scan and trusted resource guidance.
+- `tutor-visualize`: visual explanations, diagrams, tables, and traces.
+- `tutor-mistake-review`: wrong reasoning and misconception repair.
+- `tutor-diagnose-gap`: identify missing concept, notation, method, proof, or transfer.
+
+For a user-facing overview, see [../../COMMAND_SURFACE.md](../../COMMAND_SURFACE.md).
+
+## If Native Skill Discovery Is Not Available
+
+If your environment does not expose the focused entrypoints, adapt
+`skills/universal-diagnostic-tutor/SKILL.md` plus a small set of relevant
+references as project instructions.
+
+Ordinary text shortcuts still work as intent signals when included in the
+prompt, such as:
+
+```text
+/learn-anything 我想学机器学习，但是数学很弱，不知道从哪里开始。
+/study-plan 我想系统入门机器学习，但数学弱。给我一个学习计划。
+/exam-track 我高数级数判别法总不会选，帮我诊断。
+/state-card 帮我生成下次继续用的学习状态卡。
+```
+
+These are prompt shortcuts, not guaranteed native slash commands.
 
 ## Suggested Files
 
 - `skills/universal-diagnostic-tutor/SKILL.md`
 - `skills/universal-diagnostic-tutor/references/skill_routing_architecture.md`
 - `skills/universal-diagnostic-tutor/references/trigger_mode_matrix.md`
+- `skills/universal-diagnostic-tutor/references/brief_study_plan_protocol.md`
 - `skills/universal-diagnostic-tutor/references/learning_efficiency_optimization_loop.md`
 - `skills/universal-diagnostic-tutor/references/learning_state_card_protocol.md`
 - `skills/universal-diagnostic-tutor/references/no_internal_tool_leakage_protocol.md`
@@ -22,6 +77,8 @@ on how that environment loads and prioritizes instructions.
   references.
 - Project-instruction adaptation is useful but may be weaker than a full Skill
   workflow.
+- If focused entrypoints do not appear, confirm the `skills/tutor-*` folders
+  were copied or referenced alongside the main Skill folder.
 - After updating the repo or copied Skill directory, open a new session or
   reload instructions if the agent still behaves like an older version.
 - Use Learning State Cards when continuing across chats or sessions.

@@ -226,9 +226,10 @@ Future changes must preserve the core identity of the skill:
   keep the tone serious, trustworthy, and not childish.
 - Do not let README polish alter core Skill behavior, teaching protocols,
   source-pack scope, or repository infrastructure.
-- Slash-style flows such as `/tutor`, `/study-plan`, `/exam-track`,
-  `/state-card`, `/resource-scan`, and `/visualize` are user-facing intent
-  shortcuts, not actual shell commands.
+- Slash-style flows such as `/tutor`, `/learn-anything`, `/diagnose-gap`,
+  `/study-plan`, `/exam-track`, `/state-card`, `/resource-scan`, `/visualize`,
+  and `/mistake-review` are user-facing intent shortcuts, not actual shell
+  commands.
 - Keep cards visible and user-controlled. Learner Profile Cards, Learning Task
   Cards, and Learning State Cards must never imply hidden persistence,
   databases, accounts, or automatic memory.
@@ -256,6 +257,12 @@ Future changes must preserve the core identity of the skill:
 - Do not promise exact Codex UI slash command behavior. `/study-plan` and
   similar names remain Tutor text shortcuts unless the host UI exposes them.
 - Keep `tutor-*` entrypoints as thin wrappers around the main Tutor system.
+- Entrypoint descriptions should include concise Chinese trigger terms when the
+  primary user intent is likely Chinese.
+- When adding a new `tutor-*` entrypoint, update the main `SKILL.md` router,
+  `COMMAND_SURFACE.md`, `USER_GUIDE.md` if relevant, and platform adapters if
+  shortcut behavior changes.
+- Generated local exports should not be committed unless explicitly intended.
 - V1.8 is a learning architecture layer, not a new tool, assignment generator,
   grading system, course generator, graphing tool, database, or hidden-memory
   system.

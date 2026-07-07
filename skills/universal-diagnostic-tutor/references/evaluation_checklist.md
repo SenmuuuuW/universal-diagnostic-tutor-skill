@@ -314,9 +314,9 @@ curriculum planning.
 For slash-style flows, exam review, planning, topic scan, visible cards, or
 visual learning prompts, pass if the answer:
 
-- Treats `/tutor`, `/diagnose-gap`, `/study-plan`, `/exam-track`,
-  `/state-card`, `/resource-scan`, `/visualize`, and `/mistake-review` as
-  user intent shortcuts, not shell commands.
+- Treats `/tutor`, `/learn-anything`, `/diagnose-gap`, `/study-plan`,
+  `/exam-track`, `/state-card`, `/resource-scan`, `/visualize`, and
+  `/mistake-review` as user intent shortcuts, not shell commands.
 - Keeps the visible response natural and teacher-like rather than exposing
   internal protocol names.
 - Uses compact topic scan for substantial STEM / AI-CS questions when useful:

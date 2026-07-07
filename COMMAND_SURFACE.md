@@ -233,9 +233,9 @@ V1.8.2 之后，Study Plan 应该是 discipline-first：先拆学科，再给路
 - Tutor State Card
 - Tutor Visualize
 
-不同 Codex UI 的显示方式可能不同，直接 slash 名称也可能不同。不要假设 `/study-plan` 一定是 Codex 原生命令。
+不同 Codex UI 的显示方式可能不同，直接 slash 名称也可能不同。不要假设 `/study-plan` 或 `/learn-anything` 一定是 Codex 原生命令。
 
-`/study-plan` 仍然是 Tutor 能理解的文字快捷方式；如果你的 Codex 里已经能看到 Tutor Study Plan / `tutor-study-plan`，优先直接选择这个入口。
+`/study-plan` 和 `/learn-anything` 仍然是 Tutor 能理解的文字快捷方式；如果你的 Codex 里已经能看到 Tutor Study Plan / `tutor-study-plan` 或 Tutor Learn Anything / `tutor-learn-anything`，优先直接选择对应入口。
 
 ## 7. 普通聊天 AI 怎么办？
 
@@ -249,6 +249,7 @@ V1.8.2 之后，Study Plan 应该是 discipline-first：先拆学科，再给路
 复制 Lite Prompt 后，可以手动输入：
 
 ```text
+/learn-anything ...
 /study-plan ...
 /exam-track ...
 /state-card ...
@@ -271,7 +272,7 @@ V1.8.2 之后，Study Plan 应该是 discipline-first：先拆学科，再给路
 
 **`/study-plan` 为什么不弹出？**
 
-`/study-plan` 是 Tutor 能理解的文字快捷方式，不一定是 Codex 原生命令。Codex 里如果已经显示 Tutor Study Plan，请优先选择 Tutor Study Plan。
+`/study-plan` 和 `/learn-anything` 是 Tutor 能理解的文字快捷方式，不一定是 Codex 原生命令。Codex 里如果已经显示 Tutor Study Plan 或 Tutor Learn Anything，请优先选择对应入口。
 
 **这些 skill 是不是彼此独立？**
 

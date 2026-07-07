@@ -1,6 +1,6 @@
 ---
 name: tutor-diagnose-gap
-description: Diagnose the learner's missing concept, notation, prerequisite, method, proof idea, visual intuition, or transfer skill before teaching. Use when the learner asks for /diagnose-gap, says they understand examples but cannot solve new problems, feels stuck, or wants to know what knowledge gap is blocking them.
+description: Diagnose the learner's missing concept, notation, prerequisite, method, proof idea, visual intuition, or transfer skill before teaching. Use for 诊断卡点, 知识缺口, diagnose gap, /diagnose-gap, stuck learners, or examples understood but new problems unsolved.
 ---
 
 # Tutor Diagnose Gap

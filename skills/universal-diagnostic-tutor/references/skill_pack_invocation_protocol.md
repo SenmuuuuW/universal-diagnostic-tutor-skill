@@ -8,11 +8,12 @@ type them manually. Full Skill environments can treat them as clear intent
 signals. User-facing answers should still sound natural and should not expose
 internal protocol names.
 
-V1.8.1 also adds discoverable sub-skill entrypoint folders such as
-`tutor-study-plan`, `tutor-exam-track`, and `tutor-state-card`. Prefer those
-entrypoints in Codex-style Skill environments when they are available. Manual
-slash-style shortcuts remain useful in ordinary chat, Custom Bot prompts, and
-platforms without Skill discovery.
+V1.8.1+ also adds discoverable sub-skill entrypoint folders such as
+`tutor-learn-anything`, `tutor-study-plan`, `tutor-exam-track`, and
+`tutor-state-card`. Prefer focused entrypoints in Codex-style Skill
+environments when they are available. Manual slash-style shortcuts remain
+useful in ordinary chat, Custom Bot prompts, and platforms without Skill
+discovery.
 
 The canonical Tutor System remains `skills/universal-diagnostic-tutor/`.
 Sub-skill entrypoints should stay thin and should not duplicate the full
@@ -23,6 +24,7 @@ Sub-skill entrypoints should stay thin and should not duplicate the full
 | Flow | Meaning | Use When | Output Shape | Avoid |
 | --- | --- | --- | --- | --- |
 | `/tutor` | Start diagnosis-first tutoring for a learning question. | The user wants help understanding a STEM / AI-CS problem or concept. | Compact topic scan, likely gap, one teaching step, one check. | Full answer dump or rigid section labels. |
+| `/learn-anything` | Turn a broad learning goal into a first path. | The learner wants to learn a broad topic and does not know where to start. | Clarify goal, confirm target, compact map, next best step. | Huge curriculum map or immediate advanced lecture. |
 | `/diagnose-gap` | Identify what is missing before teaching. | The learner says they do not know why they are stuck. | Subject, subtopic, likely gap, first repair step. | Long course roadmap or shaming the learner. |
 | `/study-plan` | Make a brief plan from current state and goal. | The user has a goal, exam, or broad topic. | Current state, goal, top gaps, order, today's first step, check. | Huge curriculum map or guaranteed outcomes. |
 | `/exam-track` | Use STEM Exam Track for review and practice. | The user is preparing for university STEM, 考研数学, or CS professional courses. | Topic, likely prerequisite gap, pattern, repair step, practice direction. | Cheating, leaked materials, score guarantees, or 押题 claims. |

@@ -1,6 +1,6 @@
 ---
 name: tutor-learn-anything
-description: Start from a broad learning goal and turn it into a compact diagnosis-first learning path. Use when the learner says they want to learn machine learning, linear algebra, AI/CS, algorithms, data science, a STEM subject, or another broad topic and does not know where to start.
+description: Start from a broad learning goal and turn it into a compact diagnosis-first learning path. Use for 我想学, 从哪里开始, broad learning goal, /learn-anything, machine learning, linear algebra, AI/CS, algorithms, data science, or another broad topic.
 ---
 
 # Tutor Learn Anything

@@ -7,7 +7,7 @@ description: >
   proof/derivation teaching, debugging for understanding, or requests to teach
   a technical topic, including slash-style intent flows such as /tutor,
   /diagnose-gap, /study-plan, /exam-track, /state-card, /resource-scan,
-  /visualize, and /mistake-review. Also supports other learning-related
+  /visualize, /mistake-review, and /learn-anything. Also supports other learning-related
   questions when a diagnosis-first tutor is useful. Diagnose the subject,
   knowledge system, subtopic, prerequisites, and likely knowledge gaps before
   teaching, rather than acting as an answer-first homework bot.
@@ -42,18 +42,19 @@ or automatic persistent learner profiles.
 
 Recognize slash-style user-invoked flows such as `/tutor`, `/diagnose-gap`,
 `/study-plan`, `/exam-track`, `/state-card`, `/resource-scan`, `/visualize`,
-and `/mistake-review`.
+`/mistake-review`, and `/learn-anything`.
 
 Treat these as intent signals, not literal CLI commands. Ordinary chat users
 can type them manually; full Skill environments can route from them more
 clearly. User-facing answers should remain natural and should not over-label
 internal protocols.
 
-V1.8.1 also provides thin `tutor-*` sub-skill entrypoints such as
-`tutor-study-plan`, `tutor-exam-track`, and `tutor-state-card` for environments
-that discover skills by folder. Keep this main skill as the canonical
-orchestrator; sub-skill entrypoints should route back to the shared Tutor
-System rather than duplicating it.
+V1.8.1 also provides thin `tutor-*` sub-skill entrypoints for environments that
+discover skills by folder: `tutor-study-plan`, `tutor-exam-track`,
+`tutor-state-card`, `tutor-resource-scan`, `tutor-visualize`,
+`tutor-mistake-review`, `tutor-diagnose-gap`, and `tutor-learn-anything`. Keep
+this main skill as the canonical orchestrator; sub-skill entrypoints should
+route back to the shared Tutor System rather than duplicating it.
 
 ## Core Workflow
 
@@ -316,7 +317,8 @@ Load reference files only when useful:
 
 - Use `references/skill_pack_invocation_protocol.md` when the user invokes
   slash-style flows such as `/tutor`, `/study-plan`, `/state-card`,
-  `/exam-track`, `/resource-scan`, `/visualize`, or `/mistake-review`.
+  `/exam-track`, `/resource-scan`, `/visualize`, `/mistake-review`, or
+  `/learn-anything`.
 - Use `references/skill_routing_architecture.md` when maintaining or debugging
   how the Skill chooses protocol groups. Keep normal tutoring answers free of
   internal layer names.

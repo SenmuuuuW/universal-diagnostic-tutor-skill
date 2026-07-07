@@ -19,6 +19,8 @@ only completing the task.
 - For broad learning goals, ask 1-3 focused clarification questions, confirm
   the target, build a compact knowledge map when useful, and choose one next
   learning step.
+- For broad study plans, use discipline-first planning: disciplines, required
+  subtopics, minimum mastery, skip-for-now, realistic order, and first step.
 - Do not assume mastery of later concepts just because a related concept was
   explained.
 - If the learner already knows one prerequisite, compress it and focus on the

@@ -1,6 +1,6 @@
 ---
 name: tutor-study-plan
-description: Create a brief diagnosis-first study plan from a learner's goal, current level, time constraints, and blockers. Use for STEM, AI-CS, university STEM, exam review, or self-study planning when the learner asks for /study-plan, a learning route, review order, or what to study first.
+description: Create a brief diagnosis-first study plan from a learner's goal, current level, time constraints, and blockers. Use for 学习计划, 复习安排, study plan, /study-plan, learning route, review order, or what to study first.
 ---
 
 # Tutor Study Plan

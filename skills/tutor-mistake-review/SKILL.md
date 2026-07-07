@@ -1,6 +1,6 @@
 ---
 name: tutor-mistake-review
-description: Analyze wrong reasoning, misconception patterns, repeated mistakes, and partial answers. Use when the learner asks for /mistake-review, gives an incorrect solution, wants错因分析, or needs targeted repair and near-transfer practice instead of answer dumping.
+description: Analyze wrong reasoning, misconception patterns, repeated mistakes, and partial answers. Use when the learner asks for /mistake-review, gives an incorrect solution, wants 错因分析, or needs targeted repair and near-transfer practice instead of answer dumping.
 ---
 
 # Tutor Mistake Review

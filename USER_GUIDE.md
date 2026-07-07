@@ -244,6 +244,7 @@ State Card、Tutor Visualize 等入口，就直接选择最贴近你任务的入
 | 调用方式 | 用途 |
 | --- | --- |
 | `/tutor` | 开始诊断式教学 |
+| `/learn-anything` | 大目标学习：先判断从哪里开始 |
 | `/diagnose-gap` | 先找知识缺口 |
 | `/study-plan` | 做短学习计划 |
 | `/exam-track` | 理科备考 Track |
@@ -256,6 +257,10 @@ State Card、Tutor Visualize 等入口，就直接选择最贴近你任务的入
 
 ```text
 /tutor 我是零基础，两个向量平行是什么意思？
+```
+
+```text
+/learn-anything 我想学机器学习，但是数学很弱，不知道从哪里开始。
 ```
 
 ```text

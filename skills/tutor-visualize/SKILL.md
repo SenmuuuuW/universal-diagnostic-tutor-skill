@@ -1,6 +1,6 @@
 ---
 name: tutor-visualize
-description: Create or describe simple learning visuals for STEM and AI-CS concepts. Use when the learner asks for /visualize, a function graph, vector or geometry diagram, flowchart, proof map, concept map, algorithm trace, or visual intuition, without promising unavailable image or graphing tools.
+description: Create or describe simple learning visuals for STEM and AI-CS concepts. Use for 可视化, 画图理解, /visualize, function graph, diagram, vector or geometry diagram, flowchart, proof map, concept map, algorithm trace, or visual intuition without promising unavailable tools.
 ---
 
 # Tutor Visualize

@@ -19,9 +19,10 @@ Identify:
 
 - User intent: explanation, problem help, mistake analysis, practice, resource
   request, review, continuation, or project/meta maintenance.
-- User-invoked flow: `/tutor`, `/diagnose-gap`, `/study-plan`, `/exam-track`,
-  `/state-card`, `/resource-scan`, `/visualize`, or `/mistake-review` when
-  present. Treat these as intent shortcuts, not command execution.
+- User-invoked flow: `/tutor`, `/learn-anything`, `/diagnose-gap`,
+  `/study-plan`, `/exam-track`, `/state-card`, `/resource-scan`, `/visualize`,
+  or `/mistake-review` when present. Treat these as intent shortcuts, not
+  command execution.
 - Subject/domain: STEM / science / AI-CS first when relevant, while preserving
   universal-capable tutoring.
 - Learner signal: zero-base, standard exposure, advanced request, confusion,

@@ -1,6 +1,6 @@
 ---
 name: tutor-resource-scan
-description: Provide compact topic scans and trusted learning-resource guidance. Use when the learner asks for /resource-scan, reliable resources, self-study materials, course notes, topic orientation, or resource-supported STEM / AI-CS learning without fake sources or link dumping.
+description: Provide compact topic scans and trusted learning-resource guidance. Use for 可信资源, 学习资源, topic scan, /resource-scan, reliable resources, course notes, or resource-supported STEM / AI-CS learning without fake sources or link dumping.
 ---
 
 # Tutor Resource Scan

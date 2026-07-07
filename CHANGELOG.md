@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.8.4 - 2026-07-07
+
+### Changed In v1.8.4
+
+- Added Chinese trigger terms to `tutor-*` entrypoint descriptions.
+- Added `/learn-anything` prompt shortcut for broad learning goals.
+- Updated the main `SKILL.md` router to list all eight `tutor-*` entrypoints
+  and all text shortcuts.
+- Improved Claude Code-style usage documentation.
+- Propagated discipline-first study-plan guidance to lagging adapters.
+- Fixed the `tutor-mistake-review` description typo.
+- Ignored generated local `outputs/user-guide/` artifacts.
+
+### Unchanged In v1.8.4
+
+- No core teaching behavior changes, new protocols, practice generation,
+  grading, readiness gates, scripts, website, API code, package setup,
+  database, hidden memory, RAG/vector DB, PDFs, secrets, backend
+  infrastructure, graphing tools, assignment/course generation, source-pack
+  changes, or new tool integrations.
+
 ## v1.8.3 - 2026-07-06
 
 ### Changed In v1.8.3
