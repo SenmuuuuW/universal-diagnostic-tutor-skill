@@ -114,6 +114,15 @@ on. See [EXAMPLES.md](EXAMPLES.md) for concise comparisons and teaching flows.
 
 [![Star History Chart](https://api.star-history.com/svg?repos=SenmuuuuW/universal-diagnostic-tutor-skill&type=Date)](https://www.star-history.com/#SenmuuuuW/universal-diagnostic-tutor-skill&Date)
 
+<a href="https://www.star-history.com/?repos=SenmuuuuW%2Funiversal-diagnostic-tutor-skill&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=SenmuuuuW/universal-diagnostic-tutor-skill&type=date&theme=dark&legend=top-left&sealed_token=mQ56sBORgqroYwWpAOfdZxH8ZmkX67bbfQfFujWPfWgN_LMI17J0PkcJ5tqi85kifEodFyULJ_BFH5lJ2Vl21oHPk4tRDCfjfxOzXXNcRfJheTyj7VOxlBbyyvF7nrLlHr-C95VNmB63UNaoG3JBMvXYEgqyl0NBuAs0MPWvWwbjqd4QdSKpNZXmBR7S" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=SenmuuuuW/universal-diagnostic-tutor-skill&type=date&legend=top-left&sealed_token=mQ56sBORgqroYwWpAOfdZxH8ZmkX67bbfQfFujWPfWgN_LMI17J0PkcJ5tqi85kifEodFyULJ_BFH5lJ2Vl21oHPk4tRDCfjfxOzXXNcRfJheTyj7VOxlBbyyvF7nrLlHr-C95VNmB63UNaoG3JBMvXYEgqyl0NBuAs0MPWvWwbjqd4QdSKpNZXmBR7S" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=SenmuuuuW/universal-diagnostic-tutor-skill&type=date&legend=top-left&sealed_token=mQ56sBORgqroYwWpAOfdZxH8ZmkX67bbfQfFujWPfWgN_LMI17J0PkcJ5tqi85kifEodFyULJ_BFH5lJ2Vl21oHPk4tRDCfjfxOzXXNcRfJheTyj7VOxlBbyyvF7nrLlHr-C95VNmB63UNaoG3JBMvXYEgqyl0NBuAs0MPWvWwbjqd4QdSKpNZXmBR7S" />
+ </picture>
+</a>
+
+
 ## Documentation
 
 | Document | Purpose |
