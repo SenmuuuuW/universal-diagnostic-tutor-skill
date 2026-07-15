@@ -26,7 +26,7 @@ advancing.
 > compact teaching move. It is not a course platform, database, RAG system, or
 > hidden-memory service.
 
-## Quick Start
+## 🚀 Quick Start
 
 | Where you use AI | Start here |
 | --- | --- |
@@ -39,7 +39,7 @@ New to the project? Read the [User Guide](USER_GUIDE.md). Installation and
 updates live in [INSTALL.md](INSTALL.md), while entrypoint details live in
 [COMMAND_SURFACE.md](COMMAND_SURFACE.md).
 
-## Core Capabilities
+## ✨ Core Capabilities
 
 | Capability | What it does |
 | --- | --- |
@@ -59,7 +59,7 @@ machine learning, systems, networks, physics, signals, and engineering
 foundations. The Tutor remains useful across other learning domains, but it is
 not positioned as a generic answer bot.
 
-## Skill Entrypoints
+## 🧭 Skill Entrypoints
 
 | Need | Use |
 | --- | --- |
@@ -79,7 +79,7 @@ text such as `/practice` and `/study-plan` expresses intent; it is not a
 guaranteed native command in every host. See the
 [Command Surface](COMMAND_SURFACE.md) for practical examples.
 
-## How It Works
+## 🔍 How It Works
 
 ```text
 Goal clarification -> Knowledge map -> Teach one concept -> Practice
@@ -91,7 +91,7 @@ The full chain is used only when the learner needs it. A quick factual question
 does not trigger a giant workflow, and a practice turn normally stops after one
 targeted exercise to wait for the learner's answer.
 
-## V1.9 Practice & Mastery Loop
+## ✅ V1.9 Practice & Mastery Loop
 
 V1.9 closes the gap between explanation and demonstrated understanding. The
 Tutor can generate one targeted exercise, wait for the learner's attempt,
@@ -110,7 +110,7 @@ Instead of immediately solving a vector problem, the Tutor first distinguishes
 idea, teaches one compact step, and asks the learner to apply it before moving
 on. See [EXAMPLES.md](EXAMPLES.md) for concise comparisons and teaching flows.
 
-## Star History
+## ⭐ Star History
 
 <a href="https://www.star-history.com/?repos=SenmuuuuW%2Funiversal-diagnostic-tutor-skill&type=date&legend=top-left">
  <picture>
@@ -121,7 +121,7 @@ on. See [EXAMPLES.md](EXAMPLES.md) for concise comparisons and teaching flows.
 </a>
 
 
-## Documentation
+## 📚 Documentation
 
 | Document | Purpose |
 | --- | --- |
@@ -139,7 +139,7 @@ The root READMEs are landing pages. Detailed tutorials belong in the linked
 documents, and implementation guidance remains in
 [`skills/universal-diagnostic-tutor/`](skills/universal-diagnostic-tutor/).
 
-## Boundaries
+## 🛡️ Boundaries
 
 - No hidden memory, automatic learner profile, database, RAG/vector store, or backend infrastructure.
 - No official grading claims, score guarantees, exam prediction, leaked materials, cheating, or 押题.
@@ -151,6 +151,6 @@ Learning continuity uses visible, user-controlled Learning State, Profile, and
 Task Cards. Platform adapters are prompt packaging and may be less capable than
 the Full Skill.
 
-## License
+## 📄 License
 
 Released under the [MIT License](LICENSE).
