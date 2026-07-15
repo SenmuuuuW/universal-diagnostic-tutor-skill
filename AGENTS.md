@@ -199,6 +199,14 @@ Future changes must preserve the core identity of the skill:
   platform differences, and maintenance requirements first.
 - Keep README concise; prefer replacing duplicated install/update text with
   links to `INSTALL.md` over appending long repeated sections.
+- `README.md` is the English public landing page, and `README.zh-CN.md` is the
+  Chinese public landing page. Keep both concise and aligned.
+- Do not put full tutorials in either README. Keep beginner guidance in
+  `USER_GUIDE.md` and detailed entrypoint guidance in `COMMAND_SURFACE.md`.
+- Keep the Star History chart as a passive README visualization only; do not
+  add scripts, data pipelines, tracking, or repository infrastructure for it.
+- When major public capabilities change, update both README files without
+  turning either one into a changelog or full manual.
 - README can be polished and showcase-like, but must not overclaim, sound
   salesy, or imply benchmark results without real eval data.
 - Showcase examples should live in root `EXAMPLES.md`, not as long blocks in

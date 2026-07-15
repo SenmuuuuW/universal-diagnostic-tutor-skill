@@ -1,455 +1,149 @@
+<div align="center">
+
 # 🧠 Universal Diagnostic Tutor Skill
 
-### A diagnosis-first STEM / AI-CS Tutor Skill that teaches by finding the learner's current knowledge gap, not by dumping full answers.
+**A diagnosis-first STEM / AI-CS tutor skill that finds the learner's current knowledge gap before teaching.**
 
-它不是先给答案，而是先判断领域、基础、符号和知识缺口，再选择下一步最值得教的内容。
+English | [中文](README.zh-CN.md)
 
-`universal-diagnostic-tutor` 是一个可复用、Markdown-only、透明可审查的 AI Tutor Skill。它面向 Codex、Claude Code 风格的 agent 工作流，也提供 Custom Bot、Lite Prompt 和 API Prompt 适配方式。
+[User Guide](USER_GUIDE.md) · [Command Surface](COMMAND_SURFACE.md) · [Examples](EXAMPLES.md) · [Changelog](CHANGELOG.md)
 
-**当前重点：大学理科 / STEM / AI-CS 学习**，包括数学、编程、算法、机器学习、系统、网络、物理、信号与工程基础等。它保留跨学科诊断式教学能力，但不是把自己定位成泛泛的“什么都教”助手。
+[![License: MIT](https://img.shields.io/badge/License-MIT-2f6f4e.svg)](LICENSE)
+![Markdown only](https://img.shields.io/badge/Markdown-only-555555.svg)
+![Focus: STEM and AI-CS](https://img.shields.io/badge/Focus-STEM%20%2F%20AI--CS-1f6feb.svg)
+![V1.9 Practice and Mastery](https://img.shields.io/badge/V1.9-Practice%20%26%20Mastery-b78300.svg)
+[![GitHub stars](https://img.shields.io/github/stars/SenmuuuuW/universal-diagnostic-tutor-skill?style=flat)](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill/stargazers)
 
-| Highlight | What It Means |
+</div>
+
+Universal Diagnostic Tutor Skill is a Markdown-only AI tutor behavior layer for
+STEM, mathematics, programming, AI/CS, and exam review. It diagnoses the
+learner's gap, chooses the next best teaching step, and checks evidence before
+advancing.
+
+> **The difference:** it is not answer-first. It identifies the subject,
+> concept, prerequisite, notation, method, or reasoning gap before choosing a
+> compact teaching move. It is not a course platform, database, RAG system, or
+> hidden-memory service.
+
+## Quick Start
+
+| Where you use AI | Start here |
 | --- | --- |
-| 🎯 Diagnosis-first | 先判断领域、主题、前置知识和当前知识缺口 |
-| ⚙️ Next-best-step engine | 选择最小但最能推进理解的下一步 |
-| 🧭 STEM / 理科 / AI-CS focused | 当前重点覆盖大学数学、编程、AI/ML、系统、物理、信号与工程基础 |
-| 🧩 Skill entrypoints | `universal-diagnostic-tutor` plus focused `tutor-*` entrypoints and `/study-plan` / `/learn-anything` / `/practice` style shortcuts |
-| ✅ Practice & mastery | 一次一道针对性练习、定性批改、错因修复和进阶判断 |
-| 🌐 Portable prompts | Full Skill / Custom Bot / Lite Prompt / API Prompt |
-| 🧾 Continuity | Learning State / Profile / Task Cards 跨 chat 接续学习，不依赖隐藏记忆 |
-| 🧪 Quality system | EVALS / rubric / failure taxonomy / feedback loop |
-| 🧮 Math-friendly | 数学公式使用 Markdown / LaTeX math，而不是塞进代码块 |
+| Ordinary ChatGPT, Gemini, DeepSeek, Doubao, Kimi, or Qwen chat | Copy the [Lite Prompt](platforms/generic-chat/TUTOR_LITE_PROMPT.md) |
+| Codex or Claude Code-style agent | Use the [Full Skill](skills/universal-diagnostic-tutor/) and follow the [install guide](INSTALL.md) |
+| Codex with visible Skill entrypoints | Choose the most relevant `tutor-*` entrypoint |
+| Custom bot or API prompt | Choose an adapter in [Portability](PORTABILITY.md) |
 
-## 🎯 这个项目是什么？
+New to the project? Read the [User Guide](USER_GUIDE.md). Installation and
+updates live in [INSTALL.md](INSTALL.md), while entrypoint details live in
+[COMMAND_SURFACE.md](COMMAND_SURFACE.md).
 
-这是一个**教学行为层**，不是一个网站或课程平台。
+## Core Capabilities
 
-它定义的是：
-
-- AI Tutor 如何诊断学习问题属于哪个学科、知识系统、子主题和任务类型。
-- 如何判断学习者缺少的是概念、符号、步骤、推理、识别、迁移还是误解修复。
-- 如何选择教学模式、解释深度、练习梯度和反馈方式。
-- 如何在多轮对话里判断学习者目前理解到哪一步。
-- 如何使用可靠资源辅助学习，但不让资源列表取代教学本身。
-
-它不是：
-
-- 网站、App、插件市场里的插件、npm 包、数据库或课程平台。
-- 持久学习档案、账号系统或真实 RAG / vector database。
-- 教材搬运、PDF 仓库、答案库或课程地图。
-- 医疗、法律、金融、税务或安全建议工具。
-
-## 🧭 Core Reasoning Flow
-
-```mermaid
-flowchart LR
-    A[User Question] --> B[Domain & Gap Diagnosis]
-    B --> C[Choose Teaching Mode]
-    C --> D[Pick Next Best Step]
-    D --> E[Teach One Compact Unit]
-    E --> F[Check Mastery Signal]
-    F -->|Understood| G[Practice / Transfer / Advance]
-    F -->|Not yet| H[Step Down / Re-explain]
-    G --> I[Learning State Card / Continue Later]
-    H --> D
-```
-
-这个 Skill 不追求一次讲最多内容，而是先判断学习者当前的知识缺口，再选择最值得教的下一小步。
-
-在技术学习里，Tutor 会先用一两句话帮你定位知识系统，例如“这是离散数学 -> 图论 -> 边染色”或“这是线性代数 -> 向量方程 -> 线性方程组”，再开始讲概念、符号和方法。
-
-## ✨ Why This Is Different
-
-很多 answer-first 风格的 AI 会太早给完整解法。这个 Skill 会先把用户的问题当作诊断问题：到底是符号没懂、概念缺口、方法识别困难，还是已经会了前置知识但卡在某个关键步骤？
-
-它的核心问题是：**现在最小的缺失块是什么？** 然后只教一个紧凑步骤、检查理解，再决定推进、迁移、压缩解释或降难度。
-
-如果学习要跨 chat 继续，它会生成 Learning State Card，让下一次可以从当前卡点接上，而不是假装拥有隐藏记忆。
-
-## 🧪 Example
-
-普通 answer-first 风格容易直接进入解题；这个 Skill 会先判断“线性代数 → 向量 → 标量倍数”，解释为什么“平行”不是“每个分量相等”，然后只带第一步并停下来检查。
-
-完整对比见 [EXAMPLES.md](EXAMPLES.md)。
-
-## 🧩 Capability Matrix
-
-| Layer | What It Does |
+| Capability | What it does |
 | --- | --- |
-| Diagnosis-first tutoring | 判断领域、知识点、符号缺口、方法缺口 |
-| Learning architecture | 先澄清目标，再确认方向、建小地图、选下一步 |
-| Teaching modes | 零基础 / 普通 / 进阶 / 自动判断 |
-| Learning efficiency loop | 选择下一步最值得教的内容，控制认知负荷 |
-| Mistake intervention | 根据错误类型选择解释方式，而不是重复讲一遍 |
-| Practice & mastery loop | 针对性出题、定性批改、错因诊断、状态更新和 readiness decision |
-| Transfer teaching | 讲完后提炼类似题线索 |
-| Skill entrypoints | 用 `tutor-study-plan`、`tutor-exam-track` 等入口选择常用能力 |
-| Skill-pack invocations | 用 `/tutor`、`/learn-anything`、`/study-plan`、`/practice` 等短提示快速表达学习意图 |
-| STEM Exam Track | 面向大学理科、考研数学和 CS 专业课的诊断式备考支持 |
-| Topic scan + resources | 简短定位知识点，并在有用时推荐可信资源 |
-| Visual learning | 用简单图示、表格、流程图或概念图辅助理解 |
-| Learning cards | Learning State / Profile / Task Cards 跨 chat 继续学习，不依赖隐藏记忆 |
-| Quality system | EVALS / rubric / failure taxonomy / feedback loop |
-| Platform adapters | Full Skill / Custom Bot / Lite Prompt / API Prompt |
+| Diagnosis-first tutoring | Locates the subject, concept, prerequisite, notation, method, or reasoning gap |
+| Learning Architecture | Clarifies broad goals, builds a compact knowledge map, and selects one next step |
+| Practice & Mastery Loop | Generates targeted practice, waits for an answer, grades qualitatively, repairs mistakes, and checks readiness |
+| Skill entrypoints | Exposes focused `tutor-*` doors into one shared Tutor system |
+| STEM Exam Track | Supports university STEM, postgraduate math, and CS review without prediction or score promises |
+| Topic Scan + Trusted Resources | Uses reliable learning resources when they improve the current teaching step |
+| Knowledge Link Cards | Explains one to three strongly related concepts when they block the current task |
+| Learning State Cards | Creates visible, copyable checkpoints for continuation without hidden memory |
+| Cross-platform adapters | Packages smaller prompt versions for custom bots, ordinary chat, and API-style use |
 
-## 🧭 Codex Skill Entrypoints
+The strongest current coverage is university-level STEM and AI-CS: calculus,
+linear algebra, probability, discrete mathematics, programming, algorithms,
+machine learning, systems, networks, physics, signals, and engineering
+foundations. The Tutor remains useful across other learning domains, but it is
+not positioned as a generic answer bot.
 
-Codex users can now select focused Tutor entrypoints such as Tutor Study Plan,
-Tutor Exam Track, Tutor State Card, Tutor Visualize, and Tutor Practice.
+## Skill Entrypoints
 
 | Need | Use |
 | --- | --- |
-| General tutoring | Universal Diagnostic Tutor |
-| Big learning goal | Tutor Learn Anything |
-| Study plan | Tutor Study Plan |
-| Exam review | Tutor Exam Track |
-| Gap diagnosis | Tutor Diagnose Gap |
-| Mistake analysis | Tutor Mistake Review |
-| Practice, grading, readiness | Tutor Practice |
-| Learning continuity | Tutor State Card |
-| Resources | Tutor Resource Scan |
-| Visual explanation | Tutor Visualize |
+| General tutoring | `universal-diagnostic-tutor` |
+| Broad learning goal | `tutor-learn-anything` |
+| Study plan | `tutor-study-plan` |
+| Practice / grading / readiness | `tutor-practice` |
+| Exam review | `tutor-exam-track` |
+| Gap diagnosis | `tutor-diagnose-gap` |
+| Mistake analysis | `tutor-mistake-review` |
+| State cards | `tutor-state-card` |
+| Resources | `tutor-resource-scan` |
+| Visual learning | `tutor-visualize` |
 
-See [COMMAND_SURFACE.md](COMMAND_SURFACE.md) for the full Chinese tutorial.
+These are thin entrypoints into the same canonical Tutor system. Slash-style
+text such as `/practice` and `/study-plan` expresses intent; it is not a
+guaranteed native command in every host. See the
+[Command Surface](COMMAND_SURFACE.md) for practical examples.
 
-## ✅ V1.9 Practice & Mastery Loop
-
-V1.9 增加 Tutor Practice / `/practice`，把讲解之后缺失的学习闭环补完整：根据当前概念和掌握证据生成一道针对性练习，等待学习者作答，再做定性批改、错因分析、可见状态更新和进阶判断。
-
-当强相关前置概念正在阻碍当前任务时，Tutor 可以使用 1–3 张简短 Knowledge Link Cards 解释连接，然后回到练习。它仍然是 Markdown-based behavior layer，不是 backend infrastructure、官方评分系统或隐藏记忆。
-
-具体用法见 [COMMAND_SURFACE.md](COMMAND_SURFACE.md) 和 [USER_GUIDE.md](USER_GUIDE.md)。
-
-## 🧭 V1.8 Learning Architecture Layer
-
-V1.7 让这个 Tutor 更容易被调用：`/tutor`、`/learn-anything`、`/study-plan`、`/exam-track`、`/state-card` 等短提示能表达学习意图。
-
-V1.8 进一步解决“下一步到底该学什么”：当用户说“我想学机器学习”“我想补线代”“我想准备考试”这类大目标时，Tutor 会先澄清目标、确认方向，再给一个很小的知识地图，并选择第一步。
+## How It Works
 
 ```text
-Goal Clarification -> Goal Confirmation -> Knowledge Map -> Learning Path
--> Sub-skill Routing -> Mastery Check -> State Update
+Goal clarification -> Knowledge map -> Teach one concept -> Practice
+-> Learner answer -> Qualitative grading -> Mistake repair
+-> Visible state update -> Readiness decision -> Next step
 ```
 
-新增学习架构组件：
+The full chain is used only when the learner needs it. A quick factual question
+does not trigger a giant workflow, and a practice turn normally stops after one
+targeted exercise to wait for the learner's answer.
 
-- **Goal Clarifier**：把大目标缩成可开始的学习目标。
-- **Goal Confirmation Loop**：先确认理解是否正确，再建路径。
-- **Knowledge Map Builder**：只建目标相关的小知识地图，不生成庞大课程图。
-- **Learning Path Selector**：选择当前最值得学的一步。
-- **Learning Orchestrator**：把目标、地图、子技能和状态卡串起来。
-- **Concept Mastery Map**：区分 explained / practiced / checked / confirmed / unconfirmed / weak / blocked，避免过早假设掌握。
+## V1.9 Practice & Mastery Loop
 
-Study plans are discipline-first：对机器学习这类大目标，Tutor 会先说明需要哪些学科、每个学科要掌握哪些部分、最低入门标准、哪些可以先不学，以及下一步具体做什么。
+V1.9 closes the gap between explanation and demonstrated understanding. The
+Tutor can generate one targeted exercise, wait for the learner's attempt,
+preserve correct reasoning, identify the earliest meaningful mistake, select a
+focused repair, update visible learning state when useful, and decide whether
+to advance, review, step down, diagnose again, or continue practicing.
 
-## 🧩 V1.7 Skill Pack & Exam Track
+Readiness is evidence-based. An explanation or one lucky correct answer does
+not establish mastery. Knowledge Link Cards are limited to strongly related
+blocking concepts and usually contain only one to three compact cards.
 
-V1.7 把这个 Tutor 整理成更容易调用的学习系统：你可以用短的 skill-style invocation 表达意图，同时保留 diagnosis-first、next-best-step 和 check-and-stop 节奏。
+## Example
 
-| Flow | Use |
+Instead of immediately solving a vector problem, the Tutor first distinguishes
+"parallel" from "equal components," identifies scalar multiples as the missing
+idea, teaches one compact step, and asks the learner to apply it before moving
+on. See [EXAMPLES.md](EXAMPLES.md) for concise comparisons and teaching flows.
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=SenmuuuuW/universal-diagnostic-tutor-skill&type=Date)](https://www.star-history.com/#SenmuuuuW/universal-diagnostic-tutor-skill&Date)
+
+## Documentation
+
+| Document | Purpose |
 | --- | --- |
-| `/tutor` | 开始诊断式教学 |
-| `/learn-anything` | 大目标学习：先判断从哪里开始 |
-| `/diagnose-gap` | 先找知识缺口 |
-| `/study-plan` | 根据当前状态和目标生成短计划 |
-| `/exam-track` | 理科备考 Track：大学理科、考研数学、CS 专业课复习 |
-| `/state-card` | 生成或继续使用学习状态卡 / 任务卡 |
-| `/resource-scan` | 简短定位知识点并建议可信资源 |
-| `/visualize` | 用简单图示、表格、流程图或概念图辅助理解 |
-| `/mistake-review` | 分析错因并给针对性修复 |
-| `/practice` | 生成针对性练习、批改答案并判断能否进阶 |
-
-这些 slash-style 名称是文档和提示词约定，不是 shell command。普通聊天用户可以手动输入；Full Skill 环境可以把它们当成明确意图信号。
-
-在支持 Skill discovery 的 Codex-style 环境里，V1.8.1 也提供
-`tutor-study-plan`、`tutor-exam-track`、`tutor-state-card` 等轻量
-entrypoints。它们是进入同一套 Tutor System 的门口，不会复制整套主 Skill 逻辑。
-
-V1.7 还加入了 Topic Scan + Trusted Resources、Brief Study Plan、Learner Profile / Learning Task Cards 和 Basic STEM Visualization guidance。它仍然不是题库、作弊工具、押题系统、分数保证、数据库或学习平台。
-
-## 🎚️ 选择你的学习模式
-
-你可以先告诉导师你希望用哪种方式学习。如果不选择，Tutor 会进入 Auto Mode，根据你的问题、用词、错误和信心自动判断；不确定时只问一个很短的校准问题。
-
-| Mode | Best For | Style |
-| --- | --- | --- |
-| 🌱 Zero-Base Mode / 零基础模式 | 完全没学过、符号看不懂 | 从概念、符号、对象类型和小例子开始 |
-| 📘 Standard Mode / 普通模式 | 学过一点但不会做题 | 方法识别 + 分步引导 + 小检查 |
-| 🚀 Advanced Mode / 进阶模式 | 有基础，想深入 | 证明、推导、边界、假设和迁移 |
-| 🤖 Auto Mode | 不确定水平 | 自动判断，必要时问一个校准问题 |
-
-## 🌐 Cross-Platform Usage
-
-不是所有平台都是满血版；[PORTABILITY.md](PORTABILITY.md) 会清楚区分 Full Skill、Custom Bot、Lite Prompt 和 API Prompt。
-
-| Use Case | Recommended File |
-| --- | --- |
-| Full Skill: Codex / Claude Code-style agents | `skills/universal-diagnostic-tutor/` |
-| Custom Bot: GPTs / Gemini Gems / Coze / Doubao-style bots | `platforms/chatgpt-gpt/INSTRUCTIONS.md`, `platforms/gemini-gems/GEM_INSTRUCTIONS.md`, `platforms/coze-doubao/BOT_PROMPT.md` |
-| Lite Prompt: ordinary ChatGPT / Gemini / DeepSeek / 豆包 / Kimi / Qwen chat | `platforms/generic-chat/TUTOR_LITE_PROMPT.md` |
-| API Prompt: DeepSeek-compatible / OpenAI-compatible API-style usage | `platforms/deepseek-api/SYSTEM_PROMPT.md` |
-
-- 总览：[PORTABILITY.md](PORTABILITY.md)
-- 普通聊天 Lite Prompt：[platforms/generic-chat/TUTOR_LITE_PROMPT.md](platforms/generic-chat/TUTOR_LITE_PROMPT.md)
-- ChatGPT GPT instructions：[platforms/chatgpt-gpt/INSTRUCTIONS.md](platforms/chatgpt-gpt/INSTRUCTIONS.md)
-- Gemini Gem instructions：[platforms/gemini-gems/GEM_INSTRUCTIONS.md](platforms/gemini-gems/GEM_INSTRUCTIONS.md)
-- Coze / 豆包 bot prompt：[platforms/coze-doubao/BOT_PROMPT.md](platforms/coze-doubao/BOT_PROMPT.md)
-- API system prompt：[platforms/deepseek-api/SYSTEM_PROMPT.md](platforms/deepseek-api/SYSTEM_PROMPT.md)（适用于 DeepSeek-compatible / OpenAI-compatible API-style usage；开发者需要手动传入上下文或 Learning State Card）
-
-不要过度理解为“所有平台都原生支持 Skill”。不同平台的 instruction、知识文件、上下文窗口和记忆机制不同，实际效果会有差异。
-
-## 🚀 Start Here
-
-| I Want To... | Go To |
-| --- | --- |
-| Learn how to use it from zero | [USER_GUIDE.md](USER_GUIDE.md) |
-| Install / update | [INSTALL.md](INSTALL.md) |
-| Choose a Tutor entrypoint | [COMMAND_SURFACE.md](COMMAND_SURFACE.md) |
-| Use across platforms | [PORTABILITY.md](PORTABILITY.md) |
-| Share with ordinary users | [GROUP_GUIDE.md](GROUP_GUIDE.md) |
-| See showcase examples | [EXAMPLES.md](EXAMPLES.md) |
-| Try in normal chat AI | [platforms/generic-chat/TUTOR_LITE_PROMPT.md](platforms/generic-chat/TUTOR_LITE_PROMPT.md) |
-| Build a Custom GPT | [platforms/chatgpt-gpt/INSTRUCTIONS.md](platforms/chatgpt-gpt/INSTRUCTIONS.md) |
-| Evaluate quality | [EVALS.md](EVALS.md) / [QUALITY_RUBRIC.md](QUALITY_RUBRIC.md) |
-| Report failures | [FAILURE_TAXONOMY.md](FAILURE_TAXONOMY.md) / [FEEDBACK_TO_IMPROVEMENT.md](FEEDBACK_TO_IMPROVEMENT.md) |
-
-## 📘 New User Tutorial
-
-如果你是普通用户，先看 [USER_GUIDE.md](USER_GUIDE.md)。它从点进 GitHub 开始，说明不同 AI 平台该选哪种用法。
-
-- [USER_GUIDE.md](USER_GUIDE.md)：从 GitHub 入口到普通 AI chat、Custom GPT、Gemini Gem、豆包 / Coze、Codex / Claude Code-style agents 的完整教程。
-- [COMMAND_SURFACE.md](COMMAND_SURFACE.md)：说明主 Skill、`tutor-*` entrypoints 和手动 `/learn-anything` / `/study-plan` 快捷方式怎么选。
-- [GROUP_GUIDE.md](GROUP_GUIDE.md)：适合发给微信群 / 社群的简短教程。
-- [INSTALL.md](INSTALL.md)：安装、更新和复制版 Skill 同步。
-- [PORTABILITY.md](PORTABILITY.md)：Full Skill / Custom Bot / Lite Prompt / API Prompt 怎么选。
-
-如果你只用普通 ChatGPT / Gemini / DeepSeek / 豆包 / Kimi / Qwen 聊天窗口，最简单方式是打开 [Lite Prompt](platforms/generic-chat/TUTOR_LITE_PROMPT.md)，复制到 chat 里再提问。
-
-## 🚀 Quick Start
-
-完整安装、更新和 agent-assisted install prompt 见 [INSTALL.md](INSTALL.md)。
-
-Clone 这个仓库：
-
-```bash
-git clone https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill.git
-cd universal-diagnostic-tutor-skill
-```
-
-Skill 目录在这里：
-
-```text
-skills/universal-diagnostic-tutor/
-```
-
-在你的 Codex / Claude Code 风格 agent 工作流中，按本地环境要求引用或安装这个 Skill 目录即可。不同工具的 Skill 安装路径和加载方式不同，请以你的工具文档为准。
-
-如果你不确定怎么安装，可以把 [INSTALL.md](INSTALL.md) 里的 agent-assisted install prompt 发给 Codex / Claude Code-style agent，让它帮你 clone、定位 Skill 目录并同步到正确位置。
-
-## 🔄 如何更新到最新版
-
-如果你已经 clone 过这个仓库，通常**不需要重新 clone**：
-
-```bash
-cd path/to/universal-diagnostic-tutor-skill
-git pull
-git log --oneline -1
-```
-
-- `git pull` 会把本地仓库更新到 GitHub 上的最新版。
-- `git log --oneline -1` 用来查看你本地当前最新 commit。
-- 这个最新 commit 应该和 `CHANGELOG.md` 里最新版本对应。
-- 如果你的 agent 读取的是复制出去的 Skill 目录，`git pull` 后还要同步 `skills/universal-diagnostic-tutor/` 到实际读取位置。
-
-更详细的安装、复制版同步和排查说明见 [INSTALL.md](INSTALL.md)。
-
-## 📋 可复制提示词
-
-```text
-我是零基础，请从概念和符号开始教我这道题，不要直接给答案。
-```
-
-```text
-我是零基础，请先判断这题属于哪个领域，再从概念和符号开始讲。
-```
-
-```text
-请先告诉我这是离散数学、线性代数、微积分还是机器学习里的什么知识点。
-```
-
-```text
-请先告诉我这题属于哪个领域和知识点。
-```
-
-```text
-我是零基础，请先把符号翻译成人话。
-```
-
-```text
-我学过一点，但不知道该用什么方法，请用普通模式一步一步带我做。
-```
-
-```text
-我有基础，请用进阶模式讲核心思路、证明和易错点。
-```
-
-```text
-问我问题后请停下来，等我回答再继续。
-```
-
-```text
-数学公式不要用代码块，请用正常公式格式。
-```
-
-```text
-如果需要资料，请主动搜索权威资料，但不要甩链接，要整合进讲解。
-```
-
-```text
-我刚刚答对了，但我不确定自己是否真的懂，请检查我的理解。
-```
-
-```text
-我还是不懂，请不要重复刚才的解释，换一个更小的例子。
-```
-
-```text
-讲完这个小步骤后，请告诉我以后遇到类似题该看什么线索。
-```
-
-```text
-不要提工具或版本，直接像老师一样教我。
-```
-
-## 🧪 可以学习什么？
-
-| Area | Example Topics |
-| --- | --- |
-| Linear algebra | vectors, matrices, span, basis, transformations, \(Ax=b\) |
-| Calculus | limits, derivatives, integrals, series, optimization |
-| Programming | loops, recursion, debugging, state, code tracing |
-| Algorithms | binary search, invariants, correctness, complexity |
-| AI / ML | loss, gradient descent, overfitting, evaluation, embeddings |
-| Systems | memory, OS, networking, abstraction layers, virtual memory |
-| Physics / signals | measurements, sampling, units, models, frequency domain |
-| Humanities and writing | claims, evidence, interpretation, revision, argument structure |
-| Exam prep | question type, trap choices, recognition cues, transfer practice |
-
-STEM / AI-CS 是当前资料最完整、测试最密集的方向；但这个 Skill 的身份仍然是**跨学科通用诊断型导师**。
-
-## 📚 Covered STEM Scope
-
-| Track | Topics |
-| --- | --- |
-| 数学 | 高数 / 微积分、线性代数、概率统计、离散数学 |
-| CS | Python、数据结构、算法、计组、操作系统、计算机网络 |
-| AI-CS | 机器学习基础、优化、数据分析 |
-| 工程基础 | 大学物理、信号与系统、电路基础 |
-| Exam use | 大学理科课程复习、考研数学、CS 专业课复习 |
-
-备考支持的重点是诊断知识缺口、修复概念、识别题型、分析错因和安排练习顺序。它不是题库、作弊工具、押题系统、分数保证或考试预测系统。
-
-## 🧮 数学公式显示
-
-数学公式应该显示成数学，而不是代码块。普通代数、微积分、线性代数、概率和证明步骤应优先使用 Markdown / LaTeX math。面向学习者的回答推荐使用 `\(...\)` 和 `\[...\]`，例如 \(Ax=b\) 或：
-
-\[
-f'(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}
-\]
-
-代码块只用于真正的代码、命令、路径，或必须保留空格的 literal text。
-
-## 📦 仓库结构
-
-```text
-universal-diagnostic-tutor-skill/
-├── README.md
-├── EXAMPLES.md
-├── GROUP_GUIDE.md
-├── USER_GUIDE.md
-├── INSTALL.md
-├── COMMAND_SURFACE.md
-├── CHANGELOG.md
-├── AGENTS.md
-├── EVALS.md
-├── QUALITY_RUBRIC.md
-├── FAILURE_TAXONOMY.md
-├── FEEDBACK_TO_IMPROVEMENT.md
-├── PORTABILITY.md
-├── platforms/
-├── LICENSE
-└── skills/
-    ├── universal-diagnostic-tutor/
-    │   ├── SKILL.md
-    │   ├── README.md
-    │   ├── references/
-    │   └── examples/
-    └── tutor-*/
-        ├── SKILL.md
-```
-
-- `README.md`：GitHub landing page，面向新用户和维护者。
-- `EXAMPLES.md`：简短 showcase examples，展示 answer-first 与 diagnosis-first 的差异。
-- `GROUP_GUIDE.md`：适合发给普通学生、群友或社区用户的中文使用指南。
-- `USER_GUIDE.md`：从 GitHub 入口到不同 AI 平台使用方式的完整中文新手教程。
-- `INSTALL.md`：中文安装、更新、agent-assisted install 和兼容性说明。
-- `COMMAND_SURFACE.md`：主 Skill、`tutor-*` entrypoints 和 slash-style prompt shortcuts 的选择指南。
-- `CHANGELOG.md`：版本历史和每个版本的主要变化。
-- `AGENTS.md`：维护这个仓库时需要遵守的规则。
-- `EVALS.md` / `QUALITY_RUBRIC.md` / `FAILURE_TAXONOMY.md` / `FEEDBACK_TO_IMPROVEMENT.md`：人工评估、质量评分、失败分类和反馈改进流程。
-- `PORTABILITY.md` 和 `platforms/`：跨平台使用说明，以及 Custom GPT、Gemini Gem、Coze / 豆包、API、普通聊天 Lite Prompt 等适配文件。
-- `LICENSE`：MIT License。
-- `skills/universal-diagnostic-tutor/SKILL.md`：Skill 核心入口，定义触发说明、教学工作流、路由和守则。
-- `skills/universal-diagnostic-tutor/README.md`：Skill 目录内的使用指南。
-- `skills/universal-diagnostic-tutor/references/`：详细教学协议、资源规则、评估清单和人工测试矩阵。
-- `skills/universal-diagnostic-tutor/examples/`：跨学科示例回答，展示诊断、教学动作、检查和练习。
-- `skills/tutor-*/SKILL.md`：轻量 sub-skill entrypoints，方便 Codex-style skill discovery。
-
-## 🕰️ Version Timeline
-
-| Version | Focus |
-| --- | --- |
-| V1.9.x | Practice & Mastery Loop: targeted practice, qualitative grading, mistake repair, readiness |
-| V1.8.x | Learning Architecture Layer: goal clarification, compact maps, path selection |
-| V1.7.x | Skill-pack invocations, STEM Exam Track, topic scan, visual learning |
-| V1.6.x | Cross-platform adapters, portability polish, README showcase |
-| V1.5.x | Skill reliability, evals/rubric/failure taxonomy, Learning State Card context portability |
-| V1.4.x | Learning Efficiency Optimization Loop |
-| V1.3.x | Teacher presence, no internal leakage, knowledge-system mapping |
-| V1.2.x | Teaching modes, math formatting, STEM-first positioning |
-| V1.1.x | Teacher-like pacing, resource-aware tutoring, stop points |
-| V1.0.0 | Stable public README and documentation foundation |
-| V0.x | Early protocols, examples, source packs, and evaluation foundations |
-
-For detailed changes, see [CHANGELOG.md](CHANGELOG.md).
-
-## 🛡️ 质量原则
-
-- **先诊断，后回答。** 不把学习问题当成单纯答题。
-- **掌握优先于完成。** 目标是让学习者能解释、应用和迁移。
-- **直觉先于形式化。** 对抽象主题，先建立图像、例子或机制，再进入公式和证明。
-- **资源辅助教学。** 可靠来源可以支持学习，但不能替代解释、练习和反馈。
-- **不因一次答对就假设掌握。** 还要看学习者是否能说明为什么、能否独立应用、能否迁移。
-- **自然教师风格。** 内部可以诊断 gap type，外部表达要像老师，不像表格。
-- **安全教育边界。** 高风险领域只做概念教育，不替代专业人士。
-
-## ⚠️ 限制
-
-- 不保存永久学习记忆，也不包含数据库、账号系统或遥测。
-- 不替代真实老师、助教、专家审阅或正式课程。
-- 宿主 AI agent 必须认真遵守 `SKILL.md` 和 `references/` 中的规则，效果才会稳定。
-- 外部资源搜索取决于 agent 环境；无法搜索时不应假装已经验证来源。
-- 不提供医疗、法律、金融、税务、安全等个性化专业建议。
-- 不提供完整大学课程地图，也不试图成为课程平台。
-
-## 🧭 维护与验证
-
-V1.8 系列是 Markdown-only Learning Architecture Layer release。它让 Tutor 在教学前更会澄清目标、确认方向、建立小知识地图、选择下一步并路由到合适子流程；V1.8.1 进一步把常用能力做成轻量 `tutor-*` entrypoints，便于 Codex-style skill discovery。
-
-V1.9 在同一套 Markdown 行为层上加入针对性练习、学习型定性批改和 readiness decision；它不新增 course builder、real graphing tools、source packs、网站、脚本、API 集成代码、包管理、数据库、持久记忆、真实 RAG / vector database、PDF 或基础设施。
-
-维护者可以使用 [EVALS.md](EVALS.md)、[QUALITY_RUBRIC.md](QUALITY_RUBRIC.md)、[FAILURE_TAXONOMY.md](FAILURE_TAXONOMY.md)、`skills/universal-diagnostic-tutor/references/evaluation_checklist.md` 和 `skills/universal-diagnostic-tutor/references/manual_test_matrix.md` 做人工验收。若使用外部 Skill 创建工具里的 `quick_validate.py`，该脚本可能需要 PyYAML；本仓库不为此添加 package setup 或依赖文件。
-
-## 📄 License
-
-本项目使用 MIT License。详情见 [LICENSE](LICENSE)。
+| [User Guide](USER_GUIDE.md) | Beginner-friendly setup and usage tutorial |
+| [Command Surface](COMMAND_SURFACE.md) | Tutor entrypoints and text shortcuts |
+| [Install](INSTALL.md) | Installation, updates, and copied-Skill synchronization |
+| [Portability](PORTABILITY.md) | Full Skill, custom bot, Lite Prompt, and API prompt choices |
+| [Examples](EXAMPLES.md) | Short public examples of diagnosis-first tutoring |
+| [Evaluations](EVALS.md) | Behavioral evaluation cases |
+| [Quality Rubric](QUALITY_RUBRIC.md) | Scoring criteria for tutoring quality |
+| [Failure Taxonomy](FAILURE_TAXONOMY.md) | Known failure classes and repair targets |
+| [Changelog](CHANGELOG.md) | Release history |
+
+The root READMEs are landing pages. Detailed tutorials belong in the linked
+documents, and implementation guidance remains in
+[`skills/universal-diagnostic-tutor/`](skills/universal-diagnostic-tutor/).
+
+## Boundaries
+
+- No hidden memory, automatic learner profile, database, RAG/vector store, or backend infrastructure.
+- No official grading claims, score guarantees, exam prediction, leaked materials, cheating, or 押题.
+- No claim that every platform natively supports Skills or slash commands.
+- No replacement for professional medical, legal, financial, tax, or safety advice.
+- No copied textbooks, answer bank, course platform, or persistent gradebook.
+
+Learning continuity uses visible, user-controlled Learning State, Profile, and
+Task Cards. Platform adapters are prompt packaging and may be less capable than
+the Full Skill.
+
+## License
+
+Released under the [MIT License](LICENSE).

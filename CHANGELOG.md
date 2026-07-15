@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.9.1 - 2026-07-15
+
+### Changed In v1.9.1
+
+- Redesigned `README.md` as a cleaner English public landing page.
+- Added `README.zh-CN.md` as a polished Chinese public landing page.
+- Added language-switch links between both landing pages and compact links from
+  the main user documentation.
+- Added a passive Star History visualization for
+  `SenmuuuuW/universal-diagnostic-tutor-skill`.
+- Simplified landing-page navigation and linked detailed guides instead of
+  repeating installation, usage, version, repository, and maintenance content.
+
+### Unchanged In v1.9.1
+
+- No core Tutor behavior, protocol, entrypoint, example, platform adapter, or
+  source-pack changes.
+- No scripts, website files, API code, package setup, database, hidden memory,
+  RAG/vector DB, PDFs, secrets, backend infrastructure, graphing tools, or new
+  integrations.
+
 ## v1.9.0 - 2026-07-15
 
 ### Added In v1.9.0

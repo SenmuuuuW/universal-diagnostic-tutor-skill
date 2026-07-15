@@ -1,5 +1,7 @@
 # Codex 技能入口使用教程
 
+[English README](README.md) | [中文 README](README.zh-CN.md)
+
 Universal Diagnostic Tutor 的 Command Surface / Skill Entrypoints 使用说明
 
 ## 1. 现在 Codex 里能看到什么？

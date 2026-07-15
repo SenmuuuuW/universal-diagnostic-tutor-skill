@@ -1,5 +1,7 @@
 # 群友使用指南：诊断式理科学习导师
 
+[English README](README.md) | [中文 README](README.zh-CN.md)
+
 这是一份可以直接发到群里的简明说明。它面向普通用户、学生和自学者，不要求你懂 GitHub、Codex 或 Claude Code。
 
 如果你需要从“点进 GitHub 后先看哪里”开始的完整教程，请看 `USER_GUIDE.md`。这份文件保持短一点，方便直接发群。

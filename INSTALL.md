@@ -1,5 +1,7 @@
 # 安装与更新指南
 
+[English README](README.md) | [中文 README](README.zh-CN.md)
+
 这个项目目前是一个 Markdown-based Tutor Skill，不是网站、App、npm 包或自动安装器。最安全的使用方式是 clone 仓库，然后按你的 agent 环境引用、复制或同步真正的 Skill 目录。
 
 如果你不是技术用户，只想知道普通 ChatGPT / 豆包 / DeepSeek / Kimi / Qwen 怎么用，请先看 [USER_GUIDE.md](USER_GUIDE.md)。Lite Prompt 不需要安装，只需要复制到普通 AI chat。
