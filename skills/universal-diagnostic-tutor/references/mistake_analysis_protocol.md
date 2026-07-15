@@ -4,6 +4,15 @@ Use this protocol when the learner shows work, gives an answer, asks what went
 wrong, or repeats an error. Treat mistakes as diagnostic evidence, not as a
 reason to simply reveal the solution.
 
+## Protocol Boundary
+
+`answer_grading_protocol.md` owns the qualitative verdict and the accounting
+of what is correct or missing. This protocol explains the mistake and its
+underlying gap. After diagnosis, use `error_to_intervention_protocol.md` to
+choose the smallest repair, then return to `learning_task_loop_protocol.md` for
+practice, state update, and readiness. Do not repeat the full grading output
+here.
+
 ## Core Sequence
 
 1. **Identify the surface mistake.** Point to the exact line, word, assumption,
@@ -102,3 +111,5 @@ After the repair, use one similar problem with a small change:
 - Ask for a short explanation for reasoning errors.
 
 The goal is not volume. The goal is to see whether the repaired idea transfers.
+Use `exercise_generation_protocol.md` to construct that item against the
+selected rung and grading criteria.

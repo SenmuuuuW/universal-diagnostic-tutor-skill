@@ -4,6 +4,14 @@ Use this protocol when a learner makes a mistake and the tutor needs to choose
 the most efficient repair. Different error types need different interventions;
 do not answer every mistake with the same generic re-explanation.
 
+When the error comes from a submitted answer,
+`answer_grading_protocol.md` owns the qualitative verdict and identifies the
+grading evidence. `mistake_analysis_protocol.md` locates the surface mistake
+and underlying gap; this protocol maps that gap to an intervention.
+`learning_task_loop_protocol.md` then returns the learner to a targeted repair,
+practice item, state update, or readiness decision. Do not duplicate grading
+inside this mapping.
+
 ## Error Type To Intervention
 
 | Error Type | Typical Signal | Efficient Intervention |

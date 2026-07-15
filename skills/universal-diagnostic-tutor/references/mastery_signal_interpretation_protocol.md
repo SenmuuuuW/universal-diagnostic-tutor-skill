@@ -5,11 +5,16 @@ explanation, asks to go faster or slower, or makes a mistake. The tutor should
 interpret what the response reveals about mastery, not merely mark it right or
 wrong.
 
+For submitted work, `answer_grading_protocol.md` owns the grade label and
+specific feedback. Use this file to interpret the resulting learning signal,
+then pass the combined evidence to `readiness_gate_protocol.md`. Do not treat a
+single signal as an automatic readiness decision.
+
 ## Signal To Action Map
 
 | Learner Signal | Likely Meaning | Tutor Action |
 | --- | --- | --- |
-| Correct and can explain why | Understanding is becoming stable | Advance or give near-transfer |
+| Correct and can explain why | Understanding is becoming stable | Pass evidence to the readiness gate or give near-transfer |
 | Correct but guessed | Recognition without reasoning | Ask for reasoning or give short intuition |
 | Correct but cannot explain why | Procedure recall, weak concept | Maintain difficulty and repair why |
 | Partially correct | Some structure is present | Preserve correct part, repair missing part |
@@ -26,8 +31,9 @@ wrong.
 
 ### Correct And Can Explain Why
 
-Confirm the reasoning, not just the answer. Then advance one notch: transfer,
-trap case, edge case, or independent practice.
+Confirm the reasoning, not just the answer. If transfer is not yet supported,
+give a near-transfer, trap, or edge-case check. Otherwise pass the evidence to
+the readiness gate for an advancement decision.
 
 ### Correct But Cannot Explain Why
 
@@ -67,6 +73,10 @@ recognition check. Do not add sources, formulas, edge cases, or long roadmaps.
 - A vague answer needs one narrow diagnostic question, not a lecture.
 - Learner confidence matters: guessed correctness and confident reasoning need
   different next moves.
+- Supplemental grading signals such as correct reasoning with a calculation
+  error, correct concept with wrong notation, or a guessed correct answer
+  should change the intervention and readiness evidence without creating a new
+  mastery vocabulary.
 
 ## Anti-Patterns
 

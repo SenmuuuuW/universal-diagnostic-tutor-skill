@@ -38,7 +38,13 @@ Learning Task Card:
 - Due date / exam date, if provided:
 - Practice needed:
 - Checkpoint:
+- Practice checkpoint, optional:
 ```
+
+Use the optional practice checkpoint after a meaningful attempt. Keep it to:
+`attempt -> result -> mistake type -> new mastery status -> next step`. Omit it
+when no practice evidence exists or when `Checkpoint` already carries the same
+information.
 
 ## When To Offer Cards
 

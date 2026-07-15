@@ -6,6 +6,11 @@ mastery, or help transferring a method to new problems.
 Do not give every level every time. Choose the lowest rung that matches the
 learner's current gap, then move upward gradually.
 
+This file owns the practice difficulty framework, not the construction of an
+actual item. After selecting a rung, use `exercise_generation_protocol.md` to
+set the target concept, prerequisite, learner action, grading criteria, hint
+policy, and stop point.
+
 ## Level 1: Recognition Check
 
 - **Purpose:** See whether the learner can identify the concept, question type,
@@ -81,3 +86,6 @@ learner's current gap, then move upward gradually.
   a prerequisite gap.
 - After an error, repair the gap and give a similar but slightly changed item.
 - End practice with a transfer cue: "Use this method when you see..."
+- Use `readiness_gate_protocol.md` when the learner asks whether they can move
+  to a dependent concept. Completing a rung is evidence for that decision, not
+  an automatic pass.

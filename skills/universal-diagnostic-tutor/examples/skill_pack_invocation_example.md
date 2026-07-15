@@ -15,6 +15,7 @@ learner state intent quickly.
 | `/resource-scan 我想系统补线代，有什么靠谱资料？` | Topic scan, trusted resource types or verified sources if browsing is available. |
 | `/visualize 向量平行我看文字不懂。` | Use a simple vector diagram or description tied to the current gap. |
 | `/mistake-review 我把条件概率分母写成总样本数了。` | Analyze surface mistake, underlying misconception, tempting path, and repair. |
+| `/practice 我学完向量了，出一道题并在我回答后判断能否进阶。` | Generate one targeted item, wait, grade qualitatively, then apply the readiness gate. |
 
 ## Short Expected Response Shape
 

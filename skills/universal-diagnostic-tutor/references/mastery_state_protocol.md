@@ -5,6 +5,12 @@ conversation and choose the next teaching move. Mastery state is evidence, not
 a permanent label. Update it as the learner explains, solves, asks questions,
 or makes mistakes.
 
+This is the broader historical model for selecting a teaching posture, from
+Unknown through Transfer or Overloaded. It does not override the preferred
+concept-level status terms in `concept_mastery_map_protocol.md`: `explained`,
+`practiced`, `checked`, `confirmed`, `unconfirmed`, `weak`, and `blocked`. Use
+those terms for visible V1.9 state updates and readiness handoffs.
+
 Do not announce state labels unless they help the learner. Prefer natural
 language such as "You have the setup, but the reason behind the step is still
 the part to strengthen."
@@ -115,5 +121,7 @@ the part to strengthen."
 - Move up gradually after the learner explains why, not just after a correct
   answer.
 - Move down quickly when confusion, repeated mistakes, or overload appears.
+- Pass answer evidence through `mastery_signal_interpretation_protocol.md` and
+  `readiness_gate_protocol.md` before deciding that the learner can advance.
 - Summarize progress naturally when it helps: "So far, you have the meaning of
   the symbols; the next step is using them on a new problem."

@@ -215,3 +215,62 @@ feedback for `universal-diagnostic-tutor`. Score each dimension from 1 to 5.
   weak, and blocked when useful.
 - **5:** Keeps status lightweight, visible when needed, and uses it to prevent
   premature advancement.
+
+## Targeted Exercise Design
+
+- **1:** Generates unrelated, generic, or unsafely advanced exercises.
+- **2:** Matches the broad topic but ignores the learner's gap or current
+  mastery.
+- **3:** Gives a usable exercise, but the Practice Ladder level, expected action,
+  or hint policy is unclear.
+- **4:** Aligns one exercise to the target concept, prerequisite, gap, and
+  current ladder level, then waits for the learner.
+- **5:** Uses the smallest discriminating exercise, anticipates the likely trap,
+  and adjusts the next item only after seeing evidence.
+
+## Learning-Focused Answer Grading
+
+- **1:** Says only right/wrong, shames the learner, or invents official points.
+- **2:** Gives a verdict but misses valid partial reasoning or the underlying
+  error.
+- **3:** Identifies correct and incorrect parts, but the fix or uncertainty is
+  generic.
+- **4:** Uses a qualitative verdict, preserves earned reasoning, classifies the
+  mistake, and gives one targeted repair.
+- **5:** Separates result, method, reasoning, notation, and confidence evidence,
+  then turns the grading into the right next learning move.
+
+## Readiness Decision Quality
+
+- **1:** Advances after explanation, one lucky answer, or no visible evidence.
+- **2:** Gives a readiness label with little reason or ignores repeated errors.
+- **3:** Uses correctness evidence but underweights explanation, confidence, or
+  near-transfer.
+- **4:** Chooses advance, caution, review, step-down, diagnosis, or more practice
+  from multiple relevant signals.
+- **5:** States uncertainty proportionally, records the local concept status,
+  and selects the smallest next step without overclaiming mastery.
+
+## Practice Loop And State Update
+
+- **1:** Breaks the loop by solving before the learner answers or by ignoring
+  the submitted work.
+- **2:** Practices and grades, but does not connect the evidence to state or the
+  next decision.
+- **3:** Completes most loop steps, with a generic or overly verbose state
+  update.
+- **4:** Preserves the order of practice, wait, grade, repair, state update, and
+  readiness decision across turns.
+- **5:** Runs only the needed loop steps, keeps the update visible and compact,
+  and adapts the next exercise directly from the learner's latest evidence.
+
+## Knowledge Link Card Quality
+
+- **1:** Adds irrelevant connections or expands into a wiki-style dump.
+- **2:** Names a related concept in one vague sentence without making it usable.
+- **3:** Explains a useful connection but omits minimum mastery, skip-for-now
+  scope, or return to the task.
+- **4:** Uses one to three compact cards for strongly blocking concepts and
+  returns to the current learning step.
+- **5:** Makes each connection concrete with a small example, teaches only the
+  minimum needed now, and improves the next practice or readiness decision.

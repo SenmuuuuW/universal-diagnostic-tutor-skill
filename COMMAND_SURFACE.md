@@ -14,6 +14,7 @@ Universal Diagnostic Tutor 的 Command Surface / Skill Entrypoints 使用说明
 - Tutor Resource Scan
 - Tutor Learn Anything
 - Tutor Mistake Review
+- Tutor Practice
 - Universal Diagnostic Tutor
 
 这些不是彼此独立的产品。它们是同一个 Universal Diagnostic Tutor system 的不同入口：
@@ -23,7 +24,7 @@ Universal Diagnostic Tutor 的 Command Surface / Skill Entrypoints 使用说明
 
 `Universal Diagnostic Tutor` 是主 Skill / 总调度器，适合普通学习问题、概念讲解和综合诊断。
 
-`Tutor *` 是细分入口，适合你已经知道自己想做什么，比如做学习计划、错题分析、保存状态卡、找资源或用图理解。
+`Tutor *` 是细分入口，适合你已经知道自己想做什么，比如做学习计划、出题批改、错题分析、保存状态卡、找资源或用图理解。
 
 简单说：主 Skill 像总老师，Tutor Study Plan / Tutor Exam Track 这些像不同办公室的门。你可以从总老师开始，也可以直接进对应办公室。
 
@@ -37,6 +38,7 @@ Universal Diagnostic Tutor 的 Command Surface / Skill Entrypoints 使用说明
 | Tutor Exam Track | 大学理科/考研数学/CS 专业课备考 | “我高数级数判别法总不会选。” |
 | Tutor Diagnose Gap | 不知道自己到底卡在哪个知识点 | “我看答案懂，自己做不会。” |
 | Tutor Mistake Review | 已经做错了，想分析错因 | “我把平行向量理解成分量相等了。” |
+| Tutor Practice | 练习 / 出题 / 批改 / 判答案 / 判断能否进阶 | “给我一道梯度下降基础题，做完后帮我批改。” |
 | Tutor State Card | 想保存进度、跨 chat 继续学习 | “帮我生成下次继续用的学习状态卡。” |
 | Tutor Resource Scan | 想找可信资源、课程、学习材料 | “我想系统补线代，有什么靠谱资源？” |
 | Tutor Visualize | 需要图像、图表、流程图辅助理解 | “画图解释为什么矩阵乘法是变换。” |
@@ -149,6 +151,26 @@ V1.8.2 之后，Study Plan 应该是 discipline-first：先拆学科，再给路
 我把两个平行向量的每个分量都设成相等了，帮我分析错因。
 ```
 
+### Tutor Practice
+
+是什么：练习与掌握闭环入口。适合你想要针对当前知识点出题、提交答案、获得定性批改，或判断自己能不能进入下一步。
+
+它通常一次只给一道针对性练习并等你作答。你回答后，它会保留正确部分、说明错误或缺失、分析错因，再根据证据决定继续练习、复习、降一步或进阶。只有强相关概念正在卡住当前任务时，才会补充 1–3 张简短 Knowledge Link Cards。
+
+示例 prompt：
+
+```text
+给我出一道关于梯度下降的基础题，做完后帮我批改并判断我能不能继续。
+```
+
+也可以手动输入：
+
+```text
+/practice 我学完向量了，给我一道题检查掌握情况。
+```
+
+`/practice` 是 Tutor 的文字快捷方式，不保证是 Codex 原生 slash command。Codex skill picker 里能看到 Tutor Practice / `tutor-practice` 时，优先选择该入口。
+
 ### Tutor State Card
 
 是什么：学习状态卡入口。适合你想保存当前学习状态，或者换 chat 后继续。
@@ -208,14 +230,14 @@ V1.8.2 之后，Study Plan 应该是 discipline-first：先拆学科，再给路
 1. Tutor Learn Anything
 2. Tutor Study Plan
 3. Universal Diagnostic Tutor
-4. Tutor Visualize / Tutor Diagnose Gap / Tutor Mistake Review
+4. Tutor Practice / Tutor Visualize / Tutor Diagnose Gap / Tutor Mistake Review
 5. Tutor State Card
 
 如果你是备考：
 
 1. Tutor Exam Track
 2. Tutor Diagnose Gap
-3. Tutor Mistake Review
+3. Tutor Practice / Tutor Mistake Review
 4. Tutor State Card
 
 如果你只是问一个概念：
@@ -232,10 +254,11 @@ V1.8.2 之后，Study Plan 应该是 discipline-first：先拆学科，再给路
 - Tutor Exam Track
 - Tutor State Card
 - Tutor Visualize
+- Tutor Practice
 
 不同 Codex UI 的显示方式可能不同，直接 slash 名称也可能不同。不要假设 `/study-plan` 或 `/learn-anything` 一定是 Codex 原生命令。
 
-`/study-plan` 和 `/learn-anything` 仍然是 Tutor 能理解的文字快捷方式；如果你的 Codex 里已经能看到 Tutor Study Plan / `tutor-study-plan` 或 Tutor Learn Anything / `tutor-learn-anything`，优先直接选择对应入口。
+`/study-plan`、`/learn-anything` 和 `/practice` 仍然是 Tutor 能理解的文字快捷方式；如果你的 Codex 里已经能看到对应的 `tutor-*` 入口，优先直接选择该入口。
 
 ## 7. 普通聊天 AI 怎么办？
 
@@ -254,6 +277,7 @@ V1.8.2 之后，Study Plan 应该是 discipline-first：先拆学科，再给路
 /exam-track ...
 /state-card ...
 /visualize ...
+/practice ...
 ```
 
 这些是 prompt shortcuts，不是普通聊天平台的真实菜单命令。
@@ -272,7 +296,7 @@ V1.8.2 之后，Study Plan 应该是 discipline-first：先拆学科，再给路
 
 **`/study-plan` 为什么不弹出？**
 
-`/study-plan` 和 `/learn-anything` 是 Tutor 能理解的文字快捷方式，不一定是 Codex 原生命令。Codex 里如果已经显示 Tutor Study Plan 或 Tutor Learn Anything，请优先选择对应入口。
+`/study-plan`、`/learn-anything` 和 `/practice` 是 Tutor 能理解的文字快捷方式，不一定是 Codex 原生命令。Codex 里如果已经显示对应的 Tutor 入口，请优先选择该入口。
 
 **这些 skill 是不是彼此独立？**
 

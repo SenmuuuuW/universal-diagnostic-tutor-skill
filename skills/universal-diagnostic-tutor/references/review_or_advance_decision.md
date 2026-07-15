@@ -8,6 +8,12 @@ finish the topic quickly.
 For V1.4, choose the action that produces the highest learning gain for the
 smallest reasonable explanation cost.
 
+`readiness_gate_protocol.md` owns the explicit readiness outcome: Advance,
+Advance with caution, Review first, Step down, Diagnose again, or More practice
+needed. This file turns that outcome into the smallest useful teaching move. Do
+not use this guide to bypass the gate when progression to a dependent concept
+matters.
+
 ## Decision Rules
 
 - If the learner lacks vocabulary or notation, review the meaning first.
@@ -112,4 +118,5 @@ reason. Do not force practice in that turn. You may add a compact offer such as
   current blocker.
 - Giving more practice before repairing a repeated misconception.
 - Using a study roadmap when the learner needs the next teaching move.
-- Turning progress tracking into visible labels or grades.
+- Turning progress tracking into rigid scores or unnecessary visible state
+  labels.

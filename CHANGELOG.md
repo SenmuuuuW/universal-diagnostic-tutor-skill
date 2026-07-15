@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.9.0 - 2026-07-15
+
+### Added In v1.9.0
+
+- Added V1.9 Practice & Mastery Loop (练习与掌握闭环).
+- Added targeted exercise-generation, qualitative answer-grading, explicit
+  readiness-gate, learning-task-loop, and Knowledge Link Cards protocols.
+- Added the thin `tutor-practice` entrypoint and `/practice` text shortcut.
+- Added examples for the end-to-end practice loop, partial-credit grading,
+  readiness pass/review decisions, Knowledge Link Cards, and difficulty-ladder
+  exercise generation.
+
+### Changed In v1.9.0
+
+- Connected the main Skill router and learning orchestrator to practice,
+  grading, mistake analysis, visible state updates, and readiness decisions.
+- Aligned existing practice, mistake, mastery, and card guidance with the V1.9
+  loop without replacing their established responsibilities.
+- Updated command-surface, user-guide, README, platform-adapter, evaluation,
+  rubric, failure-taxonomy, feedback, and maintenance guidance.
+
+### Unchanged In v1.9.0
+
+- V1.9 remains a Markdown-only behavior layer, not "Learning Infrastructure."
+- No backend infrastructure, hidden memory, database, account system, real
+  RAG/vector DB, scripts, website, API code, package setup, npm/npx installer,
+  PDF generation, real graphing/image tools, source-pack changes, cheating,
+  exam prediction, score guarantees, or 押题 claims were added.
+
 ## v1.8.4 - 2026-07-07
 
 ### Changed In v1.8.4

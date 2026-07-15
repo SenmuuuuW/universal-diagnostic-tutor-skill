@@ -25,6 +25,8 @@ set. The visible answer should remain natural and concise.
 | `/resource-scan` | Topic scan + trusted resources | Give compact topic scan and trusted source roles or verified sources if available | Resource overuse, fake links, or link dumping |
 | `/visualize` | Basic STEM visualization | Use a simple visual, table, flowchart, or sketch tied to the learning gap | Decorative or overly complex visuals |
 | `/mistake-review` | Error-to-intervention | Explain the surface mistake, underlying gap, tempting path, repair, and near practice | Saying only wrong or giving the full answer |
+| `/practice`, 出题, 批改, 判答案, or asks whether to advance | Practice & Mastery Loop | Generate one targeted exercise or grade the submitted answer, update learning evidence, and apply the readiness gate | Giant worksheets, official scoring claims, or advancing from one lucky answer |
+| Beginner asks why required concepts connect or says they were mentioned too briefly | Knowledge Link Cards | Explain one to three strongly related concepts with minimum mastery and skip-for-now scope, then return to the current task | Equation-first lecture, vague name drops, or a wiki dump |
 
 ## Tie-Breakers
 

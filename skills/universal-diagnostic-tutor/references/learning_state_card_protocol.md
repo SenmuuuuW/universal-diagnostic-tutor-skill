@@ -50,6 +50,24 @@ Learning State Card:
 - Avoids hidden labels that would confuse the learner.
 - Uses natural, learner-readable wording.
 
+## Post-Practice Update
+
+After a practice answer materially changes the learner's state, update the
+card in this order:
+
+1. **Attempt:** Name the targeted exercise or learner action.
+2. **Result:** Record the qualitative verdict and the evidence that matters.
+3. **Mistake type:** Record the underlying error when one was found.
+4. **New mastery status:** Use `explained`, `practiced`, `checked`,
+   `confirmed`, `unconfirmed`, `weak`, or `blocked` from
+   `concept_mastery_map_protocol.md`.
+5. **Next step:** Record the readiness outcome and one concrete action.
+
+Fit this evidence into `Last successful check`, `Still weak`, `Common mistake`,
+and `Next best step`, or add one compact `Latest practice` bullet when that is
+clearer. Do not append a full attempt history or turn the card into a
+gradebook.
+
 ## Anti-Patterns
 
 - Copying the whole chat.

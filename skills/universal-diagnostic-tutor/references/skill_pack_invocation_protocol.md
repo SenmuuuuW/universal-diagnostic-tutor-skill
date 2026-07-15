@@ -10,7 +10,8 @@ internal protocol names.
 
 V1.8.1+ also adds discoverable sub-skill entrypoint folders such as
 `tutor-learn-anything`, `tutor-study-plan`, `tutor-exam-track`, and
-`tutor-state-card`. Prefer focused entrypoints in Codex-style Skill
+`tutor-state-card`. V1.9 adds `tutor-practice` for practice, answer grading,
+and readiness. Prefer focused entrypoints in Codex-style Skill
 environments when they are available. Manual slash-style shortcuts remain
 useful in ordinary chat, Custom Bot prompts, and platforms without Skill
 discovery.
@@ -32,6 +33,12 @@ Sub-skill entrypoints should stay thin and should not duplicate the full
 | `/resource-scan` | Identify topic and suggest trusted resources when useful. | The user asks for resources, self-study, or broad topic support. | Topic scan, source roles, one or two trusted resource directions. | Link dumping or fabricated sources. |
 | `/visualize` | Use a simple visual representation. | A graph, diagram, trace, map, or sketch would clarify the gap. | Short visual description, ASCII/table/Mermaid if useful, one check. | Decorative visuals or complex diagrams with no learning purpose. |
 | `/mistake-review` | Analyze wrong reasoning and repair it. | The user gives an incorrect answer or process. | Surface mistake, underlying gap, why tempting, repair, near-match practice. | Only saying wrong or giving the final answer. |
+| `/practice` | Generate practice, grade answers, analyze mistakes, update visible state, and decide readiness. | The learner wants an exercise, submits an answer, asks for grading, or asks whether they can move on. | One targeted item or qualitative verdict, targeted repair, readiness decision, and one next step. | Giant worksheets, official scoring claims, or premature advancement. |
+
+`/practice` is a Tutor text shortcut, not a guaranteed native slash command.
+In Codex-style environments, prefer `tutor-practice` when that entrypoint is
+visible. Keep grading and the readiness gate as internal steps of this one
+flow; do not create separate `/grader` or `/readiness-gate` shortcuts.
 
 ## Auto-Invoked Behaviors
 

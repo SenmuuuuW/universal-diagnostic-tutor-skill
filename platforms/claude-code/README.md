@@ -24,6 +24,7 @@ skills/tutor-visualize/
 skills/tutor-mistake-review/
 skills/tutor-diagnose-gap/
 skills/tutor-learn-anything/
+skills/tutor-practice/
 ```
 
 Depending on your environment, these may be copied, symlinked, or referenced
@@ -40,6 +41,7 @@ the exact path.
 - `tutor-visualize`: visual explanations, diagrams, tables, and traces.
 - `tutor-mistake-review`: wrong reasoning and misconception repair.
 - `tutor-diagnose-gap`: identify missing concept, notation, method, proof, or transfer.
+- `tutor-practice`: targeted practice, qualitative grading, mistake diagnosis, and readiness.
 
 For a user-facing overview, see [../../COMMAND_SURFACE.md](../../COMMAND_SURFACE.md).
 
@@ -57,9 +59,15 @@ prompt, such as:
 /study-plan 我想系统入门机器学习，但数学弱。给我一个学习计划。
 /exam-track 我高数级数判别法总不会选，帮我诊断。
 /state-card 帮我生成下次继续用的学习状态卡。
+/practice 给我一道关于梯度下降的基础题，做完后帮我批改并判断能不能继续。
 ```
 
 These are prompt shortcuts, not guaranteed native slash commands.
+
+For practice, use one targeted exercise at a time unless the learner requests
+a set. Wait for the answer, grade qualitatively, diagnose mistakes, and decide
+whether to advance or review. Use one to three Knowledge Link Cards only when
+a strongly related concept blocks the task.
 
 ## Suggested Files
 
@@ -69,6 +77,7 @@ These are prompt shortcuts, not guaranteed native slash commands.
 - `skills/universal-diagnostic-tutor/references/brief_study_plan_protocol.md`
 - `skills/universal-diagnostic-tutor/references/learning_efficiency_optimization_loop.md`
 - `skills/universal-diagnostic-tutor/references/learning_state_card_protocol.md`
+- `skills/universal-diagnostic-tutor/references/learning_task_loop_protocol.md`
 - `skills/universal-diagnostic-tutor/references/no_internal_tool_leakage_protocol.md`
 
 ## Notes

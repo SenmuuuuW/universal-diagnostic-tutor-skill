@@ -7,6 +7,10 @@ A Concept Mastery Map is a small status view for important nodes. It can appear
 inside a Learning State Card, Learning Task Card, or short progress summary.
 It is not hidden memory, a gradebook, a database, or a rigid label system.
 
+The status terms below are the preferred V1.9 terms for concept-level state.
+Use them for compact state updates and readiness handoffs instead of inventing
+a second status vocabulary.
+
 ## Status Terms
 
 | Status | Meaning |
@@ -14,7 +18,7 @@ It is not hidden memory, a gradebook, a database, or a rigid label system.
 | explained | Tutor has explained the idea, but learner mastery is not proven |
 | practiced | Learner attempted at least one task with the idea |
 | checked | Tutor asked a check or near-transfer question |
-| confirmed | Learner showed understanding through explanation, independent use, or transfer |
+| confirmed | Learner showed sound reasoning plus independent use or transfer evidence |
 | unconfirmed | No evidence yet, even if related content was discussed |
 | weak | Evidence shows partial understanding or unstable use |
 | blocked | Learner cannot proceed because this node is missing or misunderstood |
@@ -46,17 +50,33 @@ Next step: repair scalar multiple vs component equality with one near-transfer
 check.
 ```
 
-## Advancement Rule
+## Status Updates After Practice
 
-Advance when the learner can do one of these:
+- Mark an attempted concept `practiced`, even when the attempt is not correct.
+- Mark it `checked` after the response has been evaluated against a targeted
+  check or near-transfer task.
+- Use `weak` when evidence is partial or unstable, and `blocked` when an
+  unresolved prerequisite prevents progress.
+- Use `confirmed` only when learner evidence supports the readiness gate. An
+  explanation, exposure, completed example, or lucky answer is insufficient.
+- Preserve `unconfirmed` for related nodes that were mentioned but not tested.
+
+`answer_grading_protocol.md` supplies attempt evidence.
+`readiness_gate_protocol.md` owns the explicit advance decision.
+
+## Readiness Evidence
+
+Useful readiness evidence includes whether the learner can:
 
 - explain the concept in their own words
 - use it independently in a near case
 - identify a trap or misconception
 - transfer the cue to a slightly changed problem
 
-If the learner can only repeat a phrase or follow one worked example, keep the
-node as practiced or checked, not confirmed.
+These are evidence types, not automatic pass conditions. Apply the readiness
+gate and consider reasoning quality, independence, transfer, confidence, and
+repeated errors together. If the learner can only repeat a phrase or follow one
+worked example, keep the node as `practiced` or `checked`, not `confirmed`.
 
 ## Mistakes To Avoid
 

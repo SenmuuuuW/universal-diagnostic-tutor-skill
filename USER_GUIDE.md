@@ -85,6 +85,10 @@
 请用 /state-card 帮我生成下次继续用的学习状态卡。
 ```
 
+```text
+/practice 给我出一道关于矩阵 shape 的题，做完后帮我批改。
+```
+
 如果 chat 很长，或者你准备下次继续学习，就让 Tutor 生成 Learning State Card。换到新 chat 时，先粘贴这张卡，再说：
 
 ```text
@@ -225,7 +229,7 @@ skills/tutor-*/
 ## Codex 用户：直接选择 Tutor 入口
 
 如果 Codex skill picker 里能看到 Tutor Study Plan、Tutor Exam Track、Tutor
-State Card、Tutor Visualize 等入口，就直接选择最贴近你任务的入口。
+State Card、Tutor Visualize、Tutor Practice 等入口，就直接选择最贴近你任务的入口。
 
 这些入口不是独立产品，而是同一个 Universal Diagnostic Tutor 的不同门。比如：
 
@@ -233,6 +237,7 @@ State Card、Tutor Visualize 等入口，就直接选择最贴近你任务的入
 - 想备考：选 Tutor Exam Track。
 - 想保存进度：选 Tutor State Card。
 - 想用图理解：选 Tutor Visualize。
+- 想练习、批改或判断能否进阶：选 Tutor Practice。
 - 不确定选哪个：选 Universal Diagnostic Tutor 或 Tutor Learn Anything。
 
 完整说明见 [COMMAND_SURFACE.md](COMMAND_SURFACE.md)。
@@ -252,6 +257,7 @@ State Card、Tutor Visualize 等入口，就直接选择最贴近你任务的入
 | `/resource-scan` | 定位知识点并找可信资源方向 |
 | `/visualize` | 用简单图示、表格或流程图解释 |
 | `/mistake-review` | 分析错因并修复 |
+| `/practice` | 出一道针对性练习、批改答案并判断能否进阶 |
 
 示例：
 
@@ -283,7 +289,43 @@ State Card、Tutor Visualize 等入口，就直接选择最贴近你任务的入
 /state-card 帮我生成下次继续用的学习状态卡。
 ```
 
-## 11. Learning State Card 怎么用？
+```text
+/practice 我学完向量了，给我一道题检查掌握情况，做完后帮我批改。
+```
+
+## 11. 练习与掌握闭环怎么用？
+
+当你想练习、提交答案、让 Tutor 批改，或者判断自己能不能进入下一个知识点时，可以使用 Tutor Practice 或手动输入 `/practice`。
+
+可以这样问：
+
+```text
+/practice 给我出一道关于矩阵 shape 的题。
+```
+
+```text
+/practice 这是我的答案，帮我批改。
+```
+
+```text
+/practice 我学完向量了，判断我能不能进入矩阵。
+```
+
+Tutor 通常会：
+
+1. 判断你当前在学哪个概念。
+2. 给一道针对当前水平的小练习。
+3. 停下来等你作答。
+4. 做定性批改，说明哪些部分正确、哪些部分错误或缺失。
+5. 分析错因并给针对性修复。
+6. 在有用时更新可见的学习状态。
+7. 根据证据判断应该进阶、继续练习、复习还是降一步。
+
+如果一个强相关的前置概念正在阻碍你，Tutor 可以补充 1–3 张简短的 Knowledge Link Cards，解释它为什么和当前题有关，然后回到练习。它不会默认生成大题单，也不会把一次答对当成已经完全掌握。
+
+`/practice` 是 Tutor 的文字意图快捷方式，不是 shell command，也不保证是当前聊天平台或 Codex UI 的原生 slash command。
+
+## 12. Learning State Card 怎么用？
 
 Learning State Card 不是隐藏记忆。它是一张你能看见、复制、保存、粘贴的学习 checkpoint。
 
@@ -321,7 +363,7 @@ Learning State Card:
 
 如果没有卡片，也不要让 AI 假装记得旧聊天。你可以发一句话说明：上次讲到哪个知识点、你卡在哪里。
 
-## 12. 理科备考 Track 怎么用？
+## 13. 理科备考 Track 怎么用？
 
 理科备考 Track 适合：
 
@@ -362,7 +404,7 @@ Learning State Card:
 /exam-track 我准备考研数学，线代很弱，先从哪里补？
 ```
 
-## 13. 如何反馈效果不好？
+## 14. 如何反馈效果不好？
 
 如果你觉得回答不好，反馈时最好带上：
 
@@ -382,7 +424,7 @@ Learning State Card:
 
 这样维护者可以把问题变成可测试的小案例，而不是盲目加功能。
 
-## 14. 常见问题
+## 15. 常见问题
 
 **我不会 GitHub，可以用吗？**
 

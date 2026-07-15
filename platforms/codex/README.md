@@ -14,8 +14,22 @@ main `SKILL.md`, selected references, and examples as needed.
 - Clone or update the repository.
 - Point Codex at `skills/universal-diagnostic-tutor/` according to your local
   Skill workflow.
+- Keep `skills/tutor-*` alongside the main Skill if you want focused entrypoints
+  such as Tutor Practice.
 - Read the root `INSTALL.md` for installation, update, and copied-directory
   troubleshooting.
+
+## Tutor Practice
+
+If Codex exposes focused Skill entrypoints, choose Tutor Practice /
+`tutor-practice` for exercises, answer checking, qualitative grading, mistake
+diagnosis, or readiness decisions. It normally gives one targeted exercise,
+waits for the learner's answer, and then decides whether to advance or review.
+One to three Knowledge Link Cards may be used only when a strongly related
+concept blocks the current task.
+
+`/practice` is a Tutor text shortcut and is not guaranteed to be a native
+Codex slash command.
 
 ## Notes
 

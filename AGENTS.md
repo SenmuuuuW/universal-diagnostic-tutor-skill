@@ -228,8 +228,8 @@ Future changes must preserve the core identity of the skill:
   source-pack scope, or repository infrastructure.
 - Slash-style flows such as `/tutor`, `/learn-anything`, `/diagnose-gap`,
   `/study-plan`, `/exam-track`, `/state-card`, `/resource-scan`, `/visualize`,
-  and `/mistake-review` are user-facing intent shortcuts, not actual shell
-  commands.
+  `/mistake-review`, and `/practice` are user-facing intent shortcuts, not
+  actual shell commands.
 - Keep cards visible and user-controlled. Learner Profile Cards, Learning Task
   Cards, and Learning State Cards must never imply hidden persistence,
   databases, accounts, or automatic memory.
@@ -266,6 +266,19 @@ Future changes must preserve the core identity of the skill:
 - V1.8 is a learning architecture layer, not a new tool, assignment generator,
   grading system, course generator, graphing tool, database, or hidden-memory
   system.
+- Use the user-facing name `V1.9 Practice & Mastery Loop` (练习与掌握闭环).
+  Do not rename it to "Learning Infrastructure" in user-facing documentation.
+- V1.9 is a Markdown behavior-layer loop, not backend infrastructure.
+- Practice generation should usually produce one targeted exercise at a time;
+  generate a short set only when the learner asks for one.
+- Keep grading qualitative and learning-focused. Do not claim official exam
+  points, predict scores, or reduce feedback to right/wrong.
+- Readiness decisions must use learner evidence. Explanation alone or one lucky
+  correct answer does not confirm mastery.
+- Use Knowledge Link Cards only for strongly related concepts that block the
+  current task. Keep them to one to three short cards and return to the task.
+- Keep `tutor-practice` as the single V1.9 entrypoint. Do not add separate
+  grader or readiness-gate entrypoints unless explicitly approved later.
 - For broad goals, clarify the target and confirm it lightly before building a
   path.
 - Knowledge maps should be compact, goal-specific, and used to choose the next

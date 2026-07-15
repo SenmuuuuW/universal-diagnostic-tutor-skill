@@ -316,7 +316,8 @@ visual learning prompts, pass if the answer:
 
 - Treats `/tutor`, `/learn-anything`, `/diagnose-gap`, `/study-plan`,
   `/exam-track`, `/state-card`, `/resource-scan`, `/visualize`, and
-  `/mistake-review` as user intent shortcuts, not shell commands.
+  `/mistake-review`, and `/practice` as user intent shortcuts, not shell or
+  guaranteed native platform commands.
 - Keeps the visible response natural and teacher-like rather than exposing
   internal protocol names.
 - Uses compact topic scan for substantial STEM / AI-CS questions when useful:

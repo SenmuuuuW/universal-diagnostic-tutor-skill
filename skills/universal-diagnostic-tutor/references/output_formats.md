@@ -222,6 +222,32 @@ How to use it: [when to move up, when to step back]
 Prefer fewer, better-chosen practice items over a long problem dump.
 See `practice_ladder.md` for full rung guidance.
 
+## Practice And Mastery Loop Mode
+
+Use when the learner requests targeted practice, submits an answer, or asks
+whether they can advance. Show only the fields useful for the current turn.
+
+```text
+Current concept: [target concept]
+Practice level: [existing practice-ladder rung]
+Question: [one targeted exercise]
+What this checks: [prerequisite, reasoning, method, or transfer]
+Optional hint: [only if appropriate]
+```
+
+Stop after the question and wait. After the learner answers, use:
+
+```text
+Verdict: [Correct / Mostly correct / Partially correct / Incorrect /
+Cannot grade yet]
+What is correct: [specific evidence]
+What needs repair: [specific missing or wrong part]
+Next step: [repair, another practice item, or readiness decision]
+```
+
+Do not claim official points, expose internal protocol names, or force the full
+loop into one response.
+
 ## Concept Explanation Mode
 
 Use when the user asks what something means.

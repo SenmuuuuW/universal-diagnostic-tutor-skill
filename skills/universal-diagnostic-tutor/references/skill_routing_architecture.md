@@ -21,14 +21,15 @@ Identify:
   request, review, continuation, or project/meta maintenance.
 - User-invoked flow: `/tutor`, `/learn-anything`, `/diagnose-gap`,
   `/study-plan`, `/exam-track`, `/state-card`, `/resource-scan`, `/visualize`,
-  or `/mistake-review` when present. Treat these as intent shortcuts, not
-  command execution.
+  `/mistake-review`, or `/practice` when present. Treat these as intent
+  shortcuts, not command execution.
 - Subject/domain: STEM / science / AI-CS first when relevant, while preserving
   universal-capable tutoring.
 - Learner signal: zero-base, standard exposure, advanced request, confusion,
   wrong reasoning, speed request, resource need, or handoff need.
 - Task shape: tutoring, mistake repair, review/advance decision,
-  resource-supported learning, exam-pattern analysis, or meta discussion.
+  targeted practice, answer grading, resource-supported learning, exam-pattern
+  analysis, or meta discussion.
 
 ## 1.5 Learning Architecture Layer
 
@@ -84,6 +85,22 @@ Use when the learner answers, gives work, repeats a mistake, or shows overload:
 Do not assume mastery from one correct answer. Treat mistakes as evidence for
 the next intervention.
 
+## 5.5 Practice And Mastery Loop
+
+Use when the learner requests practice, submits an answer, asks for grading, or
+wants to know whether to advance:
+
+- Generate one targeted exercise from the current concept, gap, mastery state,
+  and existing practice-ladder rung.
+- Wait for the learner's answer, then grade it qualitatively.
+- Map mistakes to targeted interventions and use a Knowledge Link Card only
+  when a strongly related prerequisite blocks the task.
+- Update visible state when useful and apply the readiness gate before choosing
+  the next exercise, review step, or concept.
+
+This is a Markdown behavior layer, not backend infrastructure. Do not create a
+parallel grader, state store, or separate readiness system.
+
 ## 6. Resource Layer
 
 Use when sources would improve learning, verification, practice design, or exam
@@ -96,12 +113,13 @@ pattern analysis:
 Resources support teaching; they do not replace diagnosis, explanation,
 practice, feedback, or transfer.
 
-## 6.5 V1.7 Skill Pack Layer
+## 6.5 Skill Pack Layer
 
 Use when the learner invokes a named flow or asks for planning, exam review,
 resource scan, visible cards, or visualization:
 
 - Skill Pack invocation routing.
+- Tutor Practice for targeted practice, grading, and readiness decisions.
 - Topic scan and trusted resources.
 - Brief study plan.
 - STEM Exam Track.
@@ -144,3 +162,5 @@ databases, or persistent profiles.
   visual.
 - Treating a broad goal as permission to generate a massive curriculum map.
 - Assuming that explaining one concept confirms mastery of later map nodes.
+- Giving a giant worksheet, official-looking score, or advancement decision
+  without evidence.

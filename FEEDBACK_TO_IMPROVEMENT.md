@@ -11,7 +11,8 @@ improvements.
 2. **Identify user intent and mode.** Note whether the request was a broad
    learning goal, zero-base, standard, advanced, speed mode, mistake analysis,
    resource-supported tutoring, context handoff, `/study-plan`, `/exam-track`,
-   `/resource-scan`, `/visualize`, or card generation.
+   `/resource-scan`, `/visualize`, `/practice`, answer submission, readiness
+   decision, or card generation.
 3. **Mark the failure type.** Use `FAILURE_TAXONOMY.md` to classify the most
    specific failure.
 4. **Score the output.** Use `QUALITY_RUBRIC.md` to score the relevant
@@ -69,3 +70,23 @@ improvements.
   progression, and use readiness checks.
 - Repeated fake mastery across related concepts -> patch concept mastery map
   guidance and add an advancement eval.
+- Repeated generic exercises -> patch target concept, prerequisite, gap, and
+  Practice Ladder selection in exercise generation; add one aligned exercise
+  example and one adjacent-level eval.
+- Repeated right/wrong-only grading -> patch the grading output to preserve the
+  correct part, name the missing part, map the mistake, and choose one repair;
+  add a partial-answer eval.
+- Repeated premature advancement -> tighten readiness evidence requirements,
+  especially explanation and near-transfer; add paired advance/review cases
+  instead of broadening mastery labels.
+- Repeated giant worksheets -> restore the one-question default, stop after the
+  selected item, and add a batch-size eval; do not redesign the Practice Ladder.
+- Repeated fake scoring -> remove invented points or percentages, use
+  qualitative learning labels, state rubric uncertainty, and add an official
+  score-boundary eval.
+- Repeated Knowledge Link Card bloat -> narrow triggers to strongly blocking
+  concepts, cap the response at one to three cards, add skip-for-now scope, and
+  return to the current task.
+- Repeated missing post-practice state updates -> patch the visible update to
+  record attempt, result, mistake type, concept status, and next checkpoint;
+  keep it compact and add a handoff eval.

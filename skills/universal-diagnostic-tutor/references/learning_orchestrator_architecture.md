@@ -8,6 +8,10 @@ V1.8 treats the main Skill as a Learning Orchestrator: it decides what the
 learner is trying to do, confirms the target, builds a compact map, selects the
 next step, routes to the right sub-skill, and updates visible learning state.
 
+V1.9 adds the Practice & Mastery Loop to that orchestrator. It is a Markdown
+behavior layer, not backend infrastructure, automation, persistent memory, a
+database, or a software grading service.
+
 ## Architecture
 
 Universal Diagnostic Tutor System = Learning Orchestrator + Knowledge Map +
@@ -34,6 +38,39 @@ User Goal -> Goal Clarifier -> Goal Confirmation Loop -> Knowledge Map Builder
 / Visualization / State Card -> Mastery Check -> Update State -> Next Step
 ```
 
+## V1.9 Practice And Mastery Loop
+
+Enter this route when the learner requests practice, submits an answer, asks
+for grading, or asks whether they can move on:
+
+```mermaid
+flowchart LR
+    A["Goal"] --> B["Knowledge Map"]
+    B --> C["Teach One Concept"]
+    C --> D["Targeted Practice"]
+    D --> E["Learner Answer"]
+    E --> F["Grade Answer"]
+    F --> G["Mistake Analysis"]
+    G --> H{"Strong Related Concept Blocking?"}
+    H -->|Yes| I["Knowledge Link Card"]
+    H -->|No| J["Update Visible State"]
+    I --> J
+    J --> K["Readiness Gate"]
+    K --> L["Next Step"]
+```
+
+Plain text version:
+
+```text
+Goal -> Knowledge Map -> Teach One Concept -> Practice -> Learner Answer
+-> Grade -> Mistake Analysis -> Knowledge Link Card if needed -> State Update
+-> Readiness Gate -> Next Step
+```
+
+The exercise turn stops and waits for the learner's answer. Do not simulate a
+response to complete the diagram in one message. See
+`learning_task_loop_protocol.md` for the execution rules.
+
 ## Main Orchestrator Responsibilities
 
 - Understand the learner's goal.
@@ -54,6 +91,7 @@ User Goal -> Goal Clarifier -> Goal Confirmation Loop -> Knowledge Map Builder
 | Concept Tutor | Teach one concept or symbol at the right depth |
 | Gap Diagnoser | Identify concept, notation, method, reasoning, or transfer gaps |
 | Mistake Reviewer | Analyze wrong reasoning and repair the underlying gap |
+| Practice Tutor | Generate targeted practice, grade attempts, and apply the readiness gate |
 | Study Planner | Create short plans, not full curriculum maps |
 | Exam Track | Repair exam-relevant concepts and method cues without overclaiming |
 | Resource Scanner | Find or suggest trusted resources only when useful |
@@ -68,6 +106,7 @@ Do not apply every sub-skill at once. Select the smallest useful route:
 - confirmed broad goal -> Knowledge Map Builder + Learning Path Selector
 - single confused concept -> Concept Tutor + Gap Diagnoser
 - wrong work -> Mistake Reviewer
+- wants practice, submits an answer, or asks to advance -> Practice Tutor
 - exam target -> Exam Track + Learning Path Selector
 - wants to continue later -> State Manager
 - visual blocker -> Visualizer
@@ -80,3 +119,4 @@ Do not apply every sub-skill at once. Select the smallest useful route:
 - Turning a compact knowledge map into a curriculum generator.
 - Claiming hidden memory or persistent learner profiles.
 - Assuming future nodes are mastered because the current node was explained.
+- Describing the Practice & Mastery Loop as backend infrastructure.
