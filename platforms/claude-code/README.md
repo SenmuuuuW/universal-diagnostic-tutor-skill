@@ -16,15 +16,11 @@ folders together in the location your environment reads:
 
 ```text
 skills/universal-diagnostic-tutor/
-skills/tutor-study-plan/
-skills/tutor-exam-track/
+skills/tutor-learn-path/
+skills/tutor-practice/
 skills/tutor-state-card/
 skills/tutor-resource-scan/
 skills/tutor-visualize/
-skills/tutor-mistake-review/
-skills/tutor-diagnose-gap/
-skills/tutor-learn-anything/
-skills/tutor-practice/
 ```
 
 Depending on your environment, these may be copied, symlinked, or referenced
@@ -33,15 +29,15 @@ the exact path.
 
 ## Focused Entrypoints
 
-- `tutor-learn-anything`: broad learning goals and first path.
-- `tutor-study-plan`: brief study plans and review order.
-- `tutor-exam-track`: STEM / AI-CS exam review without overclaims.
+- `universal-diagnostic-tutor`: general diagnosis-first tutoring.
+- `tutor-learn-path`: broad learning goals, study plans, and exam routes.
+- `tutor-practice`: practice, grading, mistake review, gap diagnosis, and readiness.
 - `tutor-state-card`: Learning State / Profile / Task Cards.
 - `tutor-resource-scan`: topic scan and trusted resource guidance.
 - `tutor-visualize`: visual explanations, diagrams, tables, and traces.
-- `tutor-mistake-review`: wrong reasoning and misconception repair.
-- `tutor-diagnose-gap`: identify missing concept, notation, method, proof, or transfer.
-- `tutor-practice`: targeted practice, qualitative grading, mistake diagnosis, and readiness.
+
+Older shortcuts such as `/study-plan`, `/exam-track`, `/mistake-review`, and
+`/diagnose-gap` remain text intent aliases; they are not separate folders.
 
 For a user-facing overview, see [../../COMMAND_SURFACE.md](../../COMMAND_SURFACE.md).
 

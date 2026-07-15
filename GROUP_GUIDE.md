@@ -41,8 +41,9 @@
 
 如果你问的是很大的学习目标，比如“我想学机器学习”“我想补线代”或“我想准备考试”，Tutor 会先确认你到底想学什么，再给一个小知识地图和第一步。这样它不是直接乱讲，而是先确定方向。
 
-如果你用的是 Codex，现在可以直接选 Tutor Study Plan、Tutor Exam Track、
-Tutor State Card 等入口；普通聊天 AI 继续用 Lite Prompt 里的文字指令即可。
+如果你用的是 Codex，现在可以从 Universal Diagnostic Tutor、Tutor Learn Path、
+Tutor Practice、Tutor State Card、Tutor Resource Scan 和 Tutor Visualize 六个入口中
+选择；普通聊天 AI 继续用 Lite Prompt 里的文字指令即可。
 
 ## 豆包 / Coze 风格 Bot 怎么用？
 

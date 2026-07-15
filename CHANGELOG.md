@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.9.2 - 2026-07-15
+
+### Changed In v1.9.2
+
+- Simplified the public Tutor command surface from 10 visible entrypoints to 6
+  canonical entrypoints.
+- Added the thin `tutor-learn-path` entrypoint.
+- Merged Learn Anything, Study Plan, and exam planning into Tutor Learn Path.
+- Merged practice, grading, mistake review, gap diagnosis, exam drills, and
+  readiness into Tutor Practice.
+- Kept Tutor State Card, Tutor Resource Scan, and Tutor Visualize as separate
+  focused entrypoints.
+- Preserved old slash-style text shortcuts as aliases.
+- Removed five redundant public wrapper folders without deleting their shared
+  protocols or underlying capabilities.
+
+### Unchanged In v1.9.2
+
+- No core Tutor behavior, learning protocol, example, source pack, or compact
+  chat-prompt behavior changes.
+- No scripts, website files, API code, package setup, database, hidden memory,
+  RAG/vector DB, PDFs, secrets, backend infrastructure, graphing tools, or new
+  integrations.
+
 ## v1.9.1 - 2026-07-15
 
 ### Changed In v1.9.1

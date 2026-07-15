@@ -21,18 +21,16 @@ skills/tutor-*/
 
 ```text
 skills/universal-diagnostic-tutor/
-skills/tutor-study-plan/
-skills/tutor-exam-track/
+skills/tutor-learn-path/
+skills/tutor-practice/
 skills/tutor-state-card/
 skills/tutor-resource-scan/
 skills/tutor-visualize/
-skills/tutor-mistake-review/
-skills/tutor-diagnose-gap/
-skills/tutor-learn-anything/
 ```
 
 `skills/universal-diagnostic-tutor/` 是主 Skill；`skills/tutor-*` 是轻量
-entrypoints。完整安装时建议把它们放在同一个 skills 位置，方便环境发现。
+entrypoints。V1.9.2 的完整安装应显示这 6 个 canonical entries；建议把它们放在
+同一个 skills 位置，方便环境发现。
 
 ## 适用于哪些环境？
 
@@ -125,10 +123,11 @@ skills/tutor-*/
 
 ## Tutor entrypoints 不显示怎么办？
 
-如果 Codex 里看不到 Tutor Study Plan、Tutor Exam Track、Tutor State Card 等入口，先确认文件夹是否存在于当前 Codex 实际读取的 skills 目录。例如：
+如果 Codex 里看不到 Tutor Learn Path、Tutor Practice、Tutor State Card 等入口，
+先确认文件夹是否存在于当前 Codex 实际读取的 skills 目录。例如：
 
 ```text
-~/.codex/skills/tutor-study-plan/SKILL.md
+~/.codex/skills/tutor-learn-path/SKILL.md
 ```
 
 只同步下面这个主 Skill 不够：
@@ -137,13 +136,15 @@ skills/tutor-*/
 skills/universal-diagnostic-tutor/
 ```
 
-V1.8.1+ 的 Codex entrypoints 还需要同步所有：
+V1.9.2 的简化 command surface 还需要同步所有：
 
 ```text
 skills/tutor-*/
 ```
 
-把这些 `skills/tutor-*` 文件夹复制到当前 Codex skills 目录后，重启 Codex 或打开新的 agent session，让 skill picker 重新加载。
+把这 5 个 `skills/tutor-*` 文件夹与主 Skill 一起复制到当前 Codex skills 目录后，
+删除复制位置中已经废弃的旧 wrapper folders，再重启 Codex 或打开新的 agent
+session，让 skill picker 只显示 6 个 canonical entries。
 
 ## 为什么现在不是 npx 一键安装？
 

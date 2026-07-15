@@ -1,64 +1,51 @@
 # Skill Pack Invocation Protocol
 
-Use this protocol when the learner uses short slash-style flow names or when
-documentation needs a memorable way to describe the Skill's capabilities.
-
-These names are prompt conventions, not CLI commands. Ordinary chat users can
-type them manually. Full Skill environments can treat them as clear intent
-signals. User-facing answers should still sound natural and should not expose
-internal protocol names.
-
-V1.8.1+ also adds discoverable sub-skill entrypoint folders such as
-`tutor-learn-anything`, `tutor-study-plan`, `tutor-exam-track`, and
-`tutor-state-card`. V1.9 adds `tutor-practice` for practice, answer grading,
-and readiness. Prefer focused entrypoints in Codex-style Skill
-environments when they are available. Manual slash-style shortcuts remain
-useful in ordinary chat, Custom Bot prompts, and platforms without Skill
-discovery.
+Use this protocol when the learner uses a slash-style text shortcut or when
+documentation needs to explain the public Tutor command surface.
 
 The canonical Tutor System remains `skills/universal-diagnostic-tutor/`.
-Sub-skill entrypoints should stay thin and should not duplicate the full
-`SKILL.md` or reference system.
+Focused entrypoints are thin public doors into that system; they do not own
+separate Tutor behavior or duplicate the main `SKILL.md` and references.
 
-## User-Invoked Flows
+## Canonical Command Surface
 
-| Flow | Meaning | Use When | Output Shape | Avoid |
-| --- | --- | --- | --- | --- |
-| `/tutor` | Start diagnosis-first tutoring for a learning question. | The user wants help understanding a STEM / AI-CS problem or concept. | Compact topic scan, likely gap, one teaching step, one check. | Full answer dump or rigid section labels. |
-| `/learn-anything` | Turn a broad learning goal into a first path. | The learner wants to learn a broad topic and does not know where to start. | Clarify goal, confirm target, compact map, next best step. | Huge curriculum map or immediate advanced lecture. |
-| `/diagnose-gap` | Identify what is missing before teaching. | The learner says they do not know why they are stuck. | Subject, subtopic, likely gap, first repair step. | Long course roadmap or shaming the learner. |
-| `/study-plan` | Make a brief plan from current state and goal. | The user has a goal, exam, or broad topic. | Current state, goal, top gaps, order, today's first step, check. | Huge curriculum map or guaranteed outcomes. |
-| `/exam-track` | Use STEM Exam Track for review and practice. | The user is preparing for university STEM, 考研数学, or CS professional courses. | Topic, likely prerequisite gap, pattern, repair step, practice direction. | Cheating, leaked materials, score guarantees, or 押题 claims. |
-| `/state-card` | Generate or continue from a visible card. | The learner wants to continue later or across chats. | Learning State Card, Learner Profile Card, or Learning Task Card. | Hidden-memory claims or full transcript dumps. |
-| `/resource-scan` | Identify topic and suggest trusted resources when useful. | The user asks for resources, self-study, or broad topic support. | Topic scan, source roles, one or two trusted resource directions. | Link dumping or fabricated sources. |
-| `/visualize` | Use a simple visual representation. | A graph, diagram, trace, map, or sketch would clarify the gap. | Short visual description, ASCII/table/Mermaid if useful, one check. | Decorative visuals or complex diagrams with no learning purpose. |
-| `/mistake-review` | Analyze wrong reasoning and repair it. | The user gives an incorrect answer or process. | Surface mistake, underlying gap, why tempting, repair, near-match practice. | Only saying wrong or giving the final answer. |
-| `/practice` | Generate practice, grade answers, analyze mistakes, update visible state, and decide readiness. | The learner wants an exercise, submits an answer, asks for grading, or asks whether they can move on. | One targeted item or qualitative verdict, targeted repair, readiness decision, and one next step. | Giant worksheets, official scoring claims, or premature advancement. |
+| User need | Canonical entrypoint | Text aliases |
+| --- | --- | --- |
+| General tutoring | `universal-diagnostic-tutor` | `/tutor` if documented |
+| Learning path / study plan / exam route | `tutor-learn-path` | `/learn-anything`, `/study-plan`, `/exam-track` |
+| Practice / grading / mistakes / gap diagnosis | `tutor-practice` | `/practice`, `/mistake-review`, `/diagnose-gap` |
+| Learning state | `tutor-state-card` | `/state-card` |
+| Resources | `tutor-resource-scan` | `/resource-scan` |
+| Visualization | `tutor-visualize` | `/visualize` |
 
-`/practice` is a Tutor text shortcut, not a guaranteed native slash command.
-In Codex-style environments, prefer `tutor-practice` when that entrypoint is
-visible. Keep grading and the readiness gate as internal steps of this one
-flow; do not create separate `/grader` or `/readiness-gate` shortcuts.
+`/exam-track` routes by task: planning and review-order requests use
+`tutor-learn-path`; drills, submitted work, mistake repair, and mastery checks
+use `tutor-practice`.
 
-## Auto-Invoked Behaviors
-
-Apply these silently from learner evidence, even without slash-style flow names:
-
-- domain and gap diagnosis
-- mode selection
-- next-best-step teaching
-- cognitive-load control
-- error-to-intervention
-- explanation compression
-- stop-point discipline
-- Learning State Card suggestion when continuation would help
+These aliases are prompt conventions, not guaranteed native slash commands.
+Ordinary chat users can type them manually, while Skill-capable environments
+should promote only the six canonical entrypoints.
 
 ## Response Rules
 
-- Treat slash flows as intent shortcuts, not as commands to print a template.
-- Combine flows when natural, such as `/exam-track` plus `/mistake-review`.
-- Keep normal tutoring answers student-facing and concise.
-- If the flow name is ambiguous, ask one short clarification.
+- Treat aliases as intent signals, not commands to print a rigid template.
+- Preserve the behavior behind older aliases; only the visible wrapper list is
+  simplified.
+- Enter at the step implied by the request instead of applying every Tutor
+  capability at once.
+- Keep normal tutoring answers natural and student-facing.
+- If an alias is ambiguous, ask one short clarification.
 - Preserve math formatting with `\(...\)` and `\[...\]`.
-- Do not imply the Skill has a shell, bot command system, database, or hidden
-  memory unless the host platform actually implements something separately.
+- Do not imply a shell, native command system, database, or hidden memory unless
+  a host platform separately provides it.
+
+## Auto-Invoked Behaviors
+
+Apply these silently from learner evidence when useful:
+
+- domain and gap diagnosis
+- mode selection and cognitive-load control
+- next-best-step teaching
+- error-to-intervention and explanation compression
+- stop-point discipline
+- visible Learning State Card suggestions for continuation

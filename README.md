@@ -64,19 +64,16 @@ not positioned as a generic answer bot.
 | Need | Use |
 | --- | --- |
 | General tutoring | `universal-diagnostic-tutor` |
-| Broad learning goal | `tutor-learn-anything` |
-| Study plan | `tutor-study-plan` |
-| Practice / grading / readiness | `tutor-practice` |
-| Exam review | `tutor-exam-track` |
-| Gap diagnosis | `tutor-diagnose-gap` |
-| Mistake analysis | `tutor-mistake-review` |
+| Learning path / study plan / exam route | `tutor-learn-path` |
+| Practice / grading / mistakes / gap diagnosis | `tutor-practice` |
 | State cards | `tutor-state-card` |
 | Resources | `tutor-resource-scan` |
 | Visual learning | `tutor-visualize` |
 
-These are thin entrypoints into the same canonical Tutor system. Slash-style
-text such as `/practice` and `/study-plan` expresses intent; it is not a
-guaranteed native command in every host. See the
+V1.9.2 simplifies the public command surface into six canonical Tutor
+entrypoints. Older intents such as `/study-plan`, `/mistake-review`, and
+`/diagnose-gap` remain supported as text aliases. These aliases are not
+guaranteed native commands in every host. See the
 [Command Surface](COMMAND_SURFACE.md) for practical examples.
 
 ## 🔍 How It Works

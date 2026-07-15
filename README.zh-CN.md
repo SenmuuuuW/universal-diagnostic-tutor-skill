@@ -71,19 +71,16 @@ Prompt。Codex / Claude Code-style agent 用户可以使用完整 Skill；如果
 | 我需要 | 选择 |
 | --- | --- |
 | 通用诊断式教学 | `universal-diagnostic-tutor` |
-| 从大目标开始学习 | `tutor-learn-anything` |
-| 制定短学习计划 | `tutor-study-plan` |
-| 练习、批改、判断能否进阶 | `tutor-practice` |
-| 理科或 CS 备考 | `tutor-exam-track` |
-| 诊断知识缺口 | `tutor-diagnose-gap` |
-| 分析错因 | `tutor-mistake-review` |
+| 学习路线、学习计划、备考规划 | `tutor-learn-path` |
+| 练习、批改、错因分析、卡点诊断 | `tutor-practice` |
 | 保存或继续学习状态 | `tutor-state-card` |
 | 查找可信学习资源 | `tutor-resource-scan` |
 | 用图或流程辅助理解 | `tutor-visualize` |
 
-这些入口都回到同一套 Tutor System，不是十个互相独立的产品。`/practice`、
-`/study-plan` 等写法是文字意图快捷方式，不保证是每个平台的原生 slash command。
-具体选择方法见 [COMMAND_SURFACE.md](COMMAND_SURFACE.md)。
+V1.9.2 将公开入口收敛为 6 个。原来的学习计划、错因分析、卡点诊断等能力没有
+删除，而是合并进 Learn Path 和 Practice。`/practice`、`/study-plan` 等写法仍是
+文字意图快捷方式，不保证是每个平台的原生 slash command。具体选择方法见
+[COMMAND_SURFACE.md](COMMAND_SURFACE.md)。
 
 ## 🔍 它怎样工作
 

@@ -230,36 +230,35 @@ skills/tutor-*/
 
 ## Codex 用户：直接选择 Tutor 入口
 
-如果 Codex skill picker 里能看到 Tutor Study Plan、Tutor Exam Track、Tutor
-State Card、Tutor Visualize、Tutor Practice 等入口，就直接选择最贴近你任务的入口。
+V1.9.2 的 Codex skill picker 只推广 6 个入口。它们不是独立产品，而是同一个
+Universal Diagnostic Tutor 的不同门：
 
-这些入口不是独立产品，而是同一个 Universal Diagnostic Tutor 的不同门。比如：
+- 不知道选哪个，就用 Universal Diagnostic Tutor。
+- 想学一个东西、做计划或安排备考路线，用 Tutor Learn Path。
+- 要练题、批改、分析错因或诊断卡点，用 Tutor Practice。
+- 想接着上次学，用 Tutor State Card。
+- 找资料，用 Tutor Resource Scan。
+- 想看图理解，用 Tutor Visualize。
 
-- 想做学习计划：选 Tutor Study Plan。
-- 想备考：选 Tutor Exam Track。
-- 想保存进度：选 Tutor State Card。
-- 想用图理解：选 Tutor Visualize。
-- 想练习、批改或判断能否进阶：选 Tutor Practice。
-- 不确定选哪个：选 Universal Diagnostic Tutor 或 Tutor Learn Anything。
+旧版的 Tutor Learn Anything、Tutor Study Plan、Tutor Exam Track、Tutor Diagnose
+Gap 和 Tutor Mistake Review 已合并到 Learn Path 或 Practice，能力没有删除。
 
 完整说明见 [COMMAND_SURFACE.md](COMMAND_SURFACE.md)。
 
 ## 10. 常用调用方式
 
-这些 slash-style flow 是意图快捷方式，不是 shell command。普通聊天用户可以直接手动输入。
+这些 slash-style flow 是旧意图也能继续使用的文字别名，不是 shell command 或
+保证存在的平台原生菜单。普通聊天用户可以直接手动输入。
 
 | 调用方式 | 用途 |
 | --- | --- |
 | `/tutor` | 开始诊断式教学 |
-| `/learn-anything` | 大目标学习：先判断从哪里开始 |
-| `/diagnose-gap` | 先找知识缺口 |
-| `/study-plan` | 做短学习计划 |
-| `/exam-track` | 理科备考 Track |
+| `/learn-anything`, `/study-plan` | 路由到 Tutor Learn Path |
+| `/exam-track` | 规划用 Learn Path；练习与复盘用 Practice |
 | `/state-card` | 生成或继续学习状态卡 |
 | `/resource-scan` | 定位知识点并找可信资源方向 |
 | `/visualize` | 用简单图示、表格或流程图解释 |
-| `/mistake-review` | 分析错因并修复 |
-| `/practice` | 出一道针对性练习、批改答案并判断能否进阶 |
+| `/diagnose-gap`, `/mistake-review`, `/practice` | 路由到 Tutor Practice |
 
 示例：
 

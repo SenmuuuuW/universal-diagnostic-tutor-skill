@@ -273,22 +273,23 @@ Run them after meaningful prompt, protocol, or documentation changes.
   grades, or turns the answer into a huge roadmap.
 - **Score notes:** 5 prevents fake mastery without sounding bureaucratic.
 
-## 24. V1.8.1 Command Surface Entrypoints
+## 24. V1.9.2 Command Surface Entrypoints
 
 - **Prompt:** "我在 Codex 里想直接做学习计划，应该选哪个 Skill？"
-- **Expected behavior:** Point to `tutor-study-plan` when available, explain
+- **Expected behavior:** Point to `tutor-learn-path` when available, explain
   that it is a thin entrypoint into `universal-diagnostic-tutor`, and mention
   manual `/study-plan` for platforms without skill discovery.
 - **Failure signs:** Cannot name the entrypoint, claims every platform shows a
   menu command, or treats the entrypoint as a separate product.
 - **Score notes:** 5 makes the choice clear without overclaiming UI behavior.
 
-## 25. V1.8.1 Thin Entrypoint Integrity
+## 25. V1.9.2 Thin Entrypoint Integrity
 
-- **Prompt:** "Review `skills/tutor-exam-track/SKILL.md` behavior."
+- **Prompt:** "Review `skills/tutor-learn-path/SKILL.md` behavior."
 - **Expected behavior:** The file has clear `name` and `description`, explains
-  exam-track behavior concisely, points back to the main Tutor Skill and shared
-  references, and avoids duplicating the full main `SKILL.md`.
+  learning-path and exam-planning behavior concisely, points back to the main
+  Tutor Skill and shared references, and avoids duplicating the full main
+  `SKILL.md`.
 - **Failure signs:** Description is vague, the entrypoint copies the whole
   Tutor logic, omits no-cheating / no-押题 guardrails, or cannot be discovered
   by name.

@@ -20,13 +20,13 @@ read a Skill folder, project files, references, and examples.
 
 In Codex / Claude Code-style environments that support skill discovery, also
 keep the lightweight `skills/tutor-*/` entrypoint folders beside the main
-Skill. They make study plans, exam track, state cards, resource scans,
-visualization, mistake review, gap diagnosis, and broad-goal learning easier
-to select without duplicating the main Tutor logic.
+Skill. V1.9.2 exposes six canonical entries: the main Tutor plus Learn Path,
+Practice, State Card, Resource Scan, and Visualize. Related capabilities are
+merged without duplicating or removing the underlying Tutor logic.
 
-When installed, Codex may show user-facing names such as Tutor Study Plan,
-Tutor Exam Track, Tutor State Card, and Tutor Visualize. These are focused
-entrypoints into the same Tutor system.
+When installed, Codex may show Tutor Learn Path, Tutor Practice, Tutor State
+Card, Tutor Resource Scan, Tutor Visualize, and Universal Diagnostic Tutor.
+These are focused entrypoints into the same Tutor system.
 
 Best for:
 
@@ -51,9 +51,9 @@ Coze / Doubao-style bots. These platforms may allow custom instructions and
 optional knowledge files, but they do not automatically behave like a Codex
 Skill.
 
-Custom GPTs, Gems, Projects, and bots do not necessarily show Tutor Study Plan
-or other `tutor-*` entries as menu commands. Use their instruction field and
-ask with natural language or manual shortcuts such as `/study-plan`.
+Custom GPTs, Gems, Projects, and bots do not necessarily show canonical
+`tutor-*` entries as menu commands. Use their instruction field and ask with
+natural language or manual shortcuts such as `/study-plan`.
 
 Best for:
 
@@ -76,7 +76,7 @@ but it cannot automatically access the full reference system.
 For broad goals, it should still clarify and confirm before giving a small
 map and one next step.
 Ordinary chat platforms should use Lite Prompt shortcuts rather than expecting
-discoverable Tutor Study Plan / `tutor-*` skill entries.
+discoverable `tutor-*` skill entries.
 
 ### API Prompt Version
 

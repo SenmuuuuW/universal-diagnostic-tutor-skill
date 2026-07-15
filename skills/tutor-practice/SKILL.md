@@ -1,14 +1,15 @@
 ---
 name: tutor-practice
-description: Generate targeted practice, check or grade learner answers qualitatively, diagnose mistakes, and decide readiness to advance. Use for practice, exercises, answer checking, grading, mastery checks, 练习, 出题, 批改, 判答案, 判断能不能进入下一步, or /practice.
+description: Generate targeted practice, check or grade answers, review mistakes, diagnose learning gaps, and decide readiness. Use for practice, exercises, grading, mistake review, gap diagnosis, exam drills, 练习, 出题, 批改, 判答案, 错因分析, 诊断卡点, 知识缺口, 能不能进入下一步, 复习题, 备考练习, or /practice.
 ---
 
 # Tutor Practice
 
 ## Purpose
 
-Run the Practice & Mastery Loop for targeted exercises, answer feedback, and
-evidence-based advancement decisions.
+Run the Practice & Mastery Loop for targeted exercises, answer feedback,
+mistake review, gap diagnosis, exam drills, and evidence-based advancement
+decisions.
 
 ## Core Behavior
 
@@ -20,6 +21,10 @@ evidence-based advancement decisions.
 - Grade answers qualitatively, preserve what is correct, and state what is
   wrong or missing.
 - Map mistakes to a focused repair instead of reteaching the whole topic.
+- Diagnose the missing concept, notation, prerequisite, method, proof idea, or
+  transfer skill when the learner is stuck.
+- For exam review, choose targeted drills and pattern checks without prediction
+  or score claims.
 - Use one to three Knowledge Link Cards only when a strongly related concept
   is blocking the current task.
 - Update visible learning state when useful, apply the readiness gate, and

@@ -251,7 +251,14 @@ Future changes must preserve the core identity of the skill:
 - Keep Lite Prompt short enough for ordinary chat platforms; it should carry
   V1.7 intent shortcuts without duplicating the full Skill reference system.
 - `skills/universal-diagnostic-tutor/` is canonical. `skills/tutor-*` folders
-  are thin V1.8.1 entrypoints for discoverability, not separate Tutor systems.
+  are thin discoverability entrypoints, not separate Tutor systems.
+- Keep the public command surface at six canonical entrypoints unless an
+  expansion is explicitly approved: the main Tutor, Learn Path, Practice,
+  State Card, Resource Scan, and Visualize.
+- Do not add a public `tutor-*` entrypoint for every internal protocol. Prefer
+  merging small or related capabilities into an existing canonical entrypoint.
+- Old slash-style shortcuts may remain as text aliases, but README and
+  `COMMAND_SURFACE.md` should promote only canonical entrypoints.
 - Do not duplicate the full Tutor Skill, reference system, or long protocol
   text inside each `tutor-*` sub-skill.
 - Keep entrypoint `description` fields short, unique, and discoverable.

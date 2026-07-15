@@ -53,18 +53,18 @@ V1.7 增加了短的 user-invoked flows，V1.9 又加入 `/practice`，方便学
 
 ## Related sub-skill entrypoints
 
-V1.8.1 增加了轻量 `tutor-*` folders，方便 Codex-style skill discovery。它们不是
-独立产品，也不复制完整主 Skill；它们只是进入同一套 Tutor System 的 focused doors。
+V1.9.2 将公开 command surface 收敛为 6 个 canonical entries。它们不是独立
+产品，也不复制完整主 Skill；它们只是进入同一套 Tutor System 的 focused doors。
 
-- `../tutor-learn-anything/`：大目标学习入口。
-- `../tutor-study-plan/`：短学习计划入口。
-- `../tutor-exam-track/`：STEM / 理科备考入口。
+- `universal-diagnostic-tutor`：通用诊断式教学主入口。
+- `../tutor-learn-path/`：大目标、学习计划与备考路线入口。
+- `../tutor-practice/`：练习、批改、错因、卡点诊断与进阶判断入口。
 - `../tutor-state-card/`：Learning State / Profile / Task Cards 入口。
 - `../tutor-resource-scan/`：Topic scan + trusted resources 入口。
 - `../tutor-visualize/`：简单学习可视化入口。
-- `../tutor-mistake-review/`：错因分析入口。
-- `../tutor-diagnose-gap/`：知识缺口诊断入口。
-- `../tutor-practice/`：练习、定性批改和进阶判断入口。
+
+`/learn-anything`、`/study-plan`、`/exam-track`、`/diagnose-gap` 和
+`/mistake-review` 仍可作为文字别名使用，但不再对应独立公开 wrapper folders。
 
 完整 command surface 说明见根目录 [COMMAND_SURFACE.md](../../COMMAND_SURFACE.md)。
 

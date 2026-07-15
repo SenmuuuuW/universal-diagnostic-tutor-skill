@@ -51,13 +51,19 @@ can type them manually; full Skill environments can route from them more
 clearly. User-facing answers should remain natural and should not over-label
 internal protocols.
 
-Thin `tutor-*` sub-skill entrypoints are available for environments that
-discover skills by folder: `tutor-study-plan`, `tutor-exam-track`,
-`tutor-state-card`, `tutor-resource-scan`, `tutor-visualize`,
-`tutor-mistake-review`, `tutor-diagnose-gap`, `tutor-learn-anything`, and
-`tutor-practice`. Keep this main skill as the canonical orchestrator;
-sub-skill entrypoints should route back to the shared Tutor System rather than
-duplicating it.
+The public command surface has six canonical entrypoints: this main
+`universal-diagnostic-tutor` skill plus `tutor-learn-path`, `tutor-practice`,
+`tutor-state-card`, `tutor-resource-scan`, and `tutor-visualize`. These thin
+entrypoints route back to the shared Tutor System rather than duplicating it.
+
+Route text aliases to that smaller surface:
+
+- `/learn-anything` and `/study-plan` -> `tutor-learn-path`
+- `/exam-track` -> `tutor-learn-path` for planning, or `tutor-practice` for
+  drills and review
+- `/diagnose-gap`, `/mistake-review`, and `/practice` -> `tutor-practice`
+- `/state-card`, `/resource-scan`, and `/visualize` -> their matching focused
+  entrypoints
 
 ## Core Workflow
 
