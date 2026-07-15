@@ -112,13 +112,11 @@ on. See [EXAMPLES.md](EXAMPLES.md) for concise comparisons and teaching flows.
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=SenmuuuuW/universal-diagnostic-tutor-skill&type=Date)](https://www.star-history.com/#SenmuuuuW/universal-diagnostic-tutor-skill&Date)
-
 <a href="https://www.star-history.com/?repos=SenmuuuuW%2Funiversal-diagnostic-tutor-skill&type=date&legend=top-left">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=SenmuuuuW/universal-diagnostic-tutor-skill&type=date&theme=dark&legend=top-left&sealed_token=mQ56sBORgqroYwWpAOfdZxH8ZmkX67bbfQfFujWPfWgN_LMI17J0PkcJ5tqi85kifEodFyULJ_BFH5lJ2Vl21oHPk4tRDCfjfxOzXXNcRfJheTyj7VOxlBbyyvF7nrLlHr-C95VNmB63UNaoG3JBMvXYEgqyl0NBuAs0MPWvWwbjqd4QdSKpNZXmBR7S" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=SenmuuuuW/universal-diagnostic-tutor-skill&type=date&legend=top-left&sealed_token=mQ56sBORgqroYwWpAOfdZxH8ZmkX67bbfQfFujWPfWgN_LMI17J0PkcJ5tqi85kifEodFyULJ_BFH5lJ2Vl21oHPk4tRDCfjfxOzXXNcRfJheTyj7VOxlBbyyvF7nrLlHr-C95VNmB63UNaoG3JBMvXYEgqyl0NBuAs0MPWvWwbjqd4QdSKpNZXmBR7S" />
-   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=SenmuuuuW/universal-diagnostic-tutor-skill&type=date&legend=top-left&sealed_token=mQ56sBORgqroYwWpAOfdZxH8ZmkX67bbfQfFujWPfWgN_LMI17J0PkcJ5tqi85kifEodFyULJ_BFH5lJ2Vl21oHPk4tRDCfjfxOzXXNcRfJheTyj7VOxlBbyyvF7nrLlHr-C95VNmB63UNaoG3JBMvXYEgqyl0NBuAs0MPWvWwbjqd4QdSKpNZXmBR7S" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=SenmuuuuW/universal-diagnostic-tutor-skill&type=date&theme=dark&legend=top-left&sealed_token=Q0X6xvOavsuyd8bdKza51o_UGJTUU1wlNVQuskf64hOMbT6bVMWEsD4NadjLyoMj5r7MYrppwPZuLgsk3p_qyC_eytVA3AfYFdbGRG3cTqrLBMlSbhqGHAEAT4xIeEvAuAYae7hLQRTOCPzp1KHR2F56WLs3b6tPNZWxnZTcb25l8EAUCqrK1LJLK0U_" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=SenmuuuuW/universal-diagnostic-tutor-skill&type=date&legend=top-left&sealed_token=Q0X6xvOavsuyd8bdKza51o_UGJTUU1wlNVQuskf64hOMbT6bVMWEsD4NadjLyoMj5r7MYrppwPZuLgsk3p_qyC_eytVA3AfYFdbGRG3cTqrLBMlSbhqGHAEAT4xIeEvAuAYae7hLQRTOCPzp1KHR2F56WLs3b6tPNZWxnZTcb25l8EAUCqrK1LJLK0U_" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=SenmuuuuW/universal-diagnostic-tutor-skill&type=date&legend=top-left&sealed_token=Q0X6xvOavsuyd8bdKza51o_UGJTUU1wlNVQuskf64hOMbT6bVMWEsD4NadjLyoMj5r7MYrppwPZuLgsk3p_qyC_eytVA3AfYFdbGRG3cTqrLBMlSbhqGHAEAT4xIeEvAuAYae7hLQRTOCPzp1KHR2F56WLs3b6tPNZWxnZTcb25l8EAUCqrK1LJLK0U_" />
  </picture>
 </a>
 
