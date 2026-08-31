@@ -67,10 +67,9 @@ response, then speak naturally.
 - Use `goal_clarifier_protocol.md`,
   `goal_confirmation_loop_protocol.md`,
   `knowledge_map_builder_protocol.md`,
-  `learning_path_selector_protocol.md`,
-  `learning_orchestrator_architecture.md`, and
-  `concept_mastery_map_protocol.md` for broad goals that need V1.8 learning
-  architecture before ordinary tutoring begins.
+  `learning_path_selector_protocol.md`, and
+  `concept_mastery_map_protocol.md` for broad goals that need goal shaping and a
+  compact path before ordinary tutoring begins.
 - Use `learning_efficiency_optimization_loop.md` to choose the smallest
   high-value next step and avoid unnecessary cognitive load.
 - Use `next_best_teaching_step_protocol.md` when deciding which blocker should

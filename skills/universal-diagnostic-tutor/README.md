@@ -288,7 +288,7 @@ Skill 的核心入口。它包含触发说明、诊断优先工作流、教学�
 详细教学协议和维护资料。常用文件包括：
 
 - `skill_pack_invocation_protocol.md`：`/tutor`、`/learn-anything`、`/study-plan`、`/exam-track`、`/practice` 等 user-invoked flows 的调用约定。
-- `learning_orchestrator_architecture.md`：连接 V1.8 学习架构和 V1.9 练习闭环的主编排层。
+- 主编排层说明已归档到仓库 `docs/design-history-v18-orchestrator.md`（设计历史，非运行时参考）。
 - `goal_clarifier_protocol.md`：大目标、弱基础、考试或项目目标的短澄清问题。
 - `goal_confirmation_loop_protocol.md`：澄清后先确认目标，再开始建路径。
 - `knowledge_map_builder_protocol.md`：小而目标相关的知识地图，不生成庞大课程图。
@@ -347,7 +347,7 @@ Skill 的核心入口。它包含触发说明、诊断优先工作流、教学�
 - `autonomous_resource_discovery_protocol.md`：有 web/search 能力时主动寻找权威学习资源。
 - `resource_orchestrated_tutoring_protocol.md`：把搜索、source packs 或用户材料编排成教学，而不是链接列表。
 - `exam_pattern_resource_analysis.md`：分析常见考试题型、陷阱、识别 cue 和练习方向。
-- `skill_vs_generic_ai_advantage.md`：说明本 Skill 相比普通 AI 答案的诊断、节奏、资源和掌握优势。
+- `docs/skill_vs_generic_ai_advantage.md`：说明本 Skill 相比普通 AI 答案的诊断、节奏、资源和掌握优势（维护文档）。
 - `source_trust_hierarchy.md`：资源可信度层级。
 - `evaluation_checklist.md` 和 `manual_test_matrix.md`：人工验收和测试。根目录的 [EVALS.md](../../EVALS.md)、[QUALITY_RUBRIC.md](../../QUALITY_RUBRIC.md)、[FAILURE_TAXONOMY.md](../../FAILURE_TAXONOMY.md) 和 [FEEDBACK_TO_IMPROVEMENT.md](../../FEEDBACK_TO_IMPROVEMENT.md) 用于更系统的质量评估和改进。
 
@@ -402,7 +402,7 @@ Skill 的核心入口。它包含触发说明、诊断优先工作流、教学�
 - 学习者要跨聊天继续时，使用 Learning State Card；不要暗示 agent 有隐藏记忆或持久学习档案。
 - 对重复出现的失败，补 eval case，再做最小协议、示例或文档改动。
 - 修改教学行为时，同时更新示例、评估清单和人工测试矩阵。
-- 可用 `evaluation_checklist.md` 和 `manual_test_matrix.md` 做人工验收。
+- 可用 `docs/benchmark/` 下的人工验收与回归测试资产做质量检查。
 - 如果外部 `quick_validate.py` 因缺少 PyYAML 无法运行，不要为此在本仓库新增 package setup；可在本地环境安装依赖或使用已有 YAML 工具验证 front matter。
 
 ## 如何更新 Skill

@@ -59,17 +59,11 @@ Legacy slash-style strings such as `/tutor`, `/diagnose-gap`, `/study-plan`,
 `/mistake-review`, `/learn-anything`, and `/practice` are still recognized
 silently as intent signals for backward compatibility, but they are not
 advertised commands and learners never need to learn them. Map them to the
-same internal routes:
-
-- `/learn-anything` and `/study-plan` -> learning planning (Clarify + compact
-  map + first step)
-- `/exam-track` -> exam-aware planning for routes, or practice/drills for
-  review
-- `/diagnose-gap`, `/mistake-review`, and `/practice` -> practice, grading,
-  mistake repair, gap diagnosis, and readiness decisions
-- `/state-card` -> visible state continuity (Learning State Card)
-- `/resource-scan` -> resource-supported tutoring
-- `/visualize` -> visual explanation
+same internal routes used by their natural-language equivalents (planning
+intents to Clarify, practice/grading/mistake intents to the practice loop,
+state intents to Carry, resource intents to resource-supported teaching,
+visual intents to visual explanation); see
+`references/skill_pack_invocation_protocol.md` for the full table.
 
 User-facing answers remain natural and never over-label internal routes.
 
@@ -326,7 +320,6 @@ Select a format based on the request:
 - Full teacher-style explanation
 - Short answer mode
 - Mistake analysis mode
-- Skill Pack invocation mode
 - Topic scan / trusted resources mode
 - Brief study plan mode
 - STEM Exam Track mode
@@ -359,9 +352,8 @@ Load reference files only when useful:
 - Use `references/trigger_mode_matrix.md` when a user signal should activate a
   specific mode or protocol, such as zero-base, known-X-not-Y, still-confused,
   resource request, cross-chat continuation, or final-answer request.
-- Use V1.8 learning architecture references for broad goals and learning-path
-  decisions: `learning_orchestrator_architecture.md`,
-  `goal_clarifier_protocol.md`, `goal_confirmation_loop_protocol.md`,
+- Use the goal and path references for broad goals and learning-path
+  decisions: `goal_clarifier_protocol.md`, `goal_confirmation_loop_protocol.md`,
   `knowledge_map_builder_protocol.md`, `learning_path_selector_protocol.md`,
   and `concept_mastery_map_protocol.md`.
 - Use `references/learning_state_card_protocol.md` when the learner wants to
@@ -503,10 +495,8 @@ Load reference files only when useful:
   never present a mode menu or onboarding. Ask one minimal calibration question
   only when the mode would change the answer and cannot be inferred.
 - Use `references/output_formats.md` when formatting a tutoring answer.
-- Use `references/evaluation_checklist.md` when reviewing whether answers are
-  diagnosis-first, universal, concise enough, and safe in high-stakes domains.
-- Use `references/manual_test_matrix.md` when manually testing the skill across
-  subjects and boundary cases.
+- Maintainer-only: `docs/benchmark/` holds acceptance and regression assets;
+  they are not part of tutoring runtime.
 - Use `references/response_length_calibration.md` when tuning answer length or
   comparing ultra-short, standard, and deep responses.
 - Use `references/resource_integration_protocol.md` for resource-augmented
@@ -520,9 +510,7 @@ Load reference files only when useful:
 - Use `references/exam_pattern_resource_analysis.md` when public exams,
   problem sets, or repeated mistakes can clarify tested concepts, traps,
   recognition cues, and practice priorities.
-- Use `references/skill_vs_generic_ai_advantage.md` when examples or
-  evaluation need to show how diagnosis, pacing, resource discovery, and
-  mastery support differ from generic answer generation.
+- Maintainer-only: the Skill-vs-generic-AI comparison lives in `docs/`.
 - Use `references/source_trust_hierarchy.md` when choosing or evaluating
   sources.
 - Use `references/stem_ai_cs_scope.md` for the primary STEM / AI-CS learning
@@ -544,7 +532,7 @@ Load reference files only when useful:
   auditing source-pack links.
 - Use `references/source_note_checklist.md` before citing or listing external
   resources.
-- Use `references/maintenance_notes.md` only when updating this skill.
+- Maintainer-only: update notes live in `docs/maintenance_notes.md`.
 
 ## Guardrails
 
