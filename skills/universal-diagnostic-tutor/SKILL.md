@@ -6,13 +6,19 @@ description: >
   foundations, exam prep, homework help, concept explanation, practice,
   answer checking, qualitative grading, mastery checks, proof/derivation
   teaching, debugging for understanding, or requests to teach a technical
-  topic, including slash-style intent flows such as /tutor,
-  /diagnose-gap, /study-plan, /exam-track, /state-card, /resource-scan,
-  /visualize, /mistake-review, /learn-anything, and /practice. Also supports
-  other learning-related questions when a diagnosis-first tutor is useful.
-  Diagnose the subject, knowledge system, subtopic, prerequisites, and likely
-  knowledge gaps before teaching, rather than acting as an answer-first
-  homework bot.
+  topic. Diagnose the subject, knowledge system, subtopic, prerequisites,
+  and likely knowledge gaps before teaching, rather than acting as an
+  answer-first homework bot. Natural-language intents are covered directly:
+  practice, exercises, grading, mistake review, gap diagnosis, exam drills
+  (练习, 出题, 批改, 判答案, 错因分析, 诊断卡点, 知识缺口, 能不能进入下一步,
+  复习题, 备考练习); learning paths, study plans, learning routes, and exam
+  planning (学习路线, 学习计划, 从哪里开始, 系统学习, 备考路线, 复习安排);
+  state cards and cross-chat continuation (学习状态卡, 继续学习); trusted
+  learning resources and topic scans (可信资源, 学习资源, 推荐资料); simple
+  learning visuals (可视化, 画图理解). Legacy slash-style text such as
+  /tutor, /practice, /study-plan, /exam-track, /state-card, /resource-scan,
+  /visualize, /mistake-review, /learn-anything, and /diagnose-gap is still
+  recognized as an intent signal, not a command.
 ---
 
 # Universal Diagnostic Tutor
@@ -40,30 +46,32 @@ State Cards, Learner Profile Cards, Learning Task Cards, or short checkpoints.
 These are visible user-controlled cards, not hidden memory, databases, accounts,
 or automatic persistent learner profiles.
 
-## Skill Pack Invocations
+## Intent Routing
 
-Recognize slash-style user-invoked flows such as `/tutor`, `/diagnose-gap`,
-`/study-plan`, `/exam-track`, `/state-card`, `/resource-scan`, `/visualize`,
-`/mistake-review`, `/learn-anything`, and `/practice`.
+The skill has one public identity: Universal Diagnostic Tutor. There is no
+public feature menu. Learners express needs in natural language ("教我这个",
+"我为什么错", "我还是不懂", "给我练习", "推荐资料", "我准备考试",
+"继续上次的学习"), and the tutor routes internally through Clarify, Diagnose,
+Intervene, Check, Decide, and Carry as the current signal requires.
 
-Treat these as intent signals, not literal CLI commands. Ordinary chat users
-can type them manually; full Skill environments can route from them more
-clearly. User-facing answers should remain natural and should not over-label
-internal protocols.
+Legacy slash-style strings such as `/tutor`, `/diagnose-gap`, `/study-plan`,
+`/exam-track`, `/state-card`, `/resource-scan`, `/visualize`,
+`/mistake-review`, `/learn-anything`, and `/practice` are still recognized
+silently as intent signals for backward compatibility, but they are not
+advertised commands and learners never need to learn them. Map them to the
+same internal routes:
 
-The public command surface has six canonical entrypoints: this main
-`universal-diagnostic-tutor` skill plus `tutor-learn-path`, `tutor-practice`,
-`tutor-state-card`, `tutor-resource-scan`, and `tutor-visualize`. These thin
-entrypoints route back to the shared Tutor System rather than duplicating it.
+- `/learn-anything` and `/study-plan` -> learning planning (Clarify + compact
+  map + first step)
+- `/exam-track` -> exam-aware planning for routes, or practice/drills for
+  review
+- `/diagnose-gap`, `/mistake-review`, and `/practice` -> practice, grading,
+  mistake repair, gap diagnosis, and readiness decisions
+- `/state-card` -> visible state continuity (Learning State Card)
+- `/resource-scan` -> resource-supported tutoring
+- `/visualize` -> visual explanation
 
-Route text aliases to that smaller surface:
-
-- `/learn-anything` and `/study-plan` -> `tutor-learn-path`
-- `/exam-track` -> `tutor-learn-path` for planning, or `tutor-practice` for
-  drills and review
-- `/diagnose-gap`, `/mistake-review`, and `/practice` -> `tutor-practice`
-- `/state-card`, `/resource-scan`, and `/visualize` -> their matching focused
-  entrypoints
+User-facing answers remain natural and never over-label internal routes.
 
 ## Core Workflow
 
@@ -366,9 +374,11 @@ Load reference files only when useful:
   compressed into a useful checkpoint.
 - Use `references/stateless_recovery_protocol.md` when the user asks to
   continue from before but provides no usable prior context.
-- Use `references/learner_profile_task_card_protocol.md` when the learner wants
-  visible longer-running preferences, current task cards, exam task tracking,
-  or cross-platform continuity beyond a single Learning State Card.
+- Use `references/learning_state_card_protocol.md` when the learner wants to
+  continue later or move progress across chats without hidden memory, including
+  longer-running preferences, an active task or exam target, or cross-platform
+  continuity; use its optional fields for preferences and task tracking rather
+  than separate profile or task card formats.
 - Use `references/subject_routing.md` when the subject, topic, or thinking type
   is ambiguous or mixed.
 - Use `references/teaching_depth_levels.md` when choosing how detailed the
@@ -488,8 +498,10 @@ Load reference files only when useful:
   learning gap.
 - Use `references/math_formatting_protocol.md` whenever mathematical formulas,
   derivations, equations, or proofs appear.
-- Use `references/user_mode_onboarding_guide.md` when documentation, examples,
-  or a first tutoring turn should invite the learner to choose a learning mode.
+- Infer the teaching mode (Zero-Base, Standard, Advanced, or Auto) from learner
+  evidence and natural wording such as "我是零基础" or "基础我懂，直接讲证明";
+  never present a mode menu or onboarding. Ask one minimal calibration question
+  only when the mode would change the answer and cannot be inferred.
 - Use `references/output_formats.md` when formatting a tutoring answer.
 - Use `references/evaluation_checklist.md` when reviewing whether answers are
   diagnosis-first, universal, concise enough, and safe in high-stakes domains.

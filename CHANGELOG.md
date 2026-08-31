@@ -2,6 +2,43 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased — 2.0 Phase 1 (Public Surface Collapse)
+
+### Changed
+
+- Collapsed the public surface to ONE tutor: `universal-diagnostic-tutor`.
+  There is no feature menu; practice, grading, mistake review, gap diagnosis,
+  study plans, learning paths, exam-aware review, resource-supported teaching,
+  visualization, readiness decisions, and continuity are all triggered
+  automatically from natural-language intent.
+- Removed the five thin `tutor-*` entrypoint folders (learn-path, practice,
+  state-card, resource-scan, visualize) and merged their English and Chinese
+  trigger vocabulary into the main SKILL.md description so skill-picker
+  matching does not regress.
+- Legacy slash-style text (`/tutor`, `/practice`, `/study-plan`, `/exam-track`,
+  `/state-card`, `/resource-scan`, `/visualize`, `/mistake-review`,
+  `/learn-anything`, `/diagnose-gap`) remains silently recognized for backward
+  compatibility but is no longer advertised as a command surface.
+- Collapsed the card artifacts from three (Learning State / Learner Profile /
+  Learning Task) to one Learning State Card with optional fields (preferred
+  language/level, active goal or exam target, latest practice).
+- Removed the teaching-mode onboarding menu: Zero-Base / Standard / Advanced /
+  Auto are inferred from learner evidence; one minimal calibration question is
+  allowed only when the mode would change the answer and cannot be inferred.
+- Internalized feature names (Resource Scan, Visualize, Exam Track, Concept
+  Mastery Map, Knowledge Link Cards, Readiness Gate, Gap Diagnosis, Mistake
+  Review, Learning Architecture) as internal routes, never as names learners
+  must understand.
+- Updated README (EN/ZH), COMMAND_SURFACE, USER_GUIDE, GROUP_GUIDE, INSTALL,
+  PORTABILITY, Skill README, EVALS #24/#25, QUALITY_RUBRIC intent dimensions,
+  FAILURE_TAXONOMY entrypoint rows, and AGENTS surface rules accordingly.
+
+### Unchanged
+
+- No core teaching behavior, protocol, example, source pack, or platform
+  adapter changes. No scripts, infrastructure, database, hidden memory, or
+  integrations. No token-driven compression of core teaching instructions.
+
 ## v1.9.2 - 2026-07-15
 
 ### Changed In v1.9.2

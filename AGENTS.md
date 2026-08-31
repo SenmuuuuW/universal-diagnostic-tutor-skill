@@ -202,7 +202,7 @@ Future changes must preserve the core identity of the skill:
 - `README.md` is the English public landing page, and `README.zh-CN.md` is the
   Chinese public landing page. Keep both concise and aligned.
 - Do not put full tutorials in either README. Keep beginner guidance in
-  `USER_GUIDE.md` and detailed entrypoint guidance in `COMMAND_SURFACE.md`.
+  `USER_GUIDE.md` and single-tutor usage examples in `COMMAND_SURFACE.md`.
 - Keep the Star History chart as a passive README visualization only; do not
   add scripts, data pipelines, tracking, or repository infrastructure for it.
 - When major public capabilities change, update both README files without
@@ -238,9 +238,11 @@ Future changes must preserve the core identity of the skill:
   `/study-plan`, `/exam-track`, `/state-card`, `/resource-scan`, `/visualize`,
   `/mistake-review`, and `/practice` are user-facing intent shortcuts, not
   actual shell commands.
-- Keep cards visible and user-controlled. Learner Profile Cards, Learning Task
-  Cards, and Learning State Cards must never imply hidden persistence,
-  databases, accounts, or automatic memory.
+- Keep the Learning State Card visible and user-controlled. Its optional
+  fields (preferred language/level, active goal or exam target, latest
+  practice) absorb the former profile and task card concepts; no parallel card
+  types exist. Cards must never imply hidden persistence, databases, accounts,
+  or automatic memory.
 - STEM Exam Track must not promise score gains, predict exams, claim 押题, use
   leaked materials, or help with cheating.
 - Topic Scan should stay compact and should not force resources into every
@@ -250,39 +252,31 @@ Future changes must preserve the core identity of the skill:
   requested later.
 - Keep Lite Prompt short enough for ordinary chat platforms; it should carry
   V1.7 intent shortcuts without duplicating the full Skill reference system.
-- `skills/universal-diagnostic-tutor/` is canonical. `skills/tutor-*` folders
-  are thin discoverability entrypoints, not separate Tutor systems.
-- Keep the public command surface at six canonical entrypoints unless an
-  expansion is explicitly approved: the main Tutor, Learn Path, Practice,
-  State Card, Resource Scan, and Visualize.
-- Do not add a public `tutor-*` entrypoint for every internal protocol. Prefer
-  merging small or related capabilities into an existing canonical entrypoint.
-- Old slash-style shortcuts may remain as text aliases, but README and
-  `COMMAND_SURFACE.md` should promote only canonical entrypoints.
-- Do not duplicate the full Tutor Skill, reference system, or long protocol
-  text inside each `tutor-*` sub-skill.
-- Keep entrypoint `description` fields short, unique, and discoverable.
-- If adding a new user-facing capability later, decide whether it needs a
-  protocol reference, prompt shortcut, sub-skill entrypoint, and README /
-  `COMMAND_SURFACE.md` documentation.
-- README should only summarize the command surface. `COMMAND_SURFACE.md` is
-  the canonical detailed Chinese tutorial for visible Codex Tutor entrypoints.
-- Keep Chinese user-facing entrypoint explanations practical: what the user
-  sees, when to choose it, and one example prompt.
-- Do not promise exact Codex UI slash command behavior. `/study-plan` and
-  similar names remain Tutor text shortcuts unless the host UI exposes them.
-- Keep `tutor-*` entrypoints as thin wrappers around the main Tutor system.
-- Entrypoint descriptions should include concise Chinese trigger terms when the
-  primary user intent is likely Chinese.
-- When adding a new `tutor-*` entrypoint, update the main `SKILL.md` router,
-  `COMMAND_SURFACE.md`, `USER_GUIDE.md` if relevant, and platform adapters if
-  shortcut behavior changes.
+- 2.0 public surface: ONE tutor, no feature menu. `skills/universal-diagnostic-tutor/`
+  is the only public entrypoint; `skills/tutor-*` folders no longer exist.
+- Do not add new public entrypoints. New capabilities are internal behaviors
+  triggered by natural language; their trigger vocabulary goes into the main
+  SKILL.md description, not into a new folder or menu.
+- Legacy slash-style strings (e.g. `/practice`, `/study-plan`) remain silently
+  recognized for backward compatibility but are never advertised as a command
+  surface in README or `COMMAND_SURFACE.md`.
+- Keep the main SKILL.md `description` carrying the English and Chinese
+  natural-language trigger vocabulary (练习/批改/学习计划/学习状态卡/可信资源/
+  可视化/继续学习…). Deleting or renaming a capability requires moving its
+  trigger words into the main description first — Chinese picker matching must
+  not regress.
+- `COMMAND_SURFACE.md` explains single-tutor usage with natural-language
+  examples; it must not present a feature menu.
+- Do not promise exact Codex UI slash command behavior; slash strings are
+  intent signals unless the host UI implements them separately.
 - Generated local exports should not be committed unless explicitly intended.
 - V1.8 is a learning architecture layer, not a new tool, assignment generator,
   grading system, course generator, graphing tool, database, or hidden-memory
   system.
-- Use the user-facing name `V1.9 Practice & Mastery Loop` (练习与掌握闭环).
-  Do not rename it to "Learning Infrastructure" in user-facing documentation.
+- Keep learner mode calibration internal: Zero-Base / Standard / Advanced /
+  Auto are inferred from learner evidence; never present a mode menu or
+  onboarding. Ask one minimal calibration question only when the mode would
+  change the answer and cannot be inferred.
 - V1.9 is a Markdown behavior-layer loop, not backend infrastructure.
 - Practice generation should usually produce one targeted exercise at a time;
   generate a short set only when the learner asks for one.
@@ -292,16 +286,16 @@ Future changes must preserve the core identity of the skill:
   correct answer does not confirm mastery.
 - Use Knowledge Link Cards only for strongly related concepts that block the
   current task. Keep them to one to three short cards and return to the task.
-- Keep `tutor-practice` as the single V1.9 entrypoint. Do not add separate
-  grader or readiness-gate entrypoints unless explicitly approved later.
+- Do not add separate grader, readiness-gate, or other capability entrypoints;
+  practice, grading, and readiness are internal routes of the one tutor.
 - For broad goals, clarify the target and confirm it lightly before building a
   path.
 - Knowledge maps should be compact, goal-specific, and used to choose the next
   step; do not build massive curriculum maps.
 - Do not assume mastery of future concepts because a related concept was
   explained. Use checks and visible cards when status matters.
-- Route to existing sub-skills instead of putting every behavior in
-  `SKILL.md` or applying every protocol in one answer.
+- Route to the smallest relevant protocol set instead of putting every
+  behavior in `SKILL.md` or applying every protocol in one answer.
 - If V1.8 behavior fails, patch the smallest relevant protocol, trigger row,
   example, or eval before adding new features.
 - `USER_GUIDE.md` is the canonical beginner tutorial for non-technical users.

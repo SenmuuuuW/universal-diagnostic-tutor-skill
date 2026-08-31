@@ -80,15 +80,15 @@
 ```
 
 ```text
-请用 /study-plan 帮我根据当前基础和目标安排一个短计划。
+帮我根据当前基础和目标安排一个短计划（比如：下周考线代，矩阵和向量都很乱）。
 ```
 
 ```text
-请用 /state-card 帮我生成下次继续用的学习状态卡。
+帮我生成一张学习状态卡，下次从现在的卡点继续。
 ```
 
 ```text
-/practice 给我出一道关于矩阵 shape 的题，做完后帮我批改。
+给我出一道关于矩阵 shape 的题，做完后帮我批改。
 ```
 
 如果 chat 很长，或者你准备下次继续学习，就让 Tutor 生成 Learning State Card。换到新 chat 时，先粘贴这张卡，再说：
@@ -133,7 +133,7 @@ Bad:
 Better:
 
 ```text
-/study-plan 我想系统入门机器学习，但数学弱。我会一点 Python，目标是看懂基础模型和做小项目。请先告诉我需要哪些学科、每个学科要掌握哪些部分、哪些可以先不学。
+我想系统入门机器学习，但数学弱。我会一点 Python，目标是看懂基础模型和做小项目。请先告诉我需要哪些学科、每个学科要掌握哪些部分、哪些可以先不学。
 ```
 
 ## 5. 豆包 / Coze-style Bot 怎么用？
@@ -221,29 +221,33 @@ git pull
 
 ```text
 skills/universal-diagnostic-tutor/
-skills/tutor-*/
+
 ```
 
 同步到 agent 真正读取的位置。
 
 更新后建议新开一个 agent session，让它重新加载最新 instructions。
 
-## Codex 用户：直接选择 Tutor 入口
+## Codex 用户：只有一个入口
 
-V1.9.2 的 Codex skill picker 只推广 6 个入口。它们不是独立产品，而是同一个
-Universal Diagnostic Tutor 的不同门：
+2.0 只有一个公开入口 `universal-diagnostic-tutor`。Codex 的 skill picker 里只会
+看到这一个 Tutor。你不需要选择任何子入口——直接用自然语言提问：
 
-- 不知道选哪个，就用 Universal Diagnostic Tutor。
-- 想学一个东西、做计划或安排备考路线，用 Tutor Learn Path。
-- 要练题、批改、分析错因或诊断卡点，用 Tutor Practice。
-- 想接着上次学，用 Tutor State Card。
-- 找资料，用 Tutor Resource Scan。
-- 想看图理解，用 Tutor Visualize。
+| 你想做 | 直接说（举例） |
+| --- | --- |
+| 学懂一个概念 | “我是零基础，教我 \(\chi'(K_n)\) 是什么意思” |
+| 知道错在哪 | “我为什么这里错了？我的思路是……” |
+| 练习与批改 | “给我一道题，做完帮我批改” |
+| 检查是否掌握 | “帮我看看我是不是会了” |
+| 学习计划 | “我想系统学机器学习，数学比较弱” |
+| 备考 | “我下个月考研数学，级数总不会选判别法” |
+| 找资料 | “推荐点靠谱资料，我想补线代” |
+| 画图理解 | “能不能画一下，为什么 v 和 2v 平行” |
+| 继续上次 | “继续上次的学习”（粘贴学习状态卡） |
 
-旧版的 Tutor Learn Anything、Tutor Study Plan、Tutor Exam Track、Tutor Diagnose
-Gap 和 Tutor Mistake Review 已合并到 Learn Path 或 Practice，能力没有删除。
+旧版 `/practice`、`/study-plan` 等斜杠文本仍被静默识别（向后兼容），但不再需要
+学习它们。
 
-完整说明见 [COMMAND_SURFACE.md](COMMAND_SURFACE.md)。
 
 ## 10. 常用调用方式
 
@@ -271,15 +275,15 @@ Gap 和 Tutor Mistake Review 已合并到 Learn Path 或 Practice，能力没有
 ```
 
 ```text
-/study-plan 我想准备考研数学，但线代很弱，先从哪里补？
+我想准备考研数学，但线代很弱，先从哪里补？
 ```
 
 ```text
-/exam-track 我高数级数总是不会选判别法，帮我诊断。
+我高数级数总是不会选判别法，帮我诊断一下。
 ```
 
 ```text
-/visualize 两个向量平行为什么不是每个分量相等？
+两个向量平行为什么不是每个分量相等？能不能画一下。
 ```
 
 ```text
@@ -287,16 +291,16 @@ Gap 和 Tutor Mistake Review 已合并到 Learn Path 或 Practice，能力没有
 ```
 
 ```text
-/state-card 帮我生成下次继续用的学习状态卡。
+帮我生成下次继续用的学习状态卡。
 ```
 
 ```text
-/practice 我学完向量了，给我一道题检查掌握情况，做完后帮我批改。
+我学完向量了，给我一道题检查掌握情况，做完后帮我批改。
 ```
 
 ## 11. 练习与掌握闭环怎么用？
 
-当你想练习、提交答案、让 Tutor 批改，或者判断自己能不能进入下一个知识点时，可以使用 Tutor Practice 或手动输入 `/practice`。
+当你想练习、提交答案、让 Tutor 批改，或者判断自己能不能进入下一个知识点时，直接说“给我出题”“帮我批改”或“能学下一个吗”即可。
 
 可以这样问：
 

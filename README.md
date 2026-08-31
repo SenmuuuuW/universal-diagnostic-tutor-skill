@@ -32,7 +32,6 @@ advancing.
 | --- | --- |
 | Ordinary ChatGPT, Gemini, DeepSeek, Doubao, Kimi, or Qwen chat | Copy the [Lite Prompt](platforms/generic-chat/TUTOR_LITE_PROMPT.md) |
 | Codex or Claude Code-style agent | Use the [Full Skill](skills/universal-diagnostic-tutor/) and follow the [install guide](INSTALL.md) |
-| Codex with visible Skill entrypoints | Choose the most relevant `tutor-*` entrypoint |
 | Custom bot or API prompt | Choose an adapter in [Portability](PORTABILITY.md) |
 
 New to the project? Read the [User Guide](USER_GUIDE.md). Installation and
@@ -44,13 +43,13 @@ updates live in [INSTALL.md](INSTALL.md), while entrypoint details live in
 | Capability | What it does |
 | --- | --- |
 | Diagnosis-first tutoring | Locates the subject, concept, prerequisite, notation, method, or reasoning gap |
-| Learning Architecture | Clarifies broad goals, builds a compact knowledge map, and selects one next step |
-| Practice & Mastery Loop | Generates targeted practice, waits for an answer, grades qualitatively, repairs mistakes, and checks readiness |
-| Skill entrypoints | Exposes focused `tutor-*` doors into one shared Tutor system |
-| STEM Exam Track | Supports university STEM, postgraduate math, and CS review without prediction or score promises |
-| Topic Scan + Trusted Resources | Uses reliable learning resources when they improve the current teaching step |
-| Knowledge Link Cards | Explains one to three strongly related concepts when they block the current task |
-| Learning State Cards | Creates visible, copyable checkpoints for continuation without hidden memory |
+| Broad-goal planning | Clarifies broad goals, builds a compact knowledge map, and selects one next step |
+| Practice & mastery | Generates targeted practice, waits for an answer, grades qualitatively, repairs mistakes, and checks readiness |
+| Natural-language routing | One public tutor; practice, planning, resources, visuals, and continuity trigger automatically from what the learner says |
+| Exam-aware review | Supports university STEM, postgraduate math, and CS review without prediction or score promises |
+| Resource-supported teaching | Uses reliable learning resources when they improve the current teaching step |
+| Related-concept cards | Explains one to three strongly related concepts when they block the current task |
+| Learning State Card | Creates a visible, copyable checkpoint for continuation without hidden memory |
 | Cross-platform adapters | Packages smaller prompt versions for custom bots, ordinary chat, and API-style use |
 
 The strongest current coverage is university-level STEM and AI-CS: calculus,
@@ -59,22 +58,19 @@ machine learning, systems, networks, physics, signals, and engineering
 foundations. The Tutor remains useful across other learning domains, but it is
 not positioned as a generic answer bot.
 
-## 🧭 Skill Entrypoints
+## 🧭 One Tutor, No Feature Menu
 
-| Need | Use |
-| --- | --- |
-| General tutoring | `universal-diagnostic-tutor` |
-| Learning path / study plan / exam route | `tutor-learn-path` |
-| Practice / grading / mistakes / gap diagnosis | `tutor-practice` |
-| State cards | `tutor-state-card` |
-| Resources | `tutor-resource-scan` |
-| Visual learning | `tutor-visualize` |
+There is exactly one public entrypoint: **Universal Diagnostic Tutor**. Learners
+do not choose features — they say what they need in natural language ("教我这个",
+"我为什么错", "给我练习", "推荐资料", "我准备考试", "继续上次的学习"), and the
+Tutor routes internally through diagnosis, teaching, practice, resources,
+visuals, planning, and state continuity.
 
-V1.9.2 simplifies the public command surface into six canonical Tutor
-entrypoints. Older intents such as `/study-plan`, `/mistake-review`, and
-`/diagnose-gap` remain supported as text aliases. These aliases are not
-guaranteed native commands in every host. See the
-[Command Surface](COMMAND_SURFACE.md) for practical examples.
+Legacy slash-style text such as `/study-plan`, `/mistake-review`, and
+`/practice` is still recognized silently for backward compatibility but is no
+longer advertised. The only visible artifact learners handle is the copyable
+Learning State Card for continuing across chats. See the
+[Command Surface](COMMAND_SURFACE.md) for examples.
 
 ## 🔍 How It Works
 
@@ -144,9 +140,10 @@ documents, and implementation guidance remains in
 - No replacement for professional medical, legal, financial, tax, or safety advice.
 - No copied textbooks, answer bank, course platform, or persistent gradebook.
 
-Learning continuity uses visible, user-controlled Learning State, Profile, and
-Task Cards. Platform adapters are prompt packaging and may be less capable than
-the Full Skill.
+Learning continuity uses one visible, user-controlled Learning State Card
+(with optional fields for preferences and an active task or exam target).
+Platform adapters are prompt packaging and may be less capable than the Full
+Skill.
 
 ## 📄 License
 

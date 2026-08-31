@@ -18,15 +18,11 @@ Use the strongest pack your environment can actually load.
 Use the full `skills/universal-diagnostic-tutor/` directory when the agent can
 read a Skill folder, project files, references, and examples.
 
-In Codex / Claude Code-style environments that support skill discovery, also
-keep the lightweight `skills/tutor-*/` entrypoint folders beside the main
-Skill. V1.9.2 exposes six canonical entries: the main Tutor plus Learn Path,
-Practice, State Card, Resource Scan, and Visualize. Related capabilities are
-merged without duplicating or removing the underlying Tutor logic.
-
-When installed, Codex may show Tutor Learn Path, Tutor Practice, Tutor State
-Card, Tutor Resource Scan, Tutor Visualize, and Universal Diagnostic Tutor.
-These are focused entrypoints into the same Tutor system.
+In Codex / Claude Code-style environments that support skill discovery, use
+the single Skill folder `skills/universal-diagnostic-tutor/`. There is one
+public entrypoint; practice, planning, resources, visuals, and continuity are
+triggered automatically from natural-language intent, and legacy slash-style
+text remains silently recognized for backward compatibility.
 
 Best for:
 
@@ -42,7 +38,7 @@ Full Skill environments can use the V1.8 learning architecture layer: clarify
 broad goals, confirm the target, build a compact knowledge map, select one
 next step, route to the right sub-skill, and update visible state cards.
 
-For entrypoint selection details, see [COMMAND_SURFACE.md](COMMAND_SURFACE.md).
+For usage examples with one tutor, see [COMMAND_SURFACE.md](COMMAND_SURFACE.md).
 
 ### Custom Bot Version
 
@@ -51,9 +47,9 @@ Coze / Doubao-style bots. These platforms may allow custom instructions and
 optional knowledge files, but they do not automatically behave like a Codex
 Skill.
 
-Custom GPTs, Gems, Projects, and bots do not necessarily show canonical
-`tutor-*` entries as menu commands. Use their instruction field and ask with
-natural language or manual shortcuts such as `/study-plan`.
+Custom GPTs, Gems, Projects, and bots do not show a feature menu. Use
+their instruction field and ask with natural language; legacy shortcuts such
+as `/study-plan` still work as silent intent signals.
 
 Best for:
 
@@ -75,8 +71,8 @@ The Lite Prompt is not the full Skill. It preserves the core tutoring style,
 but it cannot automatically access the full reference system.
 For broad goals, it should still clarify and confirm before giving a small
 map and one next step.
-Ordinary chat platforms should use Lite Prompt shortcuts rather than expecting
-discoverable `tutor-*` skill entries.
+Ordinary chat platforms should use the Lite Prompt and natural language
+rather than expecting any discoverable skill entries.
 
 ### API Prompt Version
 
@@ -93,8 +89,8 @@ developer sends prior messages, summaries, or a Learning State Card.
 | --- | --- | --- | --- |
 | OpenAI Codex | Full Skill | Full | Uses Skill directory and references |
 | Claude Code / Claude Code-style agents | Full Skill | Full | Use Skill folder or project instructions depending on environment |
-| Codex / Claude Code-style agents with skill discovery | Full Skill + `tutor-*` entrypoints | Full | Keep entrypoint folders beside the main Skill |
-| ChatGPT GPTs | Custom GPT instructions | Medium-high | Copy instructions; no guaranteed `tutor-*` menu |
+| Codex / Claude Code-style agents with skill discovery | Full Skill (single `universal-diagnostic-tutor` folder) | Full | Natural-language routing; no feature menu |
+| ChatGPT GPTs | Custom GPT instructions | Medium-high | Copy instructions; no feature menu |
 | ChatGPT Projects | Project instructions | Medium | Use project instructions and selected files; no guaranteed entrypoint picker |
 | Gemini Gems | Gem instructions | Medium | Copy Gem instructions; no full repo auto-loading or skill menu |
 | Coze / Doubao-style bots | Bot prompt | Medium | Use bot prompt and optional knowledge files; commands are prompt text |
@@ -105,7 +101,7 @@ developer sends prior messages, summaries, or a Learning State Card.
 ## Adapter Files
 
 - Full Skill for Codex: `platforms/codex/README.md`
-- Command surface and sub-skill entrypoints: `COMMAND_SURFACE.md`
+- Single-tutor usage examples: `COMMAND_SURFACE.md`
 - Full Skill / project-instruction guidance for Claude Code-style agents:
   `platforms/claude-code/README.md`
 - Custom GPT instructions: `platforms/chatgpt-gpt/INSTRUCTIONS.md`
@@ -122,7 +118,7 @@ developer sends prior messages, summaries, or a Learning State Card.
 
 - Do not overclaim native support. If a platform cannot load Skill folders, use
   copied instructions instead.
-- `tutor-*` entrypoints are useful only where the environment can discover or
+- The single Skill is useful only where the environment can discover or
   select Skill folders.
 - Lite Prompt is not the full Skill; it is a manual, reduced behavior layer.
 - Custom bots may vary in how much context, files, or instructions they retain.

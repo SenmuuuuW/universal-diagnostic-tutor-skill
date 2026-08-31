@@ -54,6 +54,12 @@ Each card contains:
 Use one to three cards at most. Keep each card short but more informative than
 a one-line name drop.
 
+In learner-facing output, present card content as natural prose or minimally
+labeled sections. Do not announce the mechanism itself: avoid visible headers
+such as "Card 1", "卡1", or "Knowledge Link Cards", and do not say "I will use
+three cards". The learner should experience connected mini-explanations, not a
+card widget.
+
 ## Integration With The Practice Loop
 
 1. Identify the current task and the strong blocking connection.

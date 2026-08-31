@@ -34,39 +34,25 @@ universal-diagnostic-tutor
 
 非 agent 平台请看根目录 [PORTABILITY.md](../../PORTABILITY.md) 和 [platforms/](../../platforms/)。本 README 说明的是完整 Skill 版本；Lite Prompt、Custom GPT、Gemini Gem、Coze / 豆包和 API prompt 是下游适配包，能力通常弱于完整 Skill。
 
-## Skill Pack 用法
+## 一个 Tutor，没有功能菜单
 
-V1.7 增加了短的 user-invoked flows，V1.9 又加入 `/practice`，方便学习者在普通聊天或 Full Skill 环境里快速表达意图。这些 slash-style 名称是提示词约定，不是命令行工具：
+2.0 只有一个公开入口：`universal-diagnostic-tutor`。用户不需要学习任何功能名或命令，直接用自然语言表达需求：
 
-- `/tutor`：开始诊断式教学。
-- `/learn-anything`：大目标学习：先判断从哪里开始。
-- `/diagnose-gap`：先判断缺哪个概念、符号、方法或推理。
-- `/study-plan`：根据当前状态和目标生成短学习计划。
-- `/exam-track`：进入 STEM Exam Track / 理科备考 Track。
-- `/state-card`：生成或继续使用 Learning State / Profile / Task Cards。
-- `/resource-scan`：先定位知识点，再在有用时推荐可信资源。
-- `/visualize`：用简单图示、表格、流程图或概念图辅助理解。
-- `/mistake-review`：分析错因并映射到针对性修复。
-- `/practice`：生成针对性练习、批改答案并判断能否进阶。
+- "教我这个" → 诊断式教学
+- "我为什么错了" → 批改 + 错因 + 修复
+- "我还是不懂" → 换表征降阶
+- "给我练习 / 出一道类似的" → 练习循环
+- "帮我看看我是不是会了" → 进阶判断
+- "我想系统学机器学习" → 目标澄清 + 小地图 + 第一步
+- "我下个月考试" → 备考语境
+- "推荐点靠谱资料" → 资源辅助教学
+- "能不能画一下" → 可视化解释
+- "继续上次的学习" → 学习状态卡接续
 
-这些流程不应让普通回答变成模板。Tutor 仍然要保持自然教师表达、next-best-step、teach-check-stop、数学格式和无内部泄漏。
-
-## Related sub-skill entrypoints
-
-V1.9.2 将公开 command surface 收敛为 6 个 canonical entries。它们不是独立
-产品，也不复制完整主 Skill；它们只是进入同一套 Tutor System 的 focused doors。
-
-- `universal-diagnostic-tutor`：通用诊断式教学主入口。
-- `../tutor-learn-path/`：大目标、学习计划与备考路线入口。
-- `../tutor-practice/`：练习、批改、错因、卡点诊断与进阶判断入口。
-- `../tutor-state-card/`：Learning State / Profile / Task Cards 入口。
-- `../tutor-resource-scan/`：Topic scan + trusted resources 入口。
-- `../tutor-visualize/`：简单学习可视化入口。
-
-`/learn-anything`、`/study-plan`、`/exam-track`、`/diagnose-gap` 和
-`/mistake-review` 仍可作为文字别名使用，但不再对应独立公开 wrapper folders。
-
-完整 command surface 说明见根目录 [COMMAND_SURFACE.md](../../COMMAND_SURFACE.md)。
+旧版斜杠文本（`/practice`、`/study-plan`、`/exam-track`、`/state-card`、
+`/resource-scan`、`/visualize`、`/mistake-review`、`/learn-anything`、
+`/diagnose-gap`、`/tutor`）仍被静默识别为意图信号（向后兼容），但不再是公开
+命令面。唯一需要用户操作的可见产物是学习状态卡（Learning State Card）。
 
 ## 什么时候使用？
 
@@ -160,7 +146,7 @@ Goal Clarification -> Goal Confirmation -> Knowledge Map -> Learning Path
 
 ## V1.9 Practice & Mastery Loop 用法
 
-V1.9 把教学后的练习、作答、批改和进阶判断接进同一套 Tutor System。用户可以选择 `tutor-practice`，或手动输入 `/practice` 表达练习、判答案、检查掌握程度或判断能否进入下一步的意图。
+V1.9 把教学后的练习、作答、批改和进阶判断接进同一套 Tutor System。用户只需自然地说“给我练习”“帮我批改”“能学下一个吗”；旧输入 `/practice` 仍被静默识别（向后兼容）。
 
 默认节奏是：确认当前概念 -> 给一道针对性练习 -> 停下来等回答 -> 定性批改 -> 分析错因 -> 必要时更新可见状态 -> 判断进阶、复习、降一步或继续练习。只有强相关概念正在阻碍当前任务时，才使用 1–3 张 Knowledge Link Cards。
 
@@ -326,7 +312,7 @@ Skill 的核心入口。它包含触发说明、诊断优先工作流、教学�
 - `context_handoff_protocol.md`：从 Learning State Card 或简短摘要继续，不从零重讲。
 - `context_compression_checkpoint_protocol.md`：把长对话压缩成可继续的学习 checkpoint。
 - `stateless_recovery_protocol.md`：没有上下文时快速重新定位，而不假装记得旧 chat。
-- `learner_profile_task_card_protocol.md`：可复制的 Learner Profile Card 和 Learning Task Card，保持可见、用户控制、无隐藏记忆。
+- `learning_state_card_protocol.md`：可复制的学习状态卡（含可选字段：语言/水平偏好、当前目标或备考目标、最近练习），保持可见、用户控制、无隐藏记忆。
 - `student_facing_response_protocol.md`：让普通教学回答像自然老师，而不是协议或工具执行记录。
 - `no_internal_tool_leakage_protocol.md`：避免在教学回答里暴露 Skill、版本、文件或协议等内部细节。
 - `knowledge_system_mapping_protocol.md`：把题目简洁定位到领域、子主题、核心概念和前置知识。
@@ -336,7 +322,7 @@ Skill 的核心入口。它包含触发说明、诊断优先工作流、教学�
 - `beginner_foundation_teaching_protocol.md`：真正零基础学习者的概念、符号和对象解释。
 - `standard_and_advanced_mode_protocol.md`：区分普通问题讲解与进阶证明、推导、边界和迁移。
 - `math_formatting_protocol.md`：数学公式使用 Markdown / LaTeX math，不用代码块伪装公式。
-- `user_mode_onboarding_guide.md`：面向用户的学习模式选择提示。
+- 学习模式由证据自动推断（零基础/普通/进阶），不再提供模式菜单或 onboarding。
 - `interaction_pacing_protocol.md`：防止一次讲太多，保持 teach-check-continue 节奏。
 - `teacher_like_stop_point_protocol.md`：定义什么时候停下来让学习者参与关键步骤。
 - `knowledge_gap_taxonomy.md`：知识漏洞分类。
@@ -389,7 +375,7 @@ Skill 的核心入口。它包含触发说明、诊断优先工作流、教学�
 - 错误反馈要按错误类型选择干预方式，不要每次都泛泛重讲。
 - 不要把 source packs 变成教材库、链接堆或课程地图。
 - Slash-style flows 是用户意图快捷方式，不是 shell commands，也不代表平台真的实现了命令系统。
-- Learner Profile / Task Cards 必须可见、可复制、由用户控制；不要暗示隐藏持久记忆。
+- 学习状态卡（含可选字段）必须可见、可复制、由用户控制；不要暗示隐藏持久记忆。
 - STEM Exam Track 不得承诺提分、预测考试、押题、使用泄露材料或帮助作弊。
 - Topic Scan 要短；资源只在有用时加入，不要把每次回答变成资料列表。
 - 可视化必须服务当前学习缺口，不要为了装饰而添加图。

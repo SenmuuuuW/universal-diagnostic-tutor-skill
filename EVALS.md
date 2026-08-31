@@ -273,27 +273,30 @@ Run them after meaningful prompt, protocol, or documentation changes.
   grades, or turns the answer into a huge roadmap.
 - **Score notes:** 5 prevents fake mastery without sounding bureaucratic.
 
-## 24. V1.9.2 Command Surface Entrypoints
+## 24. No Feature Menu
 
-- **Prompt:** "我在 Codex 里想直接做学习计划，应该选哪个 Skill？"
-- **Expected behavior:** Point to `tutor-learn-path` when available, explain
-  that it is a thin entrypoint into `universal-diagnostic-tutor`, and mention
-  manual `/study-plan` for platforms without skill discovery.
-- **Failure signs:** Cannot name the entrypoint, claims every platform shows a
-  menu command, or treats the entrypoint as a separate product.
-- **Score notes:** 5 makes the choice clear without overclaiming UI behavior.
+- **Prompt:** "我想做学习计划，但不知道该用哪个功能或入口。"
+- **Expected behavior:** There is exactly one public tutor. The tutor
+  understands the need from natural language and produces a short plan,
+  without asking the learner to pick a feature, entrypoint, or command.
+- **Failure signs:** Presents a feature menu, asks the learner to choose an
+  entrypoint, or requires a slash command to proceed.
+- **Score notes:** 5 resolves the intent from natural language alone and
+  delivers the plan without exposing any internal name.
 
-## 25. V1.9.2 Thin Entrypoint Integrity
+## 25. Single Skill Description Triggers
 
-- **Prompt:** "Review `skills/tutor-learn-path/SKILL.md` behavior."
-- **Expected behavior:** The file has clear `name` and `description`, explains
-  learning-path and exam-planning behavior concisely, points back to the main
-  Tutor Skill and shared references, and avoids duplicating the full main
-  `SKILL.md`.
-- **Failure signs:** Description is vague, the entrypoint copies the whole
-  Tutor logic, omits no-cheating / no-押题 guardrails, or cannot be discovered
-  by name.
-- **Score notes:** 5 is focused, discoverable, and thin.
+- **Prompt:** "Review `skills/universal-diagnostic-tutor/SKILL.md` front
+  matter."
+- **Expected behavior:** The description carries the English and Chinese
+  natural-language triggers for practice/grading (练习, 批改), planning
+  (学习计划, 系统学习), continuity (学习状态卡, 继续学习), resources (可信资源,
+  推荐资料), and visuals (可视化, 画图理解), so a single skill entry matches
+  the intents that older `tutor-*` wrappers used to cover.
+- **Failure signs:** Description is English-only, drops the Chinese trigger
+  words, or re-introduces a feature menu.
+- **Score notes:** 5 covers the merged trigger vocabulary without overclaiming
+  host UI behavior.
 
 ## 26. V1.8.2 Discipline-first Machine Learning Study Plan
 

@@ -127,26 +127,29 @@ feedback for `universal-diagnostic-tutor`. Score each dimension from 1 to 5.
 - **5:** Produces or consumes compact handoff context, trusts known items
   provisionally, and checks one next step before advancing.
 
-## Skill Pack Invocation
+## Intent Recognition
 
-- **1:** Ignores slash-style user intent or treats it as an error.
-- **2:** Recognizes the flow but prints a rigid or internal template.
-- **3:** Provides the requested flow but with too much explanation or weak
+- **1:** Ignores the learner's expressed intent (natural language or legacy
+  slash text) or treats it as an error.
+- **2:** Recognizes the intent but prints a rigid or internal template.
+- **3:** Provides the requested behavior but with too much explanation or weak
   diagnosis.
-- **4:** Treats the flow as a clear intent signal and responds naturally.
-- **5:** Combines the requested flow with diagnosis-first tutoring, next-best
-  step, stop discipline, and no command-system overclaiming.
+- **4:** Treats natural-language intent (or legacy slash text) as a clear
+  signal and responds naturally.
+- **5:** Routes the intent into diagnosis-first tutoring, next-best step, stop
+  discipline, and no command-system overclaiming — without exposing any
+  feature or entrypoint name.
 
-## Command Surface Discoverability
+## Single-Tutor Natural Routing
 
-- **1:** The user cannot tell which entrypoint to use, or the entrypoint is
-  missing.
-- **2:** Entrypoints exist but have vague descriptions or overclaim platform UI
-  behavior.
-- **3:** Entrypoints are usable but duplicate too much main Tutor logic.
-- **4:** Entrypoints are clear, thin, and point back to the main Tutor System.
-- **5:** The main Skill, `tutor-*` entrypoints, and manual shortcuts are clearly
-  distinguished for Full Skill, custom bot, and ordinary chat environments.
+- **1:** The user is asked to pick a feature, entrypoint, or command.
+- **2:** A feature menu or old entrypoint names are exposed to the learner.
+- **3:** Natural-language intent works, but some intents still require a name
+  the user must learn.
+- **4:** One public tutor; natural-language intents route correctly, with
+  legacy slash text recognized silently.
+- **5:** A learner who only knows the tutor's name can express any need in
+  natural language and get the right internal route, with no visible menu.
 
 ## Exam Track Integrity
 

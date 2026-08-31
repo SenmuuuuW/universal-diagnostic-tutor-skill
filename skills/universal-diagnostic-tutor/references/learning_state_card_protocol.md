@@ -21,6 +21,22 @@ Learning State Card:
 - **Next best step:**
 - **Suggested continue prompt:**
 
+## Optional Fields
+
+Add only when useful, and only from learner-provided or learning-relevant
+details (never from transcripts, sensitive data, or rigid scores):
+
+- **Preferred language / level:** long-running preferences the learner asks to
+  remember across chats.
+- **Active goal or exam target:** the current task or exam being tracked, so a
+  continuation can stay on task.
+- **Latest practice:** one compact five-part entry (Attempt / Result / Mistake
+  type / New status / Next step), from the post-practice update below.
+
+These optional fields absorb what earlier versions called separate profile and
+task card formats. A single Learning State Card with optional fields replaces
+them; do not produce parallel card types.
+
 ## Rules
 
 - Keep it compact.

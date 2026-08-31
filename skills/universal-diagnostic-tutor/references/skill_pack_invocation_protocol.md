@@ -1,50 +1,62 @@
-# Skill Pack Invocation Protocol
+# Intent Routing Protocol
 
-Use this protocol when the learner uses a slash-style text shortcut or when
-documentation needs to explain the public Tutor command surface.
+Use this protocol when maintaining how the Tutor recognizes learner intent.
+The skill has one public identity: Universal Diagnostic Tutor. There is no
+public feature menu; users express needs in natural language, and the tutor
+routes internally through Clarify, Diagnose, Intervene, Check, Decide, and
+Carry as the current signal requires.
 
-The canonical Tutor System remains `skills/universal-diagnostic-tutor/`.
-Focused entrypoints are thin public doors into that system; they do not own
-separate Tutor behavior or duplicate the main `SKILL.md` and references.
+## Legacy Slash Strings (backward compatible, not advertised)
 
-## Canonical Command Surface
+Slash-style strings remain silently recognized as intent signals for older
+users and older documentation, but they are not promoted as a command surface:
 
-| User need | Canonical entrypoint | Text aliases |
-| --- | --- | --- |
-| General tutoring | `universal-diagnostic-tutor` | `/tutor` if documented |
-| Learning path / study plan / exam route | `tutor-learn-path` | `/learn-anything`, `/study-plan`, `/exam-track` |
-| Practice / grading / mistakes / gap diagnosis | `tutor-practice` | `/practice`, `/mistake-review`, `/diagnose-gap` |
-| Learning state | `tutor-state-card` | `/state-card` |
-| Resources | `tutor-resource-scan` | `/resource-scan` |
-| Visualization | `tutor-visualize` | `/visualize` |
+| Legacy text | Internal route |
+| --- | --- |
+| `/tutor` | General diagnosis-first tutoring |
+| `/learn-anything`, `/study-plan` | Learning planning: Clarify -> compact map -> first step |
+| `/exam-track` | Planning -> learning planning; drills/review -> practice loop |
+| `/practice`, `/mistake-review`, `/diagnose-gap` | Practice, grading, mistake repair, gap diagnosis, readiness decisions |
+| `/state-card` | Visible state continuity (Learning State Card) |
+| `/resource-scan` | Resource-supported tutoring |
+| `/visualize` | Visual explanation |
 
-`/exam-track` routes by task: planning and review-order requests use
-`tutor-learn-path`; drills, submitted work, mistake repair, and mastery checks
-use `tutor-practice`.
+These strings are prompt conventions, not shell commands, and the tutor never
+implies a real command system.
 
-These aliases are prompt conventions, not guaranteed native slash commands.
-Ordinary chat users can type them manually, while Skill-capable environments
-should promote only the six canonical entrypoints.
+## Natural-Language Intent Examples
+
+| Learner says (natural) | Internal route |
+| --- | --- |
+| "教我这个" / "给我讲一下这个" | Diagnose -> Intervene -> Check |
+| "我为什么这里错了" | Grading -> mistake diagnosis -> error-to-intervention |
+| "我还是不懂" | Step down -> change representation |
+| "给我一道类似的" / "给我练习" | Practice loop |
+| "帮我看看我是不是会了" / "能学下一个吗" | Readiness decision (Decide) |
+| "我想系统学机器学习" | Clarify -> compact map -> first step |
+| "我下个月考试" | Exam-aware context over the standard loop |
+| "推荐点靠谱资料" | Resource-supported Intervene |
+| "能不能画一下" | Visual representation Intervene |
+| "继续上次" | Carry (Learning State Card handoff) |
 
 ## Response Rules
 
-- Treat aliases as intent signals, not commands to print a rigid template.
-- Preserve the behavior behind older aliases; only the visible wrapper list is
-  simplified.
+- Treat any intent signal as routing input, never as a command to print a
+  rigid template or expose an internal name.
 - Enter at the step implied by the request instead of applying every Tutor
   capability at once.
-- Keep normal tutoring answers natural and student-facing.
-- If an alias is ambiguous, ask one short clarification.
+- Keep normal tutoring answers natural and student-facing; internal route
+  names never appear in user-facing output.
+- If intent is ambiguous, ask one short clarification.
 - Preserve math formatting with `\(...\)` and `\[...\]`.
-- Do not imply a shell, native command system, database, or hidden memory unless
-  a host platform separately provides it.
+- Do not imply a shell, native command system, database, or hidden memory.
 
 ## Auto-Invoked Behaviors
 
 Apply these silently from learner evidence when useful:
 
 - domain and gap diagnosis
-- mode selection and cognitive-load control
+- mode inference and cognitive-load control
 - next-best-step teaching
 - error-to-intervention and explanation compression
 - stop-point discipline

@@ -8,35 +8,28 @@
 
 ## 这到底要下载什么？
 
-这个仓库包含一个主要 Skill 和若干轻量入口：
+这个仓库包含一个 Skill：
 
 ```text
 skills/universal-diagnostic-tutor/
-skills/tutor-*/
 ```
 
 通常你需要 clone 整个仓库，然后使用、复制或引用这些 Skill 目录。根目录里的 `README.md`、`COMMAND_SURFACE.md`、`CHANGELOG.md` 和 `AGENTS.md`，以及 Skill 目录里的 `references/` 和 `examples/`，用来帮助用户和 agent 理解这个 Skill 的行为、版本和维护规则。
 
-真正给 agent 使用的 Skill 文件夹是：
+真正给 agent 使用的 Skill 文件夹只有一个：
 
 ```text
 skills/universal-diagnostic-tutor/
-skills/tutor-learn-path/
-skills/tutor-practice/
-skills/tutor-state-card/
-skills/tutor-resource-scan/
-skills/tutor-visualize/
 ```
 
-`skills/universal-diagnostic-tutor/` 是主 Skill；`skills/tutor-*` 是轻量
-entrypoints。V1.9.2 的完整安装应显示这 6 个 canonical entries；建议把它们放在
-同一个 skills 位置，方便环境发现。
+2.0 只有一个公开入口。旧版 `tutor-*` 文件夹已删除；它们的能力全部在主 Skill
+内，由自然语言自动触发。
 
 ## 适用于哪些环境？
 
 | 环境 | 适配方式 | 说明 |
 | --- | --- | --- |
-| OpenAI Codex / Codex-style Skill workflows | 推荐 / 主要适配 | 使用 `skills/universal-diagnostic-tutor/` 作为主 Skill；如环境支持 skill discovery，也保留 `skills/tutor-*` entrypoints。 |
+| OpenAI Codex / Codex-style Skill workflows | 推荐 / 主要适配 | 使用 `skills/universal-diagnostic-tutor/` 作为唯一 Skill 入口。 |
 | Claude Code / Claude Code-style agents | 可参考适配 | 如果环境支持 Skills、project instructions 或自定义 instruction 文件夹，可以把该 Skill 作为教学行为层使用。 |
 | 其他 instruction-based coding agents | 可手动适配 | 可引用 `SKILL.md`、README 和相关 references 作为项目 / agent instructions。 |
 | 普通 ChatGPT / 网页聊天 | 非原生 Skill | 可以手动复制提示词或核心说明，但不会自动加载整个 Skill 目录。 |
@@ -56,9 +49,9 @@ https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill
 
 要求：
 1. 如果本地没有这个仓库，请 clone 它；如果已经有，请进入仓库并运行 git pull。
-2. 找到真正的 Skill 目录：skills/universal-diagnostic-tutor/ 和 skills/tutor-*/
+2. 找到真正的 Skill 目录：skills/universal-diagnostic-tutor/
 3. 判断当前 agent 环境期望的 custom skills / project instructions 位置。
-4. 如果环境支持直接读取 Skill 文件夹，请复制或引用 skills/universal-diagnostic-tutor/，并把 skills/tutor-*/ entrypoints 放在同一 skills 位置。
+4. 如果环境支持直接读取 Skill 文件夹，请复制或引用 skills/universal-diagnostic-tutor/。
 5. 如果环境只支持 project instructions，请使用 SKILL.md、README.md 和必要 references 作为项目指令来源。
 6. 不要删除我已有的 skills 或自定义指令。
 7. 如果你不确定正确的 skill 位置，请先问我，不要擅自覆盖文件。
@@ -81,10 +74,10 @@ Skill 目录是：
 
 ```text
 skills/universal-diagnostic-tutor/
-skills/tutor-*/
 ```
 
-接下来按你的 agent 环境要求，把这些目录放到、复制到或引用到对应的 skills / instructions 位置。主 Skill 和 `tutor-*` entrypoints 最好保持在一起。
+接下来按你的 agent 环境要求，把这个目录放到、复制到或引用到对应的 skills /
+instructions 位置。
 
 ## 方法三：已经 clone 过，如何更新？
 
@@ -106,7 +99,6 @@ git log --oneline -1
 
 ```text
 skills/universal-diagnostic-tutor/
-skills/tutor-*/
 ```
 
 同步到 agent 真正读取的 skills 目录。
@@ -121,30 +113,17 @@ skills/tutor-*/
 
 如果你用 V1.5 的 Learning State Card 跨 chat 继续学习，请把卡片复制到新 session；它不会通过 `git pull` 或 Skill 安装自动变成隐藏记忆。
 
-## Tutor entrypoints 不显示怎么办？
+## Codex 里看不到 Tutor 怎么办？
 
-如果 Codex 里看不到 Tutor Learn Path、Tutor Practice、Tutor State Card 等入口，
-先确认文件夹是否存在于当前 Codex 实际读取的 skills 目录。例如：
-
-```text
-~/.codex/skills/tutor-learn-path/SKILL.md
-```
-
-只同步下面这个主 Skill 不够：
+2.0 只有一个公开入口。如果 Codex 里看不到 Universal Diagnostic Tutor，先确认
+这个文件夹是否存在于当前 Codex 实际读取的 skills 目录：
 
 ```text
-skills/universal-diagnostic-tutor/
+~/.codex/skills/universal-diagnostic-tutor/SKILL.md
 ```
 
-V1.9.2 的简化 command surface 还需要同步所有：
-
-```text
-skills/tutor-*/
-```
-
-把这 5 个 `skills/tutor-*` 文件夹与主 Skill 一起复制到当前 Codex skills 目录后，
-删除复制位置中已经废弃的旧 wrapper folders，再重启 Codex 或打开新的 agent
-session，让 skill picker 只显示 6 个 canonical entries。
+同步、重启 Codex 或打开新的 agent session，让 skill picker 重新发现。旧版
+`tutor-*` 文件夹如果还残留在复制位置，请删除它们，避免旧入口造成混淆。
 
 ## 为什么现在不是 npx 一键安装？
 
@@ -154,7 +133,7 @@ session，让 skill picker 只显示 6 个 canonical entries。
 
 1. `git clone` 或 `git pull` 更新仓库。
 2. 使用 agent-assisted install prompt 帮你定位真实 skill 路径。
-3. 按当前环境复制、引用或同步 `skills/universal-diagnostic-tutor/` 和 `skills/tutor-*/`。
+3. 按当前环境复制、引用或同步 `skills/universal-diagnostic-tutor/`。
 
 如果未来有足够需求，可以再考虑正式安装器；在那之前，本仓库不会为了“一键安装”加入 package setup 或脚本。
 
@@ -174,7 +153,6 @@ agent 可能正在读取旧的复制版 Skill 目录，或者当前 session 缓�
 
 ```text
 skills/universal-diagnostic-tutor/
-skills/tutor-*/
 ```
 
 **普通 ChatGPT 能直接用这个 Skill 吗？**

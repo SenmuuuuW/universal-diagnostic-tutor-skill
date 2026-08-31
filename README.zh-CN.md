@@ -40,7 +40,7 @@ Universal Diagnostic Tutor Skill 是一个 Markdown-only 的 AI Tutor 行为层�
 | 我想做什么 | 去哪里 |
 | --- | --- |
 | 从零开始使用 | [新手教程](USER_GUIDE.md) |
-| 选择 Tutor 入口 | [技能入口说明](COMMAND_SURFACE.md) |
+| 了解唯一入口 | [使用说明](COMMAND_SURFACE.md) |
 | 在普通聊天 AI 中使用 | [Lite Prompt](platforms/generic-chat/TUTOR_LITE_PROMPT.md) |
 | 安装或同步 Full Skill | [安装说明](INSTALL.md) |
 | 选择跨平台适配方式 | [兼容性说明](PORTABILITY.md) |
@@ -48,8 +48,8 @@ Universal Diagnostic Tutor Skill 是一个 Markdown-only 的 AI Tutor 行为层�
 | 查看版本更新 | [更新记录](CHANGELOG.md) |
 
 普通 ChatGPT、Gemini、DeepSeek、豆包、Kimi 或 Qwen 用户可以直接复制 Lite
-Prompt。Codex / Claude Code-style agent 用户可以使用完整 Skill；如果 Codex
-已经显示 `tutor-*` 入口，可以直接选择最符合当前任务的入口。
+Prompt。Codex / Claude Code-style agent 用户使用完整 Skill——只有一个公开入口
+`universal-diagnostic-tutor`，直接用自然语言提问即可，不需要选择任何功能入口。
 
 ## ✨ 现在能做什么
 
@@ -60,27 +60,21 @@ Prompt。Codex / Claude Code-style agent 用户可以使用完整 Skill；如果
 | 小型知识地图 | 只展示当前目标真正相关的依赖关系 |
 | 学习计划 | 给出学科优先、可执行的短计划，而不是庞大路线图 |
 | 练习与批改 | 一次生成一道针对性练习，等待作答后做定性批改 |
-| Readiness Gate | 根据推理、独立应用和近迁移证据判断是否进阶 |
-| Knowledge Link Cards | 用 1–3 张短卡解释正在阻碍当前任务的强相关概念 |
+| 进阶判断 | 根据推理、独立应用和近迁移证据判断是否进阶 |
+| 前置概念连接 | 用 1–3 张短卡解释正在阻碍当前任务的强相关概念 |
 | 学习状态卡 | 用可见、可复制的卡片跨 chat 接续，不依赖隐藏记忆 |
 | 可视化辅助 | 在确实有助于理解时使用简单图、表、流程或 trace |
 | 跨平台 Prompt | 为普通聊天、Custom Bot 和 API-style 使用提供精简适配 |
 
-## 🧭 Codex 技能入口
+## 🧭 一个 Tutor，没有功能菜单
 
-| 我需要 | 选择 |
-| --- | --- |
-| 通用诊断式教学 | `universal-diagnostic-tutor` |
-| 学习路线、学习计划、备考规划 | `tutor-learn-path` |
-| 练习、批改、错因分析、卡点诊断 | `tutor-practice` |
-| 保存或继续学习状态 | `tutor-state-card` |
-| 查找可信学习资源 | `tutor-resource-scan` |
-| 用图或流程辅助理解 | `tutor-visualize` |
+只有一个公开入口：**Universal Diagnostic Tutor**。用户不用选功能——直接说需求
+（"教我这个"、"我为什么错"、"给我练习"、"推荐资料"、"我准备考试"、"继续上次
+的学习"），Tutor 内部自动完成诊断、教学、练习、资源、可视化、规划与状态接续。
 
-V1.9.2 将公开入口收敛为 6 个。原来的学习计划、错因分析、卡点诊断等能力没有
-删除，而是合并进 Learn Path 和 Practice。`/practice`、`/study-plan` 等写法仍是
-文字意图快捷方式，不保证是每个平台的原生 slash command。具体选择方法见
-[COMMAND_SURFACE.md](COMMAND_SURFACE.md)。
+旧的 `/study-plan`、`/practice` 等斜杠文本仍被静默识别（向后兼容），但不再作为
+命令面宣传。用户唯一需要操作的可见产物是学习状态卡：换对话继续学习时带上它。
+具体例子见 [COMMAND_SURFACE.md](COMMAND_SURFACE.md)。
 
 ## 🔍 它怎样工作
 
