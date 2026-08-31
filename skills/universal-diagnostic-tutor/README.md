@@ -308,11 +308,11 @@ Skill 的核心入口。它包含触发说明、诊断优先工作流、教学�
 - `mastery_signal_interpretation_protocol.md`：把学习者回应解释成推进、迁移、压缩、重讲或降难度的信号。
 - `explanation_compression_protocol.md`：学习者已懂前置知识时避免重复讲解。
 - `error_to_intervention_protocol.md`：把错误类型映射到对应干预方式。
-- `learning_state_card_protocol.md`：生成可复制的学习状态卡，用于稍后或跨 chat 继续学习。
-- `context_handoff_protocol.md`：从 Learning State Card 或简短摘要继续，不从零重讲。
-- `context_compression_checkpoint_protocol.md`：把长对话压缩成可继续的学习 checkpoint。
-- `stateless_recovery_protocol.md`：没有上下文时快速重新定位，而不假装记得旧 chat。
-- `learning_state_card_protocol.md`：可复制的学习状态卡（含可选字段：语言/水平偏好、当前目标或备考目标、最近练习），保持可见、用户控制、无隐藏记忆。
+- `continuity.md`：生成可复制的学习状态卡，用于稍后或跨 chat 继续学习。
+- `continuity.md`：从 Learning State Card 或简短摘要继续，不从零重讲。
+- `continuity.md`：把长对话压缩成可继续的学习 checkpoint。
+- `continuity.md`：没有上下文时快速重新定位，而不假装记得旧 chat。
+- `continuity.md`：可复制的学习状态卡（含可选字段：语言/水平偏好、当前目标或备考目标、最近练习），保持可见、用户控制、无隐藏记忆。
 - `student_facing_response_protocol.md`：让普通教学回答像自然老师，而不是协议或工具执行记录。
 - `no_internal_tool_leakage_protocol.md`：避免在教学回答里暴露 Skill、版本、文件或协议等内部细节。
 - `knowledge_system_mapping_protocol.md`：把题目简洁定位到领域、子主题、核心概念和前置知识。

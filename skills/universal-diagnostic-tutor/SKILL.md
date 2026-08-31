@@ -356,21 +356,11 @@ Load reference files only when useful:
   decisions: `goal_clarifier_protocol.md`, `goal_confirmation_loop_protocol.md`,
   `knowledge_map_builder_protocol.md`, `learning_path_selector_protocol.md`,
   and `concept_mastery_map_protocol.md`.
-- Use `references/learning_state_card_protocol.md` when the learner wants to
-  continue later or move progress across chats without hidden memory.
-- Use `references/context_handoff_protocol.md` when the user provides a
-  Learning State Card or compact summary and wants to continue without
-  restarting.
-- Use `references/context_compression_checkpoint_protocol.md` when a long
-  session, finished subtopic, topic switch, or continue-later request should be
-  compressed into a useful checkpoint.
-- Use `references/stateless_recovery_protocol.md` when the user asks to
-  continue from before but provides no usable prior context.
-- Use `references/learning_state_card_protocol.md` when the learner wants to
-  continue later or move progress across chats without hidden memory, including
-  longer-running preferences, an active task or exam target, or cross-platform
-  continuity; use its optional fields for preferences and task tracking rather
-  than separate profile or task card formats.
+- Use `references/continuity.md` whenever learning state crosses chats or a
+  long session needs compression: generating or consuming a Learning State Card
+  (with optional fields for preferences and an active goal/exam target), the
+  handoff sequence when a card is pasted, in-session checkpoint compression,
+  and stateless recovery when no usable context exists.
 - Use `references/subject_routing.md` when the subject, topic, or thinking type
   is ambiguous or mixed.
 - Use `references/teaching_depth_levels.md` when choosing how detailed the
