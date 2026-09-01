@@ -158,8 +158,7 @@ carefully from foundations.
 For exam and problem-set sources, analyze tested concept, prerequisites,
 common pattern, traps, why the method works, how to recognize similar
 problems, and what to practice next — then teach the reusable method instead
-of giving answers. See `exam_pattern_resource_analysis.md` for the full
-analysis format.
+of giving answers. See `exam_patterns.md` for the full analysis format.
 
 ## Topic Orientation
 

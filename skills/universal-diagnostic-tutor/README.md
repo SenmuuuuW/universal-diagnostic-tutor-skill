@@ -329,14 +329,13 @@ Skill 的核心入口。它包含触发说明、诊断优先工作流、教学�
 - `stem_proof_and_derivation_protocol.md`：证明和推导教学。
 - `stem_problem_solving_protocol.md`：STEM 解题、建模、调试和算法问题处理。
 - `resources.md`：资源支持式教学总枢纽——主动搜索时机、唯一来源可信层级、搜索流程、教学角色、来源标注清单与资源增强输出格式。
-- `stem_exam_track_protocol.md`：STEM Exam Track / 理科备考 Track，覆盖大学理科、考研数学和 CS 专业课复习。
+- `exam_patterns.md`：理科备考 Track——考试意识诊断、题型模式与陷阱分析、短复习顺序与练习阶梯。
 - `basic_stem_visualization_protocol.md`：函数图、向量图、流程图、概率树、trace table 等基础 STEM 可视化指导。
 - `mastery_state_protocol.md`：当前对话内的掌握状态判断。
 - `cross_turn_progress_protocol.md`：跨轮进度跟踪。
 - `understanding_check_protocol.md`：支持性的理解检查。
 - `difficulty_adjustment_protocol.md`：难度调整。
 - `review_or_advance_decision.md`：复习、换解释、练习或推进的决策。
-- `exam_pattern_resource_analysis.md`：分析常见考试题型、陷阱、识别 cue 和练习方向。
 - `docs/skill_vs_generic_ai_advantage.md`：说明本 Skill 相比普通 AI 答案的诊断、节奏、资源和掌握优势（维护文档）。
 - `docs/benchmark/`：人工验收和测试资产（evaluation checklist、manual test matrix）。根目录的 [EVALS.md](../../EVALS.md)、[QUALITY_RUBRIC.md](../../QUALITY_RUBRIC.md)、[FAILURE_TAXONOMY.md](../../FAILURE_TAXONOMY.md) 和 [FEEDBACK_TO_IMPROVEMENT.md](../../FEEDBACK_TO_IMPROVEMENT.md) 用于更系统的质量评估和改进。
 

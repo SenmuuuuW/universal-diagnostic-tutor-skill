@@ -463,9 +463,8 @@ Load reference files only when useful:
   modeling, deriving, or teaching STEM / AI-CS problem-solving methods.
 - Use `references/clarify_and_path.md` when the learner gives a goal, exam
   date, broad study target, messy current state, or `/study-plan`.
-- Use `references/stem_exam_track_protocol.md` when the learner requests
-  university STEM exam review, 考研数学, CS professional course review, or
-  `/exam-track`.
+- Use `references/exam_patterns.md` when the learner requests university STEM
+  exam review, 考研数学, CS professional course review, or `/exam-track`.
 - Use `references/basic_stem_visualization_protocol.md` when a simple graph,
   diagram, table, flowchart, concept map, or sketch would clarify the current
   learning gap.
@@ -485,9 +484,7 @@ Load reference files only when useful:
   teaching roles, the source-note checklist, no-hallucination rules, topic
   orientation, and source-backed output formats. Resources support teaching,
   never replace it, and never become link dumps.
-- Use `references/exam_pattern_resource_analysis.md` when public exams,
-  problem sets, or repeated mistakes can clarify tested concepts, traps,
-  recognition cues, and practice priorities.
+
 - Maintainer-only: the Skill-vs-generic-AI comparison lives in `docs/`.
 - Use `references/stem_ai_cs_scope.md` for the primary STEM / AI-CS learning
   scope and prerequisite chains.
