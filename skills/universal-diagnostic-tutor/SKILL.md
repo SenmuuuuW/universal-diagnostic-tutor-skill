@@ -356,7 +356,7 @@ Load reference files only when useful:
 - Use `references/clarify_and_path.md` for broad goals and learning-path
   decisions: clarify first (a vague goal gets questions, not a plan), light
   confirmation, a compact knowledge map, next-step selection, brief study
-  plans, and Knowledge Link Cards. Use `concept_mastery_map_protocol.md` for
+  plans, and Knowledge Link Cards. Use `mastery_and_decision.md` for
   per-concept visible status.
 - Use `references/continuity.md` whenever learning state crosses chats or a
   long session needs compression: generating or consuming a Learning State Card
@@ -381,14 +381,13 @@ Load reference files only when useful:
 - Use `references/cognitive_load_budget_protocol.md` when a response may
   overwhelm the learner or when calibrating chunk size by Zero-Base, Standard,
   or Advanced Mode.
-- Use `references/mastery_signal_interpretation_protocol.md` when interpreting
-  learner answers, guesses, partial answers, confusion, speed requests, or
-  requests to go deeper as evidence for the next action.
+- Use `references/feedback.md` when interpreting learner answers, guesses,
+  partial answers, mistakes, or submitted work: qualitative grading, mistake
+  analysis, the error-to-intervention table, and the signal-to-action map.
 - Use `references/explanation_compression_protocol.md` when the learner already
   knows prerequisites, asks a specific question, or needs a faster answer
   without losing the core reasoning.
-- Use `references/error_to_intervention_protocol.md` when a mistake should be
-  mapped to a targeted intervention instead of a generic re-explanation.
+
 - Use `references/student_facing_response_protocol.md` when shaping answers so
   they sound like natural teacher language rather than a visible protocol or
   tool execution trace.
@@ -410,20 +409,16 @@ Load reference files only when useful:
 - Use `references/teacher_like_stop_point_protocol.md` when deciding where to
   pause for learner participation during a solution, derivation, proof, code
   trace, or representation switch.
-- Use `references/mastery_state_protocol.md` when deciding what the learner has
-  shown so far: exposure, recognition, guided understanding, independent
-  explanation, guided or independent application, transfer, misconception, or
-  overload.
-- Use `references/cross_turn_progress_protocol.md` when tracking progress
-  across turns in the current conversation without assuming mastery too early.
+- Use `references/mastery_and_decision.md` when deciding what the learner has
+  shown so far or choosing the next move: the seven status terms, the
+  readiness gate, review-or-advance moves, difficulty adjustment, and
+  cross-turn progress inside the current conversation.
+
 - Use `references/understanding_check_protocol.md` when choosing a supportive
   one-question, explain-it-back, method-classification, prediction,
   error-spotting, near-transfer, or confidence check.
-- Use `references/difficulty_adjustment_protocol.md` when deciding whether to
-  decrease, maintain, or increase difficulty or switch representations.
-- Use `references/review_or_advance_decision.md` when choosing whether to
-  review, re-explain, guide practice, give near-transfer, advance, simplify, or
-  answer first in speed mode.
+
+
 - Use `references/knowledge_gap_taxonomy.md` when diagnosing whether the
   learner needs vocabulary, concept, notation, procedure, reasoning,
   recognition, transfer, misconception, confidence, or resource support.
@@ -435,9 +430,9 @@ Load reference files only when useful:
   recognition through real-world or project-style application.
 - Use the V1.9 practice references as needed:
   `exercise_generation_protocol.md` for targeted exercises,
-  `answer_grading_protocol.md` for qualitative grading,
+  `feedback.md` for qualitative grading and mistake repair,
   `learning_task_loop_protocol.md` for the full focused loop,
-  `readiness_gate_protocol.md` for advancement decisions, and
+  `mastery_and_decision.md` for advancement decisions, and
   `clarify_and_path.md` for strongly related blocker cards.
 - Use the corresponding V1.9 examples when a concrete behavior model is
   needed: `practice_loop_end_to_end_example.md`,
@@ -445,9 +440,9 @@ Load reference files only when useful:
   `readiness_gate_pass_fail_example.md`,
   `knowledge_link_cards_machine_learning_example.md`, or
   `exercise_generation_difficulty_ladder_example.md` under `examples/`.
-- Use `references/mistake_analysis_protocol.md` when analyzing learner work,
-  separating careless errors from conceptual errors, repairing misconceptions,
-  and assigning near-match practice.
+- Use `references/feedback.md` when analyzing learner work, separating
+  careless errors from conceptual errors, repairing misconceptions, and
+  assigning near-match practice.
 - Use `references/stem_teaching_sequence.md` for STEM / AI-CS teaching that
   moves from intuition and concrete examples to formal definitions, notation,
   procedures, edge cases, practice, and later applications.
@@ -470,20 +465,17 @@ Load reference files only when useful:
   learning gap.
 - Use `references/math_formatting_protocol.md` whenever mathematical formulas,
   derivations, equations, or proofs appear.
-- Infer the teaching mode (Zero-Base, Standard, Advanced, or Auto) from learner
-  evidence and natural wording such as "我是零基础" or "基础我懂，直接讲证明";
-  never present a mode menu or onboarding. Ask one minimal calibration question
-  only when the mode would change the answer and cannot be inferred.
+- Infer the teaching mode from learner evidence; never present a mode menu.
+  Ask one calibration question only when the mode would change the answer.
 - Use `references/output_formats.md` when formatting a tutoring answer.
 - Maintainer-only: `docs/benchmark/` holds acceptance and regression assets;
   they are not part of tutoring runtime.
 - Use `references/response_length_calibration.md` when tuning answer length or
   comparing ultra-short, standard, and deep responses.
-- Use `references/resources.md` for everything resource-related: when to
-  search proactively, the single source trust hierarchy, the search workflow,
-  teaching roles, the source-note checklist, no-hallucination rules, topic
-  orientation, and source-backed output formats. Resources support teaching,
-  never replace it, and never become link dumps.
+- Use `references/resources.md` for resource-augmented answers: the single
+  source trust hierarchy, search workflow, teaching roles, source-note
+  checklist, no-hallucination rules, and output formats. Resources support
+  teaching, never replace it.
 
 - Maintainer-only: the Skill-vs-generic-AI comparison lives in `docs/`.
 - Use `references/stem_ai_cs_scope.md` for the primary STEM / AI-CS learning

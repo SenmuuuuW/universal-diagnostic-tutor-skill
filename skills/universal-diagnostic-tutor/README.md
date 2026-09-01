@@ -290,18 +290,18 @@ Skill 的核心入口。它包含触发说明、诊断优先工作流、教学�
 - `skill_pack_invocation_protocol.md`：`/tutor`、`/learn-anything`、`/study-plan`、`/exam-track`、`/practice` 等 user-invoked flows 的调用约定。
 - 主编排层说明已归档到仓库 `docs/design-history-v18-orchestrator.md`（设计历史，非运行时参考）。
 - `clarify_and_path.md`：大目标澄清 → 轻确认 → 紧凑知识地图 → 下一步选择 → 短学习计划的完整路径文件，不生成庞大课程图。
-- `concept_mastery_map_protocol.md`：区分 explained、practiced、checked、confirmed、unconfirmed、weak 和 blocked，避免过早假设掌握。
+- `mastery_and_decision.md`：七词掌握状态（explained/practiced/checked/confirmed/unconfirmed/weak/blocked）、readiness gate、下一步决策、难度调整与跨轮进度。
 - `exercise_generation_protocol.md`：根据当前概念、缺口和练习阶梯生成一道针对性练习。
-- `answer_grading_protocol.md`：对学习者答案做定性、学习导向的批改。
+- `feedback.md`：定性批改、错因分析、错误→干预映射与信号→动作表。
 - `learning_task_loop_protocol.md`：串联教学、练习、作答、批改、修复、状态和下一步。
-- `readiness_gate_protocol.md`：根据解释、推理、练习和迁移证据判断是否进阶。
+
 - `routing.md`：自适应教学总枢纽——入口信号、教学循环、下一步决策表与效率原则。
 - `trigger_mode_matrix.md`：把常见用户信号映射到教学模式、协议和应避免行为。
 - `next_best_teaching_step_protocol.md`：判断下一步该教概念、符号、方法线索、设置、证明枢纽还是误解修复。
 - `cognitive_load_budget_protocol.md`：按学习模式控制每轮解释量。
-- `mastery_signal_interpretation_protocol.md`：把学习者回应解释成推进、迁移、压缩、重讲或降难度的信号。
+
 - `explanation_compression_protocol.md`：学习者已懂前置知识时避免重复讲解。
-- `error_to_intervention_protocol.md`：把错误类型映射到对应干预方式。
+
 - `continuity.md`：生成可复制的学习状态卡，用于稍后或跨 chat 继续学习。
 - `continuity.md`：从 Learning State Card 或简短摘要继续，不从零重讲。
 - `continuity.md`：把长对话压缩成可继续的学习 checkpoint。
@@ -322,7 +322,7 @@ Skill 的核心入口。它包含触发说明、诊断优先工作流、教学�
 - `knowledge_gap_taxonomy.md`：知识漏洞分类。
 - `multiturn_tutoring_protocol.md`：多轮对话处理。
 - `practice_ladder.md`：从识别到迁移的练习梯度。
-- `mistake_analysis_protocol.md`：错题分析。
+
 - `stem_teaching_sequence.md`：STEM 从直觉到形式化的教学顺序。
 - `stem_ask_vs_explain_calibration.md`：什么时候问、什么时候直接讲。
 - `stem_symbol_notation_protocol.md`：符号、公式、对象类型和记号解释。
@@ -331,11 +331,11 @@ Skill 的核心入口。它包含触发说明、诊断优先工作流、教学�
 - `resources.md`：资源支持式教学总枢纽——主动搜索时机、唯一来源可信层级、搜索流程、教学角色、来源标注清单与资源增强输出格式。
 - `exam_patterns.md`：理科备考 Track——考试意识诊断、题型模式与陷阱分析、短复习顺序与练习阶梯。
 - `basic_stem_visualization_protocol.md`：函数图、向量图、流程图、概率树、trace table 等基础 STEM 可视化指导。
-- `mastery_state_protocol.md`：当前对话内的掌握状态判断。
-- `cross_turn_progress_protocol.md`：跨轮进度跟踪。
+
+
 - `understanding_check_protocol.md`：支持性的理解检查。
-- `difficulty_adjustment_protocol.md`：难度调整。
-- `review_or_advance_decision.md`：复习、换解释、练习或推进的决策。
+
+
 - `docs/skill_vs_generic_ai_advantage.md`：说明本 Skill 相比普通 AI 答案的诊断、节奏、资源和掌握优势（维护文档）。
 - `docs/benchmark/`：人工验收和测试资产（evaluation checklist、manual test matrix）。根目录的 [EVALS.md](../../EVALS.md)、[QUALITY_RUBRIC.md](../../QUALITY_RUBRIC.md)、[FAILURE_TAXONOMY.md](../../FAILURE_TAXONOMY.md) 和 [FEEDBACK_TO_IMPROVEMENT.md](../../FEEDBACK_TO_IMPROVEMENT.md) 用于更系统的质量评估和改进。
 

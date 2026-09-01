@@ -22,6 +22,10 @@ reasoning, and the smallest useful check.
 - Keep a compressed reply to the bridge plus the check: one bridge line, one
   small example, one check, stop. Do not append caveat lists, step-size
   discussions, or future-topic extensions unless the learner asks.
+- A speed request ("直接讲", "skip the basics", "just the key point") caps the
+  reply at roughly one short paragraph plus one check: state the single key
+  fact with its one-line reason, then ask the check. Any added section,
+  alternative view, or "by the way" detail is a failure of the request.
 
 ## Compression Moves
 

@@ -5,7 +5,7 @@ concept, gap, mastery evidence, and selected rung in `practice_ladder.md`.
 This is not a generic worksheet generator.
 
 `practice_ladder.md` owns the difficulty framework. This protocol turns the
-chosen rung into an answerable exercise. `answer_grading_protocol.md` evaluates
+chosen rung into an answerable exercise. `feedback.md` evaluates
 the learner's response, and `learning_task_loop_protocol.md` decides what
 happens around the exercise.
 

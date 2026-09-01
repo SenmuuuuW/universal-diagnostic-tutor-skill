@@ -65,12 +65,10 @@ The single loop behind every teaching turn:
    teach-back prompt (`understanding_check_protocol.md`). If the check is for
    learner participation, stop and wait.
 7. **Interpret the response as a mastery signal.** Infer what the answer shows
-   about understanding instead of marking right or wrong
-   (`mastery_signal_interpretation_protocol.md`).
+   about understanding instead of marking right or wrong (`feedback.md`).
 8. **Decide the next move.** Advance, transfer, compress, re-explain, step
    down, practice, review, simplify, or answer-first-in-speed-mode
-   (`review_or_advance_decision.md`, `difficulty_adjustment_protocol.md`,
-   `cross_turn_progress_protocol.md`). End substantial turns with a small
+   (`mastery_and_decision.md`). End substantial turns with a small
    mastery-building action: a check, practice item, transfer cue, or
    teach-back prompt.
 
@@ -173,20 +171,17 @@ move. Advanced — the proof hinge, assumption, or edge case.
 
 ## Pointer Map
 
-- Loop hub: `multiturn_tutoring_protocol.md`, `cross_turn_progress_protocol.md`,
-  `review_or_advance_decision.md`, `difficulty_adjustment_protocol.md`,
+- Loop hub: `multiturn_tutoring_protocol.md`, `mastery_and_decision.md`,
   `understanding_check_protocol.md`, `practice_ladder.md`,
   `exercise_generation_protocol.md`.
-- Gap and mistake: `knowledge_gap_taxonomy.md`,
-  `mistake_analysis_protocol.md`, `error_to_intervention_protocol.md`,
-  `mastery_signal_interpretation_protocol.md`, `answer_grading_protocol.md`,
-  `readiness_gate_protocol.md`, `mastery_state_protocol.md`.
+- Gap and mistake: `knowledge_gap_taxonomy.md`, `feedback.md`,
+  `mastery_and_decision.md`.
 - Mode and depth: `teaching_modes.md`, `cognitive_load_budget_protocol.md`,
   `explanation_compression_protocol.md`.
 - Style and safety: `student_facing_response_protocol.md`,
   `no_internal_tool_leakage_protocol.md`, `math_formatting_protocol.md`,
   `interaction_pacing_protocol.md`, `teacher_like_stop_point_protocol.md`.
-- Broad goals: `clarify_and_path.md`, `concept_mastery_map_protocol.md`.
+- Broad goals: `clarify_and_path.md`, `mastery_and_decision.md`.
 - Continuity: `continuity.md`. Entry data: `trigger_mode_matrix.md`.
 - STEM: `stem_teaching_sequence.md`, `intuition_application_bridge_protocol.md`,
   `knowledge_system_mapping_protocol.md`, `transfer_pattern_teaching_protocol.md`.

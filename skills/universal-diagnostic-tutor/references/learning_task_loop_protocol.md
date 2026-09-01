@@ -39,11 +39,11 @@ enters at evidence review.
    `exercise_generation_protocol.md` and a rung from `practice_ladder.md`.
 5. **Wait for the learner's answer.** End the turn after the question. Do not
    continue into the solution, grading, or next concept.
-6. **Grade the answer.** Use `answer_grading_protocol.md` to preserve correct
+6. **Grade the answer.** Use `feedback.md` to preserve correct
    work, identify missing evidence, and give a qualitative verdict.
 7. **Diagnose a mistake when present.** Use
-   `mistake_analysis_protocol.md`, then map the error to the smallest repair
-   through `error_to_intervention_protocol.md`.
+   `feedback.md`, then map the error to the smallest repair through its
+   error-to-intervention table.
 8. **Use a Knowledge Link Card only if needed.** If a strongly related
    prerequisite is blocking the learner, use
    `clarify_and_path.md`. Otherwise skip this step.
@@ -52,7 +52,7 @@ enters at evidence review.
    exchange, a natural one-sentence progress update is enough.
 10. **Apply the readiness gate.** Combine the available explanation,
     correctness, reasoning, transfer, confidence, and repeated-error evidence
-    through `readiness_gate_protocol.md`.
+    through `mastery_and_decision.md`.
 11. **Choose one next step.** Advance, advance with caution, review, step down,
     diagnose again, or generate one more targeted practice item.
 
@@ -77,13 +77,13 @@ enters at evidence review.
 | Diagnose again | Ask one narrow question that distinguishes the likely blockers. |
 | More practice needed | Generate one aligned item at the same or slightly lower rung. |
 
-Use `review_or_advance_decision.md` to shape the concrete teaching move after
+Use `mastery_and_decision.md` to shape the concrete teaching move after
 the gate.
 
 ## State Discipline
 
 - Use the preferred concept statuses from
-  `concept_mastery_map_protocol.md`.
+  `mastery_and_decision.md`.
 - Treat state as evidence local to a concept, not a permanent learner trait.
 - Use Learning State Cards and Learning Task Cards only as visible,
   user-controlled continuity aids.

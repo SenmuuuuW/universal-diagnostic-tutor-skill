@@ -90,6 +90,6 @@ policy, and stop point.
 - If the learner passes real-world or project-style application, offer a harder
   variation or connect to the next topic.
 - End practice with a transfer cue: "Use this method when you see..."
-- Use `readiness_gate_protocol.md` when the learner asks whether they can move
+- Use `mastery_and_decision.md` when the learner asks whether they can move
   to a dependent concept. Completing a rung is evidence for that decision, not
   an automatic pass.
