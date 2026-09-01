@@ -465,9 +465,6 @@ Load reference files only when useful:
 - Use `references/stem_exam_track_protocol.md` when the learner requests
   university STEM exam review, 考研数学, CS professional course review, or
   `/exam-track`.
-- Use `references/topic_scan_trusted_resources_protocol.md` when a substantial
-  STEM / AI-CS question needs compact topic orientation or trusted resource
-  suggestions without link dumping.
 - Use `references/basic_stem_visualization_protocol.md` when a simple graph,
   diagram, table, flowchart, concept map, or sketch would clarify the current
   learning gap.
@@ -482,24 +479,17 @@ Load reference files only when useful:
   they are not part of tutoring runtime.
 - Use `references/response_length_calibration.md` when tuning answer length or
   comparing ultra-short, standard, and deep responses.
-- Use `references/resource_integration_protocol.md` for resource-augmented
-  learning answers, especially STEM and AI/CS study questions.
-- Use `references/autonomous_resource_discovery_protocol.md` when web/search
-  access is available and authoritative resources would improve teaching,
-  verification, practice design, or exam-pattern analysis.
-- Use `references/resource_orchestrated_tutoring_protocol.md` when turning
-  searched, curated, or user-provided resources into tutoring rather than a
-  source list.
+- Use `references/resources.md` for everything resource-related: when to
+  search proactively, the single source trust hierarchy, the search workflow,
+  teaching roles, the source-note checklist, no-hallucination rules, topic
+  orientation, and source-backed output formats. Resources support teaching,
+  never replace it, and never become link dumps.
 - Use `references/exam_pattern_resource_analysis.md` when public exams,
   problem sets, or repeated mistakes can clarify tested concepts, traps,
   recognition cues, and practice priorities.
 - Maintainer-only: the Skill-vs-generic-AI comparison lives in `docs/`.
-- Use `references/source_trust_hierarchy.md` when choosing or evaluating
-  sources.
 - Use `references/stem_ai_cs_scope.md` for the primary STEM / AI-CS learning
   scope and prerequisite chains.
-- Use `references/resource_augmented_output.md` for source-backed concept,
-  problem-solving, exam-pattern, and source-limited answer formats.
 - Use `references/source_packs/source_pack_usage_guide.md` when selecting from
   curated STEM / AI-CS source packs.
 - Use files under `references/source_packs/` as preferred starting points for
@@ -513,8 +503,6 @@ Load reference files only when useful:
   broad homepages when possible.
 - Use `references/source_packs/source_refresh_maintenance.md` when updating or
   auditing source-pack links.
-- Use `references/source_note_checklist.md` before citing or listing external
-  resources.
 - Maintainer-only: update notes live in `docs/maintenance_notes.md`.
 
 ## Guardrails

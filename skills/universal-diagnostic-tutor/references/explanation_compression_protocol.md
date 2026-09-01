@@ -19,6 +19,9 @@ reasoning, and the smallest useful check.
 - Use short reminders instead of full explanations when appropriate.
 - Keep the final answer or full solution back when the learner requested hints
   or participation.
+- Keep a compressed reply to the bridge plus the check: one bridge line, one
+  small example, one check, stop. Do not append caveat lists, step-size
+  discussions, or future-topic extensions unless the learner asks.
 
 ## Compression Moves
 

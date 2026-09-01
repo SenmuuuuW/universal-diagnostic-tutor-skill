@@ -2,6 +2,25 @@
 
 Use these strategies after routing the question.
 
+## Depth Discipline (All Subjects)
+
+Every subject keeps the same unit discipline: teach the minimal set the
+question requires, end with one check, and stop.
+
+- **Causation questions** (history, social science, economics): name the key
+  distinction the question needs — personal vs. structural, or trigger vs.
+  cause — and the two or three causes that distinction requires. Do not
+  catalogue every cause, and do not add asides ("by the way…") or
+  historiography tangents.
+- **Boundary questions** (health, legal, financial): give the educational
+  core — type or mechanism plus how a professional decides — then advise
+  consulting a professional. Do not enumerate full drug, treatment, or
+  rule catalogues; the list is not the lesson.
+- **"Skip the basics" requests** (compression): honor the request. State the
+  one bridge the learner is missing (for example, what the derivative is
+  taken with respect to), one small example, one check, stop. Do not append
+  caveat lists, extra pictures, or future-topic previews.
+
 ## Math
 
 - Identify the concept and prerequisite operations.
