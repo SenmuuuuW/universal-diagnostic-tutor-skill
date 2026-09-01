@@ -68,11 +68,10 @@ a strongly related concept blocks the task.
 ## Suggested Files
 
 - `skills/universal-diagnostic-tutor/SKILL.md`
-- `skills/universal-diagnostic-tutor/references/skill_routing_architecture.md`
+- `skills/universal-diagnostic-tutor/references/routing.md`
 - `skills/universal-diagnostic-tutor/references/trigger_mode_matrix.md`
 - `skills/universal-diagnostic-tutor/references/brief_study_plan_protocol.md`
-- `skills/universal-diagnostic-tutor/references/learning_efficiency_optimization_loop.md`
-- `skills/universal-diagnostic-tutor/references/learning_state_card_protocol.md`
+- `skills/universal-diagnostic-tutor/references/continuity.md`
 - `skills/universal-diagnostic-tutor/references/learning_task_loop_protocol.md`
 - `skills/universal-diagnostic-tutor/references/no_internal_tool_leakage_protocol.md`
 

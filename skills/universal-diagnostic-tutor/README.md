@@ -299,10 +299,8 @@ Skill 的核心入口。它包含触发说明、诊断优先工作流、教学�
 - `learning_task_loop_protocol.md`：串联教学、练习、作答、批改、修复、状态和下一步。
 - `readiness_gate_protocol.md`：根据解释、推理、练习和迁移证据判断是否进阶。
 - `knowledge_link_cards_protocol.md`：只在强相关概念阻碍当前任务时补充 1–3 张连接卡。
-- `adaptive_teaching_engine.md`：自适应教学总枢纽。
-- `skill_routing_architecture.md`：维护和评估 Skill 内部路由层次，帮助 agent 选择最小相关协议集。
+- `routing.md`：自适应教学总枢纽——入口信号、教学循环、下一步决策表与效率原则。
 - `trigger_mode_matrix.md`：把常见用户信号映射到教学模式、协议和应避免行为。
-- `learning_efficiency_optimization_loop.md`：选择最小高价值下一步，降低不必要认知负荷。
 - `next_best_teaching_step_protocol.md`：判断下一步该教概念、符号、方法线索、设置、证明枢纽还是误解修复。
 - `cognitive_load_budget_protocol.md`：按学习模式控制每轮解释量。
 - `mastery_signal_interpretation_protocol.md`：把学习者回应解释成推进、迁移、压缩、重讲或降难度的信号。

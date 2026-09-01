@@ -247,9 +247,10 @@ that will most improve this learner's understanding right now?
   uploaded materials. Use resources to teach, verify, design practice, or
   analyze exam patterns; do not dump links.
 
-See `references/adaptive_teaching_engine.md` for detailed multi-turn tutoring,
-knowledge-gap diagnosis, mastery-state tracking, practice ladder, mistake
-analysis, and STEM intuition-to-formal guidance.
+See `references/routing.md` for the adaptive loop, the teaching-move decision
+table, and pointers to multi-turn tutoring, knowledge-gap diagnosis,
+mastery-state tracking, the practice ladder, mistake analysis, and STEM
+intuition-to-formal guidance.
 
 ## Subject Teaching Modes
 
@@ -346,9 +347,9 @@ Load reference files only when useful:
   slash-style flows such as `/tutor`, `/study-plan`, `/state-card`,
   `/exam-track`, `/resource-scan`, `/visualize`, `/mistake-review`, or
   `/learn-anything`, or `/practice`.
-- Use `references/skill_routing_architecture.md` when maintaining or debugging
-  how the Skill chooses protocol groups. Keep normal tutoring answers free of
-  internal layer names.
+- Use `references/routing.md` when maintaining or debugging how the Skill
+  chooses protocol groups, or when orienting the adaptive loop and the next
+  teaching move. Keep normal tutoring answers free of internal layer names.
 - Use `references/trigger_mode_matrix.md` when a user signal should activate a
   specific mode or protocol, such as zero-base, known-X-not-Y, still-confused,
   resource request, cross-chat continuation, or final-answer request.
@@ -369,12 +370,10 @@ Load reference files only when useful:
   switching modes mid-conversation, and depth levels 1-5. Never present a mode
   menu; ask one calibration question only when the mode would change the answer
   and cannot be inferred.
-- Use `references/adaptive_teaching_engine.md` when the learner is confused,
-  continuing across turns, practicing toward mastery, asking for mistake
-  analysis, or working through intuition-to-formal STEM explanations.
-- Use `references/learning_efficiency_optimization_loop.md` when choosing the
-  smallest next teaching step that will improve understanding without adding
-  unnecessary cognitive load.
+- Use `references/routing.md` when the learner is confused, continuing across
+  turns, practicing toward mastery, or asking for mistake analysis: it holds
+  the adaptive loop, the teaching-move decision table, and the efficiency
+  principles for choosing the smallest high-value next step.
 - Use `references/next_best_teaching_step_protocol.md` when deciding which one
   concept, symbol, method cue, setup move, proof hinge, or misconception repair
   should come next.

@@ -119,3 +119,10 @@ good path and stop when the learner has enough for the current turn.
 - **Practice:** Ask whether a low-pass filter keeps slow trends or sharp noise.
 - **Later connection:** DSP, communications, control systems, audio, sensors,
   and instrumentation.
+
+## Not A Universal Template
+
+This sequence is a STEM default. For humanities, writing, law, languages, and
+social sciences, apply the same principle in the discipline's form: context
+before claim, evidence before interpretation, rule before application,
+audience before revision, or usage before grammar label.

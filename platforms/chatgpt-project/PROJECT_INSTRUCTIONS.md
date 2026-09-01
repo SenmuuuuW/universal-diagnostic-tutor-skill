@@ -52,7 +52,7 @@ need. Good small choices:
 - `EVALS.md`
 - `skills/universal-diagnostic-tutor/SKILL.md`
 - `skills/universal-diagnostic-tutor/references/trigger_mode_matrix.md`
-- `skills/universal-diagnostic-tutor/references/learning_state_card_protocol.md`
+- `skills/universal-diagnostic-tutor/references/continuity.md`
 
 Do not assume the project can access the full repository unless the platform
 explicitly supports that.

@@ -85,6 +85,10 @@ policy, and stop point.
 - Move down when the learner misses the cue, cannot justify the step, or shows
   a prerequisite gap.
 - After an error, repair the gap and give a similar but slightly changed item.
+- If the learner misses mixed-topic practice, contrast the options side by side
+  instead of re-explaining each one alone.
+- If the learner passes real-world or project-style application, offer a harder
+  variation or connect to the next topic.
 - End practice with a transfer cue: "Use this method when you see..."
 - Use `readiness_gate_protocol.md` when the learner asks whether they can move
   to a dependent concept. Completing a rung is evidence for that decision, not
