@@ -82,7 +82,7 @@ response, then speak naturally.
   skipped or summarized briefly.
 - Use `error_to_intervention_protocol.md` when a mistake needs a targeted
   repair instead of a generic re-explanation.
-- Use `teaching_mode_selection_protocol.md` to select Auto, Zero-Base,
+- Use `teaching_modes.md` to select Auto, Zero-Base,
   Standard, or Advanced Mode and switch modes when learner evidence changes.
 - Use `student_facing_response_protocol.md` and
   `no_internal_tool_leakage_protocol.md` to keep visible tutoring answers
@@ -95,9 +95,9 @@ response, then speak naturally.
 - Use `transfer_pattern_teaching_protocol.md` when the learner needs to
   recognize similar problems after a check, step, practice item, or mistake
   repair.
-- Use `beginner_foundation_teaching_protocol.md` when the learner needs object,
+- Use `teaching_modes.md` when the learner needs object,
   symbol, notation, vocabulary, or prerequisite explanation before solving.
-- Use `standard_and_advanced_mode_protocol.md` to distinguish normal
+- Use `teaching_modes.md` to distinguish normal
   problem-solving support from concise rigorous proof, derivation, edge cases,
   assumptions, and transfer.
 - Use `multiturn_tutoring_protocol.md` for follow-ups such as "I still don't
@@ -161,7 +161,7 @@ the learner's next action.
 
 ## Teaching Mode Calibration
 
-Use `teaching_mode_selection_protocol.md` when the learner declares a mode or
+Use `teaching_modes.md` when the learner declares a mode or
 when their level is unclear. Zero-Base Mode starts from objects, vocabulary,
 symbols, and prerequisites. Standard Mode balances method recognition, guided
 steps, and near-transfer. Advanced Mode is concise and emphasizes derivation,

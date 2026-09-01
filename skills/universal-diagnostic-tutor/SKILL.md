@@ -179,7 +179,7 @@ Choose a depth level from the user's wording, apparent difficulty, and stakes.
   study, exam preparation, or requests to understand the whole framework;
   include real-world application and practice.
 
-See `references/teaching_depth_levels.md` for fuller guidance.
+See `references/teaching_modes.md` for fuller guidance.
 
 ## Adaptive Teaching Engine
 
@@ -363,18 +363,12 @@ Load reference files only when useful:
   and stateless recovery when no usable context exists.
 - Use `references/subject_routing.md` when the subject, topic, or thinking type
   is ambiguous or mixed.
-- Use `references/teaching_depth_levels.md` when choosing how detailed the
-  answer should be.
-- Use `references/teaching_mode_selection_protocol.md` when selecting or
-  switching between Auto, Zero-Base, Standard, and Advanced teaching modes.
-- Use `references/beginner_foundation_teaching_protocol.md` when the learner
-  is zero-base, missing prerequisites, or confused by objects, notation,
-  vocabulary, or symbols.
-- Use `references/standard_and_advanced_mode_protocol.md` when calibrating
-  standard problem-solving help versus advanced proof, derivation, rigor,
-  efficiency, assumptions, edge cases, or transfer.
-- Use `references/subject_teaching_modes.md` when subject-specific teaching
-  strategy matters.
+- Use `references/teaching_modes.md` for mode and depth as teaching
+  parameters: inferring Zero-Base / Standard / Advanced / Auto from learner
+  evidence, the beginner teaching sequence, the standard-vs-advanced contrast,
+  switching modes mid-conversation, and depth levels 1-5. Never present a mode
+  menu; ask one calibration question only when the mode would change the answer
+  and cannot be inferred.
 - Use `references/adaptive_teaching_engine.md` when the learner is confused,
   continuing across turns, practicing toward mastery, asking for mistake
   analysis, or working through intuition-to-formal STEM explanations.

@@ -318,9 +318,9 @@ Skill 的核心入口。它包含触发说明、诊断优先工作流、教学�
 - `knowledge_system_mapping_protocol.md`：把题目简洁定位到领域、子主题、核心概念和前置知识。
 - `intuition_application_bridge_protocol.md`：把抽象 STEM 概念连到直觉、现象、技术系统或应用。
 - `transfer_pattern_teaching_protocol.md`：讲完步骤后提炼可迁移的问题线索、方法和陷阱。
-- `teaching_mode_selection_protocol.md`：选择 Auto、零基础、普通或进阶教学模式。
-- `beginner_foundation_teaching_protocol.md`：真正零基础学习者的概念、符号和对象解释。
-- `standard_and_advanced_mode_protocol.md`：区分普通问题讲解与进阶证明、推导、边界和迁移。
+- `teaching_modes.md`：选择 Auto、零基础、普通或进阶教学模式。
+- `teaching_modes.md`：真正零基础学习者的概念、符号和对象解释。
+- `teaching_modes.md`：区分普通问题讲解与进阶证明、推导、边界和迁移。
 - `math_formatting_protocol.md`：数学公式使用 Markdown / LaTeX math，不用代码块伪装公式。
 - 学习模式由证据自动推断（零基础/普通/进阶），不再提供模式菜单或 onboarding。
 - `interaction_pacing_protocol.md`：防止一次讲太多，保持 teach-check-continue 节奏。
