@@ -127,6 +127,12 @@ Summarize progress naturally and only when it helps: "You now have the symbol
 meanings; next we need the procedure." Avoid visible progress reports unless
 the learner asks.
 
+After any grade or readiness decision, name the resulting status explicitly
+in one natural sentence when the next move depends on it — for example "this
+stays practiced, not yet confirmed" or "that evidence confirms this step."
+Never leave the mastery verdict implicit when the learner asked whether they
+can advance.
+
 ## Anti-Patterns
 
 - Marking mastery because the tutor explained the concept.
