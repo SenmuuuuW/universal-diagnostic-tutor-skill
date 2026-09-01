@@ -289,16 +289,12 @@ Skill 的核心入口。它包含触发说明、诊断优先工作流、教学�
 
 - `skill_pack_invocation_protocol.md`：`/tutor`、`/learn-anything`、`/study-plan`、`/exam-track`、`/practice` 等 user-invoked flows 的调用约定。
 - 主编排层说明已归档到仓库 `docs/design-history-v18-orchestrator.md`（设计历史，非运行时参考）。
-- `goal_clarifier_protocol.md`：大目标、弱基础、考试或项目目标的短澄清问题。
-- `goal_confirmation_loop_protocol.md`：澄清后先确认目标，再开始建路径。
-- `knowledge_map_builder_protocol.md`：小而目标相关的知识地图，不生成庞大课程图。
-- `learning_path_selector_protocol.md`：根据目标、基础、紧迫度和掌握信号选择下一步。
+- `clarify_and_path.md`：大目标澄清 → 轻确认 → 紧凑知识地图 → 下一步选择 → 短学习计划的完整路径文件，不生成庞大课程图。
 - `concept_mastery_map_protocol.md`：区分 explained、practiced、checked、confirmed、unconfirmed、weak 和 blocked，避免过早假设掌握。
 - `exercise_generation_protocol.md`：根据当前概念、缺口和练习阶梯生成一道针对性练习。
 - `answer_grading_protocol.md`：对学习者答案做定性、学习导向的批改。
 - `learning_task_loop_protocol.md`：串联教学、练习、作答、批改、修复、状态和下一步。
 - `readiness_gate_protocol.md`：根据解释、推理、练习和迁移证据判断是否进阶。
-- `knowledge_link_cards_protocol.md`：只在强相关概念阻碍当前任务时补充 1–3 张连接卡。
 - `routing.md`：自适应教学总枢纽——入口信号、教学循环、下一步决策表与效率原则。
 - `trigger_mode_matrix.md`：把常见用户信号映射到教学模式、协议和应避免行为。
 - `next_best_teaching_step_protocol.md`：判断下一步该教概念、符号、方法线索、设置、证明枢纽还是误解修复。
@@ -333,7 +329,6 @@ Skill 的核心入口。它包含触发说明、诊断优先工作流、教学�
 - `stem_proof_and_derivation_protocol.md`：证明和推导教学。
 - `stem_problem_solving_protocol.md`：STEM 解题、建模、调试和算法问题处理。
 - `resources.md`：资源支持式教学总枢纽——主动搜索时机、唯一来源可信层级、搜索流程、教学角色、来源标注清单与资源增强输出格式。
-- `brief_study_plan_protocol.md`：根据当前状态和目标生成短学习计划。
 - `stem_exam_track_protocol.md`：STEM Exam Track / 理科备考 Track，覆盖大学理科、考研数学和 CS 专业课复习。
 - `basic_stem_visualization_protocol.md`：函数图、向量图、流程图、概率树、trace table 等基础 STEM 可视化指导。
 - `mastery_state_protocol.md`：当前对话内的掌握状态判断。

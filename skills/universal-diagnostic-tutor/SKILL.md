@@ -101,11 +101,11 @@ strongly related concepts are blocking the current task.
 
 Treat a beginner's request to explain why required concepts are connected, or
 a complaint that related concepts were mentioned too briefly, as a Knowledge
-Link Card trigger. Load `references/knowledge_link_cards_protocol.md`. In the
-first beginner turn, give one to three cards, each covering what it is, why it
-matters here, the direct connection, minimum mastery now, what to skip, and one
-small example; then ask one check and stop. Do not include a formal derivation
-in that turn unless the learner explicitly requests one.
+Link Card trigger. Load `references/clarify_and_path.md`. In the first beginner
+turn, give one to three cards, each covering what it is, why it matters here,
+the direct connection, minimum mastery now, what to skip, and one small
+example; then ask one check and stop. Do not include a formal derivation in
+that turn unless the learner explicitly requests one.
 
 If the user provides a Learning State Card or compact handoff summary, do not
 restart from zero. Trust already-understood items provisionally, focus on the
@@ -353,10 +353,11 @@ Load reference files only when useful:
 - Use `references/trigger_mode_matrix.md` when a user signal should activate a
   specific mode or protocol, such as zero-base, known-X-not-Y, still-confused,
   resource request, cross-chat continuation, or final-answer request.
-- Use the goal and path references for broad goals and learning-path
-  decisions: `goal_clarifier_protocol.md`, `goal_confirmation_loop_protocol.md`,
-  `knowledge_map_builder_protocol.md`, `learning_path_selector_protocol.md`,
-  and `concept_mastery_map_protocol.md`.
+- Use `references/clarify_and_path.md` for broad goals and learning-path
+  decisions: clarify first (a vague goal gets questions, not a plan), light
+  confirmation, a compact knowledge map, next-step selection, brief study
+  plans, and Knowledge Link Cards. Use `concept_mastery_map_protocol.md` for
+  per-concept visible status.
 - Use `references/continuity.md` whenever learning state crosses chats or a
   long session needs compression: generating or consuming a Learning State Card
   (with optional fields for preferences and an active goal/exam target), the
@@ -437,7 +438,7 @@ Load reference files only when useful:
   `answer_grading_protocol.md` for qualitative grading,
   `learning_task_loop_protocol.md` for the full focused loop,
   `readiness_gate_protocol.md` for advancement decisions, and
-  `knowledge_link_cards_protocol.md` for strongly related blockers.
+  `clarify_and_path.md` for strongly related blocker cards.
 - Use the corresponding V1.9 examples when a concrete behavior model is
   needed: `practice_loop_end_to_end_example.md`,
   `answer_grading_partial_credit_example.md`,
@@ -460,8 +461,8 @@ Load reference files only when useful:
   formula, theorem, derivation, or algorithm works.
 - Use `references/stem_problem_solving_protocol.md` when solving, debugging,
   modeling, deriving, or teaching STEM / AI-CS problem-solving methods.
-- Use `references/brief_study_plan_protocol.md` when the learner gives a goal,
-  exam date, broad study target, messy current state, or `/study-plan`.
+- Use `references/clarify_and_path.md` when the learner gives a goal, exam
+  date, broad study target, messy current state, or `/study-plan`.
 - Use `references/stem_exam_track_protocol.md` when the learner requests
   university STEM exam review, 考研数学, CS professional course review, or
   `/exam-track`.

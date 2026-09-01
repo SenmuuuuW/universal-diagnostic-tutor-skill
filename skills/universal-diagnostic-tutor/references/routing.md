@@ -186,9 +186,7 @@ move. Advanced — the proof hinge, assumption, or edge case.
 - Style and safety: `student_facing_response_protocol.md`,
   `no_internal_tool_leakage_protocol.md`, `math_formatting_protocol.md`,
   `interaction_pacing_protocol.md`, `teacher_like_stop_point_protocol.md`.
-- Broad goals: `goal_clarifier_protocol.md`,
-  `goal_confirmation_loop_protocol.md`, `knowledge_map_builder_protocol.md`,
-  `learning_path_selector_protocol.md`, `concept_mastery_map_protocol.md`.
+- Broad goals: `clarify_and_path.md`, `concept_mastery_map_protocol.md`.
 - Continuity: `continuity.md`. Entry data: `trigger_mode_matrix.md`.
 - STEM: `stem_teaching_sequence.md`, `intuition_application_bridge_protocol.md`,
   `knowledge_system_mapping_protocol.md`, `transfer_pattern_teaching_protocol.md`.

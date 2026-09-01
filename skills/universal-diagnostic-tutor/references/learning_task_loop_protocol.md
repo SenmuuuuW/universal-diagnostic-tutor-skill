@@ -46,7 +46,7 @@ enters at evidence review.
    through `error_to_intervention_protocol.md`.
 8. **Use a Knowledge Link Card only if needed.** If a strongly related
    prerequisite is blocking the learner, use
-   `knowledge_link_cards_protocol.md`. Otherwise skip this step.
+   `clarify_and_path.md`. Otherwise skip this step.
 9. **Update visible learning state.** Record the attempt, result, mistake type,
    concept status, and next step when continuity matters. In a short live
    exchange, a natural one-sentence progress update is enough.
