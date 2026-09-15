@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## v2.0.0 — One Tutor, No Feature Menu (Release Candidate)
+## v2.0.0 — One Tutor, No Feature Menu
 
 ### The Product Change
 
@@ -36,15 +36,19 @@ All notable changes to this project will be documented in this file.
 
 | Metric | Baseline v1.9.2 | v2.0.0 |
 | --- | --- | --- |
-| Identity group | 4.622 | 4.777 |
-| Quality group | 4.135 | 4.467 |
-| Over-teaching | 3.62 | 4.46 |
-| Mistake diagnosis | 3.75 | 4.38 |
-| Next-best step | 4.03 | 4.30 |
-| Naturalness | 4.53 | 4.83 |
-| t02 (over-explaining) rate | 31.0% | 3.4% |
+| Identity group | 4.622 | 4.819 |
+| Quality group | 4.135 | 4.619 |
+| Over-teaching | 3.62 | 4.62 |
+| Mistake diagnosis | 3.75 | 4.50 |
+| Next-best step | 4.03 | 4.55 |
+| Naturalness | 4.53 | 4.76 |
+| t02 (over-explaining) rate | 31.0% | 6.9% |
 | Leakage regex hits | 0 | 0 |
 | Urgent / critical failures | 0 | 0 |
+
+These are results from this repository's frozen 29-case evaluation harness.
+They are harness-scoped measurements, not universal performance claims across
+every model or environment.
 
 ### History (2.0 Phase 1)
 
