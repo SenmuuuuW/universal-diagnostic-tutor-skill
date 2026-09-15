@@ -2,7 +2,7 @@
 
 # 🧠 Universal Diagnostic Tutor Skill
 
-**A diagnosis-first STEM / AI-CS tutor skill that finds the learner's current knowledge gap before teaching.**
+**A diagnosis-first AI tutor that decides what the learner needs next — without making them choose modes or features.**
 
 English | [中文](README.zh-CN.md)
 
@@ -11,7 +11,7 @@ English | [中文](README.zh-CN.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-2f6f4e.svg)](LICENSE)
 ![Markdown only](https://img.shields.io/badge/Markdown-only-555555.svg)
 ![Focus: STEM and AI-CS](https://img.shields.io/badge/Focus-STEM%20%2F%20AI--CS-1f6feb.svg)
-![V1.9 Practice and Mastery](https://img.shields.io/badge/V1.9-Practice%20%26%20Mastery-b78300.svg)
+![V2.0 One Tutor](https://img.shields.io/badge/V2.0-One%20Tutor-2f6f4e.svg)
 [![GitHub stars](https://img.shields.io/github/stars/SenmuuuuW/universal-diagnostic-tutor-skill?style=flat)](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill/stargazers)
 
 </div>
@@ -38,9 +38,12 @@ New to the project? Read the [User Guide](USER_GUIDE.md). Installation and
 updates live in [INSTALL.md](INSTALL.md), while entrypoint details live in
 [COMMAND_SURFACE.md](COMMAND_SURFACE.md).
 
-## ✨ Core Capabilities
+## ✨ What The Tutor Does
 
-| Capability | What it does |
+These are behaviors the tutor performs automatically from what the learner says —
+not features the learner must choose.
+
+| Behavior | What it does |
 | --- | --- |
 | Diagnosis-first tutoring | Locates the subject, concept, prerequisite, notation, method, or reasoning gap |
 | Broad-goal planning | Clarifies broad goals, builds a compact knowledge map, and selects one next step |
@@ -84,10 +87,15 @@ The full chain is used only when the learner needs it. A quick factual question
 does not trigger a giant workflow, and a practice turn normally stops after one
 targeted exercise to wait for the learner's answer.
 
-## ✅ V1.9 Practice & Mastery Loop
+## ✅ V2.0: One Tutor, No Feature Menu
 
-V1.9 closes the gap between explanation and demonstrated understanding. The
-Tutor can generate one targeted exercise, wait for the learner's attempt,
+V2.0 collapses the public surface into ONE tutor. Practice, grading, mistake
+review, planning, exam review, resources, visualization, and continuity are no
+longer separate entrypoints — the tutor routes to them automatically from
+natural language. Legacy slash strings stay silently recognized for backward
+compatibility, never required or advertised.
+
+The Tutor can generate one targeted exercise, wait for the learner's attempt,
 preserve correct reasoning, identify the earliest meaningful mistake, select a
 focused repair, update visible learning state when useful, and decide whether
 to advance, review, step down, diagnose again, or continue practicing.

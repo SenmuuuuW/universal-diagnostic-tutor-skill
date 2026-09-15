@@ -2,7 +2,55 @@
 
 All notable changes to this project will be documented in this file.
 
-## Unreleased — 2.0 Phase 1 (Public Surface Collapse)
+## v2.0.0 — One Tutor, No Feature Menu (Release Candidate)
+
+### The Product Change
+
+- One Tutor: the six public entrypoints collapsed into a single
+  diagnosis-first tutor. Practice, Mistake Review, Gap Diagnosis, Study
+  Planning, Exam Track, Resource-supported teaching, and Visualization are
+  internal behaviors triggered by natural language — never a menu.
+- Slash commands are no longer required or advertised; legacy strings stay
+  silently recognized for backward compatibility.
+- Three learning cards collapsed into ONE Learning State Card (optional fields
+  absorb former profile/task card concepts). No hidden memory.
+- Teaching modes (Zero-Base / Standard / Advanced / Auto) are inferred from
+  learner evidence; no mode menu or onboarding.
+- Canonical loop: Clarify -> Diagnose -> Intervene -> Check -> Decide, plus
+  Carry (continuity) and cross-cutting constraints.
+- Reduced over-teaching, improved cognitive-load control, improved mistake
+  diagnosis, and stronger naturalness in the canonical runtime.
+
+### Runtime Architecture (Phase 2)
+
+- references/: 74 protocol files -> 39 consolidated, single-source-of-truth
+  files (continuity, teaching_modes, routing, resources, clarify_and_path,
+  exam_patterns, feedback, mastery_and_decision, ...).
+- SKILL.md: ~8.4K -> ~2.5K tokens; compact router with identity, core loop,
+  cross-cutting rules, and lazy routing.
+- Mean runtime context: 11,388 -> 6,678 tokens (-41%) in the project's
+  29-case harness. (This is a harness-scoped measurement, not a generalized
+  "all models improve" claim.)
+
+### Benchmark (project harness, 29 cases, judge rubric v1.0.0)
+
+| Metric | Baseline v1.9.2 | v2.0.0 |
+| --- | --- | --- |
+| Identity group | 4.622 | 4.777 |
+| Quality group | 4.135 | 4.467 |
+| Over-teaching | 3.62 | 4.46 |
+| Mistake diagnosis | 3.75 | 4.38 |
+| Next-best step | 4.03 | 4.30 |
+| Naturalness | 4.53 | 4.83 |
+| t02 (over-explaining) rate | 31.0% | 3.4% |
+| Leakage regex hits | 0 | 0 |
+| Urgent / critical failures | 0 | 0 |
+
+### History (2.0 Phase 1)
+
+(Phase 1 details retained below.)
+
+
 
 ### Changed
 

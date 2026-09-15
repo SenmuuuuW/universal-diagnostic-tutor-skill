@@ -1,7 +1,7 @@
-# Orchestrator Sub-skill Routing
+# Internal Routing Example
 
-This example shows V1.8 orchestration without exposing protocol names to the
-learner.
+This example shows how one tutor routes a broad goal internally without
+exposing any internal names to the learner.
 
 ## User
 
@@ -11,11 +11,10 @@ learner.
 
 ```text
 Broad goal
--> Goal Clarifier
--> Goal Confirmation Loop
--> Knowledge Map Builder
--> Learning Path Selector
--> Study Planner / Exam Track / Concept Tutor
+-> Clarify (1-3 focused questions, stop and wait)
+-> Confirm (one-sentence restatement)
+-> Compact knowledge map (only what chooses the next step)
+-> Next best step (one concept, why it comes first, one check)
 -> Learning State Card if the learner wants continuity
 ```
 

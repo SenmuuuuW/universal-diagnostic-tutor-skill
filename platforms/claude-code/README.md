@@ -11,33 +11,23 @@ or slash UI.
 
 ## What To Install Or Reference
 
-For the strongest setup, keep the main Skill folder and focused entrypoint
-folders together in the location your environment reads:
+There is ONE tutor and no feature menu. Install or reference only the main
+Skill folder in the location your environment reads:
 
 ```text
 skills/universal-diagnostic-tutor/
-skills/tutor-learn-path/
-skills/tutor-practice/
-skills/tutor-state-card/
-skills/tutor-resource-scan/
-skills/tutor-visualize/
 ```
 
-Depending on your environment, these may be copied, symlinked, or referenced
-from a project instructions location. Follow your tool's own documentation for
-the exact path.
-
-## Focused Entrypoints
-
-- `universal-diagnostic-tutor`: general diagnosis-first tutoring.
-- `tutor-learn-path`: broad learning goals, study plans, and exam routes.
-- `tutor-practice`: practice, grading, mistake review, gap diagnosis, and readiness.
-- `tutor-state-card`: Learning State / Profile / Task Cards.
-- `tutor-resource-scan`: topic scan and trusted resource guidance.
-- `tutor-visualize`: visual explanations, diagrams, tables, and traces.
+Depending on your environment, it may be copied, symlinked, or referenced from
+a project instructions location. Follow your tool's own documentation for the
+exact path. The old `tutor-*` folders no longer exist; practice, grading,
+planning, exam review, resources, visualization, and continuity all trigger
+from natural language inside the one tutor. The canonical behavior lives only
+in `skills/universal-diagnostic-tutor/`.
 
 Older shortcuts such as `/study-plan`, `/exam-track`, `/mistake-review`, and
-`/diagnose-gap` remain text intent aliases; they are not separate folders.
+`/diagnose-gap` remain silently recognized text intent aliases; they are not
+separate folders and never need to be learned.
 
 For a user-facing overview, see [../../COMMAND_SURFACE.md](../../COMMAND_SURFACE.md).
 

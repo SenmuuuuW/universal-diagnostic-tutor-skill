@@ -312,6 +312,18 @@ Future changes must preserve the core identity of the skill:
   PyYAML in the local environment. Do not add package setup or dependency files
   only for that validator unless explicitly requested.
 
+## V2.0 Release Freeze
+
+- Core tutoring behavior is feature-frozen for the v2.0.0 release candidate.
+  Do not continue merging reference files, shrinking `SKILL.md`, or deleting
+  teaching behavior to chase token or file counts; only fix explicit bugs.
+- 39 reference files is an accepted state. Optimize further only when a
+  clear duplication of a single source of truth is demonstrated.
+- Context cost around 6,700 tokens mean is an optimization target, not a
+  release blocker.
+- Do not push, tag, or create a GitHub Release without explicit human
+  approval of the release candidate.
+
 ## Editing Notes
 
 - Use simple Markdown and portable plain text.

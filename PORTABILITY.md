@@ -34,9 +34,10 @@ Best for:
 This is the strongest version because the agent can route from `SKILL.md` into
 references and examples as needed.
 
-Full Skill environments can use the V1.8 learning architecture layer: clarify
-broad goals, confirm the target, build a compact knowledge map, select one
-next step, route to the right sub-skill, and update visible state cards.
+Full Skill environments handle broad goals with clarify-first handling: ask one
+to three focused questions, confirm the target in one sentence, build a compact
+knowledge map, and select one next step before teaching. All routes stay inside
+the one tutor.
 
 For usage examples with one tutor, see [COMMAND_SURFACE.md](COMMAND_SURFACE.md).
 

@@ -2,7 +2,7 @@
 
 ## User
 
-/visualize 我不懂为什么 \(v\) 和 \(2v\) 平行。能不能画成简单图？
+我不懂为什么 \(v\) 和 \(2v\) 平行。能不能画成简单图？
 
 ## Expected Tutor Behavior
 

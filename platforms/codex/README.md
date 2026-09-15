@@ -20,24 +20,19 @@ main `SKILL.md`, selected references, and examples as needed.
 - Read the root `INSTALL.md` for installation, update, and copied-directory
   troubleshooting.
 
-## Tutor Practice
+## One Tutor
 
-If Codex exposes focused Skill entrypoints, choose Tutor Practice /
-`tutor-practice` for exercises, answer checking, qualitative grading, mistake
-diagnosis, or readiness decisions. It normally gives one targeted exercise,
-waits for the learner's answer, and then decides whether to advance or review.
-One to three Knowledge Link Cards may be used only when a strongly related
-concept blocks the current task.
+There is one public entrypoint: Universal Diagnostic Tutor. Practice, answer
+checking, qualitative grading, mistake diagnosis, readiness decisions,
+planning, exam review, resources, and visualization all trigger from natural
+language inside the one tutor. It normally gives one targeted exercise, waits
+for the learner's answer, and then decides whether to advance or review. One
+to three Knowledge Link Cards may be used only when a strongly related concept
+blocks the current task.
 
-`/practice` is a Tutor text shortcut and is not guaranteed to be a native
-Codex slash command.
-
-## Simplified Entrypoints
-
-The public surface is Universal Diagnostic Tutor, Tutor Learn Path, Tutor
-Practice, Tutor State Card, Tutor Resource Scan, and Tutor Visualize. Older
-shortcut intents remain supported as text aliases rather than separate Skill
-folders.
+Older shortcut intents such as `/practice` remain supported as silent text
+aliases, not separate Skill folders, and are not guaranteed to be native
+Codex slash commands.
 
 ## Notes
 

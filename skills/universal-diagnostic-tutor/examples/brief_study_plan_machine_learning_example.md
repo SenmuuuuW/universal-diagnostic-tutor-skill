@@ -2,7 +2,7 @@
 
 ## User
 
-/study-plan 我想学机器学习，但数学很弱，会一点 Python。应该先补什么？
+我想学机器学习，但数学很弱，会一点 Python。应该先补什么？
 
 ## Expected Tutor Behavior
 

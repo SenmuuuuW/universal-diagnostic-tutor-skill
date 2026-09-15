@@ -1,11 +1,12 @@
 # Study Plan: Machine Learning Discipline-first Example
 
-This example shows how `/study-plan` should avoid a generic roadmap for a broad
+This example shows how a broad study goal should avoid a generic roadmap. The
+slash form `/study-plan` is still silently recognized if used.
 AI-CS goal.
 
 ## User
 
-> /study-plan 我想系统入门机器学习，但是数学基础比较弱。我会一点 Python，不是为了考试，是为了以后能看懂基础模型并做小项目。请给我一个学习计划。
+> 我想系统入门机器学习，但是数学基础比较弱。我会一点 Python，不是为了考试，是为了以后能看懂基础模型并做小项目。请给我一个学习计划。
 
 ## Tutor
 

@@ -249,33 +249,16 @@ skills/universal-diagnostic-tutor/
 学习它们。
 
 
-## 10. 常用调用方式
+## 10. 旧版斜杠文本（兼容说明）
 
-这些 slash-style flow 是旧意图也能继续使用的文字别名，不是 shell command 或
-保证存在的平台原生菜单。普通聊天用户可以直接手动输入。
-
-| 调用方式 | 用途 |
-| --- | --- |
-| `/tutor` | 开始诊断式教学 |
-| `/learn-anything`, `/study-plan` | 路由到 Tutor Learn Path |
-| `/exam-track` | 规划用 Learn Path；练习与复盘用 Practice |
-| `/state-card` | 生成或继续学习状态卡 |
-| `/resource-scan` | 定位知识点并找可信资源方向 |
-| `/visualize` | 用简单图示、表格或流程图解释 |
-| `/diagnose-gap`, `/mistake-review`, `/practice` | 路由到 Tutor Practice |
-
-示例：
+2.0 不需要任何命令或入口名。你只需要用自然语言提问，例如：
 
 ```text
-/tutor 我是零基础，两个向量平行是什么意思？
+我是零基础，两个向量平行是什么意思？
 ```
 
 ```text
-/learn-anything 我想学机器学习，但是数学很弱，不知道从哪里开始。
-```
-
-```text
-我想准备考研数学，但线代很弱，先从哪里补？
+我想学机器学习，但是数学很弱，不知道从哪里开始。
 ```
 
 ```text
@@ -287,16 +270,17 @@ skills/universal-diagnostic-tutor/
 ```
 
 ```text
-/mistake-review 我把两个平行向量的每个分量都设成相等了。
+我把两个平行向量的每个分量都设成相等了，帮我看看错在哪。
 ```
 
 ```text
 帮我生成下次继续用的学习状态卡。
 ```
 
-```text
-我学完向量了，给我一道题检查掌握情况，做完后帮我批改。
-```
+旧版本教程里出现过的 `/tutor`、`/practice`、`/study-plan`、`/exam-track`、
+`/state-card`、`/resource-scan`、`/visualize`、`/mistake-review` 等斜杠文本
+仍被静默识别为意图信号（向后兼容），但它们不是 shell command、不是平台原生
+菜单，也**不需要**再学习。
 
 ## 11. 练习与掌握闭环怎么用？
 
@@ -305,15 +289,15 @@ skills/universal-diagnostic-tutor/
 可以这样问：
 
 ```text
-/practice 给我出一道关于矩阵 shape 的题。
+给我出一道关于矩阵 shape 的题。
 ```
 
 ```text
-/practice 这是我的答案，帮我批改。
+这是我的答案，帮我批改。
 ```
 
 ```text
-/practice 我学完向量了，判断我能不能进入矩阵。
+我学完向量了，判断我能不能进入矩阵。
 ```
 
 Tutor 通常会：
@@ -328,7 +312,7 @@ Tutor 通常会：
 
 如果一个强相关的前置概念正在阻碍你，Tutor 可以补充 1–3 张简短的 Knowledge Link Cards，解释它为什么和当前题有关，然后回到练习。它不会默认生成大题单，也不会把一次答对当成已经完全掌握。
 
-`/practice` 是 Tutor 的文字意图快捷方式，不是 shell command，也不保证是当前聊天平台或 Codex UI 的原生 slash command。
+练习意图用自然语言直接说即可（"给我出题""帮我批改"）；旧版 `/practice` 文字仍被静默识别，但不是 shell command，也不保证是当前聊天平台或 Codex UI 的原生 slash command。
 
 ## 12. Learning State Card 怎么用？
 
@@ -406,7 +390,7 @@ Learning State Card:
 示例：
 
 ```text
-/exam-track 我准备考研数学，线代很弱，先从哪里补？
+我准备考研数学，线代很弱，先从哪里补？
 ```
 
 ## 14. 如何反馈效果不好？

@@ -2,7 +2,7 @@
 
 # 🧠 Universal Diagnostic Tutor Skill
 
-**一个 diagnosis-first 的 STEM / AI-CS 学习 Tutor Skill：先判断你卡在哪里，再决定下一步教什么。**
+**一个不用选模式、也不用记命令的诊断式 AI 导师。它先判断你真正卡在哪里，再决定下一步该讲、该问、该练还是该停。**
 
 [English](README.md) | 中文
 
@@ -11,7 +11,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-2f6f4e.svg)](LICENSE)
 ![Markdown only](https://img.shields.io/badge/Markdown-only-555555.svg)
 ![Focus: STEM and AI-CS](https://img.shields.io/badge/Focus-STEM%20%2F%20AI--CS-1f6feb.svg)
-![V1.9 Practice and Mastery](https://img.shields.io/badge/V1.9-Practice%20%26%20Mastery-b78300.svg)
+![V2.0 One Tutor](https://img.shields.io/badge/V2.0-One%20Tutor-2f6f4e.svg)
 [![GitHub stars](https://img.shields.io/github/stars/SenmuuuuW/universal-diagnostic-tutor-skill?style=flat)](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill/stargazers)
 
 </div>
@@ -87,9 +87,13 @@ Prompt。Codex / Claude Code-style agent 用户使用完整 Skill——只有一
 这条链不会被强行套在每个简单问题上。快速事实问题可以简短回答；练习回合通常
 只发一道题，然后停下来等学习者作答，不会在一条消息里虚构完整闭环。
 
-## ✅ V1.9 重点：练习与掌握闭环
+## ✅ V2.0 重点：一个 Tutor，没有功能菜单
 
-V1.9 加入 Practice & Mastery Loop，让 Tutor 不只是会讲，还能根据当前概念和
+2.0 把公开入口收敛成一个 Tutor：练习、批改、错因、计划、备考、资源、可视化、
+连续性不再是独立入口，而是由 Tutor 根据自然语言自动触发。旧斜杠文本仍被
+静默识别（向后兼容），但不需要学习，也不再宣传。
+
+Tutor 不只是会讲，还能根据当前概念和
 掌握证据出一道针对性练习、等你作答、保留正确部分、指出关键错误、分析错因、
 在有用时更新可见状态，并判断应该进阶、复习、降一步、重新诊断还是继续练习。
 
@@ -132,7 +136,7 @@ Cards 只用于真正阻碍当前任务的强相关概念，通常限制在 1–
 - 不替代医疗、法律、金融、税务或安全等专业建议。
 - 不是教材仓库、答案库、课程平台或持久化成绩系统。
 
-跨 chat 接续依赖用户可见、可复制的 Learning State / Profile / Task Cards。不同
+跨 chat 接续依赖用户可见、可复制的 Learning State Card（可选字段吸收偏好与当前目标）。不同
 平台的 prompt adapter 能力可能弱于完整 Skill。
 
 ## 📄 License

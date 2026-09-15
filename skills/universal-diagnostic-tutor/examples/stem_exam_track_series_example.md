@@ -2,7 +2,7 @@
 
 ## User
 
-/exam-track 我准备考试，级数判敛总是不知道选什么方法。比如 \(\sum 1/(n^2+n)\)。
+我准备考试，级数判敛总是不知道选什么方法。比如 \(\sum 1/(n^2+n)\)。
 
 ## Expected Tutor Behavior
 

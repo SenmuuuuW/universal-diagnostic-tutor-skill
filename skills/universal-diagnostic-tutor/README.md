@@ -124,9 +124,9 @@ universal-diagnostic-tutor
 - **学习架构**：对“我想学机器学习”“我想补线代”这类大目标，先澄清目标、确认方向、建小知识地图，再选择第一步和对应子流程。
 - **练习与掌握闭环**：一次生成一道针对性练习，等待作答后做定性批改、错因修复、可见状态更新和进阶判断。
 
-## V1.8 Learning Architecture 用法
+## 大目标澄清与路径用法
 
-V1.8 把完整 Skill 理解为一个 Learning Orchestrator：先判断学习者到底想学什么，再决定下一步该调用哪个子流程。它不是课程生成器，也不是长期数据库。
+对于大目标，Tutor 先澄清再规划：先判断学习者到底想学什么，用 1–3 个聚焦问题确认目标，再决定下一步学什么。它不是课程生成器，也不是长期数据库。
 
 适用场景：
 
@@ -144,7 +144,7 @@ Goal Clarification -> Goal Confirmation -> Knowledge Map -> Learning Path
 
 普通教学时不要暴露这些内部名称；用自然老师语言问 1-3 个关键问题，确认目标，然后给第一步。
 
-## V1.9 Practice & Mastery Loop 用法
+## 练习与掌握闭环用法
 
 V1.9 把教学后的练习、作答、批改和进阶判断接进同一套 Tutor System。用户只需自然地说“给我练习”“帮我批改”“能学下一个吗”；旧输入 `/practice` 仍被静默识别（向后兼容）。
 
@@ -367,9 +367,9 @@ Skill 的核心入口。它包含触发说明、诊断优先工作流、教学�
 - STEM Exam Track 不得承诺提分、预测考试、押题、使用泄露材料或帮助作弊。
 - Topic Scan 要短；资源只在有用时加入，不要把每次回答变成资料列表。
 - 可视化必须服务当前学习缺口，不要为了装饰而添加图。
-- V1.8 是学习架构层，不是 assignment generation、grading、course
+- 大目标澄清与路径是行为层，不是 assignment generation、grading、course
   generation、真实 graphing tools、数据库或隐藏记忆系统。
-- V1.9 是练习与掌握行为闭环，不是 backend infrastructure、官方评分系统、题库、数据库或隐藏记忆系统。
+- 练习与掌握闭环是行为层，不是 backend infrastructure、官方评分系统、题库、数据库或隐藏记忆系统。
 - 练习默认一次一道；批改必须定性且学习导向，不能声称官方分数或保证提分。
 - 不要因一次答对就确认掌握；使用推理、近迁移和重复错误等证据判断 readiness。
 - Knowledge Link Cards 只服务强相关阻塞概念，通常 1–3 张，并且必须回到当前任务。
