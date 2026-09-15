@@ -11,6 +11,34 @@ choice, see [USER_GUIDE.md](USER_GUIDE.md).
 
 Use the strongest pack your environment can actually load.
 
+## Native Skill Environment: DeepSeek Harness
+
+DeepSeek Harness (DSH) loads the Skill folder itself. It is a native Skill
+environment, not a prompt-pasting target, so it needs no adapter prompt and no
+second copy of the tutoring instructions.
+
+```text
+Universal Diagnostic Tutor Core
+        ↓
+DeepSeek Harness Skill Loader
+```
+
+The canonical behavior stays in exactly one place:
+
+```text
+skills/universal-diagnostic-tutor/
+```
+
+DSH discovers `<skill-root>/universal-diagnostic-tutor/SKILL.md` from its
+project and user skill roots, reads the frontmatter into a session catalog, and
+loads the body plus `references/` on demand. Installation, update, and
+verification steps live in
+[INSTALL.md](INSTALL.md#deepseek-harness--dsh); the platform notes live in
+[platforms/deepseek-harness/](platforms/deepseek-harness/README.md).
+
+Do not treat DSH as a fifth prompt pack. Anything DSH-specific is installation,
+discovery, loading, or packaging — never a second set of tutoring rules.
+
 ## Four Usage Packs
 
 ### Full Skill Version

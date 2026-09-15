@@ -30,9 +30,16 @@ advancing.
 
 | Where you use AI | Start here |
 | --- | --- |
-| Ordinary ChatGPT, Gemini, DeepSeek, Doubao, Kimi, or Qwen chat | Copy the [Lite Prompt](platforms/generic-chat/TUTOR_LITE_PROMPT.md) |
+| **DeepSeek Harness (DSH)** | **Native / first-class Skill support** — install `skills/universal-diagnostic-tutor/` into a DSH skill root; see [DSH install](INSTALL.md#deepseek-harness--dsh) |
+| Ordinary ChatGPT, Gemini, DeepSeek **Chat**, Doubao, Kimi, or Qwen chat | Copy the [Lite Prompt](platforms/generic-chat/TUTOR_LITE_PROMPT.md) |
 | Codex or Claude Code-style agent | Use the [Full Skill](skills/universal-diagnostic-tutor/) and follow the [install guide](INSTALL.md) |
-| Custom bot or API prompt | Choose an adapter in [Portability](PORTABILITY.md) |
+| Custom bot or **DeepSeek API** prompt | Choose an adapter in [Portability](PORTABILITY.md) |
+
+DeepSeek Chat, the DeepSeek API, and DeepSeek Harness are three different
+surfaces: **Chat** takes a pasted prompt, the **API** takes a system prompt you
+send yourself, and only **DSH** discovers and loads the Skill folder natively.
+See [platforms/deepseek-harness/](platforms/deepseek-harness/README.md) for the
+DSH-specific notes.
 
 New to the project? Read the [User Guide](USER_GUIDE.md). Installation and
 updates live in [INSTALL.md](INSTALL.md), while entrypoint details live in

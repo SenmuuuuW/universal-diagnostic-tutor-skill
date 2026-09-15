@@ -39,6 +39,7 @@ Universal Diagnostic Tutor Skill 是一个 Markdown-only 的 AI Tutor 行为层�
 
 | 我想做什么 | 去哪里 |
 | --- | --- |
+| **DeepSeek Harness（DSH）** | **原生 / 一等 Skill 支持**——把 `skills/universal-diagnostic-tutor/` 安装到 DSH skill 根目录，见 [DSH 安装](INSTALL.md#deepseek-harness--dsh) |
 | 从零开始使用 | [新手教程](USER_GUIDE.md) |
 | 了解唯一入口 | [使用说明](COMMAND_SURFACE.md) |
 | 在普通聊天 AI 中使用 | [Lite Prompt](platforms/generic-chat/TUTOR_LITE_PROMPT.md) |
@@ -47,8 +48,13 @@ Universal Diagnostic Tutor Skill 是一个 Markdown-only 的 AI Tutor 行为层�
 | 看实际示例 | [使用示例](EXAMPLES.md) |
 | 查看版本更新 | [更新记录](CHANGELOG.md) |
 
-普通 ChatGPT、Gemini、DeepSeek、豆包、Kimi 或 Qwen 用户可以直接复制 Lite
-Prompt。Codex / Claude Code-style agent 用户使用完整 Skill——只有一个公开入口
+DeepSeek Chat、DeepSeek API 和 DeepSeek Harness 是三个不同的使用面：**Chat**
+靠粘贴提示词，**API** 靠你自己发送 system prompt，只有 **DSH** 会原生发现并
+加载 Skill 目录。DSH 专属说明见
+[platforms/deepseek-harness/](platforms/deepseek-harness/README.md)。
+
+普通 ChatGPT、Gemini、豆包、Kimi 或 Qwen 用户可以直接复制 Lite Prompt。
+Codex / Claude Code-style agent 用户使用完整 Skill——只有一个公开入口
 `universal-diagnostic-tutor`，直接用自然语言提问即可，不需要选择任何功能入口。
 
 ## ✨ 现在能做什么

@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased — Documentation / Distribution
+
+### DeepSeek Harness support
+
+- documented native DSH Skill installation
+- added DSH-specific install/update guidance
+- clarified DeepSeek Chat vs API vs Harness
+- no Tutor runtime behavior changes
+
 ## v2.0.0 — One Tutor, No Feature Menu
 
 ### The Product Change

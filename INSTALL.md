@@ -29,15 +29,115 @@ skills/universal-diagnostic-tutor/
 
 | 环境 | 适配方式 | 说明 |
 | --- | --- | --- |
+| DeepSeek Harness（DSH） | **原生 / 一等 Skill 支持** | DSH 会直接发现并加载 `<skill-root>/universal-diagnostic-tutor/SKILL.md`；见下文 [DeepSeek Harness / DSH](#deepseek-harness--dsh)。 |
 | OpenAI Codex / Codex-style Skill workflows | 推荐 / 主要适配 | 使用 `skills/universal-diagnostic-tutor/` 作为唯一 Skill 入口。 |
 | Claude Code / Claude Code-style agents | 可参考适配 | 如果环境支持 Skills、project instructions 或自定义 instruction 文件夹，可以把该 Skill 作为教学行为层使用。 |
 | 其他 instruction-based coding agents | 可手动适配 | 可引用 `SKILL.md`、README 和相关 references 作为项目 / agent instructions。 |
-| 普通 ChatGPT / 网页聊天 | 非原生 Skill | 可以手动复制提示词或核心说明，但不会自动加载整个 Skill 目录。 |
+| 普通 ChatGPT / 网页聊天（含 DeepSeek Chat） | 非原生 Skill | 可以手动复制提示词或核心说明，但不会自动加载整个 Skill 目录。 |
 | 本地模型 / IDE Agent | 取决于环境 | 需要该环境能读取 Markdown instructions、项目文件和自定义规则。 |
 
 不要过度理解成“所有平台都原生支持”。不同工具的 Skill 路径、加载方式、缓存机制和权限模型都不一样，请以各自工具文档为准。
 
 如果你的平台不支持 Skill 文件夹，请使用根目录 [PORTABILITY.md](PORTABILITY.md) 和 `platforms/` 里的平台适配提示词。Lite Prompt 不需要安装，只需要手动复制；完整 Skill 安装仍推荐用于 Codex / Claude Code-style 工作流。
+
+## DeepSeek Harness / DSH
+
+DeepSeek Harness 原生支持 Skill：不需要复制提示词，也不需要第二套 adapter 指令。
+DSH 的本地 skill provider 会扫描固定根目录，把 `<name>/SKILL.md` 解析成 catalog
+条目，并在模型真正需要时才加载正文与 `references/`。
+
+**Skill 格式要求（DSH 实际行为）**：必须是扫描根目录**直接子级**的目录 bundle：
+
+```text
+<skill-root>/universal-diagnostic-tutor/SKILL.md
+```
+
+`SKILL.md` 需要 YAML frontmatter 的 `name`（kebab-case）与 `description`。本项目
+的 `skills/universal-diagnostic-tutor/` 已满足该格式。注意 DSH 只发现**一层深
+度**：不要把整个仓库目录放进去，因为 `SKILL.md` 会嵌套在两层之下而无法被发现。
+
+### Recommended install
+
+DSH 的扫描根目录（按优先级）：
+
+| 优先级 | 作用域 | 路径 |
+| --- | --- | --- |
+| 100 | project | `<projectRoot>/.dsh/skills` |
+| 200 | project | `<projectRoot>/.agents/skills` |
+| 300 | custom | provider 配置的 `customSkillDirs` |
+| 400 | user | `$DSH_HOME/skills`（默认 `~/.dsh/skills`） |
+| 500 | user | `$DSH_AGENTS_HOME/skills`（默认 `~/.agents/skills`） |
+
+`<projectRoot>` 是包含 `.git` 的最近上层目录；没有则用当前工作目录。
+
+**推荐方式：user-level + symlink。** user 级让所有 session 都能用；symlink 让仓库
+成为唯一 source of truth，`git pull` 后立即生效，不需要重新复制。
+
+```bash
+# 1) clone（已有可跳过）
+git clone https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill.git
+cd universal-diagnostic-tutor-skill
+
+# 2) 把 Skill bundle（不是整个仓库）链接进 user 级扫描根
+mkdir -p ~/.agents/skills
+ln -s "$(pwd)/skills/universal-diagnostic-tutor" ~/.agents/skills/universal-diagnostic-tutor
+```
+
+如果更希望只在某个项目里生效，用 project 级（更安全地限定作用域）：
+
+```bash
+mkdir -p /path/to/your-project/.agents/skills
+ln -s /path/to/universal-diagnostic-tutor-skill/skills/universal-diagnostic-tutor \
+  /path/to/your-project/.agents/skills/universal-diagnostic-tutor
+```
+
+**如果不用 symlink**，也可以直接复制（适合不打算频繁更新的用户）：
+
+```bash
+mkdir -p ~/.agents/skills
+cp -R skills/universal-diagnostic-tutor ~/.agents/skills/universal-diagnostic-tutor
+```
+
+注意两点：链接目标必须是 `skills/universal-diagnostic-tutor`（bundle 本身），
+名称必须保持 `universal-diagnostic-tutor`（与 frontmatter 的 `name` 一致）。
+
+### Update
+
+- **symlink 安装**：`cd` 到仓库执行 `git pull` 即可，DSH 读取的始终是同一份文件，
+  不需要重新安装。
+- **copy 安装**：`git pull` 只更新仓库副本，必须重新复制一次：
+  `cp -R skills/universal-diagnostic-tutor ~/.agents/skills/universal-diagnostic-tutor`
+- **确认指向新版**：`git -C <repo> log --oneline -1` 与 `CHANGELOG.md` 顶部版本对比；
+  symlink 安装还可直接比对
+  `diff <repo>/skills/universal-diagnostic-tutor/SKILL.md ~/.agents/skills/universal-diagnostic-tutor/SKILL.md`。
+- **是否需要重启**：DSH 会监听扫描根，新增／重命名／删除 skill 或修改 frontmatter
+  会在下一次模型步前刷新 catalog；正文（含 `references/`）在每次加载时重新读取。
+  已开的 session 用替换 catalog 更新，**新开 session** 是最稳妥的确认方式。
+
+### Verification
+
+安装后，在 DSH 里新开一个 session，用自然语言直接说：
+
+```text
+教我一下梯度下降
+```
+
+```text
+我为什么这里错了？我的答案是 3(2x+1)^2
+```
+
+```text
+给我一道类似题
+```
+
+确认以下各点：
+
+- catalog 中出现 `universal-diagnostic-tutor`（skill 被发现）；
+- 加载成功，且返回的 base directory 指向安装位置（`SKILL.md` 可加载）；
+- 不需要任何 slash command，自然语言即可触发（例如"给我练习"不会要求你选择功能）；
+- references 能按需读取（例如让 Tutor 讲一道级数题，它会读取所需 reference 而不是全部加载）；
+- 说"我还是不懂"时继续使用 Tutor 行为（换表征、降一步），而不是重讲同一段；
+- 学习状态卡（Learning State Card）不受影响：粘贴卡片可继续上次学习。
 
 ## 方法一：让 Codex / Claude Code-style agent 帮你安装
 
