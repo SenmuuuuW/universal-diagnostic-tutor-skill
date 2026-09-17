@@ -1,6 +1,6 @@
 # 安装与更新指南
 
-[English README](README.md) | [中文 README](README.zh-CN.md)
+[简体中文](README.md) | [English](README.en.md)
 
 这个项目目前是一个 Markdown-based Tutor Skill，不是网站、App、npm 包或自动安装器。最安全的使用方式是 clone 仓库，然后按你的 agent 环境引用、复制或同步真正的 Skill 目录。
 

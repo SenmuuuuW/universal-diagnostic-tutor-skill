@@ -199,8 +199,10 @@ Future changes must preserve the core identity of the skill:
   platform differences, and maintenance requirements first.
 - Keep README concise; prefer replacing duplicated install/update text with
   links to `INSTALL.md` over appending long repeated sections.
-- `README.md` is the English public landing page, and `README.zh-CN.md` is the
-  Chinese public landing page. Keep both concise and aligned.
+- `README.md` is the Chinese-primary public landing page and `README.en.md` is
+  the English landing page. Keep both concise and aligned.
+- `README.zh-CN.md` is a compatibility pointer to `README.md`; do not grow a
+  second Chinese copy there.
 - Do not put full tutorials in either README. Keep beginner guidance in
   `USER_GUIDE.md` and single-tutor usage examples in `COMMAND_SURFACE.md`.
 - Keep the Star History chart as a passive README visualization only; do not
@@ -230,8 +232,8 @@ Future changes must preserve the core identity of the skill:
   `CHANGELOG.md` for details.
 - Describe current capabilities as present capabilities, not repeated
   historical release notes.
-- Use emojis in README files sparingly and consistently as visual anchors;
-  keep the tone serious, trustworthy, and not childish.
+- Do not use emoji in the README files. Use structure, tables, badges, and
+  diagrams as visual anchors, and keep the tone serious and trustworthy.
 - Do not let README polish alter core Skill behavior, teaching protocols,
   source-pack scope, or repository infrastructure.
 - Slash-style flows such as `/tutor`, `/learn-anything`, `/diagnose-gap`,

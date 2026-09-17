@@ -1,6 +1,6 @@
 # 使用说明：你只需要知道一个名字
 
-[English README](README.md) | [中文 README](README.zh-CN.md)
+[简体中文](README.md) | [English](README.en.md)
 
 Universal Diagnostic Tutor 2.0 只有一个公开入口：
 
