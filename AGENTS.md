@@ -199,9 +199,11 @@ Future changes must preserve the core identity of the skill:
   platform differences, and maintenance requirements first.
 - Keep README concise; prefer replacing duplicated install/update text with
   links to `INSTALL.md` over appending long repeated sections.
-- `README.md` is the English public landing page and the GitHub default;
-  `README.zh-CN.md` is the full Chinese landing page. Keep both concise,
+- `README.md` is the Chinese-primary public landing page and the GitHub
+  default; `README.en.md` is the full English landing page. Keep both concise,
   aligned, and switchable from each other.
+- `README.zh-CN.md` is a compatibility pointer to `README.md`; do not grow a
+  second Chinese copy there.
 - Do not put full tutorials in either README. Keep beginner guidance in
   `USER_GUIDE.md` and single-tutor usage examples in `COMMAND_SURFACE.md`.
 - Keep the Star History chart as a passive README visualization only; do not

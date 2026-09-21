@@ -13,8 +13,9 @@ All notable changes to this project will be documented in this file.
 
 ### README refresh
 
-- `README.md` stays the English GitHub default; `README.zh-CN.md` stays the full
-  Chinese landing page, now switchable both ways
+- `README.md` is the Chinese-primary GitHub default; `README.en.md` is the full
+  English landing page, switchable both ways; `README.zh-CN.md` is a
+  compatibility pointer only
 - both READMEs restructured: quick-start matrix, core loop, behaviour table,
   evaluation table, documentation index
 - READMEs are now emoji-free; layout uses badges, tables, and diagrams

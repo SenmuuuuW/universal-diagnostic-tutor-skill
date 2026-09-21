@@ -1,6 +1,6 @@
 # Universal Diagnostic Tutor Skill 使用教程
 
-[中文](README.zh-CN.md) | [English](README.md)
+[中文](README.md) | [English](README.en.md)
 
 这是一份面向普通学生、群友和自学者的完整使用教程。你不需要先懂 GitHub、Codex 或编程工具，也可以从普通 AI chat 开始使用这个诊断式导师。
 
