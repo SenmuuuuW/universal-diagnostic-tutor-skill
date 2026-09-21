@@ -11,11 +11,13 @@ All notable changes to this project will be documented in this file.
 - clarified DeepSeek Chat vs API vs Harness
 - no Tutor runtime behavior changes
 
-### Chinese-primary README
+### README refresh
 
-- `README.md` is now the Chinese-primary landing page, with an English switch
-- added `README.en.md` as the English landing page
-- `README.zh-CN.md` kept as a compatibility pointer; no second Chinese copy
+- `README.md` stays the English GitHub default; `README.zh-CN.md` stays the full
+  Chinese landing page, now switchable both ways
+- both READMEs restructured: quick-start matrix, core loop, behaviour table,
+  evaluation table, documentation index
+- READMEs are now emoji-free; layout uses badges, tables, and diagrams
 - no Tutor runtime behavior changes
 
 ## v2.0.0 — One Tutor, No Feature Menu
