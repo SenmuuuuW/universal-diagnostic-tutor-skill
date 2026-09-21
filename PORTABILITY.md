@@ -1,6 +1,6 @@
 # Cross-Platform Portability
 
-[English](README.md) | [中文](README.zh-CN.md)
+[中文](README.zh-CN.md) | [English](README.md)
 
 `universal-diagnostic-tutor` is a Markdown-based Tutor Skill. Different AI
 environments can use different packaging levels, but they do not all support

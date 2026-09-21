@@ -6,7 +6,7 @@
 
 它先判断你真正卡在哪里，再决定下一步该讲、该问、该练还是该停。
 
-[English](README.md) | 简体中文
+简体中文 | [English](README.md)
 
 [![Version](https://img.shields.io/badge/version-2.0.0-1f6feb.svg)](CHANGELOG.md)
 ![Markdown only](https://img.shields.io/badge/Markdown-only-555555.svg)

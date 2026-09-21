@@ -4,7 +4,7 @@
 
 **A diagnosis-first AI tutor that decides what the learner needs next — without making them choose modes or commands.**
 
-English | [简体中文](README.zh-CN.md)
+[简体中文](README.zh-CN.md) | English
 
 [![Version](https://img.shields.io/badge/version-2.0.0-1f6feb.svg)](CHANGELOG.md)
 ![Markdown only](https://img.shields.io/badge/Markdown-only-555555.svg)
