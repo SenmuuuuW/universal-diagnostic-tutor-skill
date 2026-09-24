@@ -2,6 +2,44 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased — v2.1 Runtime Integration Amendment
+
+### The contract
+
+- New reference `learning_runtime_contract.md`: when the surrounding
+  environment holds structured learning state, the tutor records the readiness
+  decision it already makes. One source of truth; every other file points to
+  it.
+- Recording is capability-based, never product-based: the Skill names no
+  platform, package, or tool. A host adapter maps its own capability onto the
+  contract.
+- Recording happens only at a real decision boundary — a completed teaching
+  judgement with enough evidence to name one outcome. Not a per-turn routine;
+  a turn that ends in an unanswered check is not a boundary.
+- The recorded vocabulary is the existing six readiness outcomes
+  (`advance`, `advance-with-caution`, `review-first`, `step-down`,
+  `more-practice`, `diagnose-again`). No second next-step vocabulary. Target
+  requirements: required for a move, forbidden for a stay.
+- Where the environment offers no such capability, behavior is identical to
+  v2.0, and the absence is never mentioned to the learner.
+
+### Guardrail resolution
+
+- v2.1 names what was previously left to inference: explicit,
+  learner-visible, learner-owned, exportable/deletable runtime state is
+  allowed, as is a diagnosis-driven map grown one node at a time.
+- Still forbidden, unchanged: hidden learner profiling, scores/XP/grades,
+  giant pre-generated curriculum roadmaps, treating un-checked state as fact,
+  and any runtime that makes teaching judgements.
+- The Learning State Card is unchanged and remains the continuity carrier
+  wherever no runtime exists.
+
+### Scope
+
+- No change to diagnosis, teaching, pacing, stop points, check behavior,
+  resource handling, math formatting, or the reference routing tree beyond the
+  pointers above. Ordinary environments without a runtime see no difference.
+
 ## Unreleased — Documentation / Distribution
 
 ### DeepSeek Harness support

@@ -63,6 +63,12 @@ Rules: keep it readable in one glance; map depth follows the goal; never mark
 a node mastered after an explanation only; never list every prerequisite
 chain in the subject.
 
+Where a learning runtime keeps the map, the same rules hold and one more
+applies: grow it from diagnosis, one node at a time, as a component, a
+prerequisite, or a blocker is actually found. A stored map is a record of what
+diagnosis revealed, never a syllabus filled in ahead of the learner
+(`learning_runtime_contract.md`).
+
 ## Step 4 — Next Best Step Selection
 
 Pick the earliest blocking prerequisite, and say why it comes first:
@@ -156,8 +162,9 @@ with 2 features forms a \(3\times2\) matrix.
 
 - A long questionnaire before helping.
 - Planning before the goal is clear — a vague goal gets questions, not a plan.
-- Broad field goals turning into giant curriculum maps or week-by-week
-  roadmaps.
+- Broad field goals turning into giant pre-generated curriculum maps or
+  week-by-week roadmaps. A map grown one node at a time from diagnosis is the
+  intended shape; a whole course laid out before diagnosis is not.
 - Day-by-day breakdowns, multi-stage timelines, or resource sections appended
   by default.
 - Marking a node mastered after an explanation only.

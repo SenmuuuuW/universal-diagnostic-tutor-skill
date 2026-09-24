@@ -16,6 +16,9 @@ explaining its own machinery.
 - Internal protocol names.
 - Acceptance reports or test matrices.
 - Hidden routing, maintenance, or implementation details.
+- Learning-runtime capability names, action names, or the fact that a decision
+  was recorded.
+- Stored-state headings, node identifiers, or status codes.
 
 Bad:
 
@@ -62,6 +65,15 @@ Instead of explaining internal machinery, explain the teaching move:
 - "先把符号翻译成人话。"
 - "这一步先停，因为下一步是关键判断。"
 - "你已经会跟着例题做了，现在提炼以后能复用的线索。"
+
+## Recording Decisions Silently
+
+When the environment stores learning state, recording a decision is an internal
+action and produces no sentence of its own. The learner sees the teaching, plus
+whatever the environment's own surface shows them — that surface is the
+runtime's voice, not the tutor's, so never narrate it, repeat it, or explain
+it. One exception: if the learner asks what was saved or where their progress
+lives, answer plainly about their own state, because it is theirs.
 
 ## Check Before Sending
 

@@ -46,6 +46,8 @@ details (never from transcripts, sensitive data, or rigid scores):
 - Keep the next best step specific enough that another tutor can continue
   without restarting.
 - Never claim hidden memory: the card is user-carried data, not storage.
+  Where a learning runtime holds state, that state is visible and
+  learner-owned — say so plainly if asked; neither is hidden memory.
 
 ## When To Offer A Card
 
@@ -111,6 +113,19 @@ Example recovery wording:
 上次讲到哪个题/哪个概念、卡在哪里？
 ```
 
+## Runtime State Alongside The Card
+
+When the environment stores learning state, continuity has two carriers and
+they agree: the runtime's visible map and focus, and the card. The card stays
+the portable one — it moves between chats and platforms, and it is still the
+only thing that works where no runtime exists. Keep them consistent, and keep
+the card's "Next best step" the same decision the runtime recorded.
+
+Never present runtime state as the tutor remembering, and never copy its
+headings or identifiers into a card. If the learner asks what is stored, tell
+them plainly and point out that it is theirs to export or delete
+(`learning_runtime_contract.md`).
+
 ## Post-Practice Update
 
 After a practice answer materially changes the learner's state, update the
@@ -122,7 +137,9 @@ card in this order:
 4. **New mastery status:** Use `explained`, `practiced`, `checked`,
    `confirmed`, `unconfirmed`, `weak`, or `blocked` from the mastery state
    vocabulary.
-5. **Next step:** Record the readiness outcome and one concrete action.
+5. **Next step:** Record the readiness outcome and one concrete action — in the
+   runtime as well, when the environment keeps structured state
+   (`learning_runtime_contract.md`).
 
 Fit this evidence into `Last successful check`, `Still weak`, `Common mistake`,
 and `Next best step`, or add one compact `Latest practice` bullet when that is

@@ -82,6 +82,26 @@ Turn the readiness outcome into the smallest useful teaching move:
 - Made a mistake -> match the intervention to the error type (feedback.md)
   before deciding review or advance.
 
+## Recording The Decision
+
+The readiness outcome is the decision. When the environment holds structured
+learning state, record it there in the same turn: one of the six outcomes above,
+a target only when the outcome moves the learner, and a one-sentence reason the
+learner can read. With no such runtime, say the same thing in teaching language
+and continue — the teaching is identical either way.
+
+Do not end a turn that judged a learner's answer without it. Writing evidence
+on the node is not the decision — evidence records what happened, the decision
+records where the learner goes — so a turn that did only the first still owes
+the second.
+
+Record only at a real decision boundary — a judgement that is complete, not
+every turn. A check just asked and still unanswered is not one. Thin evidence
+is: its outcome is `diagnose-again`, so an unlocated gap is a decision to
+record rather than a reason to stay silent. See `learning_runtime_contract.md`
+for the capability rules, the target requirements, and what stored state may
+hold.
+
 ## Difficulty Adjustment
 
 The goal is productive challenge: hard enough to build mastery, small enough
@@ -114,7 +134,8 @@ rigor, coding complexity, system layers, and amount of source material.
 Inside the current conversation, keep a lightweight model of what the learner
 understood, what confused them, which representation helped or failed, and
 what the next move should be. This is not persistent memory and must not feel
-like a tracking spreadsheet.
+like a tracking spreadsheet. Where a learning runtime is present, its visible
+learner-owned state carries this instead (`learning_runtime_contract.md`).
 
 Track concept, notation, reasoning, procedure, application, transfer, and
 affect evidence. When the learner answers correctly, confirm briefly and ask

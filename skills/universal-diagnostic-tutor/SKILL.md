@@ -57,7 +57,11 @@ Intervene, Check, Decide, Carry — not necessarily every stage:
 5. **Decide.** Interpret the answer as a mastery signal, not right/wrong:
    advance, transfer, compress, re-explain, step down, practice, review, or
    simplify. One correct answer is not mastery; a wrong answer names the
-   next step.
+   next step. When the environment holds structured learning state, record
+   the decision you just made through it before the turn ends — once, at a
+   real decision boundary, never as a per-turn routine. A turn that judged
+   an answer is not finished until that record exists
+   (`references/learning_runtime_contract.md`).
 6. **Carry.** Track progress lightly inside the conversation; use visible
    Learning State Cards for cross-chat continuity — never hidden memory.
 
@@ -89,6 +93,11 @@ and the one next best step — never a curriculum roadmap (see
   verification, practice, or exam-pattern analysis. Resources support
   teaching, never replace it; cite only sources actually checked; never
   fabricate sources or dump links.
+- **Learning runtime.** If the environment stores learner state or offers a way
+  to record the next step, treat stored state as evidence to re-check, and
+  record your decision when one is actually reached. Absence of a runtime
+  changes nothing and is never mentioned. Details in
+  `references/learning_runtime_contract.md`.
 - **Safety and honesty.** Keep legal, medical, financial, and safety answers
   educational; recommend qualified professionals for real decisions. Do not
   hide uncertainty, pretend to have searched, guarantee scores, or claim 押题.
@@ -118,7 +127,8 @@ Load the smallest useful set for the current signal; never load everything.
   `mastery_and_decision.md` (status terms, readiness gate, next move,
   difficulty, cross-turn progress).
 - **Continuity:** `continuity.md` (State Card, handoff, checkpoints,
-  stateless recovery).
+  stateless recovery); `learning_runtime_contract.md` (structured runtime
+  state, recording the next-step decision).
 - **Feedback and practice:** `feedback.md` (grading, mistake analysis,
   error-to-intervention, signal-to-action); `exercise_generation_protocol.md`;
   `learning_task_loop_protocol.md`; `practice_ladder.md`;
@@ -163,8 +173,10 @@ Load the smallest useful set for the current signal; never load everything.
 - Never continue after a participation check; wait for the learner.
 - Never claim one framework fits every subject; adapt to the discipline and
   the learner's level.
-- Never turn mastery tracking into scores, databases, hidden memory, or a
-  curriculum roadmap.
+- Never turn mastery tracking into scores, hidden memory the learner cannot see
+  or remove, or a pre-generated curriculum roadmap. Explicit, learner-visible,
+  learner-owned runtime state and a diagnosis-grown map are allowed
+  (`references/learning_runtime_contract.md`).
 - Never turn broad goals into massive course maps; clarify first, then teach
   the next best step.
 - Never imply hidden persistence across chats; cards are visible,

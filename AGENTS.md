@@ -328,6 +328,38 @@ Future changes must preserve the core identity of the skill:
 - Do not push, tag, or create a GitHub Release without explicit human
   approval.
 
+## V2.1 Runtime Integration Amendment
+
+- v2.1 is a narrow amendment, not a feature release. It adds one contract:
+  when the surrounding environment holds structured learning state, the tutor
+  records the readiness decision it already makes. Nothing about how the tutor
+  teaches, diagnoses, checks, or paces changes.
+- The whole contract lives in one file:
+  `skills/universal-diagnostic-tutor/references/learning_runtime_contract.md`.
+  Every other mention is a pointer. Do not copy the contract into additional
+  protocols, and do not let a second source of truth grow.
+- The next-step vocabulary is the existing six readiness outcomes. Never add a
+  seventh outcome, rename them, or introduce a parallel "action" vocabulary.
+  Status vocabulary stays the seven mastery terms.
+- Integration is capability-based, never product-based. Do not hardcode a
+  platform, product, package, plugin, or file path into the Skill. A host
+  adapter may map its own tools onto the contract; the Skill must not name
+  them.
+- Recording happens only at a real decision boundary. Do not turn it into a
+  per-turn habit, and do not record a decision the evidence does not support.
+- Absent the capability, behavior is unchanged from v2.0 — including never
+  mentioning that nothing is being saved.
+- v2.1 explicitly resolves the standing guardrail tension. Allowed: explicit,
+  learner-visible, learner-owned, exportable/deletable runtime state, and a
+  diagnosis-driven map grown one node at a time. Still forbidden: hidden
+  profiling, scores/XP/grades, giant pre-generated curriculum roadmaps,
+  treating un-checked state as fact, and any runtime that makes teaching
+  judgements. The earlier "no databases / no curriculum roadmap" wording
+  stands as written against those forbidden cases.
+- Keeping this amendment small is the point. If a change cannot be expressed
+  as a sentence in the contract file plus a pointer, it is probably a new
+  feature and does not belong in v2.1.
+
 ## Editing Notes
 
 - Use simple Markdown and portable plain text.

@@ -68,9 +68,11 @@ The single loop behind every teaching turn:
    about understanding instead of marking right or wrong (`feedback.md`).
 8. **Decide the next move.** Advance, transfer, compress, re-explain, step
    down, practice, review, simplify, or answer-first-in-speed-mode
-   (`mastery_and_decision.md`). End substantial turns with a small
-   mastery-building action: a check, practice item, transfer cue, or
-   teach-back prompt.
+   (`mastery_and_decision.md`). Where the environment holds structured
+   learning state, record that decision through it once a real decision
+   boundary is reached (`learning_runtime_contract.md`). End substantial turns
+   with a small mastery-building action: a check, practice item, transfer cue,
+   or teach-back prompt.
 
 When the learner is confused, do not explain more — change the move: step
 down, switch representation, shrink the example, or rebuild the missing
@@ -145,6 +147,9 @@ move. Advanced — the proof hinge, assumption, or edge case.
 - **Context portability:** State Card, handoff, checkpoint compression, and
   stateless recovery (`continuity.md`). Copy-pasteable state, not hidden
   memory.
+- **Learning runtime:** structured state where the environment offers it —
+  read as evidence, record the decision (`learning_runtime_contract.md`).
+  Absent a runtime, nothing here changes.
 
 ## Routing Sequence
 
@@ -182,6 +187,7 @@ move. Advanced — the proof hinge, assumption, or edge case.
   `no_internal_tool_leakage_protocol.md`, `math_formatting_protocol.md`,
   `interaction_pacing_protocol.md`, `teacher_like_stop_point_protocol.md`.
 - Broad goals: `clarify_and_path.md`, `mastery_and_decision.md`.
-- Continuity: `continuity.md`. Entry data: `trigger_mode_matrix.md`.
+- Continuity: `continuity.md`, `learning_runtime_contract.md`. Entry data:
+  `trigger_mode_matrix.md`.
 - STEM: `stem_teaching_sequence.md`, `intuition_application_bridge_protocol.md`,
   `knowledge_system_mapping_protocol.md`, `transfer_pattern_teaching_protocol.md`.
