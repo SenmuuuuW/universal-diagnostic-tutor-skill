@@ -8,7 +8,7 @@
 
 简体中文 | [English](README.en.md)
 
-[![Version](https://img.shields.io/badge/version-2.0.0-1f6feb.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-2.1.0-1f6feb.svg)](CHANGELOG.md)
 ![Markdown only](https://img.shields.io/badge/Markdown-only-555555.svg)
 [![DeepSeek Harness](https://img.shields.io/badge/DeepSeek%20Harness-native%20skill-2f6f4e.svg)](platforms/deepseek-harness/README.md)
 ![Focus: STEM and AI-CS](https://img.shields.io/badge/Focus-STEM%20%2F%20AI--CS-1f6feb.svg)

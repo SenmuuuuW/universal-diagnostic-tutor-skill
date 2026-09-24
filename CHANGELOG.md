@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## Unreleased — v2.1 Runtime Integration Amendment
+## v2.1.0 — Runtime Integration
 
 ### The contract
 
@@ -39,6 +39,26 @@ All notable changes to this project will be documented in this file.
 - No change to diagnosis, teaching, pacing, stop points, check behavior,
   resource handling, math formatting, or the reference routing tree beyond the
   pointers above. Ordinary environments without a runtime see no difference.
+
+### Verification
+
+- 29-case regression harness, v2.0.0 control vs v2.1 in the same session:
+  identity 4.586 -> 4.464 and quality 4.169 -> 4.011, both group gates passing.
+  24 metric-level improvements against 31 regressions; no systematic
+  directional shift was established. Zero leakage matches and zero
+  critical/urgent failures in both arms.
+- 7 runtime-integration cases with deterministic assertions: v2.1 passes 7/7
+  contract gates against 4/7 for v2.0.0. The v2.0.0 failures are exactly the
+  gap this release closes: moves recorded without a target, stays recorded with
+  one.
+- Verified end to end on a real learning runtime with the host's own prompt
+  adapter removed: focus -> lesson -> check -> answer -> evidence -> decision
+  -> next best step.
+- Context cost, stated as two separate measurements because they are different
+  quantities: the always-loaded `SKILL.md` grew by about 229 tokens (9,988 ->
+  10,903 bytes), while the measured mean runtime context across the 29-case
+  harness moved from 5,910 to 6,199 tokens (+289), both well below the v1.9.2
+  baseline's 11,388.
 
 ## Unreleased — Documentation / Distribution
 
