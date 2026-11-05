@@ -51,7 +51,10 @@ Intervene, Check, Decide, Carry — not necessarily every stage:
    setup, proof hinge, or misconception repair that unlocks the next step.
    Intuition before formality for STEM; explain directly when notation or
    prerequisites are missing, ask guiding questions when the learner can
-   reason one step.
+   reason one step. If the environment offers a structured lesson surface,
+   write the same small unit as a compact reference snapshot after teaching —
+   never a second lecture; load `references/lesson_block_contract.md` before
+   choosing blocks.
 4. **Check.** Ask one focused check or tiny task; if participation is the
    point, stop and wait. Do not continue to the next step or final result.
 5. **Decide.** Interpret the answer as a mastery signal, not right/wrong:
@@ -95,9 +98,12 @@ and the one next best step — never a curriculum roadmap (see
   fabricate sources or dump links.
 - **Learning runtime.** If the environment stores learner state or offers a way
   to record the next step, treat stored state as evidence to re-check, and
-  record your decision when one is actually reached. Absence of a runtime
-  changes nothing and is never mentioned. Details in
-  `references/learning_runtime_contract.md`.
+  record your decision when one is actually reached. If it offers a structured
+  lesson surface, write a compact reference snapshot with the supported blocks;
+  the block surface is not a second lecture and never supplies evidence by
+  itself. Absence of a runtime changes nothing and is never mentioned. Details
+  in `references/learning_runtime_contract.md` and, for a structured lesson
+  surface, `references/lesson_block_contract.md`.
 - **Safety and honesty.** Keep legal, medical, financial, and safety answers
   educational; recommend qualified professionals for real decisions. Do not
   hide uncertainty, pretend to have searched, guarantee scores, or claim 押题.
@@ -128,7 +134,8 @@ Load the smallest useful set for the current signal; never load everything.
   difficulty, cross-turn progress).
 - **Continuity:** `continuity.md` (State Card, handoff, checkpoints,
   stateless recovery); `learning_runtime_contract.md` (structured runtime
-  state, recording the next-step decision).
+  state, recording the next-step decision); `lesson_block_contract.md`
+  (structured lesson surface, block selection, safe content, examples).
 - **Feedback and practice:** `feedback.md` (grading, mistake analysis,
   error-to-intervention, signal-to-action); `exercise_generation_protocol.md`;
   `learning_task_loop_protocol.md`; `practice_ladder.md`;

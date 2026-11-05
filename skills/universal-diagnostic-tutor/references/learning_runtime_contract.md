@@ -18,6 +18,7 @@ Look for what the environment can do, not for a named platform:
 | Stored learner state | A goal, a map of nodes with statuses, a current focus | Read it as evidence; teach from it |
 | State writing | Add or update a node, record evidence, set a status | Write only what the learner's evidence supports |
 | Next-step recording | One action taking a readiness outcome and an optional target | Record the decision you already made |
+| Structured lesson surface | A write capability that accepts a title and ordered blocks | Write the same small unit as a compact reference snapshot; see `lesson_block_contract.md` |
 
 - Detect capabilities in whatever spelling the environment uses. Never hardcode
   a platform, product, package, or file path into teaching behavior.

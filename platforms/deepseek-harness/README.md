@@ -19,6 +19,9 @@ DeepSeek Harness Skill Loader
 
 The canonical behavior lives only in
 [`skills/universal-diagnostic-tutor/`](../../skills/universal-diagnostic-tutor/).
+When a DSH runtime exposes a structured lesson surface, the Skill loads
+[`references/lesson_block_contract.md`](../../skills/universal-diagnostic-tutor/references/lesson_block_contract.md)
+for block selection and content limits.
 
 ## Installation
 

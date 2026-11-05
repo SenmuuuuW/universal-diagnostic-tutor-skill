@@ -1,3 +1,20 @@
+## [2.2.0] — 2026-11-05
+
+### Added — Structured lesson surface contract
+
+- New `lesson_block_contract.md` reference covering the 13 supported lesson
+  blocks: selection guidance, exact content limits, sourceRefs, safe SVG,
+  slider expression rules, step-through pacing and quiz/check boundaries.
+- Complete math, physics and computer-science lesson examples that match the
+  current DSH Diagnostic Tutor runtime schema.
+- Incremental-write guidance for rich blocks, learned from a real DSH model run
+  where a combined slider/step-through/figure update produced malformed tool
+  JSON; writing one block per call recovered cleanly.
+- `SKILL.md` and `learning_runtime_contract.md` now route to the contract only
+  when the environment exposes a structured lesson surface.
+
+This is a Skill-side contract addition. It does not move teaching decisions into
+the runtime and does not treat viewed blocks or slider drags as mastery.
 # Changelog
 
 All notable changes to this project will be documented in this file.
