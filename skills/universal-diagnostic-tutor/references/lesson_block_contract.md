@@ -2,7 +2,7 @@
 
 Use this file only when the environment exposes a **structured lesson surface**:
 a runtime that stores lesson blocks and offers a way to write them (for example
-`udt_lesson_update`). The chat remains the classroom; the lesson surface is a
+`udt_lesson_update` / `udt_lesson_append_block`). The chat remains the classroom; the lesson surface is a
 compact reference snapshot of the unit just taught. Never dump a whole lecture
 into the block surface.
 
@@ -35,11 +35,11 @@ absence or the runtime.
 - **No arbitrary code or remote content.** Only the block types and fields
   below. SVG is sanitized; scripts, event handlers, external URLs, images and
   `foreignObject` are removed.
-- **Append one complex block at a time.** A `figure` (inline SVG), or a mixed
-  update containing several rich blocks, is more likely to exceed a model's
-  tool-input budget and be rejected as malformed JSON. Write one such block per
-  call, then verify it before appending the next. This is a delivery strategy,
-  not a schema rule.
+- **Append one complex block at a time.** A `figure` (inline SVG), `image`, or a
+  mixed update containing several rich blocks, is more likely to exceed a
+  model's tool-input budget and be rejected as malformed JSON. Write one such
+  block per call with `udt_lesson_append_block`, then verify it before appending
+  the next. This is a delivery strategy, not a schema rule.
 - **No source fabrication.** Every `sourceRefs` entry must point to a source
   that actually exists and was read.
 - **No mastery claim.** A completed block, a moved slider or a view is not
@@ -64,6 +64,7 @@ Choose for the teaching purpose, not for visual variety.
 | Record an inline answer | `quiz` | A quick multiple-choice or short answer should be recorded by the runtime | The answer needs qualitative teaching judgement |
 | Schedule recall | `flashcard` | A fact should become a review card | The item is a full explanation |
 | Safe custom visual | `figure` | A sanitized inline SVG makes the relation clearer | A text explanation is clearer |
+| Learner-supplied image | `image` | A local course image supports the explanation | You need the model to understand the pixels; this runtime only displays it |
 
 ### Slider
 
@@ -276,6 +277,22 @@ All limits are hard runtime limits; stay well inside them.
 - 2–12 frames; frame `body` 1–2000; frame `title` 1–200; optional `math`
   fragments are host-rendered; `title`/`prompt` 1–200/1000; `caption` 1–200.
 
+### `image`
+
+```json
+{ "assetId": "local-asset-id", "alt": "A labelled chart", "caption": "Optional." }
+```
+
+- `assetId` is a local asset id from `udt_asset_list`; never a URL or filesystem
+  path. `alt` 1–300; `caption` 1–200.
+- The image bytes live in the runtime's local asset store, not in `udt.json`.
+  The learner uploads them through Course materials or `udt_asset_add`.
+- **You do not receive image understanding through this block.** Do not claim to
+  have read a screenshot, chart or textbook image. Display it as learner material
+  and describe only what the learner or source tells you. If image understanding
+  is needed, ask the learner to describe it or use a tool that actually returns
+  image content.
+
 ### `figure`
 
 ```json
@@ -332,6 +349,20 @@ for a real lesson, append one block (and especially one `figure`) at a time.
 ]
 ```
 
+## PDF and Page Citations
+
+- Add a PDF with `udt_source_add` `kind: "pdf"` and an absolute local path, or
+  let the learner upload it in Course materials.
+- Read selected pages with `udt_source_get` `pages: [12, 13]`. Do not load a whole
+  textbook: the runtime returns at most 20 pages / 20,000 characters per call.
+- Cite a page or inclusive page range on the block:
+  `sourceRefs: [{ "sourceId": "src_...", "locator": "page 12", "page": 12 }]`,
+  or `"page": 12, "pageEnd": 14`. The runtime refuses a page outside the PDF.
+- The first version extracts text only. Scanned pages may be empty and are not
+  OCRed. If the text is empty, say so or ask the learner for a description; do
+  not invent the page's content.
+- The learner can delete a source. Do not keep using a deleted source id.
+
 ## Source Citations
 
 - Read the source with the runtime's source-read capability before citing it.
@@ -357,11 +388,27 @@ for a real lesson, append one block (and especially one `figure`) at a time.
   read the source first; do not fabricate an id.
 - If the runtime reports an unknown block type, use only the types listed here.
 - If a rich multi-block update is rejected as malformed JSON, do not retry the
-  same payload. Split it: one small block per call, figure/SVG alone. Keep the
-  chat and block surface consistent while appending the rest.
+  same payload. Split it: one small block per call, figure/SVG/image alone. Keep
+  the chat and block surface consistent while appending the rest.
+- `udt_lesson_append_block` is idempotent by stable block id: retrying the exact
+  block is safe, but reusing an id with different content is refused. Use a new
+  id for a revised block or replace the lesson explicitly.
 - Keep the chat and the block surface consistent: if the chat teaches a
   correction, rewrite or append the relevant block rather than leaving a
   contradictory reference.
+
+## Two Write Paths
+
+- `udt_lesson_update` — use when beginning a lesson, replacing a wrong unit, or
+  writing a few simple blocks together. It accepts a blocks array and is still
+  guarded by the same schema, source, size and lesson caps.
+- `udt_lesson_append_block` — use when adding one block to an existing lesson,
+  especially a complex `figure`, `image`, `step-through` or `slider`, or when
+  repairing a failed write. It takes one `block`, appends at the end, and returns
+  `added` / `idempotent`.
+- Both validate against the same runtime schema and security rules. Incremental
+  writing is not a way around validation; it is a way to keep each model output
+  small enough to survive a real streaming tool call.
 
 ## Boundary
 

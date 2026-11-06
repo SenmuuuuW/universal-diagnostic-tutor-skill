@@ -103,7 +103,8 @@ and the one next best step — never a curriculum roadmap (see
   the block surface is not a second lecture and never supplies evidence by
   itself. Absence of a runtime changes nothing and is never mentioned. Details
   in `references/learning_runtime_contract.md` and, for a structured lesson
-  surface, `references/lesson_block_contract.md`.
+  surface, `references/lesson_block_contract.md`; use incremental append for
+  one complex block and page-bounded PDF reads for learner materials.
 - **Safety and honesty.** Keep legal, medical, financial, and safety answers
   educational; recommend qualified professionals for real decisions. Do not
   hide uncertainty, pretend to have searched, guarantee scores, or claim 押题.
@@ -135,7 +136,8 @@ Load the smallest useful set for the current signal; never load everything.
 - **Continuity:** `continuity.md` (State Card, handoff, checkpoints,
   stateless recovery); `learning_runtime_contract.md` (structured runtime
   state, recording the next-step decision); `lesson_block_contract.md`
-  (structured lesson surface, block selection, safe content, examples).
+  (structured lesson surface, incremental append, PDF/image materials, safe
+  content, examples); `evidence_contract.md` (what counts as evidence).
 - **Feedback and practice:** `feedback.md` (grading, mistake analysis,
   error-to-intervention, signal-to-action); `exercise_generation_protocol.md`;
   `learning_task_loop_protocol.md`; `practice_ladder.md`;

@@ -1,3 +1,16 @@
+## [2.3.0] — v0.6.0 development
+
+### Added — Incremental lesson writes and learner materials
+
+- `udt_lesson_append_block` contract: one-block append with stable IDs,
+  idempotent retries, conflict errors and optional run-revision checks.
+- PDF source contract: local extraction, original page numbers, bounded
+  `udt_source_get` page selection, `sourceRefs.page` / `pageEnd` citations.
+- Image block contract: local `assetId`, alt/caption, no remote URL, and an
+  explicit warning that the model does not receive image understanding.
+- `evidence_contract.md`: interaction vs evidence, the chat-check gap, duplicate
+  avoidance and the boundary between a recorded answer and mastery.
+
 ## [2.2.0] — 2026-11-05
 
 ### Added — Structured lesson surface contract

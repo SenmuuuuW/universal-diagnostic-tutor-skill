@@ -19,6 +19,10 @@ Look for what the environment can do, not for a named platform:
 | State writing | Add or update a node, record evidence, set a status | Write only what the learner's evidence supports |
 | Next-step recording | One action taking a readiness outcome and an optional target | Record the decision you already made |
 | Structured lesson surface | A write capability that accepts a title and ordered blocks | Write the same small unit as a compact reference snapshot; see `lesson_block_contract.md` |
+| Incremental block append | A one-block append capability with a stable block id | Append one complex block or recover a failed write without resending the lesson |
+| PDF source with pages | A local PDF import plus page-bounded source reads | Read only the pages the diagnosis/teaching needs; cite `sourceRefs.page` |
+| Local image assets | An asset list plus an `image` block that takes an asset id | Display learner material; do not claim image understanding |
+| Interaction evidence | Quiz/flashcard responses recorded by the runtime; explicit check evidence through the map | Treat recorded answers as practice, not correctness or mastery |
 
 - Detect capabilities in whatever spelling the environment uses. Never hardcode
   a platform, product, package, or file path into teaching behavior.
