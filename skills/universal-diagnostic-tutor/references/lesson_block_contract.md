@@ -10,6 +10,16 @@ The teaching brain still decides what to teach, in what order, and what counts
 as evidence. The runtime only validates, stores, renders and records. Never
 invent a block type, a citation, or a runtime decision.
 
+## Production scene playback (v0.8) is not a generation capability
+
+A production runtime may expose a `scene` block for **reviewed playback**. Do
+not generate one. Scene writes require the runtime's code-reviewed approved
+digest and an explicitly enabled feature flag; a model-rendered SceneSpec from
+research is not approved. If the environment exposes no approved scene for this
+lesson, teach with the existing blocks. Never invent a scene, an approval, a
+`scene` spec field, or a playlist of scenes. No Tutor↔scene synchronization is
+part of this contract.
+
 ## Capability Detection
 
 Look for capabilities, not a product name:

@@ -918,3 +918,9 @@ every model or environment.
 - Reusable output formats for common tutoring situations.
 - First example set across math, science, humanities, coding, language and
   literature, and exam prep.
+
+## [2.3.1] — v0.8.0 production scene boundary
+
+- Documented that the production `scene` block is code-approved playback only;
+  the teaching model must not generate or invent scenes. AI generation remains
+  research and is not production-approved.

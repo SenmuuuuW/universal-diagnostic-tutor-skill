@@ -159,3 +159,10 @@ and remains the continuity carrier wherever no runtime exists
 - Recording a move to a target the runtime cannot resolve.
 - Narrating the call, or mentioning saved state, in the reply.
 - Growing the map ahead of diagnosis to look thorough.
+
+
+## v0.8 production scene boundary
+
+- `scene` is render-only reviewed production content, not a model generation tool.
+- AI-generated scene research output is not approved and must not be passed to `udt_lesson_update` as if it were.
+- Scene playback/progress is presentation state; it does not change evidence, mastery or lesson completion.
