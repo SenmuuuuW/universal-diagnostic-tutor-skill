@@ -166,3 +166,18 @@ and remains the continuity carrier wherever no runtime exists
 - `scene` is render-only reviewed production content, not a model generation tool.
 - AI-generated scene research output is not approved and must not be passed to `udt_lesson_update` as if it were.
 - Scene playback/progress is presentation state; it does not change evidence, mastery or lesson completion.
+
+## Experimental Scene Candidate bridge (v0.12)
+
+When the runtime exposes `udt_scene_candidate_create`, you may request a dynamic
+scene only when a visual interaction is genuinely the best teaching medium:
+
+- supply the current courseId, an existing diagnosis node, a concrete teaching
+  objective, the observed learner difficulty, and a visualization intent;
+- this creates a **request only**; it does not generate, approve, attach or
+  render anything and does not write evidence;
+- never claim a scene exists until `udt_scene_candidate_status` reports approved
+  and the local review CLI has recorded approval;
+- after approval, `udt_scene_candidate_attach` may attach it to a live attempt;
+  never approve, regenerate or attach an unapproved candidate yourself;
+- if candidate tools are absent, teach with existing blocks; do not invent JSON.

@@ -924,3 +924,8 @@ every model or environment.
 - Documented that the production `scene` block is code-approved playback only;
   the teaching model must not generate or invent scenes. AI generation remains
   research and is not production-approved.
+
+## [2.4.0] — v0.12 experimental scene candidate bridge
+
+- Documents request-only `udt_scene_candidate_create` and approved-only attach.
+- Makes clear the tutor cannot approve or fabricate a generated scene.
