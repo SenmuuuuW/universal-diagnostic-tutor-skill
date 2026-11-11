@@ -929,3 +929,9 @@ every model or environment.
 
 - Documents request-only `udt_scene_candidate_create` and approved-only attach.
 - Makes clear the tutor cannot approve or fabricate a generated scene.
+
+## [2.5.0] — v1.1 multimodal material guidance
+
+- Adds materials reference: image tool-mediated access, PDF page citations,
+  empty text-layer warnings, OCR/vision distinction, untrusted-content rule and
+  evidence separation.
